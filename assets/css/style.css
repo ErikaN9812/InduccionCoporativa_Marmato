@@ -2213,10 +2213,18 @@ iframe:after {
     .top{
        margin-top:340px;
     }
+
     .top-slide-14{
         margin-top:100px;
      }
 }
+
+ /*reponsive un minuto*/  
+ @media (max-width: 768px){
+    .top-slide-1{
+            margin-top:150px;
+         }
+    }
 
 .glass {
   padding: 5%; /* Espacio interno deseado */
