@@ -1,0 +1,1351 @@
+<!-- <?php
+    require('../../../functions_helpers.php'); /*load helper*/
+    check_session(); /*check session by employee */
+    $course_code = $_GET['course_code']; /* recibir el código del curso */
+    //$module_id        = __my_simple_crypt__($_GET['module'], 'd');
+    $module_id = 344;
+    $unique_course_id = check_permission_employee_course($course_code); /* Comprobar si el empleado tiene acceso al curso*/
+    $extension_url = "?course_code=" . $course_code; /* variable url para pasar el código del curso*/
+    
+    
+    $progress = progress_courses($course_code,$module_id);
+
+?> -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- library bootstrap v.5.0.2 -->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cards.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-utilities.css">
+	<script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.esm.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.js"></script>
+	<script src="assets/js/jquery-3.3.1.js"></script>
+	<script src="assets/js/touch-dnd.js"></script>
+	<!-- library cascading style sheets -->
+	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styleSlider.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700">
+
+    <!-- Para mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="assets/js/jplayer/lib/circle-player/skin/circle.player.css">
+    <script type="text/javascript" src="assets/js/jplayer/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/dist/jplayer/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/jquery.transform2d.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/jquery.grab.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/mod.csstransforms.min.js"></script>
+    <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/circle.player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body style="padding-left: 0px !important; padding-right: 0px !important;">
+    <input type="hidden" id="course_code" value="<?= $course_code ?>">
+	<input type="hidden" id="module_id" value="<?= $module_id ?>">
+    <!-- Header con el logo -->
+    <div class="header">
+       <!-- header -->
+	<div class="contentHeader">
+		<div>
+			<img class="logoTop" src="assets/img/logoG.png">
+			<div></div>
+			<!-- button home -->
+			<div>
+				<button id="home" onclick="progCircle(1);">
+					<i class="fas fa-home"></i>
+				</button>
+			</div>
+			<!-- progress counter -->
+			<div class="txPg">
+				<span id="textProg">1</span> / <span id="nSlider"></span>
+			</div>
+			<i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
+		</div>
+		<!--menu-->
+		<div class="headerOpc">
+			<i class="fas fa-times"></i>
+			<br>
+			<!-- <h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1> -->
+			<h1>Hola! <b>Nombre user</b></h1>
+			<h5>Bienvenido a su Ruta de Aprendizaje!</h5>
+			<div class="headerProg">
+			    <p><b>Progreso: </b><span id="course-progress"><strong>
+				<?= $progress[0]['course_progress'];?>%</span></strong></p>
+			</div>
+			<hr>
+			<ul>
+				<a href="index.html">
+				<!-- <a href="index.php?course_code=<?= $course_code; ?>"> -->
+					<li><i class="fas fa-caret-right"></i> Presentación</li>
+				</a>
+				<a href="modulo.html" class="act">
+				<!-- <a href="modulo.php?course_code=<?= $course_code; ?>" class="act"> -->
+					<li><i class="fas fa-caret-right"></i> Contenido</li>
+				</a>
+				<a href="quiz.html">
+				<!-- <a href="quiz.php?course_code=<?= $course_code; ?>"> -->
+					<li><i class="fas fa-caret-right"></i> Evaluación</li>
+				</a>
+			</ul>
+			<hr>
+			<ul>
+				<a href="index.html">
+				<!-- <a href="../../../../courses/login.php"> -->
+					<li><i class="fas fa-caret-right"></i> Mis cursos</li>
+				</a>
+				<a href="modulo.html">
+				<!-- <a href="../../../../courses/logout.php"> -->
+					<li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
+				</a>
+			</ul>
+			<span class="infSof">© Sofactia. powered by Unydos</span>
+		</div>
+	</div>
+    </div>
+<!-- content fluid -->
+<div class="container-fluid" style="position: relative; height: 100vh;">
+<!-- content slider -->
+<div class="ctMd">
+<!-- content module-->
+<div class="contentModule">
+
+    <!-- slider01 welcome -->       
+
+
+    <!-- slider un minuto de reflexion--> 
+    <div class="container current bg-petroleo-v2">
+        <div class="row top">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-6" style="padding-left: 15%; margin-top:5%;">
+                <h1 class="dx2minuto" style="color: var(--white);">Un minuto de <span style="color: var(--grey)">reflexión</span></h1><br>
+                <p class="dxnew" style="color: var(--white);">¿Por qué es importante esta inducción para ti?</p><br>
+                <p class="dxnew" style="color: var(--white);">No queremos que inicies tu trabajo en
+                    nuestra organización sin que nos conozcas, por ello <span style="color: var(--grey)">es muy importante que hagas
+                        esta inducción</span>, y sepas qué puedes obtener, y también aportar en nuestra empresa.</p><br>
+                        <audio controls id='actividad_3' class="track-element">
+                            <source src="assets/audio/slide_10.mp3" type="audio/mp3">
+                        </audio>
+            </div>
+            <!-- Columna derecha - Azul petróleo  -->
+            <div class="col-4" style="padding-left: 5%; margin-top:0%; width:40%;">
+                <img src="assets/img/img-minuto-reflexionv2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- slider fin minuto de relexion-->
+    
+
+    <!--Bienvenida Nombre-->
+    <div class="container divided-backgroundv2">
+        <div class="row">
+        <div class="col-lg-4 col-md-12 top-slide-14">
+            <div class="contenido-lateral">
+                <!-- Contenido a la izquierda -->
+                <div style="max-width: auto; margin: 0 auto;">
+                    <img src="assets/img/img-bienvenida.png">
+                </div>	
+            </div>
+        </div>
+        <!-- Columna derecha-->
+        <div class="col-lg-8 col-md-12 top-slide-14">
+            <div class="contenido-central" style="padding-right: 10%;">
+                <h1 class="dx3-v2 cambiocolorh1" style="color: var(--white10);">Maria Alejandra,</h1>
+                <br>
+                <h1 class="dx2-v2 cambiocolordx2-v2" style="color: var(--white);">Te damos la bienvenida a nuestro equipo</h1>
+                <p style="text-align: justify; font-size:20px; color:#11111157; padding-top: 15%;">Estamos encantados de darte la bienvenida
+                    a través de este módulo virtual, diseñado especialmente para guiarte como nuevo colaborador de nuestra empresa. Queremos facilitarte una hoja de ruta que te permita
+                    identificarte y moverte con confianza dentro de nuestra organización</p>
+            </div>   
+        </div>
+        <div>
+            <img src="assets/img/img-footer-bienvenida.png" alt="" style="max-width:550px;" >
+        </div>
+        </div>
+    </div>
+    <!--Fin Nombre-->
+
+    <!--Pantalla estrucutra tematica-->
+    <div class="container divided-backgroundv3">
+        <div class="row ">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-12 col-md-12">
+                <h1 class="white-text text-center">Estructura temática</h1>
+                <h4 style="color: var(--white10);" class="mb-5 text-center">En este curso encontrarás estos 3 secciones claves de acercamiento
+                    a nuestra organización, <br />continúa adelante para irlos revisando en el mismo orden</h4>
+            </div>
+            
+            <!-- Columna derecha - azul oscuro -->
+            <div class="col-lg-12 col-md-12 ">
+                <div class="contenido-central">
+                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                        <div class="col-lg-3  col-md-12">
+                            <img  class="img-estructura"  src="assets/img/Seccion1.png">
+                        </div>
+                        <div class="col-lg-3  col-md-12">
+                            <img  class="img-estructura"  src="assets/img/seccion2.png">
+                        </div>
+                        <div class="col-lg-3  col-md-12">
+                            <img class="img-estructura" src="assets/img/seccion3.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin estrucuta tematica-->
+
+    <!--Inicio Seccion 01-->
+    <div class="container dividerImgSeccion1">
+        <div class="row top">
+            <!--<div>
+                <p class="indPag">
+                    <a href="#"><span style="font-weight: 900;">>Sección 1</span> / <span style="font-weight: 700;">Inducción Q&HS</span> / <span style="font-weight: 100;">Sección 1</span></a>
+                </p>
+                <span class="indPagMb"></span>
+            </div>-->
+            
+            <div class="col-lg-6 col-md-12">
+                <h1 class="dx3-v2" style="color: #0B3D5C; padding-left: 15%; margin-top:5%;">&gt; Sección 1</h1>
+                <hr class="hr-custom"> 
+                <h4 class="dx2-v2" style="color: var(--primary30); padding-left: 15%; margin-top:2%;">Conoce la organización de
+                    la que haces parte</h4>
+            </div>
+        </div>
+    </div>
+    <!--Fin Seccion1-->
+
+    <!--Inicio Nuestro proposito superior-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 bg-blanco" >
+                <div class="contenido-lateral">
+                    <h1 style="color: var(--primary80)">Nuestro <span style="color: var(--primary)">propósito</span> superior</h1>
+                    <br>   
+                    <p style="text-align: justify !important;">Concebimos a Aris Mining como una
+                        compañía ambiental y social con base en la minería, lo cual es relevante en el
+                        contexto minero colombiano; queremos combinar las habilidades tradicionales
+                        y el conocimiento local de los mineros a pequeña escala con la tecnología,
+                        infraestructura y acceso al capital  de la minería a gran escala</p>
+                    <br>
+                    <img src="assets/img/logo_color.png" alt="" style="width: 30%; text-align: right !important;">
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 bg-azuloscuro2" >
+                    <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster="assets/img/portada_video.png"  style="max-width:540px; height: 450px;" id='actividad_4' class="track-element">
+                            <source src="assets/video/induccioncorp1.mp4" type="video/mp4">
+                        </video>
+
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+    <!--Fin de nuestro proposito superior-->
+
+
+    <!--Inicio Operacion Minera-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 bg-petroleo-v3 col-inline pc-movil-mapa1">
+                <div style="margin-left: 60px;">
+                    <!-- Contenido a la izquierda azul-->
+                        <img src="assets/img/operacion-minera.png" style="max-width: 200%; margin: 0 auto;">
+                    <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_06" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
+                        VER VIDEO</button>
+                </div>
+            </div>
+
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 col-inline pc-movil-mapa2" >
+                <div class="pc-movil-iframe" id="map" >
+                    <iframe class="pc-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.6183181896654!2d-75.60362592590765!3d5.474721334463523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4703f35fdd3599%3A0x438b69e5e58260d0!2sMarmato%2C%20Caldas!5e0!3m2!1ses!2sco!4v1700075024197!5m2!1ses!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+                    <iframe class="movil-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7943.236707552308!2d-75.60620085875658!3d5.474715978019876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4703f35fdd3599%3A0x438b69e5e58260d0!2sMarmato%2C%20Caldas!5e0!3m2!1ses!2sco!4v1700326402852!5m2!1ses!2sco" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="slide_06" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" style="color: #BFEE30;">Ver video</h5>
+                <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst mb-2">Haga clic para ejecutar el video</i>
+                <video controls poster  class="mx-auto">
+                    <source src="assets/video/arismining1.mp4" type="video/mp4">
+                </video>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Fin Operacion minera-->
+
+    <!--Inicio nuestra mision y vision-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-6 bg-petroleo2" style="padding-left: 10%; padding-right: 5%; margin-top:5%;">
+                <div class="col-lg-12 col-md-12">
+                    <img src="assets/img/img-nuestra-mision.png" alt="" style=" width: 30%; text-align: center !important">
+                    <h1 style="color: var(--white)">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
+                    <br>   
+                    <p style="color: var (--white); text-align: justify !important;"> Aris Mining es una empresa minera
+                        productora de metales preciosos que crea valor para sus accionistas y
+                        grupos de interés mediante la adopción  de prácticas eficientes, seguras
+                        y responsables bajo estándares de
+                        nivel</p>
+                    <br>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-6 bg-blanco" style="padding-left: 10%; padding-right: 5%; margin-top:5%;">
+                <div class="col-lg-12 col-md-12">
+                    <img src="assets/img/img-nuestra-vision.png" alt="" style="text-align: center  !important; width: 30%;">
+                    <h1 style="color: var(--primary30)">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
+                    <br>   
+                    <p style="text-align: justify !important;">  Aris Mining será una empresa consolidada en explotación
+                        subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras,
+                        desarrollo sostenible e integridad  empresarial.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Fin mision y vision-->
+
+
+
+
+    <!-- slider8 politicas -->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-3 bg-blanco2 col-inline pc-celular-blanco " >
+                <div class="contenido-lateral">
+                    <!-- Contenido a la derecha -->
+                    <div style="max-width: 220px; margin: 0 auto;">
+                        <img src="assets/img/6pol.png">
+                    </div>	
+                    <br>	
+                    <h1 class="dx3" style="color: var(--blue75);">Seis políticas</h1>
+                    <h1 class="dx2" style="color: var(--primary30);">que te cuidan:</h1>
+                    <br>
+                    <p class="mb-2 text-center">Presentamos las seis políticas que aplicamos en la operación y que cuidan tu salud y tu vida cada día.</p> 
+                    <i class="inst mb-2">Haz clic para descargar el PDF de cada política</i>
+                </div> 
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-9 bg-petroleo3 col-inline-politicas pc-celular-azul">
+                <div class="col-12 col-inline-politicas">
+                    <div class="row col-12">
+                        <div class="col-lg-4 col-md-4 track-element" id="actividad_2"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_01">
+                            <!-- <a href="assets/doc/principio_dorado.pdf" download="Política Principio Dorado"> -->
+                                <img class="img-legal" src="assets/img/icolegal1.png"><br>
+                            <h4 class="mt-3 dx13g text-center">Política Principio Dorado</h4></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_02">
+                            <!-- <a href="assets/doc/sst.pdf"  download="Política de SST"> -->
+                                <img class="img-legal" src="assets/img/icolegal2.png"><br>
+                            <h4 class="mt-3  dx13g text-center">Política de SST</h4></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_03">
+                            <!-- <a href="assets/doc/consumo_SPA.pdf" download="Política Prevención y control del consumo SPA"> -->
+                                <img class="img-legal"  src="assets/img/icolegal3.png"><br>
+                            <h4 class="mt-3  dx13g text-center">Política Prevención y control del consumo SPA</h4></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_04">
+                            <!-- <a href="assets/doc/buen_trato.pdf" download="Política de Buen trato"> -->
+                                <img class="img-legal"  src="assets/img/icolegal4.png"><br>
+                            <h4 class="mt-3  dx13g text-center">Política de Buen trato</h4></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_05">
+                            <!-- <a href="assets/doc/seguridad_vial.pdf" download="Política de Seguridad vial">  -->
+                                <img class="img-legal"  src="assets/img/icolegal5.png"><br>
+                            <h4 class="mt-3  dx13g text-center">Política de Seguridad Vial</h4></a>
+                        </div>
+                        <div class="col-lg-4 col-md-4"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_06">
+                            <!-- <a href="assets/doc/higiene_seguridad.pdf" download="Reglamento de Higiene y seguridad"> -->
+                                <img class="img-legal" src="assets/img/icolegal6.png"><br>
+                            <h4 class="mt-3  dx13g text-center">Reglamento de Higiene y seguridad</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Modal -->
+         <div class="modal fade" id="slide_08_01" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Política Principio Dorado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Política Principio Dorado, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Política Principio Dorado,<br>
+                                                         haga clic en el siguiente icono</i>
+                    <a href="assets/doc/principio_dorado.pdf" download="Política Principio Dorado">
+                    <img class="img-legal" src="assets/img/icolegal1.png"><br>
+                    <h4 class="mt-3 text-center">Política Principio Dorado</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="slide_08_02" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Política de SST</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Política de SST, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Política de SST, <br>
+                                                         haga clic en el siguiente icono</i>
+                   <a href="assets/doc/sst.pdf" class="track-element" id="actividad_2" download="Política de SST">
+                   <img class="img-legal" src="assets/img/icolegal2.png"><br>
+                    <h4 class="mt-3  text-center">Política de SST</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="slide_08_03" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Política Prevención y control del consumo SPA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Política Prevención y control del consumo SPA, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Política SPA,<br>
+                                                         haga clic en el  siguiente icono</i>
+                    <a href="assets/doc/consumo_SPA.pdf" download="Política Prevención y control del consumo SPA">
+                    <img class="img-legal"  src="assets/img/icolegal3.png"><br>
+                    <h4 class="mt-3 text-center">Política Prevención y control del consumo SPA</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="slide_08_04" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Política de Buen trato</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Política de Buen trato, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Política de Buen trato, <br>
+                                                         haga clic en el siguiente icono</i>
+                    <a href="assets/doc/buen_trato.pdf" download="Política de Buen trato">
+                    <img class="img-legal"  src="assets/img/icolegal4.png"><br>
+                    <h4 class="mt-3 text-center">Política de Buen trato</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="slide_08_05" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Política de Seguridad Vial</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Política de Seguridad Vial, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Política de Seguridad Vial, <br>
+                                                         haga clic en el siguiente icono</i>
+                    <a href="assets/doc/seguridad_vial.pdf" download="Política de Seguridad vial"> 
+                    <img class="img-legal"  src="assets/img/icolegal5.png"><br>
+                    <h4 class="mt-3 text-center">Política de Seguridad Vial</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="slide_08_06" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Descargar Reglamento de Higiene y seguridad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="inst2 mb-2 pc-slide-8" style="text-align: center;">Si desea descargar la Reglamento de Higiene y seguridad, haga clic en el siguiente icono</i>
+                    <i class="inst3 mb-2 movil-slide-8">Si desea descargar la Reglamento de Higiene y <br>
+                     seguridad, haga clic en el siguiente icono</i>
+                    <a href="assets/doc/higiene_seguridad.pdf" download="Reglamento de Higiene y seguridad">
+                    <img class="img-legal" src="assets/img/icolegal6.png"><br>
+                    <h4 class="mt-3 text-center">Reglamento de Higiene y seguridad</h4></a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- slider9 momento2 -->
+    <div class="container dividerImg22">
+        <div class="row top">
+            <div>
+                <p class="indPag">
+                    <a href="#"><span style="font-weight: 900;">Modulo 2</span> / <span style="font-weight: 700;">Inducción Q&HS</span> / <span style="font-weight: 100;">Momento 2</span></a>
+                </p>
+                <span class="indPagMb"></span>
+            </div>
+            
+            <div class="col-lg-6 col-md-12">
+                <h1 class="dx2" style="color: #c3b152;">Momento-2</h1>
+                <hr class="hr-custom">
+                <h1 class="dx3" style="color: var(--primary30);">Programa: </h1><h1 class="dx2"  style="color: var(--primary30);">
+                    Visión Zer<span style="color: #B41E1E;">o</span><span style="color: #559AC3;">o</span><span style="color: #9BA255;">o</span>
+                </h1>
+            </div>
+            
+          
+        </div>
+
+                <!-- Modal -->
+    </div>
+
+    <!-- slider10 ceo IZQ-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleo2 pc-movil-slide-10-1" >
+                <div class="contenido-lateral">
+                    <!-- Contenido a la derecha -->
+                    <img src="assets/img/logo-full.svg" style="max-width: 50%; margin: 0 auto;">
+                    <br>
+                    <br>
+                    <h2 class="dx13w">Es una metodología orientada al mejoramiento de la Seguridad, la Salud y el Bienestar de las personas en el trabajo.</h2>
+                    <br>   
+                    <audio controls id='actividad_3' class="track-element">
+                        <source src="assets/audio/slide_10.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="inst mb-2 h1-text">Escucha el audio, y observa el video de nuestro COO</i>
+                    <i class="inst mb-2 h1-text-movil">Escucha el audio, y observa el video de <br> nuestro COO</i>
+
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-9 bg-azuloscuro2 pc-movil-slide-10-2" >
+                    <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster="assets/img/posterceo.jpg"  style="max-width:640px; height: 480px;" id='actividad_4' class="track-element">
+                            <source src="assets/video/slide_10.mp4" type="video/mp4">
+                        </video>
+                        <p style="max-width: 640px;" class="mt-2 text-center">
+                            Está basada en la convicción de que “todos los accidentes, lesiones y enfermedades relacionadas con el trabajo son prevenibles, si asumimos nuestras responsabilidades diarias.    
+                        </p>
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+
+    <!-- slider11 game words DER-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            <div class="col-3 bg-petroleo2 col-inline actividad-01-cl-01" >
+                <div class="contenido-azuloscuro2">
+                    <canvas style="max-width: 200px; max-height: 200px; margin: 0 auto;" id="donutChart01"
+                    width="200" height="200"></canvas>
+                    <div id="completionPercentage"></div>
+                    <!-- Contenido a la izquierda -->
+                    <p class="instrucciones">  
+                        <span><strong>Instrucciones:</strong></span><br >
+                        Acorde al texto arrastra la palabra que corresponda en el espacio disponible, hasta completar el 100% de la frase                 
+                    </p>
+                    <img src="assets/img/logo-full.svg" style="max-width: 50%; margin: 0 auto;">
+                </div>
+            </div>
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-9 bg-blanco-actividad-02 actividad-01-cl-02">
+                <div class="col-md-12 col-lg-10">
+                    
+                    <div class="ctActivityDragDrop">
+                        <div>
+                            <div class="listOpcDrop">
+                                <h1 style="color: var(--blue75);">
+                                    <span style="color: var(--blue50);">Recordemos:</span>
+                                    <br>  
+                                    ¿Qué significa nuestro <br> Principio Dorado?
+                                </h1>
+                                <p class="mt-2">
+                                    Esto significa que todas las personas son responsables y tiene la 
+                                <span id="drop1"></span>  de detener y reportar cualquier 
+                                <span id="drop2"></span> o condición que consideren 
+                                <span id="drop3"></span>  y que la ejecución de la tarea solo puede continuar cuando las condiciones de 
+                                <span id="drop4"></span> sean claras para todos.  Estas intervenciones deben ser ejecutadas y aceptadas  
+                                <span id="drop5"></span>, entendiendo que la seguridad y la  
+                                <span id="drop6"></span> son asuntos inseparables.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="listOpcDrag mt-3">            
+                        <span id="drag3">insegura</span>
+                        <span id="drag5">positivamente</span>
+                        <span id="drag1">autoridad</span>
+                        <span id="drag6">productividad</span>
+                        <span id="drag4">seguridad </span>
+                        <span id="drag2">trabajo</span>
+                        </div>
+        
+                        <div class="ctActivityDragDropFny" style="display: none;">
+                        <h4>Correcto !!</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- slider12 rules IZQ-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            
+            <div class="col-3 bg-blanco-reglas pc-movil-slide-12-1 top-slide-14">
+                <div class="bntNextPrev12r movil-pc-flechas-l" onclick="prevSlide()">  <i class="fas fa-angle-left"></i></div>
+                <div class="col-lg-6" >
+                    <img id="img_slide12" src="assets/img/slide_12_rules.jpg" alt="Imagen" style="width: 100%;">
+                    <p style="margin-top: 50px; font-weight: bold; font-size: 17px" class="text-center">Por favor haga click, sobre las flechas, para escuchar una breve descripción de cada una de las reglas.</p>
+                </div>
+                <div class="bntNextPrev12r movil-pc-flechas-r" onclick="nextSlide()">  <i class="fas fa-angle-right"></i></div>
+            </div>
+
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-3 bg-petroleo-reglas col-inline pc-movil-slide-12-2">
+                <div class="contenido-lateral">
+                    <!-- Contenido a la derecha -->
+                    <div class="rulest" style="margin-top:0px">
+                        <img src="assets/img/12rules.png" style="max-width: 50%; margin: 0 auto;">
+                        <br>	
+                        <h4 data-title="slide12_01"  style="color: var(--blue25);"> <span style="color: var(--grey);">1-</span> Apto para trabajar</h4>
+                        <h4 data-title="slide12_02" style="color: var(--blue25);"> <span style="color: var(--grey);">2-</span> Evaluación de riesgos</h4>
+                        <h4 data-title="slide12_03" style="color: var(--blue25);"> <span style="color: var(--grey);">3-</span> Dotación y EPP</h4>
+                        <h4 data-title="slide12_04" style="color: var(--blue25);"> <span style="color: var(--grey);">4-</span> Lugares, máquinas y herramientas seguras</h4>
+                        <h4 data-title="slide12_05" style="color: var(--blue25);"> <span style="color: var(--grey);">5-</span> Control de la caida de rocas</h4>
+                        <h4 data-title="slide12_06" style="color: var(--blue25);"> <span style="color: var(--grey);">6-</span> Control de las energías peligrosas</h4>
+                        <h4 data-title="slide12_07" style="color: var(--blue25);"> <span style="color: var(--grey);">7-</span> Seguridad Vial</h4>
+                        <h4 data-title="slide12_08" style="color: var(--blue25);"> <span style="color: var(--grey);">8-</span> Sustancias peligrosas - explosivas</h4>
+                        <h4 data-title="slide12_09" style="color: var(--blue25);"> <span style="color: var(--grey);">9-</span> Trabajo en alturas</h4>
+                        <h4 data-title="slide12_10" style="color: var(--blue25);"> <span style="color: var(--grey);">10-</span> Trabajo en caliente</h4>
+                        <h4 data-title="slide12_11" style="color: var(--blue25);"> <span style="color: var(--grey);">11-</span> Izaje de cargas</h4>
+                        <h4 data-title="slide12_12" style="color: var(--blue25);"> <span style="color: var(--grey);">12-</span> Espacios confinados</h4>
+                    </div>   
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- slider13 incident IZQ-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleosound pc-celular-slide-13-1">
+                <div class="col-lg-12 col-md-12 top-logo2">
+                    <img src="assets/img/logo-full.svg" style="max-width: 30%; margin: 0 auto;">
+                    <div class="mb-3">
+                    <i class="inst mb-2">En caso de que no puedas ver el video <br> correctamente, escucha estos audios</i> 
+                        <h2 class="dx13w mt-5 mb-2">¿Qué es un <span style="color: var(--grey);"> accidente?</span></h2>
+                    <audio controls style="opacity: 0.75;">
+                        <source src="assets/audio/Accidente.mp3" type="audio/mp3">
+                    </audio>
+                    </div>
+                    <div  class="mb-3">
+                        <h2 class="dx13w mb-2">¿Qué es un <span style="color: var(--grey);"> incidente?</span></h2>
+                    <audio controls style="opacity: 0.75;" class="track-element" id='actividad_5'>
+                        <source src="assets/audio/Incidente.mp3" type="audio/mp3">
+                    </audio>
+                    </div>
+                    <div  class="mb-3">
+                        <h2 class="dx13w mb-2">¿Qué es una <span style="color: var(--grey);"> Enfermedad laboral?</span></h2>
+                    <audio controls style="opacity: 0.75;">
+                        <source src="assets/audio/Enf-Laboral.mp3" type="audio/mp3">
+                    </audio>
+                    
+
+                    </div>
+                </div>     
+            </div>
+
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-9 bg-azuloscuro pc-celular-slide-13-2">
+                
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <i class="inst mb-2">Clic sobre el video para comenzar</i>		
+                        <video class="video-slide-13" controls poster="assets/img/poster_slide_13.jpg" id="ceo">
+                            <source src="assets/video/slide_13.mp4" type="video/mp4">
+                        </video>
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+
+    <!-- slider14-->       
+    <div class="container divided-background-slide-14">
+        <div class="row ">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-12 col-md-12 magin-movil top-slide-14" style="text-align:center;">
+                <h2 style="color: var(--primary30);">Reconoces la diferencia entre</h2>
+                <h4 style="color: var(--blue25);">Accidente / Incidente / Enfermedad laboral ?</h4>
+                <p class='instrucciones2'>Por favor, revisa detenidamente las tres opciones y clasifícalas según su aplicabilidad en cada caso,  seleccionando la opción que mejor <br> se adapte en cada situación</p>
+            </div>
+            
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-12 col-md-12 ">
+                <div class="contenido-central">
+                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
+                        <div class="col-lg-3 col-md-12 actividad_slide_14">
+                            <img class="img-estructura"  src="assets/img/act_slide_14_01_pre.png">
+                            <h4>
+                                Se presentó un evento de Caída de roca sin lesionados en ese caso tenemos un:
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_01_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_01_mal.png">ENFERMEDAD LABORAL</option>
+                                <option data-image="act_slide_14_01_mal.png">ACCIDENTE DE TRABAJO</option>
+                                <option data-image="act_slide_14_01_ok.png">INCIDENTE DE TRABAJO</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-12 actividad_slide_14">
+                            <img class="img-estructura"  src="assets/img/act_slide_14_02_pre.png">
+                            <h4>
+                                Se diagnostica una pérdida de audición causada por la exposición a ruido constante, en ese caso tenemos:
+
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_02_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_02_mal.png">ACCIDENTE DE TRABAJO</option>
+                                <option data-image="act_slide_14_02_ok.png">ENFERMEDAD LABORAL</option>
+                                <option data-image="act_slide_14_02_mal.png">INCIDENTE DE TRABAJO</option>
+                            </select>                        
+                        </div>
+                        <div class="col-lg-3 col-md-12 actividad_slide_14">
+                            <img class="img-estructura" src="assets/img/act_slide_14_03_pre.png">
+                            <h4>
+                                Ocurrió un evento de latigazo de tubería con un trabajador lesionado, en ese caso tenemos un:
+
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_03_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_03_mal.png">INCIDENTE DE TRABAJO</option>
+                                <option data-image="act_slide_14_03_ok.png">ACCIDENTE DE TRABAJO</option>
+                                <option data-image="act_slide_14_03_mal.png">ENFERMEDAD LABORAL</option>
+                            </select>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider15 report -->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - blaco -->
+            <div class="col-3 bg-blancoincident col-inline pc-movil-slide-15-1">
+                <div class="phones">
+                    <h1 class="dx2" style="color: var(--blue50);">Reportar un  <br><span class="dx2" style="color: var(--blue25);")> accidente</span></h1>
+                    <h1 class="dx2" style="color: var(--blue50);">es deber de todos en la <br><span style="color: var(--blue75);")>operación</span></h1>
+                </div>
+            </div>
+            <!-- Columna derecha - petroleo  -->
+            <div class="col-9 bg-petroleo2-slide-15 col-inline pc-movil-slide-15-2">
+                <div class="col-lg-10 col-md-12" style="margin-top:50px;">
+                    <div  class="row col-lg-12 col-md-12 mb-5 h-100">
+                        <div class="col-lg-3 col-md-12"><img style="max-width: 75%; margin: 0 auto;" src="assets/img/reportstep1.png"></div>
+                        <div  class="col-lg-9 col-md-12">
+                            <h4 style="color: var(--grey);">¿A quién?</h4>
+                            <p class="white-text-slide-15">Se debe informar al responsable de la visita y al área Q&HS de Aris Mining.</p></div>
+                    </div>
+
+                    <div  class="row col-lg-12 col-md-12 mb-5 h-100">
+                        <div class="col-lg-3 col-md-12"><img  style="max-width: 75%; margin: 0 auto;"  src="assets/img/reportstep2.png"></div>
+                        <div  class="col-lg-9 col-md-12">
+                            <h4 style="color: var(--grey);">¿Cuándo?</h4>
+                            <p class="white-text-slide-15">Se debe informar inmediatamente ocurra el accidente o incidente.</p></div>
+                    </div>
+
+                    <div  class="row col-lg-12 col-md-12 mb-5 h-100">
+                        <div class="col-lg-3 col-md-12"><img  style="max-width: 75%; margin: 0 auto;"  src="assets/img/reportstep3.png"></div>
+                        <div  class="col-lg-9 col-md-12">
+                            <h4 style="color: var(--grey);">¿Cómo?</h4>
+                            <p class="white-text-slide-15">A través de los números de emergencia de la empresa, en superficie marcando al número celular 323-209-3956</p></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider16 risk hazard IZQ-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleosound-slide-16 pc-movil-slide-16-1">
+                <div class="col-lg-12 col-md-12 mt-5 ">
+                    <!-- Contenido a la derecha -->
+                    <img src="assets/img/logo-full.svg" style="max-width: 30%; margin: 0 auto;">
+                    <br>
+                    
+                    <div class="mb-5">
+                        <i class="inst mb-2">En caso de que no puedas ver el video <br> correctamente, escucha estos audios</i> 
+                        <h2 class="dx13w mb-2">¿Qué es un <span style="color: var(--grey);"> Peligro?</span></h2>
+                        <audio id='actividad_6' class="track-element" controls  style="opacity: 0.75;">
+                            <source src="assets/audio/Peligro.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="mb-5">
+                        <h2 class="dx13w mb-2">¿Qué es un <span style="color: var(--grey);"> Riesgo?</span></h2>
+                        <audio controls  style="opacity: 0.75;">
+                            <source src="assets/audio/Riesgo.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-9 bg-azuloscuro-slide-16 pc-movil-slide-16-2">
+                    <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster="assets/img/posterrisk.jpg"  style="max-width:640px; height: 480px;" id='actividad_7' class="track-element">
+                            <source src="assets/video/peligroriesgo.mp4" type="video/mp4">
+                        </video>
+                        <p style="max-width: 640px;" class="mt-2 text-center">
+                            El peligro es la fuente o situación con potencial de causar daño, mientras que el riesgo es la probabilidad de que ese peligro se materialice y cause daño.
+                        </p>
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+
+    <!-- slider17 epp -->        
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-9 bg-azuloscuro pc-movil-slide-17-1">
+                <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster="assets/img/posterepp.jpg" style="max-width:640px; height: 480px;" id="ceo">
+                            <source src="assets/video/epp.mp4" type="video/mp4">
+                        </video>
+                        <p style="max-width: 640px;" class="mt-2 text-center">
+                            Los EPP son clave para prevenir lesiones y enfermedades en el trabajo, garantizando la seguridad del personal y el cumplimiento de regulaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleosound pc-movil-slide-17-2">
+                <div class="col-lg-12 col-md-12 mt-5">
+                    <!-- Contenido a la derecha -->
+                    <img src="assets/img/logo-full.svg" style="max-width: 30%; margin: 0 auto;">
+                    <br>
+                    <br>
+
+                    <div class="mb-5">
+                        <h2 class="dx13w mb-2">Escuchemos recomendaciones con los <span style="color: var(--grey);"> EPP</span></h2>
+                        <audio id='activodad_8' controls style="opacity: 0.75;">
+                            <source src="assets/audio/slide_17_epp.mp3  " type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider18 emergency -->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            <div class="col-lg-9 bg-azuloscuro pc-movil-slide-18-1">
+                <!-- Contenido a la izquierda -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="videocontainer fcenter">
+                        <video controls poster="assets/img/posteremergency.jpg" style="max-width:640px; height: 480px;"
+                            id="actividad_9" class="track-element">
+                            <source src="assets/video/emergencia.mp4" type="video/mp4">
+                        </video>
+
+                        <p style="max-width: 640px;" class="mt-2 text-center">
+                            En una emergencia, mantén la calma, llama a los servicios de emergencia, sigue las indicaciones, ayuda a otros de manera segura y mantente informado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-3 bg-petroleosound pc-movil-slide-18-2">
+                <div class="col-lg-12 col-md-12 mt-5">
+                    <!-- Contenido a la derecha -->
+                    <img src="assets/img/logo-full.svg" style="max-width: 30%; margin: 0 auto;">
+                    <br>
+                    <br>
+                    <div class="mb-5">
+                        <h2 class="dx13w mb-2">¿Sabes qué es una Brigada de <span style="color: var(--grey);"> Emergencia?</span></h2>
+                        <audio controls style="opacity: 0.75;">
+                            <source src="assets/audio/slide_18_emergencia.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- slider19 emergency call IZQ-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-9 bg-blanco-slide-19 pc-movil-slide-19-1" >
+                <div class="listas row" style="margin: 0 auto; margin-top: 130px;">
+                    <h1 class="mb-2 h1-text" style="text-align: center; color: var(--blue75);">
+                        Protocolo para llamar a emergencias
+                    </h1>
+                    <i class="inst mb-2 h1-text">Escucha las llamadas de emergencia correcta e incorrecta, y realiza la actividad</i>
+                   
+                    <h1 class="mb-2 h1-text-movil" style="text-align: center; color: var(--blue75);">
+                        Protocolo para llamar <br>
+                        a emergencias
+                    </h1>
+                    <i class="inst mb-2 h1-text-movil">Escucha las llamadas de emergencia correcta e <br> incorrecta, y realiza la actividad</i>
+
+                    <div class="col-lg-6 col-md-12 pc-movil-llamada">
+                        <h1 style="margin: 0 auto;"><span style="padding-bottom: 15px; color: #89cf89;">Llamada correcta</span><br>
+                            <audio controls class="track-element audio-movil" id="llamada-correcta" style="margin-bottom:15px; margin-top: 15px;">
+                                <source src="assets/audio/MARMATO-llamada-emergencia-correcta.mp3" type="audio/mp3">
+                            </audio>
+                        </h1>	
+                            <ol class="custom-list custom-list-correct"  style=" margin: 0 auto;">
+                                <li>1. Marca al <span class="dx13">3232093956</span>   <span  class="" style="font-size:20px;">245 ó 221</span> </li>
+                                <li>2. Diga su nombre, identifíquese</li>
+                                <li>3. ¿Qué pasó?, descripción breve</li>
+                                <li>4. ¿Cuándo pasó?</li>
+                                <li>5. ¿Dónde pasó? ubicación del evento</li>
+                                <li>6. Si hay personas en riesgos, indique el número</li>
+                                <li>7. Indique que recursos necesita</li>
+                                <li>8. Antes de cortar la llamada, pregunte si puede colgar.</li>
+                            </ol>
+                    </div>
+                    <div class="col-lg-6 col-md-12 pc-movil-llamada">
+                        <h1 class=" " style="  margin: 0 auto;"><span style="margin-bottom: 15px; color:#db8a8a;">Llamada incorrecta</span><br>
+                            <audio controls id="llamada-incorrecta"  style="margin-bottom:15px; margin-top: 15px;">
+                                <source src="assets/audio/MARMATO-llamada-emergencia-incorrecta.mp3" type="audio/mp3">
+                            </audio>
+                        </h1>
+
+                        <ol class="custom-list2 custom-list-incorrect"  style=" margin: 0 auto;">
+                            <i id="textoIncorrecto" style="display: none;" class="inst2 mb-2">Identifica la información faltante, que no se transmite en la llamada</i>
+                            <li>1. Marca al <span class="dx13">3232093956</span><span class="dx13" style="font-size:20px;"> 245 ó 221</span> </li>
+                            <li>2. Diga su nombre, identifíquese</li>
+                            <li>3. ¿Qué pasó?, descripción breve</li>
+                            <li>4. ¿Cuándo pasó?</li>
+                            <li>5. ¿Dónde pasó? ubicación del evento</li>
+                            <li>6. Si hay personas en riesgos, indique el número</li>
+                            <li>7. Indique que recursos necesita</li>
+                            <li>8. Antes de cortar la llamada, pregunte si puede colgar.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Columna derecha - Blanco -->
+            <div class="col-3 bg-petroleoemergency col-inline pc-movil-slide-19-2">
+                    <!-- Contenido a la izquierda -->
+                <div class="phones">
+                    <h1 class="dx13" style="color: var(--blue50);">superficie <br><span class="dx2" style="color: var(--grey);">323 2093956</span></h1>
+                    <h1 class="dx13" style="color: var(--blue50); ">operaciones <br><span class="dx3" style="color: var(--grey); font-size: 35px;">245 ó 221</span></h1>
+                </div>
+            </div>
+
+        </div>
+    </div>    
+
+    <!-- slider20 game cards DER-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            <div class="col-3 bg-petroleo2 col-inline pc-movil-slide-20-1">
+                <div class="contenido-azuloscuro2">
+                    <canvas style="max-width: 200px; max-height: 200px; margin: 0 auto;" id="donutChart02" width="200" height="200"></canvas>
+                    <div id="completionPercentage2"></div>
+                    <!-- Contenido a la izquierda -->
+                    <p  class="instrucciones">  
+                        <span><strong>Instrucciones:</strong></span><br> 
+                        Evalúa las siguientes frases y marca Verdadero o Falso, según corresponda.               
+                    </p>
+                    <img src="assets/img/logo-full.svg" style="max-width: 60%; margin: 0 auto;">
+                </div>
+            </div>
+                <!-- Columna izquierda - Azul petróleo -->
+                <div class="col-9 bg-blanco-slide-20 pc-movil-slide-20-2" >
+                    <div class="col-md-12 col-lg-12">
+                        <div class="actVorF">
+                            <div class="counta">
+                                <span class="inc">1</span>/<span class="tol"></span>
+                            </div>
+                            <div class="itemQ view">
+                                <div class="row">
+                                <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                <p>Las emergencias pueden ser también de origen natural además de las tareas que se ejecutan</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                <img src="assets/img/slide19_01.png" id="img_slide19_01">
+                                </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
+                                </div>
+                            </div>
+                            <div class="itemQ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                        <p>No es importante conocer las rutas y planes de emergencia del lugar en que me encuentre</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                            <img src="assets/img/slide19_02.jpg" id="img_slide19_02">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                                </div>
+                            </div>
+
+                            <div class="itemQ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                        <p>Ejecutar el Análisis de Riesgo es opcional, puedo hacerlo o no antes de ingresar a la operación</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                        <img src="assets/img/slide19_03.png" id="img_slide19_03">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                                </div>
+                            </div>
+
+                            <div class="itemQ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                        <p>Es importante conocer los Puntos de encuentro designados en la zona de trabajo en que me encuentro</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                
+                                        <img src="assets/img/slide19_04.jpg" id="img_slide19_04">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
+                                </div>
+                            </div>
+                            <div class="itemQ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                        <p>Evaluar los riesgos de mi labor, es responsabilidad exclusiva de mi jefe</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                
+                                        <img src="assets/img/slide19_05.png" id="img_slide19_05">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                                </div>
+                            </div>
+
+                            <div class="itemQ">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                        <p>Al hacer una llamada de emergencia es mejor hablar rápido y no identificarme</p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                        <img src="assets/img/slide19_06.png" id="img_slide19_06">
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                    <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                    <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                                </div>
+                            </div>
+
+                            <div class="actFin" style="display:none;">
+                                <p class="my-2 p-res">Respuesta correctas</p>
+                                <h1></h1>
+                            </div>
+                            <br>
+                            <div class="btn-reintentar text-center" style="display: flex; justify-content: center; display:none; padding:15px;">
+                                <a class="btn-success btn-reiniciar" onclick="reiniciarActividad(this);">Reintentar</a>
+                            </div>
+                        </div>
+                      
+
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- slider21  momento3-->
+    <div class="container dividerImg23">
+        <div class="row">
+            <div>
+                <p class="indPag">
+                    <a href="#"><span style="font-weight: 900;">Modulo 1</span> / <span style="font-weight: 700;">Inducción Q&HS</span> / <span style="font-weight: 100;">Momento 3</span></a>
+                </p>
+                <span class="indPagMb"></span>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 top">
+                <h1 class="dx2" style="color: #c3b152;">Momento-3</h1>
+                <hr class="hr-custom">
+                <h1 class="dx3" style="color: var(--primary30);">Hago mi compromiso</h1>
+            </div>
+
+        </div>
+
+            <!-- Modal -->
+    </div>
+
+    <!-- slider22 commitment IZQ-->       
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha - Blanco -->
+            <div class="col-12 bg-petroleo-slide-22 pc-movil-slide-22-1">
+                <div class="contenido-slide-22" >
+                    <!-- Contenido a la izquierda -->
+                    <h1 class="dx2  mt-3" style="color: var(--blue25);">Yo, <span style="color: var(--blue75);"> <?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></span> en mi calidad de visitante:</h1>
+                
+                    <p class="white-text mt-5" style="text-align: justify; width: 100%;">
+                        Como visitante me comprometo a cumplir con las normas y procedimientos, responsabilidades, velar por la conservación del medio ambiente, el uso de los elementos de protección personal que sean suministrados y requeridos durante mi permanencia en las instalaciones de la empresa.
+                    </p>
+                    <p class="white-text  mt-3"  style="text-align: justify; width: 100%;">
+                        Entiendo que no está permitido el ingreso a las instalaciones de la empresa bajo la influencia de sustancias psicoactivas legales o ilegales, ya que pondría en riesgo mi seguridad y la de los demás en la operación.
+                    </p>
+                    <img class="signature-slide-22" src="assets/img/logo-full.svg">
+                    
+                </div>
+                
+            </div>
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-3 bg-blanco col-inline pc-movil-slide-22-2">
+                <div class="contenido-lateral">
+                    <!-- Contenido a la derecha -->
+                    <div style="max-width: 220px; margin: 0 auto;"><img src="assets/img/sld1_commitment.png"></div>	
+                    <br>	
+                        <p class="mt-5 mb-2">Graba un AUDIO leyendo tu COMPROMISO y compartelo en el grupo de Whatsapp con el Equipo Q&HS</p>
+                        <div class="col-md-12">
+                        <button id='grupo_whatsapp' class="btn mt-3 track-element" ><i class="fab fa-whatsapp"></i> Grupo de WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- sliderfinal NO REMOVER -->   
+<div class="container">
+    <h1></h1>
+</div>
+<!--end contentmodule -->
+</div>
+<!-- end  content slider -->
+    <div class="footer">
+        <div class="contCircleBar">
+            <!-- create list circle function 'createProgCircle' -->
+        </div>
+    </div>
+    <div>
+        <!-- button next & prev -->
+        <button id="pagIndex" class="bntNextPrev" onclick="btnPrev()" style="left: 10px;">
+        <i class="fas fa-angle-left"></i>
+        </button>
+        <!-- button next & prev -->
+        <button id="prev" class="bntNextPrev" style="display: none;">
+            <i class="fas fa-angle-left"></i>
+        </button>
+        <!-- button next & prev -->
+        <button id="next" class="bntNextPrev">
+            <i class="fas fa-angle-right"></i>
+        </button>
+    </div>
+</div>
+<!-- end content fluid -->   
+
+
+
+</div>
+
+
+
+    
+    
+      <!-- library javascript -->
+        <script src="assets/js/trackingmanagern3.js"></script>
+        <script src="assets/js/sessvars.js"> </script>
+        <script src="assets/js/touch-dnd.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/interactividad.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+       
+       <script>
+
+          aniSl19(1);
+            function aniSl19(e){
+                
+                // number of slider
+                var sliders = $(".contentModule > div").length;
+                $('#nSlider').html(sliders - 1);
+                // var progressBar = Math.round((e/sliders)*100);
+                // $(".progBar > div").css("width",progressBar+"%");
+                if(e === 1){
+                    $("#prev").css('display','none');
+                    $("#pagIndex").css('display','inline-block');
+                }else{
+                    $("#pagIndex").css('display','none');
+                }
+                if(e === 2){
+                    $("#pagIndex").css('display','none');
+                    $("#next-btn").on('click', function() {
+                        $("#next").click(); 
+                    });
+    
+                }
+                if(e === sliders){
+                    $("#next").css('display','none');
+                    // window.location.href = "quiz.php?course_code=<?= $course_code; ?>";
+                    window.location.href = "quiz.html";
+                }
+                // change background
+                if($('.current').hasClass('dividerImg')){
+                    $('body').addClass('darkStyleimg');
+                } else {
+                    $('body').removeClass('darkStyleimg');
+                }
+    
+                // change background
+                if($('.current').hasClass('dividerImg2')){
+                    $('body').addClass('darkStyleimg2');
+                } else {
+                    $('body').removeClass('darkStyleimg2');
+                }
+    
+                    // change background
+                if($('.current').hasClass('dividerImg21')){
+                    $('body').addClass('darkStyleimg21');
+                } else {
+                    $('body').removeClass('darkStyleimg21');
+                }
+
+                //cambiar fondo seccion1
+                if($('.current').hasClass('dividerImgSeccion1')){
+                    $('body').addClass('darkStyleimgseccion1');
+                } else {
+                    $('body').removeClass('darkStyleimgseccion1');
+                }
+
+
+                // change background
+                if($('.current').hasClass('dividerImg22')){
+                    $('body').addClass('darkStyleimg22');
+                } else {
+                    $('body').removeClass('darkStyleimg22');
+                }
+    
+                // change background
+                if($('.current').hasClass('dividerImg23')){
+                    $('body').addClass('darkStyleimg23');
+                } else {
+                    $('body').removeClass('darkStyleimg23');
+                }
+    
+                // change background
+                if($('.current').hasClass('minaview')){
+                    $('body').addClass('darkStyleimg3');
+                } else {
+                    $('body').removeClass('darkStyleimg3');
+                }
+    
+                // change background
+                if($('.current').hasClass('minatitle')){
+                    $('body').addClass('darkStyleimg4');
+                } else {
+                    $('body').removeClass('darkStyleimg4');
+                }
+    
+    
+                // chenge background
+                if($('.current').hasClass('dividerBg')){
+                    $('body').addClass('darkStyle');
+                } else {
+                    $('body').removeClass('darkStyle');
+                }
+            }
+    
+            // function redirect pag index
+            function btnPrev(){
+                // window.location.href = "index.php?course_code=<?= $course_code; ?>";
+                window.location.href = "index.html";
+            };
+    
+            // trackingManager.init({
+            // 'trackClass': '.track-element',
+            // 'progressEl': '#progreso_01'
+            // },
+            // '<?= $CI->session->userdata('employee_data')['user_id']; ?>', '<?= $unique_course_id; ?>', '<?= $module_id; ?>');
+    
+            // sessvars.fullname     = "<?= $CI->session->userdata('employee_data')['fullname'];  ?>";
+            // sessvars.id_empleado  = "<?= $CI->session->userdata('employee_data')['user_id'];  ?>";
+            
+            // document.addEventListener('visibilitychange', handleVisibilityChange, false);
+        </script>
+</body>
+</html>
