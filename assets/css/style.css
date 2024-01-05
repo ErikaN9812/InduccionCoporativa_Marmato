@@ -69,6 +69,14 @@
             align-items: center;
             position: relative;
         }
+        .bg-petroleo4{
+            background-color: #003a5d; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
 
 
           /*fondo azul petroelo-er*/
@@ -152,7 +160,44 @@
             display: none;
         }
 
+        .pc-movil-slide-1{
+            padding-left: 15%;
+            margin-top:5%;
+        }
+
+        .padding-right{
+            padding-right: 10%;
+        }
+
         @media(max-width: 768px){
+            .bg-petroleo4{
+                background-color: #003a5d; /* Color azul petróleo */
+                height: 50vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: 60px;
+            }
+            .bg-petroleo-v3 {
+                background-color: #133450; /* Color azul petróleo */
+                background-image: url(../img/img-triangulo-fondo-v3.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 65vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: 60px !important;
+            }
+            .padding-right{
+                padding-right: 0%;
+            }
+            .pc-movil-slide-1{
+                padding-left: 5%;
+                margin-top:5%;
+            }
             .pc-slide-8{
                 display: none;
             }
@@ -363,7 +408,7 @@
             padding: 0%;
             text-align: center;
         }
-
+       
         
         .pc{
             display: block;
@@ -376,7 +421,10 @@
             width: 40% !important; 
             margin-top: 30px;
         }
-        
+        .pc-movil-mapa1-left{
+            margin-left: 60px;
+        }
+
         .pc-movil-mapa2{
             width: 60% !important; 
             background-color: rgb(233, 228, 228);
@@ -413,15 +461,32 @@
             align-items: center;
             position: relative;
         }
+        .pc-movil-slide-7-1{
+            width: 50% !important; 
+            margin-top:40px;
+        }
+        .pc-movil-slide-7-2{
+            width: 50% !important; 
+            margin-top:40px;
+        }
         .pc-movil-slide-10-1{
             width: 40% !important; 
             margin-top:40px;
         }
+        
         .pc-movil-slide-10-2{
             width: 60% !important;
             margin-top:40px;
         }
         .bg-azuloscuro2 {
+            background-color: #071835; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .bg-azuloscuro4 {
             background-color: #071835; /* Color blanco */
             height: 100vh;
             z-index: 0;
@@ -657,7 +722,81 @@
         select option {
             text-align: center;
         }
+
+        .dx3-v3{
+            font-size: 3em;
+            text-align: left;
+            word-wrap: break-word; 
+            overflow-wrap: break-word;
+            white-space: normal;
+            
+        }
+
+        .dx2-v3{
+            font-size: 2em;
+            text-align: left;
+            word-wrap: break-word; 
+            overflow-wrap: break-word;
+            white-space: normal;
+            color: var(--primary30); 
+            padding-left: 15%; 
+            margin-top:2%;
+        }
+        .left{
+            padding-left: 15%; 
+        }
         @media (max-width: 768px) {
+            .bg-blancofondominera {
+                background-image: url(../img/fondo-minero24.jpg) ;
+                background-color: #fff; /* Color blanco */
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 60vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .bg-azuloscuro4 {
+                background-color: #071835; /* Color blanco */
+                height: 60vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .pc-movil-mapa1-left{
+                margin-left: 0px;
+            }
+            .left{
+                padding-left: 3%; 
+                margin-top:0%;
+            }            
+            .dx2-v3{
+                font-size: 2em;
+                text-align: center;
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                white-space: normal;
+                color: var(--primary30); 
+                padding-left: 0%; 
+                margin-top:2%;
+            }
+            .contenido-central-2 {
+                margin-right: 0px; /* Ajusta el margen derecho para dispositivos móviles */
+                margin-left: 0px;  /* Ajusta el margen izquierdo para dispositivos móviles */
+                max-width: 93%;
+                padding: 0%;
+                text-align: center;
+            }
+    
+            .dx3-v3{
+                font-size: 2.5em;
+                text-align: left;
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
             .magin-pc-movil{
                 margin-top: 80px
             }
@@ -910,6 +1049,14 @@
                 align-items: center;
                 position: relative;
             }
+            .pc-movil-slide-7-1{
+                width: 100% !important; 
+                margin-top:100px;
+            }
+            .pc-movil-slide-7-2{
+                width: 100% !important; 
+                margin-top:0px;
+            }
             .pc-movil-slide-10-1{
                 width: 100% !important; 
                 margin-top:40px;
@@ -920,12 +1067,12 @@
             }
             .bg-blanco2 {
                 background-color: #fff; /* Color blanco */
-                height: 65vh;
+                height: 55vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
                 position: relative;
-                margin-top: 80px !important;
+                margin-top: 60px !important;
             } 
 
             .col-inline-politicas {
@@ -1013,6 +1160,8 @@
                 text-align: center;
             }
 
+          
+
             .bg-petroleoh {
                 background-color: #003A5D; /* Color azul petróleo */
                 height: 50%;
@@ -1062,13 +1211,13 @@
                 padding: 3%;
                 text-align: center;
             }
-            .contenido-central {
+            /* .contenido-central {
                 margin-right: 0px;
                 margin-left: 0px;
                 max-width: 100%;
                 padding: 3%;
                 text-align: center;
-            }
+            } */
             .footer {
                 height: 0px;
                 position: relative;
@@ -1346,7 +1495,9 @@ video::-webkit-media-controls-panel {
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
-  
+    color: #0B3D5C; 
+    padding-left: 15%; 
+    margin-top:10%;
 }
 
 .dx2{
@@ -1365,7 +1516,6 @@ video::-webkit-media-controls-panel {
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
-
 }
 
 
@@ -1562,6 +1712,16 @@ button.btn {
     box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
 }
 @media (max-width: 700px) {
+    .dx3-v2{
+        font-size: 3em;
+        text-align: left;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+        white-space: normal;
+        color: #0B3D5C; 
+        padding-left: 15%; 
+        margin-top:2%;
+    }
     button.btn {
         margin: 15px auto 0px;
     }
@@ -2046,7 +2206,7 @@ iframe:after {
         height: 55px;
     }    
 
-    }
+}
 
 
 .accordion-button {
@@ -2158,6 +2318,10 @@ iframe:after {
     background-position: right;
     background-size: contain;  
 }
+.hide-nine-back{
+    display: none;
+    margin-top: 70px;
+}
 
 .darkStyleimg22 {
     background: url(../../assets/img/bluebg2.png);
@@ -2188,12 +2352,26 @@ iframe:after {
 }
 
 @media (max-width:734px) {
+    
     .darkStyleimg21 {
         background: url(../../assets/img/fondo_02_slide_04.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
         height: 40vh;
+    }
+
+    .hide-nine-back{
+        display: block;
+    }
+
+    .darkStyleimgseccion1 {
+        background: url();
+        background-repeat: 0;
+        background-size: 0;
+        background-position: 0;
+        height: 0;
+        
     }
     .darkStyleimg22 {
         background: url(../../assets/img/bluebg2.png);
@@ -2232,13 +2410,28 @@ iframe:after {
         margin-top:100px;
      }
 }
+.top-slide-1-2{
+    padding-left: 5%; 
+    margin-top:0%; 
+    width:40%;
+}
+
 
  /*reponsive un minuto*/  
  @media (max-width: 768px){
+    .top-slide-14{
+        margin-top:70px;
+     }
     .top-slide-1{
-            margin-top:150px;
-         }
+        margin-top:150px;
     }
+    
+    .top-slide-1-2{
+        padding-left: 0%; 
+        margin-top:0%; 
+        width:100%;
+    }
+}
 
 .glass {
   padding: 5%; /* Espacio interno deseado */
