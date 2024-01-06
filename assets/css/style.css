@@ -61,6 +61,16 @@
             position: relative;
         }
 
+        /*color petroleo 80%*/
+        .bg-petroleo80 {
+            background-color: #17637E; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
         .bg-petroleo2 {
             background-color: #003a5d; /* Color azul petróleo */
             height: 100vh;
@@ -86,6 +96,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             display: flex;
+            height: 100vh;
             align-items: center;
             position: relative;
         }
@@ -103,6 +114,19 @@
             position: relative;
         }
 
+
+        /*Fondo como entendemos la minera*/
+         .bg-petroleo-v4min {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulos-v3-minera.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
 
         .bg-petroleo-slide-7{
             background-color: #003a5d; /* Color azul petróleo */
@@ -167,6 +191,13 @@
 
         .padding-right{
             padding-right: 10%;
+        }
+
+        .padding-left-1{
+            margin-right: 60px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 0%;
         }
 
         @media(max-width: 768px){
@@ -785,7 +816,7 @@
             .contenido-central-2 {
                 margin-right: 0px; /* Ajusta el margen derecho para dispositivos móviles */
                 margin-left: 0px;  /* Ajusta el margen izquierdo para dispositivos móviles */
-                max-width: 93%;
+                max-width: 100%;
                 padding: 0%;
                 text-align: center;
             }
@@ -1283,7 +1314,90 @@
             }
         }
 
-        
+  
+/*Estilo carrusel*/
+.slider-box{
+    width: 500px;
+    height: auto;
+    margin:50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+    list-style-type: none;
+    width: 100%;
+}
+
+.slider-box img{
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100;}
+    45% {margin-left: -100;}
+
+    50% {margin-left: -200;} 
+    70% {margin-left: -200;} 
+
+    75% {margin-left: -300;} 
+    100% {margin-left: -300;} 
+}
+
+@media (max-width: 991px) {
+    .slider-box
+    {
+        width: 340px;
+    } 
+}
+
+/*otro estilo carrusel*/
+.slider{
+    width: 500px;
+    height: auto;
+    margin:50px auto 0;
+    overflow: hidden;
+}
+
+.silder .slider-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+    -webkit-animation: scroll 40s linear infinite;
+}
+
+.slider .slide {
+    width: 100%;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-animation: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-animation: translateX(calc 200px * 7);
+        transform: translateX(calc 200px * 7);
+    }
+}
+
+
+
+
 
 .img-estructura{
     max-height: 15rem;
@@ -1356,13 +1470,15 @@
 	padding: 0;
 	margin: 0;
 }
+
 p, a, ul, li, label {
 	font-size: 1rem;
-	font-family: 'DM Sans', sans-serif;
+	font-family: 'Futura Bk BT', sans-serif;
 	color: #8f8f8f;
     font-weight: 500;
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -2305,6 +2421,7 @@ iframe:after {
     background-position: center;
     background-size: cover;  
 }
+
 .darkStyleimg21 {
     background: url(../../assets/img/bluebg1.png);
     background-repeat: no-repeat;
@@ -2318,6 +2435,15 @@ iframe:after {
     background-position: right;
     background-size: contain;  
 }
+
+.darkStyleimgdiversidad1 {
+    background: url(../../assets/img/Fondo-diversidad.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;  
+}
+
+
 .hide-nine-back{
     display: none;
     margin-top: 70px;
