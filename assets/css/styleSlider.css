@@ -30,6 +30,19 @@
     font-size: 13px; 
 
 }
+
+/*ref de mision y vision*/
+.current i.inst3 {
+	padding: 5px  5px;
+    border-radius: 5px;
+    background: #fdbf6030;
+    color: #f4a630;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    max-width: 300px;
+}
+
 .pc-slide-8{
     display: block;
 }

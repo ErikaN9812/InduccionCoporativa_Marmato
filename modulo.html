@@ -316,7 +316,7 @@
                 <div class="pc-movil-mapa1-left">
                     <!-- Contenido a la izquierda azul-->
                         <img src="assets/img/operacion-minera.png" style="max-width: 200%; margin: 0 auto;">
-                    <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_06" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
+                    <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_07" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
                         VER VIDEO</button>
                 </div>
             </div>
@@ -329,7 +329,7 @@
                 </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="slide_06" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="slide_07" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -391,6 +391,10 @@
                     <p style="text-align: justify !important; width: 70%; color: #ffff"> Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras
                         y responsables bajo estándares de nivel   </p>
                     <br>
+                    <audio controls id='actividad_3' class="track-element">
+                        <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="inst3 mb-2">Haga clic para ejecutar el audio</i>
                 </div>
             </div>
             <!-- Columna derecha - Blanco -->
@@ -401,6 +405,10 @@
                     <br>   
                     <p style="text-align: justify !important; width: 70%;" >  Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.</p>
                     <br>
+                    <audio controls id='actividad_3' class="track-element">
+                        <source src="assets/audio/Vision-audio.mp3" type="audio/mp3">
+                    </audio>
+                    <i class="inst3 mb-2">Haga clic para ejecutar el audio</i>
                 </div>
             </div>
         </div>
@@ -426,7 +434,7 @@
                     <br>
                    
                     <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_06" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
-                            VER VIDEO</button>
+                        VER VIDEO</button>
                 </div>
             </div>
             <!-- Columna derecha - Fondo -->
@@ -451,7 +459,7 @@
                 </div>
             </div>
             </div>
-        </div>      
+        </div>     
 
     </div>
     <!--Fin como entedemos la minera-->
@@ -462,6 +470,7 @@
             <div class="col-lg-12 col-md-12"  style="display: grid; place-items: center;" >
                 <img src="assets/img/seccion-diversidad.png" data-bs-toggle="modal" data-bs-target="#slide_09" style="cursor:pointe; text-align: center !important; width: 30%;" align="center">
             </div>  
+
         </div>
         <!-- Modal -->
         <div class="modal fade" id="slide_09" tabindex="-1" aria-hidden="true">
@@ -469,7 +478,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <h5 class="modal-title">Ver video</h5>
-                <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                 <video controls poster  class="mx-auto">
@@ -614,6 +623,27 @@
     </div>
 
     <!--Fin actividad de vestuario-->
+
+     <!--Inicio Seccion 02-->
+     <div class="container back dividerImgSeccion2" id="dividerImgSeccion2">
+        <div class="row">
+        
+            <div class="hide-nine-back">
+                <img src="assets/img/Fondo-seccion2.jpg" alt="">
+            </div>
+            
+            <div class="col-lg-6 col-md-12 left">
+                <h1 class="dx3-v2">&gt; Sección 2</h1>
+                <hr class="hr-custom"> 
+                <h4 class="dx2-v3">Reconoce los beneficios de
+                    trabajar con nosotros</h4>
+            </div>
+        </div>
+    </div>
+    <!--Fin Seccion2-->
+
+
+
 
 
 
@@ -1571,6 +1601,14 @@
                     $('#dividerImgSeccion1').addClass('darkStyleimgseccion1');
                 } else {
                     $('#dividerImgSeccion1').removeClass('darkStyleimgseccion1');
+                }
+
+
+                //cambiar fondo seccion2
+                if($('.back').hasClass('dividerImgSeccion2')){
+                    $('#dividerImgSeccion2').addClass('darkStyleimgseccion2');
+                } else {
+                    $('#dividerImgSeccion2').removeClass('darkStyleimgseccion2');
                 }
 
                 //cambiar fondo de Diversidad

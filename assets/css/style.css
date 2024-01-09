@@ -2021,12 +2021,15 @@ button.btn-sm {
     list-style: none;
     padding: 0;
 }
+
 .headerOpc ul li {
     background: #fafafa;
     padding: 10px;
     border-radius: 10px;
     margin: 5px;
 }
+
+
 .headerOpc ul li:hover {
     background: #e7e7e7;
 }
@@ -2454,6 +2457,15 @@ iframe:after {
     background-position: right;
     background-size: contain;  
 }
+
+/*seccion 2*/
+.darkStyleimgseccion2 {
+    background: url(../../assets/img/Fondo-seccion2.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;  
+}
+
 
 .darkStyleimgdiversidad1 {
     background: url(../../assets/img/Fondo-diversidad.jpg);
