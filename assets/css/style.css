@@ -88,6 +88,15 @@
             position: relative;
         }
 
+        .bg-petroleov5 {
+            background-color: #133450; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
 
           /*fondo azul petroelo-er*/
         .bg-petroleo-v2 {
@@ -121,6 +130,19 @@
             background-image: url(../img/triangulos-v3-minera.png);
             background-repeat: no-repeat;
             background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+         /*Fondo beneficios 1 polizas*/
+         .bg-beneficiospoliza1 {
+            background-image: url(../img/beneficios-1-poliza.JPG) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -1331,6 +1353,7 @@
     margin:50px auto 0;
     overflow: hidden;
 }
+
 
 .slider-box ul{
     display: flex;
