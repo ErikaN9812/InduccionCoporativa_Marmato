@@ -49,6 +49,8 @@
     <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/mod.csstransforms.min.js"></script>
     <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/circle.player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 </head>
 <body style="padding-left: 0px !important; padding-right: 0px !important;">
@@ -158,6 +160,21 @@
                     <li>
                         <img src="assets/img/slide/Slide-4.jpg" alt="">
                     </li>
+<<<<<<< HEAD
+=======
+                    <li>
+                        <img src="assets/img/slide/Slide-5.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/img/slide/Slide-6.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/img/slide/Slide-7.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="assets/img/slide/Slide-8.jpg" alt="">
+                    </li>
+>>>>>>> 424453c1469b7d9769c26aea4f5e7d3fb4930c8a
                 </ul>
                </div>
             </div>
@@ -498,40 +515,42 @@
     <div class="container divided-backgroundv3">
         <div class="row">
             <!-- Columna top -->
-            <div class="col-lg-12 col-md-12">
+            <div class="col-lg-12 col-md-12" style="margin-top:40px">
                 <h1 class="text-valores text-center">Valores</h1>
-                <h4 style="color: var(--white);" class="mb-5 text-center">Organiza en orden alfabético los valores que
-                    hacen parte de nuestra organización</h4>
             </div>
-            
-            <!-- Columna bottom-->
-            <div class="col-lg-12 col-md-12 ">
-                <div class="contenido-central-2">
-                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <div class="col-lg-3 col-md-12">
-                            <img  class="img-estructura"  src="assets/img/actividad-valores/valor2-eficencia.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img  class="img-estructura"  src="assets/img/actividad-valores/valor5-seguridad.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img class="img-estructura" src="assets/img/actividad-valores/valor3-gestion.png">
-                        </div>
-                    </div>
+        
+            <div class="col-md-12 col-lg-12" >
+                <i class="inst mb-2">Organiza en orden alfabético los valores que hacen parte de nuestra organización</i>
+                <div class="center-actividad">
+                    <ul id="actOrderElement">
+                        <li class="ui-state-default" value="2">
+                            <img src="assets/img/actividad-valores/valor2-eficencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="5">
+                            <img src="assets/img/actividad-valores/valor5-seguridad.png"> 
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="3">
+                            <img src="assets/img/actividad-valores/valor3-gestion.png" >
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="1">
+                            <img src="assets/img/actividad-valores/valor1-coexistencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="6">
+                            <img src="assets/img/actividad-valores/valor6-transparencia.png">
+                            <img class="ico" src="">
+                        </li>
+                        <li class="ui-state-default" value="4">
+                            <img src="assets/img/actividad-valores/valor4-inversion.png">
+                            <img class="ico" src="">
+                        </li>
+                      </ul>
                 </div>
-                <div class="contenido-central-2">
-                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <div class="col-lg-3 col-md-12">
-                            <img  class="img-estructura"  src="assets/img/actividad-valores/valor1-coexistencia.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img  class="img-estructura"  src="assets/img/actividad-valores/valor6-transparencia.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img class="img-estructura" src="assets/img/actividad-valores/valor6-transparencia.png">
-                        </div>
-                    </div>
-                </div>
+                <button class="btn btn-warning" onclick="actOrderElement()" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
+                    Verificar</button>
             </div>
         </div>
     </div>
@@ -572,9 +591,14 @@
     <div class="container">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 bg-petroleo-v4min col-inline" style="padding-left: 10%; padding-right: 10%;">
+            <div class="bg-petroleo-v4min col-inline" style="width: 35%;">
                 <div class="col-lg-12 col-md-12">
+<<<<<<< HEAD
                     <h1 style="color: var(--white); text-align: center;">Que sigas el código de
+=======
+                    <h1 style="color: var(--white); text-align: center;">Que sigas el códgio de
+                        <br>
+>>>>>>> 424453c1469b7d9769c26aea4f5e7d3fb4930c8a
                     <span style="color: var(--grey)"> Vestuario</span></h1> 
 
                     <ul>
@@ -592,18 +616,31 @@
                 </div>
             </div>
             <!-- Columna derecha - Fondo -->
-            <div class="col-lg-6 col-inline">
-                <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                    <div class="col-lg-3 col-md-12">
-                        <img  class="img-vestuario"  src="assets/img/vestuario-1.png">
+            <div class="" style="width: 65%; margin-top: 70px">
+                <div class="col-md-12 col-lg-12">
+                    <i class="inst mb-2">Arrastra las partes de la imagen que se relacionen con el tipo de riesgos indicado</i>
+                    <div class="actPuzzle">
+                        <div>
+                            <img id="actPuzzleDra01" src="assets/img/vestuario-1.png">
+                            <img id="actPuzzleDra03" src="assets/img/vestuario-3.png">
+                            <img id="actPuzzleDra02" src="assets/img/vestuario-2.png">
+                        </div>
+                        <div>
+                            <div id="actPuzzleDro01">
+                                <!-- <img class="imgPz" src="assets/img/marco_actividad.png"> -->
+                            </div>
+                            <div id="actPuzzleDro02">
+                                <!-- <img class="imgPz" src="assets/img/marco_actividad.png"> -->
+                            </div>
+                            <div id="actPuzzleDro03">
+                                <!-- <img class="imgPz" src="assets/img/marco_actividad.png"> -->
+                            </div>
+                            <audio id="audio-puzzle" controls poster  class="mx-auto" hidden>
+                                <source src="assets/audio/Vestuario-Operativo.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
                     </div>
-                    <div class="col-lg-3  col-md-12">
-                        <img  class="img-vestuario"  src="assets/img/vestuario-2.png">
-                    </div>
-                    <div class="col-lg-3  col-md-12">
-                        <img class="img-vestuario" src="assets/img/vestuario-3.png">
-                    </div>
-                </div>
+                  </div>
             </div>
         </div>
 

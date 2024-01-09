@@ -1,5 +1,72 @@
 $(document).ready(function () {
 
+
+    //img 01 grag & drop
+  $("#actPuzzleDra01").draggable({
+      snap: '#actPuzzleDro01'
+  });
+  $("#actPuzzleDro01").droppable({
+      accept: '#actPuzzleDra01'
+  }).on('droppable:drop',function(e){
+      $(this).find('.imgPz').remove();
+      reproducirAudio();
+    });
+
+  //img02 grag & drop
+  $("#actPuzzleDra02").draggable({
+  snap: '#actPuzzleDro02'
+    });
+    $("#actPuzzleDro02").droppable({
+        accept: '#actPuzzleDra02'
+  }).on('droppable:drop',function(e){
+    $(this).find('.imgPz').remove();
+  });
+
+  //img03 grag & drop
+  $("#actPuzzleDra03").draggable({
+  snap: '#actPuzzleDro03'
+    });
+    $("#actPuzzleDro03").droppable({
+        accept: '#actPuzzleDra03'
+  }).on('droppable:drop',function(e){
+    $(this).find('.imgPz').remove();
+  });
+
+
+
+  // Configuración Carrusel
+ var intervaloTiempo = 2000;
+ var $slider = $('.slider-box ul');
+ 
+ function moverSlide() {
+     $slider.find('li:first').fadeOut(1000, function() {
+         // Mueve el primer elemento al final
+         $slider.find('li:last').after($slider.find('li:first'));
+         $slider.find('li:first').show();
+     });
+ }
+
+ // Inicia el carrusel
+ var intervalo = setInterval(moverSlide, intervaloTiempo);
+
+ // Detiene el carrusel al pasar el mouse sobre él
+ $('.slider-box').hover(function() {
+     clearInterval(intervalo);
+ }, function() {
+     intervalo = setInterval(moverSlide, intervaloTiempo);
+ });
+
+ $(function() {
+  $("#actOrderElement").sortable({
+    revert: true,
+    stop: function(event, ui) {
+      console.log("pl");
+    }
+  });
+  $( "#actOrderElement" ).disableSelection();
+});
+
+
   //TRACKING
   $("#actividad_1").on("click", function() {
     trackingManager.startTracking("actividad_1");
@@ -119,6 +186,7 @@ $(document).ready(function () {
   });
 
   
+
   var logoImage = document.getElementById("logoImage");
   function checkScreenWidth() {
       var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
@@ -133,6 +201,28 @@ $(document).ready(function () {
   });
 
 });
+
+function reproducirAudio() {
+  var audioPuzzle = document.getElementById('audio-puzzle');
+  if (audioPuzzle) {
+      audioPuzzle.play();
+  }
+}
+
+function actOrderElement(){
+  let cont = 0;
+  for(var i = 1; i <= $("#actOrderElement li").length; i++) {
+    if($("#actOrderElement li:nth-child(" + i + ")").attr("value") == i) {
+      $("#actOrderElement li:nth-child(" + i + ") img").addClass("correct");
+      $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/checkAct.png");
+      cont++
+    } else {
+      $("#actOrderElement li:nth-child(" + i + ") img").addClass("incorrect");
+      $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/xmarkAct.png");
+    }
+  }
+}
+
 
 function updateProgress(){
   let code_course = $('#course_code').val();
@@ -191,32 +281,6 @@ function reproducirAudioImagen(){
   });
 }
 
-// let cont;
-// let video_slide_14 = document.getElementById("slide_14_actividad");
-
-// video_slide_14.ontimeupdate = function () {
-//   slide_14_actividad();
-// };
-
-// function slide_14_actividad() {
-//   if (cont !== parseInt(video_slide_14.currentTime)) {
-//     switch (parseInt(video_slide_14.currentTime)) {
-//       case 7:
-//         action();
-//         $(".slide_14 .ctItem01").show();
-//         break;
-//       case 15:
-//         action();
-//         $(".slide_14 .ctItem02").show();
-//         break;
-//       case 25:
-//         action();
-//         $(".slide_14 .ctItem03").show();
-//         break;
-//     }
-//     cont = parseInt(video_slide_14.currentTime);
-//   }
-// }
 
 var result;
 var elemt;
