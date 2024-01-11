@@ -43,6 +43,21 @@
     max-width: 300px;
 }
 
+/*ref beneficios*/
+.current p.inst4{
+    padding: 5px  5px;
+    border-radius: 5px;
+    background: #fdbf6030;
+    color: #f4a630;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    max-width: 300px;
+    line-height: 1.3rem;
+    font-family: 'Alata';
+    font-size: 16px;
+}
+
 .pc-slide-8{
     display: block;
 }

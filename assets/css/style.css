@@ -137,9 +137,9 @@
             position: relative;
         }
 
-         /*Fondo beneficios 1 polizas*/
+         /*Fondo beneficios 1 poliza*/
          .bg-beneficiospoliza1 {
-            background-image: url(../img/beneficios-1-poliza.JPG) ;
+            background-image: url(../img/beneficio1-poliza.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
@@ -149,6 +149,34 @@
             align-items: center;
             position: relative;
         }
+
+        /*Fondo beneficios 2 auxilio*/
+        .bg-beneficiosauxilio1 {
+            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        
+        /*Fondo beneficios 3 transporte*/
+        .bg-beneficiostransporte1 {
+            background-image: url(../img/beneficio3-transporte.jpg) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
 
         .bg-petroleo-slide-7{
             background-color: #003a5d; /* Color azul petróleo */
@@ -1616,6 +1644,12 @@
     margin-top: -7rem; 
 }
 
+/*Imagen beneficios*/
+.beneficios img{
+    width: 80%;
+    margin-left: 10%;
+}
+
 
 
 .img-legal{
@@ -1683,12 +1717,25 @@
 }
 
 p, a, ul, li, label {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-family: 'Futura Bk BT', sans-serif;
 	color: #8f8f8f;
     font-weight: 500;
     margin: 0;
+    line-height: 1.5rem;
 }
+
+
+/*listado vestuario*/
+ .listado ul, li {
+	font-size: 1.2rem;
+	font-family: 'Futura Bk BT', sans-serif;
+	color: #fff;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6rem;
+}
+
 
 a {
     text-decoration: none;
@@ -1924,7 +1971,7 @@ iframe {
 }
 h1 {
     color: var(--secondary);
-    line-height: .9;
+    line-height: 1.1;
     font-weight: 800;
     font-size: 2.2rem;
 }
