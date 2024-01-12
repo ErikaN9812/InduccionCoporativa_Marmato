@@ -423,6 +423,14 @@
             padding: 3%;
             text-align: center;
         }
+
+        /*estilo animaciones*/
+        .contenido-lateralv2 {
+            margin-right: 60px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 3%;
+        }
         
         
         .contenido-azuloscuro {
@@ -1760,6 +1768,7 @@ p, a, ul, li, label {
     font-weight: 500;
     margin: 0;
     line-height: 1.6rem;
+    text-align: justify;
 }
 
 
