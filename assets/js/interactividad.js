@@ -56,103 +56,6 @@ $('.slider-box').hover(function() {
    intervalo = setInterval(moverSlide, intervaloTiempo);
 });
 
-<<<<<<< HEAD
-  $("#actividad_6").on({
-    play:function(){
-      trackingManager.startTracking("actividad_6");
-      trackingManager.stopTracking("actividad_6");
-    }
-  });
-
-  $("#actividad_7").on({
-    play:function(){
-      trackingManager.startTracking("actividad_7");
-      trackingManager.stopTracking("actividad_7");
-    }
-  });
-
-  $("#actividad_8").on({
-    play:function(){
-      trackingManager.startTracking("actividad_8");
-      trackingManager.stopTracking("actividad_8");
-    }
-  });
-
-  $("#actividad_9").on({
-    play:function(){
-      trackingManager.startTracking("actividad_9");
-      trackingManager.stopTracking("actividad_9");
-    }
-  });
-
-  $("#llamada-correcta").on({
-    play:function(){
-      trackingManager.startTracking("llamada-correcta");
-      trackingManager.stopTracking("llamada-correcta");
-    }
-  });
-
-  $("#grupo_whatsapp").on("click", function() {
-    trackingManager.startTracking("grupo_whatsapp");
-    trackingManager.stopTracking("grupo_whatsapp");
-  });
-
-  
-  // Comportamiento de acordeón en dispositivos móviles
-  $(".accordion-label").click(function () {
-    $(this).siblings(".accordion-content").slideToggle();
-  });
-
-  setTimeout(() => {
-    $(".actVorF .tol").html($(".itemQ").length);
-  }, "2000");
-
-  $("#drop1, #drop2, #drop3, #drop4, #drop5, #drop6").on("droppable:drop",
-    function (e) {
-      $(this).addClass("corret");
-      actualizarProgreso(); // Llama a la función para actualizar el progreso
-    }
-  );
-
-  $("#grupo_whatsapp").click(function () {
-    window.open('https://chat.whatsapp.com/G91Vr9cBLlwAWaXGmS1cB9','_blank');
-  });
-
-  arrastrarElemento();
-  // actualizarGrafico();
-  // actualizarGrafico2();
-  // listaLlamadaCorrecta();
-  // listaLlamadaIncorrecta();
-  pausarMultimedia();
-  reproducirAudioImagen();
-
-  var selects = document.querySelectorAll('.select-opcion');
-
-  // Itera sobre cada select y agrega un evento de cambio
-  selects.forEach(function(select) {
-      select.addEventListener('change', function() {
-          // Obtén el valor y la imagen asociada de la opción seleccionada
-          var selectedValue = select.value;
-          var selectedImage = select.options[select.selectedIndex].getAttribute('data-image');
-
-          // Obtén la imagen dentro del div padre del select actual
-          var image = select.closest('.actividad_slide_14').querySelector('.img-estructura');
-
-          // Cambia la fuente de la imagen según la opción seleccionada
-          image.src = 'assets/img/' + (selectedImage);
-      });
-  });
-
-  
-
-  // var logoImage = document.getElementById("logoImage");
-  // function checkScreenWidth() {
-  //     var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
-  //     logoImage.src = newImageSrc;
-  // }
-  // window.onload = checkScreenWidth;
-  // window.addEventListener("resize", checkScreenWidth);
-=======
 $(function() {
 $("#actOrderElement").sortable({
   revert: true,
@@ -162,7 +65,6 @@ $("#actOrderElement").sortable({
 });
 $( "#actOrderElement" ).disableSelection();
 });
->>>>>>> ramaErika
 
 
 //TRACKING
@@ -697,20 +599,6 @@ if (allowNextSlide) {
 }
 
 function updateSlide() {
-<<<<<<< HEAD
-  allowNextSlide = false;
-
-  // Cambiar la imagen
-  const newImageSrc = `assets/img/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.png`;
-  console.log(newImageSrc);
-  image.src = newImageSrc;
-  image.style.cursor = "pointer";
-
-  const newBackgroundImageSrc = `assets/img/${titles2[currentIndex].getAttribute("data-title").toLowerCase()}.jpg`;
-  backgroundImageDiv.style.backgroundImage = `url(${newBackgroundImageSrc})`;
-
-  allowNextSlide = true;
-=======
 allowNextSlide = false;
 
 // Cambiar la imagen
@@ -723,7 +611,6 @@ const newBackgroundImageSrc = `assets/img/${titles2[currentIndex].getAttribute("
 backgroundImageDiv.style.backgroundImage = `url(${newBackgroundImageSrc})`;
 
 allowNextSlide = true;
->>>>>>> ramaErika
 
 }
 
