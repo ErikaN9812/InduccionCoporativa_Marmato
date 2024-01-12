@@ -161,10 +161,10 @@ $(document).ready(function () {
   });
 
   arrastrarElemento();
-  actualizarGrafico();
-  actualizarGrafico2();
-  listaLlamadaCorrecta();
-  listaLlamadaIncorrecta();
+  // actualizarGrafico();
+  // actualizarGrafico2();
+  // listaLlamadaCorrecta();
+  // listaLlamadaIncorrecta();
   pausarMultimedia();
   reproducirAudioImagen();
 
@@ -187,13 +187,13 @@ $(document).ready(function () {
 
   
 
-  var logoImage = document.getElementById("logoImage");
-  function checkScreenWidth() {
-      var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
-      logoImage.src = newImageSrc;
-  }
-  window.onload = checkScreenWidth;
-  window.addEventListener("resize", checkScreenWidth);
+  // var logoImage = document.getElementById("logoImage");
+  // function checkScreenWidth() {
+  //     var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
+  //     logoImage.src = newImageSrc;
+  // }
+  // window.onload = checkScreenWidth;
+  // window.addEventListener("resize", checkScreenWidth);
 
   //Actualizar el progreso del curso cada vez que se avanza en los slides
   $("#next").on('click', function() {
@@ -572,10 +572,12 @@ function actVorF(el, res) {
 
 
 
-const titles = document.querySelectorAll(".rulest h4");
-const image = document.querySelector("#img_slide12");
-const audio_slide_12 = new Audio();
-let currentIndex = -1;
+const titles = document.querySelectorAll(".rulest h2");
+const image = document.querySelector("#img_slide13");
+const backgroundImageDiv = document.querySelector(".bg-slide-13");
+const titles2 = document.querySelectorAll(".bg-slide-13 h2");
+
+let currentIndex = 0;
 let allowNextSlide = true;
 let prev = false;
 
@@ -598,41 +600,18 @@ function nextSlide() {
 
 function updateSlide() {
   allowNextSlide = false;
-  // Remover el fondo resaltado de todos los títulos
-  titles.forEach((title) => {
-    title.style.backgroundColor = "transparent";
-    title.style.border = "transparent";
-    title.style.borderRadius = "10px";
-  });
 
-  // Resaltar el título actual
-  titles[currentIndex].style.backgroundColor = "rgba(0, 122, 243, 0.20)";
   // Cambiar la imagen
-  const newImageSrc = `assets/img/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.jpg`;
+  const newImageSrc = `assets/img/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.png`;
+  console.log(newImageSrc);
   image.src = newImageSrc;
   image.style.cursor = "pointer";
-  // Detener la reproducción actual y reproducir el nuevo audio
-  audio_slide_12.pause();
-  audio_slide_12.src = `assets/audio/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.mp3`;
-  audio_slide_12.play();
 
-  audio_slide_12.addEventListener("timeupdate", function () {
-    if (audio_slide_12.currentTime >= audio_slide_12.duration - 5) {
-      allowNextSlide = true;
-    }
-  });
+  const newBackgroundImageSrc = `assets/img/${titles2[currentIndex].getAttribute("data-title").toLowerCase()}.jpg`;
+  backgroundImageDiv.style.backgroundImage = `url(${newBackgroundImageSrc})`;
 
-  image.addEventListener("click", function () {
-    if (audio_slide_12.paused) {
-      audio_slide_12.play();
-    } else {
-      audio_slide_12.pause();
-    }
-  });
+  allowNextSlide = true;
 
-  $("#prev, #next").on("click", function () {
-    audio_slide_12.pause();
-  });
 }
 
 let completion = 0.0;
