@@ -177,6 +177,19 @@
             position: relative;
         }
 
+        /*Fondo votacion*/
+        .bg-votacion {
+            background-image: url(../img/fondo-votacion.jpg) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
 
         .bg-petroleo-slide-7{
             background-color: #003a5d; /* Color azul petróleo */
@@ -566,6 +579,19 @@
             padding: 0;
             flex-wrap: wrap;
         }
+
+        /*actividad riesgos*/
+        #actOrderElement1 {
+            max-width: 1500px;
+            list-style: none;
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+
+
+
         #actOrderElement li {
             position: relative;
             margin: 10px;
@@ -2704,6 +2730,15 @@ iframe:after {
     background-position: right;
     background-size: contain;  
 }
+
+/*seccion 3*/
+.darkStyleimgseccion3 {
+    background: url(../../assets/img/Fondo-seccion3.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;  
+}
+
 
 
 .darkStyleimgdiversidad1 {
