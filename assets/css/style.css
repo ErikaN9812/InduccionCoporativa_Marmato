@@ -151,7 +151,7 @@
             background-image: url(../img/triangulos-v3-minera.png);
             background-repeat: no-repeat;
             background-size: contain;
-            height: 112vh;
+            height: 100vh;
             z-index: 0;
             display: flex;
             align-items: center;
@@ -783,6 +783,17 @@
             align-items: center;
             position: relative;
         }
+
+        /*fondo color video*/
+        .bg-azuloscuro3 {
+            background-color: #022249; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
         .bg-azuloscuro4 {
             background-color: #071835; /* Color blanco */
             height: 100vh;
@@ -1711,23 +1722,46 @@
 
 
 .img-estructura{
+    max-height: 16rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -10rem;
+}
+
+.img-estructura2{
     max-height: 15rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
     height: auto;
-    margin-top: -7rem; 
+    margin-top: -3rem;
 }
+
 
 /*Arrastrar imagen de vestuario*/
 .img-vestuario{
-    max-height: 25rem;
+    max-height: 27rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
     height: auto;
-    margin-top: -7rem; 
+    margin-top: -7rem;
+    z-index: -1;
 }
+
+/*icono mas vestuario*/
+.icono {
+    position: absolute;
+    max-height: 27rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
 
 /*Imagen beneficios*/
 .beneficios img{
@@ -1950,7 +1984,7 @@ video::-webkit-media-controls-panel {
 }
 
 .dx3-v2{
-    font-size: 3em;
+    font-size: 5em;
     text-align: left;
     word-wrap: break-word; 
     overflow-wrap: break-word;
