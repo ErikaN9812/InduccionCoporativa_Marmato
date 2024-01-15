@@ -495,14 +495,14 @@ function preguntas02(){
 
   video.addEventListener("timeupdate", function() {
       var currentTime = video.currentTime;
-      if (currentTime >= 80) {
+      if (currentTime >= 86) {
           // $('.custom-split-div').hide();
           actividad_h_02.css('display', 'block'); 
       }
 
       video.addEventListener("seeked", function () {
           var currentTime = video.currentTime;
-          if (currentTime >= 80) {
+          if (currentTime >= 86) {
               // $('.custom-split-div').hide();
               actividad_h_02.css('display', 'block'); 
           }
