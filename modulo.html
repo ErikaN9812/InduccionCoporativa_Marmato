@@ -32,6 +32,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styleSlider.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/actividades.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700">
 
@@ -50,6 +51,8 @@
     <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/circle.player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="assets/js/magnify/css/magnify.css" />
 
 
 </head>
@@ -515,7 +518,9 @@
                 <div class="col-lg-12 col-md-12" align="center">
                     <h1 style="color: var(--white)">Conozcamos a<span style="color: var(--grey)"> nuestras directivas</span></h1>
                     <br>   
-                    <img src="assets/img/Organigrama-actualizado.png" alt="" style="text-align: center !important; width: 50%;" align="center">
+                    <img src="assets/img/Organigrama-actualizado.png" alt="" class="zoom img-zomm"
+                    style="text-align: center !important; width: 50%;" align="center"
+                    data-magnify-src="assets/img/organigrama_full.png">
 
                 </div>
             </div>
@@ -788,7 +793,20 @@
                         que como colaborador tienes para ayudar a prevenir
                         estos riesgos de lavado de activos en nuestra operación</p>
 
-                        <img src="assets/img/votacion.png" alt="" style="width: 60%; text-align: center !important">
+                    <div class="rating">
+                        <input type="radio" name="estrellas" id="estrella1" value="1">
+                        <label for="estrella1"></label>
+                        <input type="radio" name="estrellas" id="estrella2" value="2">
+                        <label for="estrella2"></label>
+                        <input type="radio" name="estrellas" id="estrella3" value="3">
+                        <label for="estrella3"></label>
+                        <input type="radio" name="estrellas" id="estrella4" value="4">
+                        <label for="estrella4"></label>
+                        <input type="radio" name="estrellas" id="estrella5" value="5">
+                        <label for="estrella5"></label>
+                    </div>
+                    <br>
+					<p class="resultado"></p>
                     <i class="inst mb-2">Selecciona la votación</i>
                 </div>
             </div>
@@ -800,38 +818,36 @@
     <!--Fin Actividad de calificacion-->
 
     <!--Inicio Actividad lavado de activos-->
-    <div class="container">
+    <div class="container preguntas_01">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo80" >
                 <div class="padding-left-1">
                     <h3 class="dx2-v2" style="color: #ffff; margin-top: 5%;"> Veamos este caso relacionado con <br>LAVADO DE ACTIVOS,
-                        <br>y ayúdale a Hugo a PREVENIR este riesgo:
+                       y ayúdale a Hugo  <br> a PREVENIR este riesgo:
                     </h3>
-                    <h4 style="color:#ffff">¿Qué crees que debe hacer Hugo,<br>
-                        frente a esta propuesta de Paco?
-                    </h4>
-                    <ul class="listado" style="width: 85%; margin-top: 5%;">
-                        <li>
-                            a. La propuesta de Paco no tiene nada de malo y Hugo la debe aceptar
-                        </li>
-                        <li>
-                            b. La propuesta de Paco es una propuesta tentadora de la que Hugo no se debe negar
-                        </li>    
-                        <li>
-                            c. La propuesta de Paco es un acto de corrupción y debe ser rechazada por Hugo
-                        </li>
-                        <li>d. Hugo debe denunciar la propuesta de Paco, ante la Línea de Denuncia y Ética de Cuyano Mining
-                        </li>  
-                        <li style="color: #c2c2c2">Las respuestas “c” y “d” son correctas</li> 
-                    </ul>
+                    
+                    <div class="ctItem" id='actividad_h_01' style="display: none;">
+                        <h4 style="color:var(--primary);">¿Qué crees que debe hacer Hugo,
+                            frente a esta <br>propuesta de Paco?
+                        </h4>
+                        <div>
+                            <p onclick="Questions(this, false)">a. La propuesta de Paco no tiene nada de malo y Hugo la debe aceptar.</p>
+                            <p onclick="Questions(this, false)">b. La propuesta de Paco es una propuesta tentadora de la que Hugo no se debe negar.</p>
+                            <p onclick="Questions(this, true)">c. La propuesta de Paco es un acto de corrupción y debe ser rechazada por Hugo.</p>
+                            <p onclick="Questions(this, true)">d. Hugo debe denunciar la propuesta de Paco, ante la Línea de Denuncia y Ética de Cuyano Mining</p>
+                        </div>
+                        <i class="inst" id='respuesta' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid' onclick="valid(2)">Validar</button>
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo" >
                 <div class="videocontainer fcenter">
                     <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
-                    <video class="video-slide-13" controls poster="assets/img/portada-videocaso-activo.jpg" id="Video Caso Lavado de activos">
+                    <video id="preguntas_01" class="video-slide-13" controls poster="assets/img/portada-videocaso-activo.jpg" id="Video Caso Lavado de activos">
                         <source src="assets/video/Caso2-lavado-activo.mp4" type="video/mp4">
                     </video>
                 </div>  
@@ -841,43 +857,39 @@
    <!--Fin de actividad lavado de activos-->
 
        <!--Inicio Conflicto de interes-->
-       <div class="container">
+       <div class="container preguntas_02">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo80" >
-                <div class="padding-left-1">
-                    <h3 class="dx2-v2" style="color: #ffff; margin-top: 15%;"> Observa este VIDEO-CASO que puede ocurrir en nuestra<br>
+            <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo80-v2" >
+                <div class="padding-left-2">
+                    <h3 class="dx2-v2" style="color: #ffff; margin-top: 5%;"> Observa este VIDEO-CASO que puede ocurrir en nuestra
                         operación y escoge las opciones correctas
                     </h3>
-                    <h4 style="color:#ffff">¿Qué es y qué debes hacer en caso de CONFLICTO DE INTERES?
-                    </h4>
-                    <p style="color:#ffff">Selecciona las acciones y consecuencias que consideras que ocurrirán, luego de que Eloisa<br>
-                        ha conversado con su jefe, acerca de su situación de CONFLICTO DE INTERES
-                    </p>
-                    <ul class="listado" style="width: 85%; margin-top: 5%;">
-                        <li>
-                             No pasará nada, ya que el sólo hecho de contárselo a su jefe ya es suficiente
-                        </li>
-                        <!--respuesta correcta--> <li>
-                             No tendrá consecuencias negatIvas para Eloisa, quien además es bien vista por su jefe
-                            y colegas al ayudar a la ética y transparencia en la organizacion
-                        </li>    
-                       <!--respuesta correcta-->  <li>
-                             El jefe de Eloisa se lo comunicará al Oficial de cumplimiento de la empresa, quien realizará la debida diligencia.
-                        </li>
-                        <!--respuesta correcta--> <li> El oficial de cumplimiento, hará que Eloisa diligencie y firme el formato de Conflicto de interés de la empresa
-                        </li> 
-                        <li>
-                            Tendrá consecuencias negativas para Eloisa, quien no podrá volver a hablar con su hermano
-                        </li> 
-                    </ul>
+                    <div class="ctItem" id='actividad_h_02' style="display: none;">
+                        <h4 style="color:var(--primary);">¿Qué es y qué debes hacer en caso de CONFLICTO DE INTERES?
+                        </h4>
+                        <h5 style="color:var(--primary80)">Selecciona las acciones y consecuencias que consideras que ocurrirán, luego de que Eloisa
+                            ha conversado con su jefe, acerca de su situación de CONFLICTO DE INTERES
+                        </h5>
+                        <div>
+                            <p onclick="Questions2(this, false)">a. No pasará nada, ya que el sólo hecho de contárselo a su jefe ya es suficiente.</p>
+                            <p onclick="Questions2(this, true)">b. No tendrá consecuencias negatIvas para Eloisa, quien además es bien vista por su jefe
+                                y colegas al ayudar a la ética y transparencia en la organizacion.</p>
+                            <p onclick="Questions2(this, true)">c. El jefe de Eloisa se lo comunicará al Oficial de cumplimiento de la empresa, quien realizará la debida diligencia.</p>
+                            <p onclick="Questions2(this, true)">d. El oficial de cumplimiento, hará que Eloisa diligencie y firme el formato de Conflicto de interés de la empresa.</p>
+                            <p onclick="Questions2(this, false)">e. Tendrá consecuencias negativas para Eloisa, quien no podrá volver a hablar con su hermano.</p>
+                        </div>
+                        <i class="inst" id='respuesta2' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal2' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid2' onclick="valid2(3)">Validar</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo" >
+            <div class="col-lg-6 col-md-12 top-slide-14 bg-petroleo-v5" >
                 <div class="videocontainer fcenter">
                     <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
-                    <video class="video-slide-13" controls poster="assets/img/portada-videocaso-activo.jpg" id="ceo">
+                    <video id="preguntas_02" class="video-slide-13" controls poster="assets/img/portada-videocaso-activo.jpg" id="ceo">
                         <source src="assets/video/Caso 3-Conflicto-de-Interes.mp4" type="video/mp4">
                     </video>
                 </div>  
@@ -924,6 +936,7 @@
         <script src="assets/js/sessvars.js"> </script>
         <script src="assets/js/touch-dnd.js"></script>
         <script src="assets/js/script.js"></script>
+        <script type="text/javascript" src="assets/js/magnify/js/jquery.magnify.js"></script>
         <script src="assets/js/interactividad.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

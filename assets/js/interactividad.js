@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
-
+  $('.zoom').magnify();
+  sistemaVotacion();
+  preguntas01();
+  preguntas02();
   //img 01 grag & drop
 $("#actPuzzleDra01").draggable({
     snap: '#actPuzzleDro01'
@@ -197,10 +200,95 @@ selects.forEach(function(select) {
 
 //Actualizar el progreso del curso cada vez que se avanza en los slides
 $("#next").on('click', function() {
-  updateProgress();
+  // updateProgress();
 });
 
 });
+
+var results = [];
+var elements = [];
+
+function Questions01(el, e) {
+    var index = elements.indexOf(el);
+    if (index === -1) {
+        elements.push(el);
+        results.push(e);
+    } else {
+        results[index] = e;
+    }
+    
+    $(el).addClass('act');
+}
+
+function sistemaVotacion(){
+  const estrellas = document.querySelectorAll('input[name="estrellas"]');
+  const resultado = document.querySelector('.resultado');
+  const estrellasLabels = document.querySelectorAll('.rating label');
+  // const course_code = $('#course_code').val();
+  // const module_id = $('#module_id').val();
+  // const unique_course_id = $('#unique_course_id').val();
+
+
+   // Función para obtener la calificación guardada en la base de datos
+  //  function obtenerCalificacionGuardada() {
+  //     $.ajax({
+  //         type: "POST",
+  //         url: "../../functions_helpers.php?sistema_votacion=2", // Cambia la URL a una que maneje la obtención de la calificación guardada
+  //         data: {
+  //             course_code: course_code,
+  //             module_id: module_id,
+  //             unique_course_id: unique_course_id
+  //         },
+  //         success: function (response) {
+
+  //             if (response ) {
+  //                 let responseData = JSON.parse(response);
+  //                 let numEstrellas = responseData.num_estrellas;
+  //                 resultado.innerHTML = `Has calificado con ${numEstrellas} estrella${numEstrellas === 1 ? '' : 's'}.<br>¡Gracias por tu calificación!`;
+  //                 estrellasLabels.forEach((label, i) => {
+  //                     if (i < numEstrellas) {
+  //                         label.style.backgroundImage = 'url("assets/img/estrella-llena.png")';
+  //                     } else {
+  //                         label.style.backgroundImage = 'url("assets/img/estrella-vacia.png")';
+  //                     }
+  //                 });
+  //             }
+  //         }
+  //     });
+  //  }
+
+  // obtenerCalificacionGuardada();
+
+  estrellas.forEach((estrella, index) => {
+      estrella.addEventListener('change', () => {
+          resultado.innerHTML = `Has calificado con ${estrella.value} estrella${estrella.value === '1' ? '' : 's'}.<br>¡Gracias por tu calificación!`;
+          
+          // Llena todas las estrellas anteriores a la seleccionada
+          estrellasLabels.forEach((label, i) => {
+              if (i <= index) {
+                  label.style.backgroundImage = 'url("assets/img/estrella-llena.png")'; 
+              } else {
+                  label.style.backgroundImage = 'url("assets/img/estrella-vacia.png")'; 
+              }
+          });
+          //Guardar el numero de estrellas con que calificación
+          // $.ajax({
+          //     type: "POST", 
+          //     url: "../../functions_helpers.php?sistema_votacion=1",
+          //     data: {
+          //         num_estrella: estrella.value,
+          //         course_code : course_code,
+          //         module_id : module_id,
+          //         unique_course_id : unique_course_id
+          //     },
+          //     success: function (response) {
+          //         console.log(response);
+          //     }
+          // });
+      });
+  });
+}
+
 
 function reproducirAudio() {
 var audioPuzzle = document.getElementById('audio-puzzle');
@@ -281,37 +369,155 @@ elementosInline.forEach(function (elemento) {
 });
 }
 
+var results = [];
+var elements = [];
 
-var result;
-var elemt;
-function actividad_slide_14(el, e) {
-result = e;
-elemt = el;
-$(".slide_14 .ctItem > div p").removeClass();
-$(el).addClass("act");
+function Questions(el, e) {
+    var index = elements.indexOf(el);
+    if (index === -1) {
+        elements.push(el);
+        results.push(e);
+    } else {
+        results[index] = e;
+    }
+    
+    $(el).addClass('act');
 }
-function valid() {
-$(".slide_14 .ctItem > div p").removeClass();
-if (result) {
-  $(".slide_14 .ctItem .inst").html("Respuesta correcta");
-  $(".slide_14 .ctItem .inst").show();
-  $(".slide_14 .ctItem button").hide();
-  $(".record").show();
-  $(elemt).addClass("true");
-  video_slide_14.play(6);
 
-} else {
-  $(".slide_14 .ctItem .inst").html("Respuesta incorrecta");
-  $(".slide_14 .ctItem .inst").show();
-  $(elemt).addClass("false");
+function valid(numCorrect) {
+  var correctCount = 0;
+  // var malCount = 0;
+  for (var i = 0; i < elements.length; i++) {
+      if (results[i] ) {
+          $(elements[i]).addClass('true');
+          correctCount++;
+          if(correctCount == numCorrect){
+              $('#respuesta_mal').hide();
+              $('#respuesta').html('Respuesta correcta');
+              $('#respuesta').show();
+          }else{
+              $('#respuesta_mal').html('Respuesta incorrecta');
+              $('#respuesta_mal').show();
+          }
+      } else {
+          $('#respuesta_mal').html('Respuesta incorrecta');
+          $('#respuesta_mal').show();
+          $(elements[i]).addClass('false');
+      }
+  }
+
+  if (correctCount == numCorrect) {
+      for (var i = 0; i < elements.length; i++) {
+          $(elements[i]).removeClass('false');
+          $(elements[i]).removeClass('act');
+      }
+      $('#btn-valid').hide();
+  }
+
 }
+
+
+function preguntas01(){
+  var video  = document.getElementById('preguntas_01');
+  var actividad_h_01 = $('#actividad_h_01');
+
+  video.addEventListener("timeupdate", function() {
+      var currentTime = video.currentTime;
+      if (currentTime >= 73) {
+          // $('.custom-split-div').hide();
+          actividad_h_01.css('display', 'block'); 
+      }
+
+      video.addEventListener("seeked", function () {
+          var currentTime = video.currentTime;
+          if (currentTime >= 73) {
+              // $('.custom-split-div').hide();
+              actividad_h_01.css('display', 'block'); 
+          }
+          
+      });
+
+  });
 }
+
+var results2 = [];
+var elements2 = [];
+
+function Questions2(el, e) {
+    var index = elements2.indexOf(el);
+    if (index === -1) {
+        elements2.push(el);
+        results2.push(e);
+    } else {
+        results2[index] = e;
+    }
+    
+    $(el).addClass('act');
+}
+
+
+
+function valid2(numCorrect) {
+  var correctCount = 0;
+  // var malCount = 0;
+  for (var i = 0; i < elements2.length; i++) {
+      if (results2[i] ) {
+          $(elements2[i]).addClass('true');
+          correctCount++;
+          if(correctCount == numCorrect){
+              $('#respuesta_mal2').hide();
+              $('#respuesta2').html('Respuesta correcta');
+              $('#respuesta2').show();
+          }else{
+              $('#respuesta_mal2').html('Respuesta incorrecta');
+              $('#respuesta_mal2').show();
+          }
+      } else {
+          $('#respuesta_mal2').html('Respuesta incorrecta');
+          $('#respuesta_mal2').show();
+          $(elements2[i]).addClass('false');
+      }
+  }
+
+  if (correctCount == numCorrect) {
+      for (var i = 0; i < elements2.length; i++) {
+          $(elements2[i]).removeClass('false');
+          $(elements2[i]).removeClass('act');
+      }
+      $('#btn-valid2').hide();
+  }
+
+}
+
+function preguntas02(){
+  var video  = document.getElementById('preguntas_02');
+  var actividad_h_02 = $('#actividad_h_02');
+
+  video.addEventListener("timeupdate", function() {
+      var currentTime = video.currentTime;
+      if (currentTime >= 80) {
+          // $('.custom-split-div').hide();
+          actividad_h_02.css('display', 'block'); 
+      }
+
+      video.addEventListener("seeked", function () {
+          var currentTime = video.currentTime;
+          if (currentTime >= 80) {
+              // $('.custom-split-div').hide();
+              actividad_h_02.css('display', 'block'); 
+          }
+          
+      });
+
+  });
+}
+
 function action() {
-$(".slide_14 .ctItem").hide();
-$(".slide_14 .ctItem button").show();
-$(".slide_14 .ctItem .inst").hide();
-$(".record").hide();
-video_slide_14.pause();
+  $(".slide_14 .ctItem").hide();
+  $(".slide_14 .ctItem button").show();
+  $(".slide_14 .ctItem .inst").hide();
+  $(".record").hide();
+  video_slide_14.pause();
 }
 
 function pausarMultimedia() {

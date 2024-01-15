@@ -59,6 +59,27 @@
             display: flex;
             align-items: center;
             position: relative;
+            
+        }
+
+        .bg-petroleo-v5{
+            background-color: #2c3e50; /* Color azul petróleo */
+            height: 110vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 35%;
+        }
+
+        .bg-petroleo80-v2{
+            background-color: #17637E; /* Color azul petróleo */
+            height: 110vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 65%;
         }
 
         /*color petroleo 80%*/
@@ -257,8 +278,16 @@
         }
 
         .padding-left-1{
-            margin-right: 60px;
+            margin-right: 0px;
             margin-left: 60px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+        .padding-left-2{
+            margin-right: 0px;
+            margin-left: 60px;
+            margin-top: 0px;
             max-width: 100%;
             padding: 0%;
         }
@@ -1012,6 +1041,28 @@
         }
         .left{
             padding-left: 15%; 
+        }
+        .rating {
+            display: inline-block;
+            font-size: 0;
+        }
+        
+        .rating input {
+            display: none;
+        }
+        
+        .rating label {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-image: url('../../assets/img/estrella-vacia.png'); /* Cambia 'estrella-vacia.png' por tu imagen de estrella vacía */
+            background-size: cover;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+        
+        .rating input:checked + label {
+            background-image: url('../../assets/img/estrella-llena.png'); /* Cambia 'estrella-llena.png' por tu imagen de estrella llena */
         }
         @media (max-width: 768px) {
             .bg-blancofondominera {

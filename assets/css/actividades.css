@@ -1,0 +1,74 @@
+.preguntas_01 .ctItem {
+    background: #ebebeb;
+    padding: 15px;  
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+.preguntas_01 .ctItem > div p,
+.preguntas_01 .record {
+    background: #f7f7f7;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 18px !important;
+}
+.preguntas_01 .ctItem > div p.act {
+    background: #353846;
+    color: #fff;
+}
+.preguntas_01 .ctItem > div p:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #8f8f8f;
+}
+.preguntas_01 .ctItem > div p.false {
+    background: #f36572;
+    color: #fff;
+}
+.preguntas_01 .ctItem > div p.true {
+    background: #65f38a;
+    color: #fff;
+}
+.current i.inst_mal {
+	padding: 5px  10px;
+    border-radius: 5px;
+    background: #fdbf6030;
+    color: #b40000;
+    display: block;
+    text-align: center;
+    margin-top: 8px; 
+}
+
+.preguntas_02 .ctItem {
+    background: #ebebeb;
+    padding: 15px;  
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+.preguntas_02 .ctItem > div p,
+.preguntas_02 .record {
+    background: #f7f7f7;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 15px !important;
+}
+.preguntas_02 .ctItem > div p.act {
+    background: #353846;
+    color: #fff;
+}
+.preguntas_02 .ctItem > div p:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #8f8f8f;
+}
+.preguntas_02 .ctItem > div p.false {
+    background: #f36572;
+    color: #fff;
+}
+.preguntas_02 .ctItem > div p.true {
+    background: #65f38a;
+    color: #fff;
+}
