@@ -61,7 +61,7 @@
             position: relative;
             
         }
-
+ 
         /*background casos*/
         .bg-petroleocasos {
             background-color: #0B3E5D;
@@ -138,6 +138,16 @@
             background-size: contain;
             display: flex;
             height: 100vh;
+            align-items: center;
+            position: relative;
+        }
+        .bg-petroleo-v4 {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/img-triangulo-fondo-v3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            height: 120vh;
             align-items: center;
             position: relative;
         }
@@ -631,94 +641,7 @@
             display: grid;
             place-items: center;
         }
-        #actOrderElement {
-            max-width: 700px;
-            list-style: none;
-            display: flex;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-        /*actividad riesgos*/
-        #actOrderElement1 {
-            max-width: 1500px;
-            list-style: none;
-            display: flex;
-            padding: 0;
-            flex-wrap: wrap;
-        }
-
-
-
-
-        #actOrderElement li {
-            position: relative;
-            margin: 10px;
-        /*    height: 93px;*/
-        }
-     
-        #actOrderElement li img:hover {
-            /* border: 2px solid #00a0ae; */
-            filter: brightness(0.8);
-            transform: scale(1.01);
-            transition: .2s;
-            cursor: pointer;
-        }
-        #actOrderElement li img.ico {
-            position: absolute;
-            max-width: 50px;
-            border: none !important;
-            bottom: 5px;
-            left: 0;
-            right: 0;
-        }
-        #actOrderElement li:active {
-            z-index: 2;
-        }
-        #actOrderElement img {
-            max-width: 200px;
-        }
-        #actOrderElement li img.incorrect {
-            border: 3px solid #FF5F5F;
-        }
-        #actOrderElement li img.correct {
-            border: 3px solid #66f948;
-        }
-        #actOrderElement {
-            display: flex;
-        }
-        #actOrderElement02 {
-            display: none;
-        }
-
-        @media (max-width: 992px) {
-            #actOrderElement img {
-                max-width: 80px;
-            }
-            #actOrderElement {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr; 
-            }
-            .slider12 button {
-                display: none;
-            }
-            #actOrderElement {
-                display: none;
-            }
-            #actOrderElement02 {
-                display: flex;
-                flex-wrap: wrap;
-                list-style: none;
-                padding: 0;
-            }
-            #actOrderElement02 li {
-                margin: 10px;
-                border: 1px solid #333;
-                    width: 80px;
-            }
-        }
-        
-
+       
 
         .contenido-central {
             margin-right: 60px;
@@ -771,7 +694,25 @@
             display: flex;
             align-items: center;
             position: relative;
+
         } 
+        .bg-blanco-bienvenida{
+            background-color: #fff; /* Color blanco */
+            height: 85vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .bg-petroleo-bienvenida{
+            background-color: #2c3e50; /* Color azul petróleo */
+            height: 85vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 40%;
+        }
         .bg-petroleo3 {
             background-color: #003a5d; /* Color azul petróleo */
             height: 100vh;
@@ -1648,76 +1589,7 @@
         }
 
   
-/*Estilo carrusel*/
-/* .slider-box{
-    width: 500px;
-    height: auto;
-    margin:50px auto 0;
-    overflow: hidden;
-}
 
-
-.slider-box ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-box li{
-    list-style-type: none;
-    width: 100%;
-}
-
-.slider-box img{
-    width: 100%;
-} */
-
-.slider-box ul {
-    text-align: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.slider-box ul li {
-    margin-top: 50px;
-    display: none;
-    text-align: center;
-}
-
-.slider-box ul li img {
-
-    margin: 0 auto;
-    display: block; 
-    max-width: 57%;  /* Ajusta esto según tus necesidades */
-    
-}
-.slider-box {
-    position: relative;
-}
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-
-    25% {margin-left: -100;}
-    45% {margin-left: -100;}
-
-    50% {margin-left: -200;} 
-    70% {margin-left: -200;} 
-
-    75% {margin-left: -300;} 
-    100% {margin-left: -300;} 
-}
-
-@media (max-width: 991px) {
-    .slider-box
-    {
-        width: 340px;
-    } 
-}
 
 /*otro estilo carrusel*/
 .slider{
@@ -2167,6 +2039,11 @@ img {
 audio {
     width: 100%;
     max-width: 400px;
+}
+.audio-bienvenida {
+    width: 100%;
+    max-width: 100%;
+
 }
 audio:focus {
     outline: inherit !important;

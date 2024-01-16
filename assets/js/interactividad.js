@@ -37,36 +37,24 @@ snap: '#actPuzzleDro03'
 
 
 
-// Configuración Carrusel
-var intervaloTiempo = 2000;
-var $slider = $('.slider-box ul');
 
-function moverSlide() {
-   $slider.find('li:first').fadeOut(1000, function() {
-       // Mueve el primer elemento al final
-       $slider.find('li:last').after($slider.find('li:first'));
-       $slider.find('li:first').show();
-   });
-}
-
-// Inicia el carrusel
-var intervalo = setInterval(moverSlide, intervaloTiempo);
-
-// Detiene el carrusel al pasar el mouse sobre él
-$('.slider-box').hover(function() {
-   clearInterval(intervalo);
-}, function() {
-   intervalo = setInterval(moverSlide, intervaloTiempo);
-});
 
 $(function() {
-$("#actOrderElement").sortable({
-  revert: true,
-  stop: function(event, ui) {
-    console.log("pl");
-  }
-});
-$( "#actOrderElement" ).disableSelection();
+  $("#actOrderElement").sortable({
+    revert: true,
+    stop: function(event, ui) {
+      console.log("pl");
+    }
+  });
+  $( "#actOrderElement" ).disableSelection();
+
+  $("#actOrderElement2").sortable({
+    revert: true,
+    stop: function(event, ui) {
+      console.log("pl");
+    }
+  });
+  $( "#actOrderElement2" ).disableSelection();
 });
 
 
@@ -171,39 +159,94 @@ arrastrarElemento();
 pausarMultimedia();
 reproducirAudioImagen();
 
-var selects = document.querySelectorAll('.select-opcion');
+  var selects = document.querySelectorAll('.select-opcion');
 
-// Itera sobre cada select y agrega un evento de cambio
-selects.forEach(function(select) {
-    select.addEventListener('change', function() {
-        // Obtén el valor y la imagen asociada de la opción seleccionada
-        var selectedValue = select.value;
-        var selectedImage = select.options[select.selectedIndex].getAttribute('data-image');
+  // Itera sobre cada select y agrega un evento de cambio
+  selects.forEach(function(select) {
+      select.addEventListener('change', function() {
+          // Obtén el valor y la imagen asociada de la opción seleccionada
+          var selectedValue = select.value;
+          var selectedImage = select.options[select.selectedIndex].getAttribute('data-image');
 
-        // Obtén la imagen dentro del div padre del select actual
-        var image = select.closest('.actividad_slide_14').querySelector('.img-estructura');
+          // Obtén la imagen dentro del div padre del select actual
+          var image = select.closest('.actividad_slide_14').querySelector('.img-estructura');
 
-        // Cambia la fuente de la imagen según la opción seleccionada
-        image.src = 'assets/img/' + (selectedImage);
-    });
-});
+          // Cambia la fuente de la imagen según la opción seleccionada
+          image.src = 'assets/img/' + (selectedImage);
+      });
+  });
 
 
 
-// var logoImage = document.getElementById("logoImage");
-// function checkScreenWidth() {
-//     var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
-//     logoImage.src = newImageSrc;
-// }
-// window.onload = checkScreenWidth;
+  // var logoImage = document.getElementById("logoImage");
+  // function checkScreenWidth() {
+  //     var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
+  //     logoImage.src = newImageSrc;
+  // }
+  // window.onload = checkScreenWidth;
 // window.addEventListener("resize", checkScreenWidth);
 
-//Actualizar el progreso del curso cada vez que se avanza en los slides
-$("#next").on('click', function() {
-  // updateProgress();
-});
+  //Actualizar el progreso del curso cada vez que se avanza en los slides
+  $("#next").on('click', function() {
+    // updateProgress();
+  });
+  var carrusel_img = document.getElementById("carrusel");
+  carrusel_img.style.backgroundImage = 'url(assets/img/slide/Slide-1.jpg)';
+  carrusel();
+  popsAudios();
 
 });
+
+function popsAudios(){
+  var iconos = document.querySelectorAll('.icono');
+  var currentAudio = null;
+  iconos.forEach(function (icono, index) {
+      icono.addEventListener('click', function () {
+          toggleAudio(icono.id, 'audio' + (index + 1));
+      });
+  });
+
+  function toggleAudio(iconId, audioId) {
+      var audio = document.getElementById(audioId);
+
+      if (currentAudio && currentAudio !== audio) {
+          currentAudio.pause();
+      }
+
+      if (audio.paused) {
+          audio.play();
+          currentAudio = audio;
+      } else {
+          audio.pause();
+          currentAudio = null;
+      }
+  }
+}
+
+function carrusel() {
+  var carrusel = document.getElementById("carrusel");
+  var images = [];
+
+  // Generar URLs de imágenes con un bucle
+  for (var i = 1; i <= 8; i++) {
+    var img = document.createElement("img");
+    img.src = `assets/img/slide/Slide-${i}.jpg`;
+    carrusel.appendChild(img);
+    images.push(img);
+      // images.push(`url(assets/img/slide/Slide-${i}.jpg)`);
+  }
+
+  var currentImageIndex = 0;
+
+  function changeImage() {
+    images[currentImageIndex].classList.remove("active-img");
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      images[currentImageIndex].classList.add("active-img");
+  }
+  images[currentImageIndex].classList.add("active-img");
+  // Cambiar la imagen cada dos segundos
+  setInterval(changeImage, 2100);
+}
 
 var results = [];
 var elements = [];
@@ -298,17 +341,32 @@ if (audioPuzzle) {
 }
 
 function actOrderElement(){
-let cont = 0;
-for(var i = 1; i <= $("#actOrderElement li").length; i++) {
-  if($("#actOrderElement li:nth-child(" + i + ")").attr("value") == i) {
-    $("#actOrderElement li:nth-child(" + i + ") img").addClass("correct");
-    $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/checkAct.png");
-    cont++
-  } else {
-    $("#actOrderElement li:nth-child(" + i + ") img").addClass("incorrect");
-    $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/xmarkAct.png");
+  let cont = 0;
+  for(var i = 1; i <= $("#actOrderElement li").length; i++) {
+    if($("#actOrderElement li:nth-child(" + i + ")").attr("value") == i) {
+      $("#actOrderElement li:nth-child(" + i + ") img").addClass("correct");
+      $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/checkAct.png");
+      cont++
+    } else {
+      $("#actOrderElement li:nth-child(" + i + ") img").addClass("incorrect");
+      $("#actOrderElement li:nth-child(" + i + ") .ico").attr("src", "assets/img/xmarkAct.png");
+    }
   }
 }
+
+
+function actOrderElement2(){
+  let cont = 0;
+  for(var i = 1; i <= $("#actOrderElement2 li").length; i++) {
+    if($("#actOrderElement2 li:nth-child(" + i + ")").attr("value") == i) {
+      $("#actOrderElement2 li:nth-child(" + i + ") img").addClass("correct");
+      $("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "assets/img/checkAct.png");
+      cont++
+    } else {
+      $("#actOrderElement2 li:nth-child(" + i + ") img").addClass("incorrect");
+      $("#actOrderElement2 li:nth-child(" + i + ") .ico").attr("src", "assets/img/xmarkAct.png");
+    }
+  }
 }
 
 
