@@ -4,6 +4,8 @@ $(document).ready(function () {
   sistemaVotacion();
   preguntas01();
   preguntas02();
+  preguntas03();
+  preguntas04();
   //img 01 grag & drop
 $("#actPuzzleDra01").draggable({
     snap: '#actPuzzleDro01'
@@ -498,6 +500,8 @@ function preguntas01(){
   });
 }
 
+// PREGUNTAS 02
+
 var results2 = [];
 var elements2 = [];
 
@@ -553,14 +557,14 @@ function preguntas02(){
 
   video.addEventListener("timeupdate", function() {
       var currentTime = video.currentTime;
-      if (currentTime >= 86) {
+      if (currentTime >= 70) {
           // $('.custom-split-div').hide();
           actividad_h_02.css('display', 'block'); 
       }
 
       video.addEventListener("seeked", function () {
           var currentTime = video.currentTime;
-          if (currentTime >= 86) {
+          if (currentTime >= 70) {
               // $('.custom-split-div').hide();
               actividad_h_02.css('display', 'block'); 
           }
@@ -568,6 +572,150 @@ function preguntas02(){
       });
 
   });
+}
+
+function preguntas03(){
+  var video  = document.getElementById('preguntas_03');
+  var actividad_h_03 = $('#actividad_h_03');
+
+  video.addEventListener("timeupdate", function() {
+      var currentTime = video.currentTime;
+      if (currentTime >= 80) {
+          // $('.custom-split-div').hide();
+          actividad_h_03.css('display', 'block'); 
+      }
+
+      video.addEventListener("seeked", function () {
+          var currentTime = video.currentTime;
+          if (currentTime >= 80) {
+              // $('.custom-split-div').hide();
+              actividad_h_03.css('display', 'block'); 
+          }
+          
+      });
+
+  });
+}
+
+
+var results3 = [];
+var elements3 = [];
+
+function Questions3(el, e) {
+    var index = elements3.indexOf(el);
+    if (index === -1) {
+        elements3.push(el);
+        results3.push(e);
+    } else {
+        results3[index] = e;
+    }
+    
+    $(el).addClass('act');
+}
+
+
+function valid3(numCorrect) {
+  var correctCount = 0;
+  // var malCount = 0;
+  for (var i = 0; i < elements3.length; i++) {
+      if (results3[i] ) {
+          $(elements3[i]).addClass('true');
+          correctCount++;
+          if(correctCount == numCorrect){
+              $('#respuesta_mal3').hide();
+              $('#respuesta3').html('Respuesta correcta');
+              $('#respuesta3').show();
+          }else{
+              $('#respuesta_mal2').html('Respuesta incorrecta');
+              $('#respuesta_mal3').show();
+          }
+      } else {
+          $('#respuesta_mal3').html('Respuesta incorrecta');
+          $('#respuesta_mal3').show();
+          $(elements3[i]).addClass('false');
+      }
+  }
+
+  if (correctCount == numCorrect) {
+      for (var i = 0; i < elements3.length; i++) {
+          $(elements3[i]).removeClass('false');
+          $(elements3[i]).removeClass('act');
+      }
+      $('#btn-valid3').hide();
+  }
+
+}
+
+function preguntas04(){
+  var video  = document.getElementById('preguntas_04');
+  var actividad_h_04 = $('#actividad_h_04');
+
+  video.addEventListener("timeupdate", function() {
+      var currentTime = video.currentTime;
+      if (currentTime >= 70) {
+          // $('.custom-split-div').hide();
+          actividad_h_04.css('display', 'block'); 
+      }
+
+      video.addEventListener("seeked", function () {
+          var currentTime = video.currentTime;
+          if (currentTime >= 70) {
+              // $('.custom-split-div').hide();
+              actividad_h_04.css('display', 'block'); 
+          }
+          
+      });
+
+  });
+}
+
+
+var results4 = [];
+var elements4 = [];
+
+function Questions4(el, e) {
+    var index = elements4.indexOf(el);
+    if (index === -1) {
+        elements4.push(el);
+        results4.push(e);
+    } else {
+        results4[index] = e;
+    }
+    
+    $(el).addClass('act');
+}
+
+
+function valid4(numCorrect) {
+  var correctCount = 0;
+  // var malCount = 0;
+  for (var i = 0; i < elements4.length; i++) {
+      if (results4[i] ) {
+          $(elements4[i]).addClass('true');
+          correctCount++;
+          if(correctCount == numCorrect){
+              $('#respuesta_mal4').hide();
+              $('#respuesta4').html('Respuesta correcta');
+              $('#respuesta4').show();
+          }else{
+              $('#respuesta_mal2').html('Respuesta incorrecta');
+              $('#respuesta_mal4').show();
+          }
+      } else {
+          $('#respuesta_mal4').html('Respuesta incorrecta');
+          $('#respuesta_mal4').show();
+          $(elements4[i]).addClass('false');
+      }
+  }
+
+  if (correctCount == numCorrect) {
+      for (var i = 0; i < elements4.length; i++) {
+          $(elements4[i]).removeClass('false');
+          $(elements4[i]).removeClass('act');
+      }
+      $('#btn-valid4').hide();
+  }
+
 }
 
 function action() {

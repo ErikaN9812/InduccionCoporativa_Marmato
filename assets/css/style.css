@@ -70,7 +70,15 @@
             display: flex;
             align-items: center;
             position: relative;
-            
+        }
+
+        .bg-petroleocasos-v2 {
+            background-color: #0B3E5D;
+            height: 120vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
         }
 
         .bg-petroleo-v5{
@@ -319,7 +327,7 @@
         .padding-left-2{
             margin-right: 0px;
             margin-left: 60px;
-            margin-top: 0px;
+            margin-top: 90px;
             max-width: 100%;
             padding: 0%;
         }
