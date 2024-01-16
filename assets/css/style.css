@@ -62,6 +62,17 @@
             
         }
 
+        /*background casos*/
+        .bg-petroleocasos {
+            background-color: #0B3E5D;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            
+        }
+
         .bg-petroleo-v5{
             background-color: #2c3e50; /* Color azul petróleo */
             height: 110vh;
@@ -278,12 +289,23 @@
         }
 
         .padding-left-1{
-            margin-right: 0px;
+            margin-right: 60px;
             margin-left: 60px;
             margin-top: 50px;
             max-width: 100%;
             padding: 0%;
         }
+
+        /*casos*/
+        .padding-left-3{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+
         .padding-left-2{
             margin-right: 0px;
             margin-left: 60px;
@@ -1050,6 +1072,18 @@
             padding-left: 15%; 
             margin-top:2%;
         }
+
+        /*texto casos*/
+        .dx2-v4{
+            font-size: 1.7rem;
+            font-family: 'Futura Bk BT', sans-serif;
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.7rem;
+        }
+
+
         .left{
             padding-left: 15%; 
         }

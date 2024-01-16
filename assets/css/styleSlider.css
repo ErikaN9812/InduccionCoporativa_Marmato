@@ -58,6 +58,22 @@
     font-size: 16px;
 }
 
+/*actividad deberes*/
+.current p.inst5{
+    padding: 5px  5px;
+    border-radius: 5px;
+    background: #fdbf6030;
+    color: #f4a630;
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    max-width: auto;
+    line-height: 1.3rem;
+    font-family: 'Alata';
+    font-size: 16px;
+}
+
 .pc-slide-8{
     display: block;
 }
