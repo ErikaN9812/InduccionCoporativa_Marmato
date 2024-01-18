@@ -230,7 +230,7 @@ function carrusel() {
   var images = [];
 
   // Generar URLs de imágenes con un bucle
-  for (var i = 1; i <= 8; i++) {
+  for (var i = 1; i <= 19; i++) {
     var img = document.createElement("img");
     img.src = `assets/img/slide/Slide-${i}.jpg`;
     carrusel.appendChild(img);
