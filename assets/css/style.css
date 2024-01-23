@@ -241,6 +241,21 @@
         }
 
 
+        /*Fondo asi te cuidamos en la operacion*/
+        .bg-cuidamosoperacion {
+            background-image: url(../img/cuidamos-operacion.png) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+
+
         .bg-petroleo-slide-7{
             background-color: #003a5d; /* Color azul petróleo */
             height: 100vh;
@@ -415,6 +430,19 @@
         .bg-blancofondominera {
             background-image: url(../img/fondo-minero24.jpg) ;
             background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+           /*Fondo asi te queremos en la operacion*/
+           .bg-azuloperacion {
+            background-image: url(../img/asi-te-queremos-operacion.png) ;
+            background-color: #133450; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -1018,7 +1046,7 @@
             overflow-wrap: break-word;
             white-space: normal;
             color: var(--primary30); 
-            padding-left: 15%; 
+            padding-left: 0%; 
             margin-top:2%;
         }
 
@@ -1758,6 +1786,16 @@ p, a, ul, li, label {
     line-height: 1.5rem;
 }
 
+/*listado asi te queremos en la operacion*/
+.listadoperacion li {
+	font-size: 1.2rem;
+	font-family: 'Futura Bk BT', sans-serif;
+	color: #8f8f8f ;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6rem;
+    text-align: justify;
+}
 
 /*listado vestuario*/
  .listado ul, li {
@@ -1769,7 +1807,6 @@ p, a, ul, li, label {
     line-height: 1.6rem;
     text-align: justify;
 }
-
 
 a {
     text-decoration: none;
@@ -1898,13 +1935,14 @@ video::-webkit-media-controls-panel {
 }
 
 .dx3-v2{
-    font-size: 5em;
+    font-size: 3em;
     text-align: left;
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
-    color: #0B3D5C; 
-    padding-left: 15%; 
+    color: #0B3D5C;
+    line-height: 45px;
+    padding-left: 0%; 
     margin-top:10%;
 }
 
@@ -2626,6 +2664,7 @@ iframe:after {
 
 
 .accordion-button {
+    font-size: 18px;
     color: #ffffff;
     background-color: var(--primary);
 }
@@ -2855,8 +2894,7 @@ iframe:after {
      }
 }
 .top-slide-1-2{
-    padding-left: 5%; 
-    margin-top:0%; 
+    margin-top:5%; 
     width:40%;
 }
 
