@@ -426,6 +426,15 @@
             position: relative;
         }
 
+        /*Fondo blanco*/
+        .bg-blancominera {
+            background-color: #fff; /* Color blanco */
+            z-index: 0;
+            display:block;
+            align-items: center;
+            position: relative;
+        }
+
         /*Fondo como entendemos la minera*/
         .bg-blancofondominera {
             background-image: url(../img/fondo-minero24.jpg) ;
@@ -442,6 +451,19 @@
            /*Fondo asi te queremos en la operacion*/
            .bg-azuloperacion {
             background-image: url(../img/asi-te-queremos-operacion.png) ;
+            background-color: #133450; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*Fondo buena gente*/
+        .bg-buenagente {
+            background-image: url(../img/buena-gente.JPG) ;
             background-color: #133450; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
@@ -686,6 +708,15 @@
             padding: 0%;
             text-align: center;
         }
+
+        .contenido-amplio {
+            padding: 0%;
+            text-align: center;
+            max-width: 1500px;
+            display: flex;
+            padding: 0;
+            flex-wrap: wrap;
+        }
        
         
         .pc{
@@ -725,13 +756,14 @@
         }
         .bg-blanco2 {
             background-color: #fff; /* Color blanco */
-            height: 85vh;
+            height: 55vh;
             z-index: 0;
             display: flex;
             align-items: center;
             position: relative;
 
         } 
+
         .bg-blanco-bienvenida{
             background-color: #fff; /* Color blanco */
             height: 85vh;
@@ -740,6 +772,23 @@
             align-items: center;
             position: relative;
         }
+
+        /*fondo lineamiento ambiental*/
+        .bg-blanco-ambiental{
+            background-color: #003a5d;
+            background-image: url(../img/fondo-blanco-24.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
+
         .bg-petroleo-bienvenida{
             background-color: #2c3e50; /* Color azul petróleo */
             height: 85vh;
@@ -1693,6 +1742,18 @@
     z-index: -1;
 }
 
+
+/*ambiental*/
+.img-ambiental{
+    max-height: 27rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -7rem;
+    z-index: -1;
+}
+
 /*icono mas vestuario*/
 .icono {
     position: absolute;
@@ -1704,6 +1765,14 @@
     z-index: 1;
 }
 
+/* Lineamitnos ambientales */
+.seccionElement {
+    max-width: 1500px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
 
 /*Imagen beneficios*/
 .beneficios img{
@@ -1974,6 +2043,18 @@ video::-webkit-media-controls-panel {
 
 }
 
+.dx2gente {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #0b3d5c;
+    text-align: center;
+    line-height: 1.1em;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin: 0;
+}
+
 .dx4{
     font-size: 4em;
     line-height: 0.7;
@@ -2024,6 +2105,22 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+/*centrar imagen*/
+.containerimg {
+    height: 370px;
+    position: relative;
+    border: 3px solid #dbe4ed; /* Border color is optional */ 
+  }
+
+.centerimg {
+    margin: 0;
+    position: absolute;
+    max-width: 50%;
+  }
+
+  
+
 video {
     position: relative;
     width: 100%;
