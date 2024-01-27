@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  
   $('.zoom').magnify();
   sistemaVotacion();
   preguntas01();
@@ -36,9 +37,6 @@ snap: '#actPuzzleDro03'
 }).on('droppable:drop',function(e){
   $(this).find('.imgPz').remove();
 });
-
-
-
 
 
 $(function() {
@@ -198,6 +196,10 @@ reproducirAudioImagen();
   popsAudios();
 
 });
+
+function changeImage2(element, newSrc) {
+  element.src = newSrc;
+}
 
 function popsAudios(){
   var iconos = document.querySelectorAll('.icono');

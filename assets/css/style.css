@@ -586,7 +586,9 @@
             width: 60% !important;
             margin-top:20px;
         }
-        
+        .slide-acordeon{
+            width: 100%;
+        }
         .slide-2-elementos{
             display: flex; 
             margin-top: 150px; 
@@ -595,6 +597,25 @@
             z-index: 3;
         }
 
+
+        .slide-acordeon-elementos{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .slide-acordeon{
+            display: flex;
+            justify-content: center;
+        }
+        .img-ambiental-2 {
+            width: 250px !important;
+            height: auto;
+            /* transition: width 0.3s, left 0.3s; */
+            transition: max-width 0.5s ease !important  ; 
+         
+          }
+      
+  
+          
         .divided-background {
             background: linear-gradient(to bottom, #003A5D 50%, #071835 50%);
         }
