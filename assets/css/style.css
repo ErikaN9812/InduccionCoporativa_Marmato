@@ -2136,15 +2136,17 @@ img {
 
 /*centrar imagen*/
 .containerimg {
-    height: 370px;
+    height: 395px;
     position: relative;
     border: 3px solid #dbe4ed; /* Border color is optional */ 
+
   }
 
 .centerimg {
     margin: 0;
     position: absolute;
-    max-width: 50%;
+    max-width: 100%;
+    margin-left: 20%;
   }
 
   
@@ -2893,8 +2895,9 @@ iframe:after {
     background-size: cover;  
 }
 
+/*Fondo seccion1*/
 .darkStyleimgseccion1 {
-    background: url(../../assets/img/Fondo-seccion1.jpg);
+    background: url(../../assets/img/Fondo-seccion1-v2.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;  
@@ -2919,7 +2922,7 @@ iframe:after {
 
 
 .darkStyleimgdiversidad1 {
-    background: url(../../assets/img/Fondo-diversidad.jpg);
+    background: url(../../assets/img/fondo-diversidad-v2.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;  
