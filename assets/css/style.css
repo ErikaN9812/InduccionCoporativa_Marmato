@@ -167,6 +167,30 @@
             position: relative;
         }
 
+
+        /*fondo casos*/
+        .bg-casos {
+            background-image: url(../img/fondo-casos-2024.jpg);
+            position: absolute;
+			width: 100%;
+			height: 100vh;
+			background-size: cover;
+    		background-position: center;
+        }
+
+
+        /*fondo sagrilaft lavado de activos*/
+        .bg-petroleo-v5-sagri {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/img-triangulo-fondo-v3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            height: 110vh;
+            align-items: center;
+            position: relative;
+        }
+
          /*fondo azul operacionminera*/
          .bg-petroleo-v3 {
             background-color: #133450; /* Color azul petróleo */
@@ -340,7 +364,7 @@
         .padding-left-3{
             margin-right: 60px;
             margin-left: 60px;
-            margin-top: 90px;
+            margin-top: 50px;
             max-width: 100%;
             padding: 0%;
         }
@@ -550,6 +574,14 @@
             text-align: center;
         }
 
+        /*contenido asi te queremos*/
+        .contenido-lateral-asi-queremos {
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 3%;
+            text-align: center;
+        }
+
         /*estilo animaciones*/
         .contenido-lateralv2 {
             margin-right: 60px;
@@ -724,10 +756,11 @@
             margin-top: 5px; 
         }
         .center-actividad{
-            display: flex;
-            justify-content: center;
+            display: grid;
+            place-items: center;
         }
        
+
         .contenido-central {
             margin-right: 60px;
             margin-left: 60px;
@@ -1126,9 +1159,20 @@
             margin-top:2%;
         }
 
+         /*texto subtitulos casos*/
+         .dx2-v4-casos{
+            font-size: 1.6rem;
+            font-family: 'Futura Bk BT', sans-serif;
+            color: #fff;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.7rem;
+        }
+
+
         /*texto casos*/
         .dx2-v4{
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             font-family: 'Futura Bk BT', sans-serif;
             color: #fff;
             font-weight: 500;
@@ -1760,7 +1804,7 @@
 
 /*Arrastrar imagen de vestuario*/
 .img-vestuario{
-    max-height: 27rem;
+    max-height: 30rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
@@ -2589,7 +2633,7 @@ button.btn-sm {
 .contCircleBar {
     padding: 13px;
     text-align: end;
-    margin-right: 5%;
+    margin-right: 20%;
 }
 .txPg:hover .contCircleBar {
     display: block;
