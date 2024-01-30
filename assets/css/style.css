@@ -223,7 +223,7 @@
             background-image: url(../img/beneficio1-poliza.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -738,11 +738,15 @@
         .divided-backgroundv3 {
             /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
             background-image: url(../img/fondo-estructura-secciones.jpg);
-            opacity: 0.6;
-            background-size: cover;
-            background-position: center;
             background-repeat: no-repeat;
-            height: 100vh !important;
+            background-position: bottom;
+            background-size: cover;
+            height: 120vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-align: center;
         }
         
         .white-text{
