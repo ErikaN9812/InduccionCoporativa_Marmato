@@ -233,10 +233,10 @@
 
         /*Fondo beneficios 2 auxilio*/
         .bg-beneficiosauxilio1 {
-            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
+            background-image: url(../img/beneficio1-poliza.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -247,10 +247,10 @@
         
         /*Fondo beneficios 3 transporte*/
         .bg-beneficiostransporte1 {
-            background-image: url(../img/beneficio3-transporte.jpg) ;
+            background-image: url(../img/beneficio2fondo-auxilio.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -448,6 +448,7 @@
             position: relative;
             text-align: center;
         }
+        
         .bg-blanco {
             background-color: #fff; /* Color blanco */
             height: 100vh;
@@ -1851,8 +1852,8 @@
 
 /*Imagen beneficios*/
 .beneficios img{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    margin-left: 0%;
 }
 
 
