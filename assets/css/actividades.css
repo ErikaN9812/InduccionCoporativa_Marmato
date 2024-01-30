@@ -104,11 +104,12 @@
 
 /* Actividad de ordenar elementos 1 */
 .actOrderElement {
-    max-width: 700px;
+    max-width: 900px;
     list-style: none;
     display: flex;
     padding: 0;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .actOrderElement li {
@@ -136,7 +137,7 @@
     z-index: 2;
 }
 .actOrderElement img {
-    max-width: 200px;
+    max-width: 230px;
 }
 .actOrderElement li img.incorrect {
     border: 3px solid #FF5F5F;

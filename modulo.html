@@ -974,11 +974,9 @@
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
                 <div class="contenido-central">
-                    <h1 style="padding-top: 18%; color: var(--primary80)">VOTACIÓN <span style="color: var(--primary);"></span></h1>
+                    <h1 style="padding-top: 18%; color: var(--primary80)">¡HAZ TU COMPROMISO!  <span style="color: var(--primary);"></span></h1>
                     <br>   
-                    <p style="text-align: justify !important; padding-bottom: 5%">De <b>1 a 5</b> selecciona cuál es el nivel de responsabilidad
-                        que como colaborador tienes para ayudar a prevenir
-                        estos riesgos de lavado de activos en nuestra operación</p>
+                    <p style="text-align: justify !important; padding-bottom: 5%">Selecciona el nivel de compromiso que como colaborador tendrás para ayudar a prevenir los RIESGOS DE LAVADO DE ACTIVOS en nuestra operación</p>
 
                     <div class="rating">
                         <input type="radio" name="estrellas" id="estrella1" value="1">
@@ -1531,7 +1529,13 @@
                     $("#next-btn").on('click', function() {
                         $("#next").click(); 
                     });
-    
+                }
+                if(e === 20){
+                    if (localStorage.getItem('slider20') === "ok") {
+					    $("#next").removeAttr("disabled").removeAttr("style");
+                    } else {
+                        $("#next").attr('disabled','disabled').css("cursor", "no-drop");
+                    }
                 }
                 if(e === sliders){
                     $("#next").css('display','none');

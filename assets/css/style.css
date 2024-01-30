@@ -340,7 +340,7 @@
         .padding-left-3{
             margin-right: 60px;
             margin-left: 60px;
-            margin-top: 50px;
+            margin-top: 90px;
             max-width: 100%;
             padding: 0%;
         }
@@ -724,11 +724,10 @@
             margin-top: 5px; 
         }
         .center-actividad{
-            display: grid;
-            place-items: center;
+            display: flex;
+            justify-content: center;
         }
        
-
         .contenido-central {
             margin-right: 60px;
             margin-left: 60px;
@@ -2590,7 +2589,7 @@ button.btn-sm {
 .contCircleBar {
     padding: 13px;
     text-align: end;
-    margin-right: 20%;
+    margin-right: 5%;
 }
 .txPg:hover .contCircleBar {
     display: block;

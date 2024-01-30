@@ -457,6 +457,7 @@ function valid(numCorrect) {
               $('#respuesta_mal').hide();
               $('#respuesta').html('Respuesta correcta');
               $('#respuesta').show();
+              localStorage.setItem('slider20', 'ok');
           }else{
               $('#respuesta_mal').html('Respuesta incorrecta');
               $('#respuesta_mal').show();
