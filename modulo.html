@@ -441,7 +441,7 @@
     <div class="container divided-backgroundv3">
         <div class="row">
             <!-- Columna top -->
-            <div class="col-lg-12 col-md-12" style="margin-top:40px">
+            <div class="col-lg-12 col-md-12">
                 <h1 style="color: var(--white); text-align: center; padding-top: 2%;">Nuestros principios
                     <span style="color: var(--grey)"> ARIS</span></h1>
             </div>
@@ -539,16 +539,18 @@
                     <i class="inst mb-2">Desplace el mouse sobre la imagen para ver el contenido detallado</i>
                     <div class="col-lg-12 col-md-12 slide-2-elementos" >
                         <div class="col-lg-3 col-md-12" style="margin-top: -15%;">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-lampara.png">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-casco.png">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-protector.png">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-gafas.png">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-repistaorio.png">
-                            <img  class=""  src="assets/img/vestuario-mina/uniforme-mina-guantes.png">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-lampara.png" id="img-1" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-casco.png" id="img-2" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-gafas.png" id="img-3" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-protector.png" id="img-4" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-repistaorio.png" id="img-5" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-guantes.png" id="img-6" style="display: none;">
+                            <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-botas.png" id="img-7" style="display: none;">
                         </div>
                         <div class="col-lg-3 col-md-12">
-                            <img  class="img-vestuario"  src="assets/img/uniforme-mina.png" alt="vestuario-corporativo">
+                            <img  class="img-vestuario" id="main-image" src="assets/img/uniforme-mina.png" alt="vestuario-corporativo">
                         </div>
+
                     </div>
                   </div>
             </div> 
@@ -978,7 +980,7 @@
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-8 col-md-12 top-slide-14 " >
-                <div class="padding-left-3">
+                <div class="padding-left-4">
                     <h1 style="color: var(--white);"><span style="color: var(--grey);">CASO 1:</span> SAGRILAFT</h1>
                     <p class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">Que nos ayudes a prevenir el riesgo de <span style="color: var(--blue25);">Lavado de activos</span><p>
                     <p class="dx2-v4" style="color: var(--white); line-height: 1.2em;"> Veamos este caso relacionado con SAGRILAFT
@@ -1478,7 +1480,7 @@
                             <hr>
                             <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
                                 <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
-                                <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
+                                <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
                             </div>
                         </div>
                         <div class="itemQ">
@@ -1586,8 +1588,8 @@
                         $("#next").click(); 
                     });
                 }
-                if(e === 20){
-                    if (localStorage.getItem('slider20') === "ok") {
+                if(e === 21){
+                    if (localStorage.getItem('slider21') === "ok") {
 					    $("#next").removeAttr("disabled").removeAttr("style");
                     } else {
                         $("#next").attr('disabled','disabled').css("cursor", "no-drop");

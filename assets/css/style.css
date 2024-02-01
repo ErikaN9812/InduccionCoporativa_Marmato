@@ -217,20 +217,7 @@
             align-items: center;
             position: relative;
         }
-
-         /*Fondo beneficios 1 poliza*/
-         .bg-slide-13 {
-            background-image: url(../img/beneficio1-poliza.jpg) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
+      
         /*Fondo beneficios 2 auxilio*/
         .bg-beneficiosauxilio1 {
             background-image: url(../img/beneficio1-poliza.jpg) ;
@@ -361,6 +348,14 @@
         }
 
         /*casos*/
+        .padding-left-4{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 80px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
         .padding-left-3{
             margin-right: 60px;
             margin-left: 60px;
@@ -458,6 +453,42 @@
             position: relative;
         }
 
+        .bg-slide-13 {
+            background-image: url(../img/beneficio1-poliza.jpg) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 45%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .bg-blanco-v2 {
+            background-color: #fff; /* Color blanco */
+            width: 55%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* Ajusta según sea necesario */
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #3498db; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         /*Fondo blanco*/
         .bg-blancominera {
             background-color: #fff; /* Color blanco */
@@ -742,13 +773,14 @@
             background-repeat: no-repeat;
             background-position: bottom;
             background-size: cover;
-            height: 120vh;
+            height: 110vh !important;
             z-index: 0;
             display: flex;
             align-items: center;
             position: relative;
             text-align: center;
         }
+
         
         .white-text{
             color: whitesmoke !important;

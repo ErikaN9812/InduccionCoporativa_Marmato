@@ -1,5 +1,66 @@
 $(document).ready(function () {
 
+
+// Mover el tooltip junto con el cursor
+$('#main-image').mousemove(function (e) {
+  console.log(e);
+  if(e.pageX >= 1045 && e.pageX <= 1075 && e.pageY >= 180 && e.pageY <= 200){
+    $('#img-1').show();
+  }else{
+    $('#img-1').hide();
+  }
+
+  if(e.pageX >= 1045 && e.pageX <= 1085 && e.pageY > 200 && e.pageY <= 220){
+    $('#img-2').show();
+    $('#img-2').css('margin-top', '15px');
+
+  }else{
+    $('#img-2').hide();
+  }
+
+  if(e.pageY > 220 && e.pageY <= 232 && e.pageX <= 1075){
+    $('#img-3').show();
+    $('#img-3').css('margin-top', '35px');
+
+  }else{
+    $('#img-3').hide();
+  }
+  // console.log(e.pageX);
+
+  if(e.pageX >= 1080 && e.pageX <= 1095 && e.pageY > 232 && e.pageY <= 240){
+    $('#img-4').show();
+    $('#img-4').css('margin-top', '45px');
+
+  }else{
+    $('#img-4').hide();
+  }
+
+  if(e.pageY > 245 && e.pageY <= 260){
+    $('#img-5').show();
+    $('#img-5').css('margin-top', '55px');
+
+  }else{
+    $('#img-5').hide();
+  }
+
+  if(e.pageX >= 1096 && e.pageX <= 1125 && e.pageY >= 340 && e.pageY <= 365 ){
+    $('#img-6').show();
+    $('#img-6').css('margin-top', '150px');
+
+  }else{
+    $('#img-6').hide();
+  }
+
+  if(e.pageX >= 1020 && e.pageX <= 1044 && e.pageY >= 470 && e.pageY <= 485 ){
+    $('#img-7').show();
+    $('#img-7').css('margin-top', '200px');
+
+  }else{
+    $('#img-7').hide();
+  }
+   
+
+});
   
   $('.zoom').magnify();
   sistemaVotacion();
@@ -153,7 +214,7 @@ $("#grupo_whatsapp").click(function () {
 
 arrastrarElemento();
 // actualizarGrafico();
-// actualizarGrafico2();
+actualizarGrafico2();
 // listaLlamadaCorrecta();
 // listaLlamadaIncorrecta();
 pausarMultimedia();
@@ -457,7 +518,8 @@ function valid(numCorrect) {
               $('#respuesta_mal').hide();
               $('#respuesta').html('Respuesta correcta');
               $('#respuesta').show();
-              localStorage.setItem('slider20', 'ok');
+              localStorage.setItem('slider21', 'ok');
+              createProgCircle();
           }else{
               $('#respuesta_mal').html('Respuesta incorrecta');
               $('#respuesta_mal').show();
