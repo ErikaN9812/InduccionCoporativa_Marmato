@@ -939,6 +939,27 @@
             position: relative;
         }
 
+        /*fondo  beneficios*/
+        .bg-blanco-beneficio {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+            margin-top: 30px !important;
+        } 
+
+        .bg-azuloscuro3-bene {
+            background-color: #022249;
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+            margin-top: 30px !important;
+        }
+
+
+
         .bg-azuloscuro4 {
             background-color: #071835; /* Color blanco */
             height: 100vh;
@@ -1827,6 +1848,16 @@
     width: auto;
     height: auto;
     margin-top: -10rem;
+}
+
+/*imagen beneficios*/
+.img-beneficio2{
+    max-height: 16rem;
+    max-width: auto; 
+    margin: 0 auto;
+    width: 20em;
+    height: auto;
+    margin-top: 0.5rem;
 }
 
 .img-estructura2{
