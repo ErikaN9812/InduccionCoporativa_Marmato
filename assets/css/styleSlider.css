@@ -13,12 +13,15 @@
 .current i.inst {
 	padding: 5px  10px;
     border-radius: 5px;
-    background: #fdbf6030;
     color: #f4a630;
     display: block;
     text-align: center;
     margin-top: 8px;
 }
+
+/**/
+
+
 .current i.inst2 {
 	padding: 5px;
     border-radius: 5px;
@@ -28,7 +31,6 @@
     text-align: left;
     margin-top: 8px;
     font-size: 13px; 
-
 }
 
 /*ref de mision y vision*/

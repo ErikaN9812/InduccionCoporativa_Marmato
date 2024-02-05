@@ -217,6 +217,33 @@
             align-items: center;
             position: relative;
         }
+        
+        /*Fondo como entendemos la minera*/
+        .bg-petroleo-mineria {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*fondo triagulos lateral derecha*/
+        .bg-petroleo-triangulor {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado-derecha.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
       
         /*Fondo beneficios 2 auxilio*/
         .bg-beneficiosauxilio1 {
@@ -341,6 +368,15 @@
 
         .padding-left-1{
             margin-right: 60px;
+            margin-left: 90px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+        /*que gestiones tu turno*/
+        .padding-left-turno{
+            margin-right: 60px;
             margin-left: 60px;
             margin-top: 50px;
             max-width: 100%;
@@ -356,6 +392,14 @@
             padding: 0%;
         }
 
+        .padding-left-casos{
+            margin-right: 60px;
+            margin-left: 10px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
         .padding-left-3{
             margin-right: 60px;
             margin-left: 60px;
@@ -363,6 +407,7 @@
             max-width: 100%;
             padding: 0%;
         }
+
 
 
         .padding-left-2{
@@ -453,6 +498,20 @@
             position: relative;
         }
 
+        /*fondo diversidad*/
+        .bg-blanco-equipares {
+            background-image: url(../img/fondo-equipares.png) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+
         .bg-slide-13 {
             background-image: url(../img/beneficio1-poliza.jpg) ;
             background-color: #fff; /* Color blanco */
@@ -500,7 +559,7 @@
 
         /*Fondo como entendemos la minera*/
         .bg-blancofondominera {
-            background-image: url(../img/fondo-minero24.jpg) ;
+            background-image: url(../img/fondo-mineria-v3.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
@@ -805,6 +864,26 @@
             padding: 0%;
             text-align: center;
         }
+
+        /*instruccion flecha*/
+        .cont-central-flecha {
+            margin-right: 60px;
+            margin-left: 80px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+        .cont-flecha-mision {
+            margin-right: 60px;
+            margin-left: 200px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+
+
 
         .contenido-amplio {
             padding: 0%;
@@ -1850,6 +1929,26 @@
     margin-top: -10rem;
 }
 
+
+/*Estrucutura diversidad*/
+.img-equipares{
+    max-height: 6rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -10rem;
+}
+
+/*Estrucutura diversidad*/
+.equipares p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+
+
 /*imagen beneficios*/
 .img-beneficio2{
     max-height: 16rem;
@@ -1892,6 +1991,23 @@
     margin-top: -7rem;
     z-index: -1;
 }
+
+/*imagen flecha*/
+.icoflecha img {
+    width: 5%;
+    float: left;
+    margin-right: 2%;
+  }
+
+.instruccionflecha i{
+    padding: 5px  10px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: left;
+    margin-top: 8px;
+}  
+
 
 /*icono mas vestuario*/
 .icono {
@@ -2329,6 +2445,14 @@ audio {
     max-width: 100%;
 
 }
+
+/*nuevo audio*/
+.audio-v2 {
+    width: 100%;
+    max-width: 100%;
+
+}
+
 audio:focus {
     outline: inherit !important;
     border: 3px solid #b29100;
