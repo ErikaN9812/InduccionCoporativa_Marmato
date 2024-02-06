@@ -1,4 +1,53 @@
 $(document).ready(function () {
+					// item 1
+					$("#sl21_drag1").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop1',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop1").droppable({
+						accept: '#sl21_drag1',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
+
+				  // item 2
+					$("#sl21_drag2").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop1',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop2").droppable({
+						accept: '#sl21_drag2',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
+
+				  // item 3
+					$("#sl21_drag3").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop3',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop3").droppable({
+						accept: '#sl21_drag3',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
+
+
 
   //Para generar el TOOLTIP
   $(function() {
