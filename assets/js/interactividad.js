@@ -101,14 +101,15 @@ $(document).ready(function () {
 
 // Mover el tooltip junto con el cursor
 $('#main-image').mousemove(function (e) {
-  console.log(e);
-  if(e.pageX >= 1045 && e.pageX <= 1075 && e.pageY >= 180 && e.pageY <= 200){
+  console.log(e.pageX);
+  console.log(e.pageY);
+  if(e.pageX >= 1075 && e.pageX <= 1109 && e.pageY >= 90 && e.pageY <= 117){
     $('#img-1').show();
   }else{
     $('#img-1').hide();
   }
 
-  if(e.pageX >= 1045 && e.pageX <= 1085 && e.pageY > 200 && e.pageY <= 220){
+  if(e.pageX >= 1074 && e.pageX <= 1125 && e.pageY > 115 && e.pageY <= 128){
     $('#img-2').show();
     $('#img-2').css('margin-top', '15px');
 
@@ -116,7 +117,7 @@ $('#main-image').mousemove(function (e) {
     $('#img-2').hide();
   }
 
-  if(e.pageY > 220 && e.pageY <= 232 && e.pageX <= 1075){
+  if(e.pageX >= 1076 && e.pageX <= 1112 && e.pageY > 137 && e.pageY <= 147){
     $('#img-3').show();
     $('#img-3').css('margin-top', '35px');
 
@@ -125,7 +126,7 @@ $('#main-image').mousemove(function (e) {
   }
   // console.log(e.pageX);
 
-  if(e.pageX >= 1080 && e.pageX <= 1095 && e.pageY > 232 && e.pageY <= 240){
+  if(e.pageX >= 1116 && e.pageX <= 1135 && e.pageY > 147 && e.pageY <= 159){
     $('#img-4').show();
     $('#img-4').css('margin-top', '45px');
 
@@ -133,7 +134,7 @@ $('#main-image').mousemove(function (e) {
     $('#img-4').hide();
   }
 
-  if(e.pageY > 245 && e.pageY <= 260){
+  if(e.pageX >= 1065 && e.pageX <= 1100 && e.pageY > 160 && e.pageY <= 188){
     $('#img-5').show();
     $('#img-5').css('margin-top', '55px');
 
@@ -141,7 +142,7 @@ $('#main-image').mousemove(function (e) {
     $('#img-5').hide();
   }
 
-  if(e.pageX >= 1096 && e.pageX <= 1125 && e.pageY >= 340 && e.pageY <= 365 ){
+  if(e.pageX >= 1135 && e.pageX <= 1168 && e.pageY >= 290 && e.pageY <= 325 ){
     $('#img-6').show();
     $('#img-6').css('margin-top', '150px');
 
@@ -149,7 +150,7 @@ $('#main-image').mousemove(function (e) {
     $('#img-6').hide();
   }
 
-  if(e.pageX >= 1020 && e.pageX <= 1044 && e.pageY >= 470 && e.pageY <= 485 ){
+  if(e.pageX >= 1038 && e.pageX <= 1075 && e.pageY >= 455 && e.pageY <= 485 ){
     $('#img-7').show();
     $('#img-7').css('margin-top', '200px');
 
