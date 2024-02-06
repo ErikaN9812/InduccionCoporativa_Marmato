@@ -20,7 +20,14 @@
 }
 
 /**/
-
+.current i.instvest {
+	padding: 5px  10px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+}
 
 .current i.inst2 {
 	padding: 5px;

@@ -204,6 +204,33 @@
             position: relative;
         }
 
+         /*fondo azul mision*/
+         .bg-petroleo-mision {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/fondo-mision.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /*fondo blanco vision*/
+        .bg-petroleo-vision {
+            background-color: #fff; /* Color azul petróleo */
+            background-image: url(../img/fondo-vision.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
 
         /*Fondo como entendemos la minera*/
          .bg-petroleo-v4min {
@@ -221,7 +248,7 @@
         /*Fondo como entendemos la minera*/
         .bg-petroleo-mineria {
             background-color: #133450; /* Color azul petróleo */
-            background-image: url(../img/triangulo-degradado.jpg);
+            background-image: url(../img/triangulo-degradado.png);
             background-repeat: no-repeat;
             background-size: contain;
             height: 100vh;
@@ -244,6 +271,19 @@
             position: relative;
         }
         
+        /*fondo triangulo iziquierda degrade*/
+        .bg-petroleo-triangulo-right {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
       
         /*Fondo beneficios 2 auxilio*/
         .bg-beneficiosauxilio1 {
@@ -882,8 +922,13 @@
             text-align: center;
         }
 
-
-
+        .cont-flecha-vision {
+            margin-right: 60px;
+            margin-left: 200px;
+            max-width: 65%;
+            padding: 0%;
+            text-align: center;
+        }
 
         .contenido-amplio {
             padding: 0%;
@@ -1992,10 +2037,17 @@
     z-index: -1;
 }
 
-/*imagen flecha*/
+/*imagen flecha izquierda*/
 .icoflecha img {
     width: 5%;
     float: left;
+    margin-right: 2%;
+  }
+
+  /*imagen flecha derecha*/
+.icoflechaderecha img {
+    width: 5%;
+    float: right;
     margin-right: 2%;
   }
 
@@ -2012,7 +2064,7 @@
 /*icono mas vestuario*/
 .icono {
     position: absolute;
-    max-height: 27rem;
+    max-height: 2rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
@@ -2299,7 +2351,7 @@ video::-webkit-media-controls-panel {
 }
 
 .dx2gente {
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 600;
     color: #0b3d5c;
     text-align: center;
@@ -2309,6 +2361,8 @@ video::-webkit-media-controls-panel {
     white-space: normal;
     margin: 0;
 }
+
+
 
 .dx4{
     font-size: 4em;
