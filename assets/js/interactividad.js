@@ -47,6 +47,53 @@ $(document).ready(function () {
 						}
 				  });
 
+          // item 4
+					$("#sl21_drag4").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop4',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop4").droppable({
+						accept: '#sl21_drag4',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
+
+          // item 5
+					$("#sl21_drag5").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop5',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop5").droppable({
+						accept: '#sl21_drag5',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
+
+          // item 6
+					$("#sl21_drag6").draggable({
+						revert: 'invalid',
+				    snap: '#sl21_drop6',
+				    snapMode: 'corner',
+    				snapTolerance: '22'
+					});
+					$("#sl21_drop6").droppable({
+						accept: '#sl21_drag6',
+						drop: function( ev, ui ) {
+							ui.draggable.detach();
+    					$(this).append( ui.draggable );
+    					$(this).addClass("correct");
+						}
+				  });
 
 
   //Para generar el TOOLTIP
@@ -101,8 +148,8 @@ $(document).ready(function () {
 
 // Mover el tooltip junto con el cursor
 $('#main-image').mousemove(function (e) {
-  console.log(e.pageX);
-  console.log(e.pageY);
+  // console.log(e.pageX);
+  // console.log(e.pageY);
   if(e.pageX >= 1075 && e.pageX <= 1109 && e.pageY >= 90 && e.pageY <= 117){
     $('#img-1').show();
   }else{
@@ -157,8 +204,6 @@ $('#main-image').mousemove(function (e) {
   }else{
     $('#img-7').hide();
   }
-   
-
 });
   
   $('.zoom').magnify();

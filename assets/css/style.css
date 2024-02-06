@@ -186,7 +186,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             display: flex;
-            height: 110vh;
+            height: 140vh;
             align-items: center;
             position: relative;
         }
@@ -3446,7 +3446,7 @@ iframe:after {
     grid-template-columns: 1fr 1fr;
 }
 .ctActivityDragDrop img {
-    max-width: 90px;
+    max-width: 317px;
     border-radius: 5px;
 }
 .ctActivityDragDrop img:hover {
@@ -3458,8 +3458,8 @@ iframe:after {
 .ctActivityDragDrop .listOpcDrag > div {
     position: relative;
     display: inline-block;
-    width: 90px;
-    height: 180px;
+    width: 150px;
+    height: 190px;
     margin: 10px;
     border: 1px solid #cdcdcd;
     border-radius: 5px;
