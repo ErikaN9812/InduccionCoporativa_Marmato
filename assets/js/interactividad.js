@@ -57,22 +57,22 @@ $(document).ready(function () {
   
       switch ($(this).closest('li').attr('value')) {
         case '1':
-          concepto = 'Coexistencia';
+          concepto = 'Coexistir con comunidades es convivir en armonía y respeto mutuo, promoviendo la paz y la equidad.';
           break;
         case '2':
-          concepto = 'Eficiencia';
+          concepto = 'Eficiencia operacional es hacer más con menos recursos, optimizando procesos para alcanzar resultados óptimos.';
           break;
         case '3':
-          concepto = 'Gestión';
+          concepto = 'Proteger el medio ambiente mediante prácticas responsables y sostenibles.';
           break;
         case '4':
-          concepto = 'Inversión';
+          concepto = 'Destinando recursos para mejorar la calidad de vida y promover el desarrollo comunitario.';
           break;
         case '5':
-          concepto = 'Seguridad';
+          concepto = 'Garantizar condiciones seguras y promover el bienestar físico y mental de las personas en entornos laborales y sociales.';
           break;
         case '6':
-          concepto = 'Transparencia';
+          concepto = 'Divulgar información para rendir cuentas y construir confianza.';
           break;
         default:
           concepto = 'Concepto por defecto';
