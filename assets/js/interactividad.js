@@ -662,7 +662,7 @@ function valid(numCorrect) {
               $('#respuesta_mal').hide();
               $('#respuesta').html('Respuesta correcta');
               $('#respuesta').show();
-              localStorage.setItem('slider21', 'ok');
+              // localStorage.setItem('slider21', 'ok');
               createProgCircle();
           }else{
               $('#respuesta_mal').html('Respuesta incorrecta');
@@ -1185,7 +1185,7 @@ setTimeout(() => {
     $(".actFin button").css("text-align", "center");
     $(".actFin h1").html(corret + " de " + $(".itemQ").length);
     $("#next").removeAttr("disabled").removeAttr("style");
-    localStorage.setItem("slider28", "ok");
+    // localStorage.setItem("slider28", "ok");
   }
   $(".actVorF button").removeAttr("disabled");
 }, "1000");
