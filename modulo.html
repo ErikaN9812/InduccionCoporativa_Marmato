@@ -1162,35 +1162,6 @@
     </div>
    <!--Fin de actividad lavado de activos-->
 
-    <!--Actividad Compromiso-->
-    <div class="container">
-        <div class="row">
-            <!-- Columna derecha -->
-            <div class="col-12 bg-petroleo-slide-22 pc-movil-slide-22-1">
-                <div class="contenido-slide-22" >
-                    <!-- Contenido a la izquierda -->
-                    <h1 class="dx2  mt-3" style="color: var(--blue25);">Yo, <span style="color: var(--blue75);">Johana Linares </span> en mi calidad de visitante:</h1>
-                
-                    <p class="white-text mt-5" style="text-align: justify; width: 100%;">
-                        Como visitante me comprometo a cumplir con las normas y procedimientos, responsabilidades, velar por la conservación del medio ambiente, el uso de los elementos de protección personal que sean suministrados y requeridos durante mi permanencia en las instalaciones de la empresa.
-                    </p>
-                    <p class="white-text  mt-3"  style="text-align: justify; width: 100%;">
-                        Entiendo que no está permitido el ingreso a las instalaciones de la empresa bajo la influencia de sustancias psicoactivas legales o ilegales, ya que pondría en riesgo mi seguridad y la de los demás en la operación.
-                    </p>    
-                    <div class="signature-slide-22" >
-                        <canvas id="firmaCanvas" width="300" height="100" style="background:white"></canvas>
-                        <button id="borrarFirmaBtn"></button>
-                        <!-- <img src="assets/img/logo-full.svg" style="max-width: 10%; padding: 10px;"> -->
-                    </div>
-                   
-
-                </div>
-                
-            </div>
-       
-        </div>
-    </div>
-    <!--Fin Actividad de calificacion-->
 
     <!--Inicio Caso 2 Actividad lavado de activos-->
     <div class="container preguntas_01 bg-casos">
@@ -1292,6 +1263,56 @@
     </div>
     <!--Fin actividad de estar atento a tus deberes y tu entorno-->
 
+    
+    <!--Inicio Caso 4 Comite de Convivencia-->
+    <div class="container preguntas_02 bg-casos">
+        <div class="row">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-lg-8 col-md-12 top-slide-14" >
+                <div class="padding-left-2">
+                
+                    <h1 style="color: var(--white);"><span style="color: var(--grey);">CASO 4:</span> COMITÉ DE CONVIVENCIA </h1>
+                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
+                    <p  class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">Que sepas cuándo acudir al <span style="color: var(--blue25);">comité de convivencia</span><p>
+                        <p class="dx2-v4" style="color: var(--white); line-height: 1.2em;"> Veamos este caso relacionado que puede ocurrir en
+                            <span style="color: var(--blue25);">nuestra operación</span><br>
+                            y escoge las<span style="color: var(--blue25);"> opciones correctas</span> 
+                        </p>
+
+                    <div class="ctItem" id='actividad_h_04' style="display: none;">
+                        <h4 style="color:var(--primary);">Seleccione las acciones y consecuencias que consideras que ocurrirán,
+                            luego de que Matías ha presentado su queja en Recursos Humanos de la mineraS
+                        </h4>
+                        <div>
+                            <p onclick="Questions4(this, false)">a. El área de recursos humanos no prestará atención a Matías y le dirán que regrese al trabajo</p>
+                            <p onclick="Questions4(this, true)">b. El área de recursos humanos indicará que debe presentar esta solicitud al
+                                COMITÉ DE CONVIVENCIA de la empresa</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, true)">c. El Comité de convivencia revisará la queja de Matías y realizaráindagación con el jefe Joaquín y compañeros de Matías</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, true)">d. Es probable que el Comité de convivencia encuentre que el caso que presenta Matías no se trate de ACOSO LABORAL
+                                ya que es una solicitud legítima por la alta temporada de trabajo</p> <!--respuesta correcta-->
+                            <p onclick="Questions4(this, false)">e. El área de recursos humanos sancionará al jefe Joaquín,
+                                sin hacer la debida investigación ni consultar con el Comité de convivencia</p>
+                        </div>
+                        <i class="inst" id='respuesta4' style="display:none;">Mensaje</i>
+                        <i class="inst_mal" id='respuesta_mal4' style="display:none;">Mensaje</i>
+                        <button class="btn" id='btn-valid4' onclick="valid4(3)">Validar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 top-slide-14 " >
+                <div class="videocontainer fcenter">
+                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
+                    <video id="preguntas_04" class="video-slide-13" controls poster="assets/img/portada-caso4-comite.jpg" id="caso 4">
+                        <source src="assets/video/Caso 4-Comite -de-Convivencia.mp4" type="video/mp4">
+                    </video>
+                </div>  
+            </div>
+        </div>
+    </div>
+   <!--Fin caso 4 Conflicto de interes-->
+
     <!--Inicio Caso 3 Conflicto de interes-->
        <div class="container preguntas_02 bg-casos">
         <div class="row">
@@ -1383,54 +1404,6 @@
   </div>
    <!--Fin que seas buena gente-->
    
-    <!--Inicio Caso 4 Comite de Convivencia-->
-    <div class="container preguntas_02 bg-casos">
-        <div class="row">
-            <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-8 col-md-12 top-slide-14" >
-                <div class="padding-left-2">
-                
-                    <h1 style="color: var(--white);"><span style="color: var(--grey);">CASO 4:</span> COMITÉ DE CONVIVENCIA </h1>
-                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
-                    <hr style="color: #e9e9e9;">
-                    <p  class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">Que sepas cuándo acudir al <span style="color: var(--blue25);">comité de convivencia</span><p>
-                        <p class="dx2-v4" style="color: var(--white); line-height: 1.2em;"> Veamos este caso relacionado que puede ocurrir en
-                            <span style="color: var(--blue25);">nuestra operación</span><br>
-                            y escoge las<span style="color: var(--blue25);"> opciones correctas</span> 
-                        </p>
-
-                    <div class="ctItem" id='actividad_h_04' style="display: none;">
-                        <h4 style="color:var(--primary);">Seleccione las acciones y consecuencias que consideras que ocurrirán,
-                            luego de que Matías ha presentado su queja en Recursos Humanos de la mineraS
-                        </h4>
-                        <div>
-                            <p onclick="Questions4(this, false)">a. El área de recursos humanos no prestará atención a Matías y le dirán que regrese al trabajo</p>
-                            <p onclick="Questions4(this, true)">b. El área de recursos humanos indicará que debe presentar esta solicitud al
-                                COMITÉ DE CONVIVENCIA de la empresa</p> <!--respuesta correcta-->
-                            <p onclick="Questions4(this, true)">c. El Comité de convivencia revisará la queja de Matías y realizaráindagación con el jefe Joaquín y compañeros de Matías</p> <!--respuesta correcta-->
-                            <p onclick="Questions4(this, true)">d. Es probable que el Comité de convivencia encuentre que el caso que presenta Matías no se trate de ACOSO LABORAL
-                                ya que es una solicitud legítima por la alta temporada de trabajo</p> <!--respuesta correcta-->
-                            <p onclick="Questions4(this, false)">e. El área de recursos humanos sancionará al jefe Joaquín,
-                                sin hacer la debida investigación ni consultar con el Comité de convivencia</p>
-                        </div>
-                        <i class="inst" id='respuesta4' style="display:none;">Mensaje</i>
-                        <i class="inst_mal" id='respuesta_mal4' style="display:none;">Mensaje</i>
-                        <button class="btn" id='btn-valid4' onclick="valid4(3)">Validar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12 top-slide-14 " >
-                <div class="videocontainer fcenter">
-                    <i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>		
-                    <video id="preguntas_04" class="video-slide-13" controls poster="assets/img/portada-caso4-comite.jpg" id="caso 4">
-                        <source src="assets/video/Caso 4-Comite -de-Convivencia.mp4" type="video/mp4">
-                    </video>
-                </div>  
-            </div>
-        </div>
-    </div>
-   <!--Fin caso 4 Conflicto de interes-->
 
 <!--Inicio Lineamientos ambientales-->
     <div class="container bg-blanco-ambiental">
@@ -1673,6 +1646,36 @@
 </div>
    <!--Fin politica de anticonsumo-->
 
+   
+    <!--Actividad Compromiso-->
+    <div class="container">
+        <div class="row">
+            <!-- Columna derecha -->
+            <div class="col-12 bg-petroleo-slide-22 pc-movil-slide-22-1">
+                <div class="contenido-slide-22" >
+                    <!-- Contenido a la izquierda -->
+                    <h1 class="dx2  mt-3" style="color: var(--blue25);">Yo, <span style="color: var(--blue75);">Johana Linares </span> en mi calidad de visitante:</h1>
+                
+                    <p class="white-text mt-5" style="text-align: justify; width: 100%;">
+                        Como visitante me comprometo a cumplir con las normas y procedimientos, responsabilidades, velar por la conservación del medio ambiente, el uso de los elementos de protección personal que sean suministrados y requeridos durante mi permanencia en las instalaciones de la empresa.
+                    </p>
+                    <p class="white-text  mt-3"  style="text-align: justify; width: 100%;">
+                        Entiendo que no está permitido el ingreso a las instalaciones de la empresa bajo la influencia de sustancias psicoactivas legales o ilegales, ya que pondría en riesgo mi seguridad y la de los demás en la operación.
+                    </p>    
+                    <div class="signature-slide-22" >
+                        <canvas id="firmaCanvas" width="300" height="100" style="background:white"></canvas>
+                        <button id="borrarFirmaBtn"></button>
+                        <!-- <img src="assets/img/logo-full.svg" style="max-width: 10%; padding: 10px;"> -->
+                    </div>
+                   
+
+                </div>
+                
+            </div>
+       
+        </div>
+    </div>
+    <!--Fin Actividad de calificacion-->
 
 <!-- sliderfinal NO REMOVER -->   
 <div class="container">
