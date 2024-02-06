@@ -2438,7 +2438,7 @@ img {
 }
 audio {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
 }
 .audio-bienvenida {
     width: 100%;
