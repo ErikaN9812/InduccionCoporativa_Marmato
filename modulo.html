@@ -18,6 +18,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- library bootstrap v.5.0.2 -->
+
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-grid.css">
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-reboot.css">
@@ -42,7 +43,10 @@
 
     <!-- Para mapa -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-   
+
+    <!-- Para Tooltip -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -55,14 +59,16 @@
     <script type="text/javascript" src="assets/js/jplayer/lib/circle-player/js/circle.player.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
 
     <link rel="stylesheet" href="assets/js/magnify/css/magnify.css" />
+
+    <!-- SIGNATURE PADS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
 
 </head>
 <body style="padding-left: 0px !important; padding-right: 0px !important;">
-    <input type="hidden" id="course_code" value="<?= $course_code ?>">
-	<input type="hidden" id="module_id" value="<?= $module_id ?>">
     <!-- Header con el logo -->
     <div class="header">
        <!-- header -->
@@ -319,37 +325,37 @@
     <div class="container">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-3 bg-petroleo-v3 pc-movil-slide-7-1" >
-                <div class="col-lg-12 col-md-12" align="center">
-                    <img src="assets/img/img-nuestra-vision.png " alt="" style="text-align: center !important; width: 27%; margin-top: -5%; text-align:center">
-                    <h1 style="color: var(--white)">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
-                    <br>   
-                    <p style="text-align: justify !important; width: 70%; color: #ffff; margin-top: -3%;">Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras
-                        y responsables bajo estándares de nivel. </p>
-                    <br>
-                    <audio controls id='actividad_3' class="track-element">
-                        <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
-                    </audio>
-                    <div class="icoflecha instruccionflecha cont-flecha-mision">
-                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+            <div class="col-lg-3 bg-petroleo-v3 pc-movil-slide-7-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img src="assets/img/img-nuestra-vision.png" alt="" style="margin:0 auto; width:25%; margin-top: 5%;">
+                        <h1 class="mt-3" style="color: var(--white); text-align: center;">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
+                        <div><p style="margin:0 auto; max-width: 75%; text-align: justify; color: #ffff;">Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras y responsables bajo estándares de nivel.</p></div>
+                        <audio controls id="actividad_3" class="track-element mt-5  mx-auto d-block" style="max-width: 75%;">
+                            <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
+                        </audio>
+                        <div class="icoflecha instruccionflecha cont-flecha-mision" style="text-align: center;">
+                            <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                        </div>
                     </div>
-                  
                 </div>
             </div>
             <!-- Columna derecha - Blanco -->
             <div class="col-lg-3 .bg-blanco pc-movil-slide-7-2" >
-                <div class="col-lg-12 col-md-12" align="center">
-                    <img src="assets/img/img-nuestra-mision.png" alt="" style="text-align: center !important;  width: 27%; margin-top: -8%;" align="center">
-                    <h1 style="color: var(--blue75)">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
+                <div class="col-lg-12 col-md-12">
+                <div class="row">
+                    <img src="assets/img/img-nuestra-mision.png" alt="" style="margin:0 auto; width:25%; margin-top: 5%;">
+                    <h1  class="mt-3" style="color: var(--blue75); text-align: center;">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
                     <br>   
-                    <p style="text-align: justify !important; width: 70%; margin-top: -3%;">Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.</p>
+                    <div><p style="margin:0 auto; text-align: justify !important; width: 70%;">Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.</p></div>
                     <br>
-                    <audio controls id='actividad_3' class="track-element">
+                    <audio controls id='actividad_3' class="track-element  mt-5  mx-auto d-block" style="max-width: 75%;">
                         <source src="assets/audio/Vision-f.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-flecha-mision">
+                    <div class="icoflecha instruccionflecha cont-flecha-mision" style="text-align: center;">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -362,18 +368,18 @@
     <div class="container">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 bg-petroleo-mineria  col-inline" style="padding-left: 10%; padding-right: 5%;">
+            <div class="col-lg-6 bg-blanco-beneficio  col-inline" style="padding-left: 10%; padding-right: 5%;">
                 <div class="col-lg-12 col-md-12 padding-left">
-                    <h1 class="dx2-v2" style="color: var(--white); margin-top: 12%;">¿Cómo entendemos
-                     la<span style="color: var(--grey)"> minería</span>?</h1>
+                    <h1 class="dx2-v2" style="color: var(--blue75); margin-top: 12%;">¿Cómo entendemos
+                     la<span style="color: var(--blue25)"> minería</span>?</h1>
                     <br>   
-                    <p style="color: #f3f3f3; text-align: justify !important;"> Creemos en una operación minera con
+                    <p style="color: #474545; text-align: justify !important;"> Creemos en una operación minera con
                         altos estándares de seguridad, ética empresarial y buen gobierno, donde el
                         centro de toda operación es el bienestar
                         del ser humano y la protección del medio
                         ambiente.</p>
                     <br>
-                    <audio controls id='actividad_3' class="track-element audio-v2">
+                    <audio controls id='actividad_3' class="track-element audio-v2 mt-5">
                         <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
                     </audio>
                     <div class="icoflecha instruccionflecha cont-central-flecha">
@@ -385,7 +391,7 @@
             <!-- Columna derecha - Fondo -->
             <div class="col-lg-6 col-inline bg-blancofondominera">
                 <div class="col-lg-12 col-md-12 padding-left">
-                    <p style="color:#e9e9e9; font-size: 18px; margin-top: 65%; text-align: center; "><em>Descubre nuestro enfoque en minería en este video:</em></p>
+                    <p class="mb-3" style="color:#e9e9e9; font-size: 18px; margin-top: 65%; text-align: center; "><em>Descubre nuestro enfoque acerca de la minería en este video:</em></p>
                     <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_06" style="background-color: #BFEE30 !important; color: #0B3D5C !important;"> 
                         <i class="fa fa-play"></i> Ver video</button>
                 </div>
@@ -500,7 +506,7 @@
             </div>
         
             <div class="col-md-12 col-lg-12" >
-                <i class="inst mb-2">Organiza en orden alfabético los valores que hacen parte de nuestra organización</i>
+                <i class="inst mb-2">¡Diviértete!. Organiza, arrastrando al sitio correcto, el orden alfabético los principios que hacen parte de nuestra organización</i>
                 <div class="center-actividad">
                     <ul class="actOrderElement" id="actOrderElement">
                         <li class="ui-state-default" value="2">
@@ -542,12 +548,12 @@
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-12 bg-petroleo-v2 pc_movil_slide_10_1" >
-                <div class="col-lg-12 col-md-12" align="center">
-                    <h1 style="color: var(--white); margin-top: 3%;">Conozcamos a<span style="color: var(--grey)"> nuestras directivas</span></h1>
-                    <i class="inst mb-2">Desplace el mouse sobre la imagen para ver el contenido detallado</i>
+                <div class="col-lg-12 col-md-12" style="text-align:center">
+                    <h1 style="color: var(--white); margin-top: 3%;">Conoce a<span style="color: var(--grey)"> nuestras directivas</span></h1>
+                    <i class="inst mb-2">Desplazando el mouse sobre la imagen que quieras ampliar</i>
                     <br>   
                     <img src="assets/img/Organigrama-actualizado.png" alt="" class="zoom img-zomm"
-                    style="text-align: center !important; width: 50%;" align="center"
+                    style="text-align: center !important; width: 50%; margin: 0 auto;"
                     data-magnify-src="assets/img/organigrama-actualizado-zoom.png">
 
                 </div>
@@ -562,9 +568,8 @@
             <!-- Columna izquierda - Azul petróleo -->
         <div class="col-lg-5 col-md-12 top-slide-14 bg-petroleo-v4min">
                 <div class="col-lg-12 col-md-12 padding-left-1">
-                    <h1 style="color: var(--white);">Conoce el
-                     <br>
-                    <span style="color: var(--grey)"> Vestuario Operativo</span> de mina</h1> 
+                    <h1 style="color: var(--white);">Conoce el        
+                    <span style="color: var(--grey)"> Vestuario  <br> Operativo</span>  de mina</h1> 
 
                     <ul class="listado"  style="width: 80%; margin-top: 5%; margin-bottom: 5%;">
                         <li>
@@ -578,20 +583,22 @@
                             elementos de protección personal (EPP) aptos para cada labor
                         </li>      
                     </ul>
-                    <audio controls>
+                    <audio controls class="mt-5" style="max-width: 80%;">
                         <source src="assets/audio/Vestuario-Operativo-f.mp3" type="audio/mp3" style="padding-bottom: 2%;">
                     </audio>
-                    <i class="inst mb-2">Haga clic para escuchar el audio</i>
+                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                    </div>
         
                 </div>
             </div>
         
             <!-- Columna derecha - Fondo -->
-            <div class="col-lg-7 col-md-12 top-slide-14 bg-petroleov5" >
+            <div class="col-lg-7 col-md-12 top-slide-14 bg-blanco" >
                 <div class="col-md-12 col-lg-12">
-                    <i class="inst mb-2">Desplace el mouse sobre la imagen para ver el contenido detallado</i>
+                    
                     <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <div class="col-lg-3 col-md-12" style="margin-top: -15%;">
+                        <div class="col-lg-4 col-md-12" style="margin-top: -15%;">
                             <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-lampara.png" id="img-1" style="display: none;">
                             <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-casco.png" id="img-2" style="display: none;">
                             <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-gafas.png" id="img-3" style="display: none;">
@@ -600,12 +607,13 @@
                             <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-guantes.png" id="img-6" style="display: none;">
                             <img  class="tooltip-item" src="assets/img/vestuario-mina/uniforme-mina-botas.png" id="img-7" style="display: none;">
                         </div>
-                        <div class="col-lg-3 col-md-12">
+                        <div class="col-lg-8 col-md-12">
                             <img  class="img-vestuario" id="main-image" src="assets/img/uniforme-mina.png" alt="vestuario-corporativo">
                         </div>
 
                     </div>
-                  </div>
+                    <i class="inst mb-2">Desplace el mouse sobre la imagen para ver el contenido detallado</i>
+                </div>
             </div> 
     </div> 
     </div>    
@@ -618,9 +626,7 @@
         <div class="col-lg-5 col-md-12 top-slide-14 bg-petroleo-v4min">
                 <div class="col-lg-12 col-md-12 padding-left-1">
                     <h1 style="color: var(--white);">Conoce el
-                     <br>
-                    <span style="color: var(--grey)"> Vestuario Administrativo 
-                        <br>Operacional</span></h1> 
+                    <span style="color: var(--grey)"> Vestuario <br> Administrativo </span><span  style="color: var(--white);">Operacional</span></h1> 
 
                     <ul class="listado"  style="width: 80%; margin-top: 5%; margin-bottom: 5%;">
                         <li>
@@ -628,30 +634,24 @@
                         <li>
                             Queda prohibido modificar su uniforme o dotación de trabajo.
                         </li>    
-                        <li>
-                            Botas de seguridad.
-                        </li>
-                        <li>
-                            Se permite el uso de blue jeans sin rotos, desgastes o decorados fuertes.
-                        </li> 
-                        <li>
-                            Se permite el uso prudente de accesorios (aretas, anillos, pulseras, entre otros).
-                        </li>     
+                             
                     </ul>
-                    <audio controls>
-                        <source src="assets/audio/" type="audio/mp3" style="padding-bottom: 2%;">
+                    <audio controls class="mt-5" style="max-width: 80%;">
+                        <source src="assets/audio/" type="audio/mp3">
                     </audio>
-                    <i class="inst mb-2">Haga clic para escuchar el audio</i>
+                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                    </div>
         
                 </div>
             </div>
         
             <!-- Columna derecha - Fondo -->
-            <div class="col-lg-7 col-md-12 top-slide-14 bg-petroleov5" >
+            <div class="col-lg-7 col-md-12 top-slide-14 bg-blanco" >
                 <div class="col-md-12 col-lg-12">
                     <i class="inst mb-2">Clic sobre el icono más</i>
                     <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <img class="img-vestuario" style="margin-top: -20%; margin-bottom: -5%;"  src="assets/img/vestuario-operativo-oficina.png" alt="vestuario-corporativo oficina">
+                        <img class="img-vestuario"  src="assets/img/vestuario-operativo-oficina.png" alt="vestuario-corporativo oficina">
                         <img class="icono" id="icono5" style="margin-top: 2% pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
                         <audio id="audio5" src="assets/audio/Vestuario-Administrativo.mp3" hidden></audio>
                     </div>
@@ -675,30 +675,23 @@
                     <p style="color: #fff; margin-top: 2%;">Te invitamos a que cuides tu presentación personal<br>
                         en los días de trabajo y a tener presente las <br>siguientes indicaciones</p>
 
-                    <ul class="listado" style="width: 80%; margin-top: 3%; margin-bottom: 3%;">
-                        <li>
-                            El uso de blue jean no debe tener rotos, desgastes o decorados fuertes</li>
-                        <li>
-                            Las blusas no deben tener escotes exagerados ni ser demasiado cortas
-                        </li>    
-                        <li>
-                            Tener cuidado con el largo de las faldas y vestidos, no deben ser demasiado cortas
-                        </li>      
-                    </ul>
-                    <audio controls>
+                    
+                    <audio controls class="width:80%; mt-5">
                         <source src="assets/audio/Vestuario-Administrativo.mp3" type="audio/mp3" style="padding-bottom: 2%;">
                     </audio>
-                    <i class="inst mb-2">Haga clic para escuchar el audio</i>
+                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                    </div>
         
                 </div>
             </div>
         
             <!-- Columna derecha - Fondo -->
-            <div class="col-lg-7 col-md-12 top-slide-14 bg-petroleov5" >
+            <div class="col-lg-7 col-md-12 top-slide-14 bg-blanco" >
                 <div class="col-md-12 col-lg-12">
                     <i class="inst mb-2">Clic sobre el icono más</i>
                     <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <img class="img-vestuario" style="margin-top: -20%; margin-bottom: -5%;"  src="assets/img/vestuario-administrativo-oficina.png" alt="vestuario-administrativo-oficina oficina">
+                        <img class="img-vestuario" src="assets/img/vestuario-administrativo-oficina.png" alt="vestuario-administrativo-oficina oficina">
                         <img class="icono" id="icono5" style="margin-top: 2% pointer;" src="assets/img/icono-mas-vestuario.png" alt="">
                         <audio id="audio5" src="assets/audio/Vestuario-Administrativo.mp3" hidden></audio>
                     </div>
@@ -986,7 +979,7 @@
             </div>
         
             <div class="col-lg-6 col-md-12 left">
-                <h1 class="dx3-v2">Que esperamos <br> de ti como nuevo colaborado</h1>
+                <h1 class="dx3-v2">¿Qué esperamos <br> de ti como nuevo colaborador?</h1>
                 <hr class="hr-custom"> 
                 <h4 class="dx2-v3">Sección 3</h4>
             </div>
@@ -995,16 +988,18 @@
     <!--Fin Seccion3-->
 
     <!--Inicio Turno de trabajo-->
-        <div class="container bg-petroleo-v2">
+        <div class="container bg-petroleo2">
             <div class="row">
                 <!-- Columna izquierda - Azul petróleo -->
                 <div class="col-lg-6 col-md-12 padding-left-turno" style="padding-left: 5%; padding-right: 2%;">
-                    <h1 class="" style="color: var(--white);">Gestiones adecuadamente tu <br>
+                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
+                    <h1 class="" style="color: var(--white);">1. Que gestiones adecuadamente tu <br>
                         <span style="color: var(--grey)">turno de trabajo</span></h1><br>
                     <ul class="listado" style="margin-top: -3%; margin-bottom: 5%;">
-                        <li>Garantiza el <span style="color: var(--grey)">cumplimiento de los turnos</span> y el pago correcto de las diferentes novedades</li>
-                        <li>Novedades que registra: recargos nocturnos, dominicales o festivos, <span style="color: var(--grey)">horas extras</span> o <span style="color: var(--grey)">ausencias</span></li>
-                        <li>Todas las personas debemos realizar adecuadamente la <span style="color: var(--grey)">marcación de ingreso</span> y <span style="color: var(--grey)">salida de turno</span> en los lectores disponibles con nuestro carnet corporativo</li>
+                        <li>Garantizando el <span style="color: var(--grey)">cumplimiento de los turnos</span> y el pago correcto de las diferentes novedades</li>
+                        <li>Registrando las novedades: recargos nocturnos, dominicales o festivos, <span style="color: var(--grey)">horas extras</span> o <span style="color: var(--grey)">ausencias</span></li>
+                        <li>Todos debemos realizar adecuadamente la <span style="color: var(--grey)">marcación de ingreso</span> y <span style="color: var(--grey)">salida de turno</span> en los lectores disponibles con nuestro carnet corporativo</li>
                     </ul>
 
                     <audio controls class="audio-bienvenida">
@@ -1048,12 +1043,24 @@
     <!--Inicio Actividad Riesgos mas comunes-->
     <div class="container">
         <div class="row">
+             <!--contenido lateral Izquierdo sagrilaft-->
+             <div class="col-lg-4 col-md-12 bg-blanco">
+                <div class="col-lg-12 col-md-12">
+                    <h1 style="color: var(--primary); text-align: center; padding-top: 12%;">¿Qué es SAGRILAFT?</h1>
+                <br>
+                <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_08"
+                style="background-color: #BFEE30 !important; color: #0B3D5C !important; float: justify;"> 
+                Ver video</button>
+                </div>
+            </div>
             <!-- Columna top -->
             <div class="col-lg-8 col-inline top-slide-14 bg-petroleo-v5-sagri">
                 <div class="col-lg-12 col-md-12">
-                    <h1 style="color: var(--white); text-align: center; padding-top: -10%;">Ayudanos a
-                        <span style="color: var(--grey)"> prevenir</span> el riesgo de <br>
-                        <span style="color: var(--grey)"> Lavado de activos</span></h1>
+                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
+                        <h3 style="color: var(--white); text-align: center; margin-top: 25px !important;">2- Que nos ayudes a
+                        <span style="color: var(--grey)"> prevenir</span> el riesgo de
+                        <span style="color: var(--grey)"> LAVADO DE ACTIVOS</span></h3>
                     
                         <i class="inst mb-2">Organiza de 1 a 6 los <b>riesgos más comunes</b> que puede ocurrir en nuestra operación</i>
                         <div class="center-actividad">
@@ -1089,16 +1096,7 @@
                             Verificar</button>
                 </div>
             </div>
-            <!--contenido lateral derecho sagrilaft-->
-            <div class="col-lg-4 col-md-12 bg-blanco">
-                <div class="col-lg-12 col-md-12">
-                    <h1 style="color: var(--primary); text-align: center; padding-top: 12%;">¿Qué es SAGRILAFT?</h1>
-                <br>
-                <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_08"
-                style="background-color: #BFEE30 !important; color: #0B3D5C !important; float: justify;"> 
-                Ver video</button>
-                </div>
-            </div>
+           
 
              <!-- Modal -->
         <div class="modal fade" id="slide_08" tabindex="-1" aria-hidden="true">
@@ -1138,7 +1136,8 @@
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-8 col-md-12 top-slide-14" >
                 <div class="padding-left-casos">
-                <h1 style="color: var(--white);">Qué <span style="color: var(--blue25);">esperamos</span> de ti:</h1>
+                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
                 <p class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">2- Que nos ayudes a prevenir el riesgo de <span style="color: var(--blue25);">Lavado de activos</span><p>
 
             <div class="ctItem" id='actividad_h_01' style="display: none;">
@@ -1163,36 +1162,32 @@
     </div>
    <!--Fin de actividad lavado de activos-->
 
-    <!--Actividad calificacion-->
+    <!--Actividad Compromiso-->
     <div class="container">
         <div class="row">
-            <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
-                <div class="contenido-central">
-                    <h1 style="padding-top: 18%; color: var(--primary80)">¡HAZ TU <span style="color: var(--primary);">COMPROMISO</span>!</h1>
-                    <br>   
-                    <p style="text-align: justify !important; padding-bottom: 5%">Selecciona el nivel de compromiso que como colaborador tendrás para ayudar a prevenir los <span style="color: var(--primary);">RIESGOS DE LAVADO DE ACTIVOS</span> en nuestra operación</p>
-
-                    <div class="rating">
-                        <input type="radio" name="estrellas" id="estrella1" value="1">
-                        <label for="estrella1"></label>
-                        <input type="radio" name="estrellas" id="estrella2" value="2">
-                        <label for="estrella2"></label>
-                        <input type="radio" name="estrellas" id="estrella3" value="3">
-                        <label for="estrella3"></label>
-                        <input type="radio" name="estrellas" id="estrella4" value="4">
-                        <label for="estrella4"></label>
-                        <input type="radio" name="estrellas" id="estrella5" value="5">
-                        <label for="estrella5"></label>
+            <!-- Columna derecha -->
+            <div class="col-12 bg-petroleo-slide-22 pc-movil-slide-22-1">
+                <div class="contenido-slide-22" >
+                    <!-- Contenido a la izquierda -->
+                    <h1 class="dx2  mt-3" style="color: var(--blue25);">Yo, <span style="color: var(--blue75);">Johana Linares </span> en mi calidad de visitante:</h1>
+                
+                    <p class="white-text mt-5" style="text-align: justify; width: 100%;">
+                        Como visitante me comprometo a cumplir con las normas y procedimientos, responsabilidades, velar por la conservación del medio ambiente, el uso de los elementos de protección personal que sean suministrados y requeridos durante mi permanencia en las instalaciones de la empresa.
+                    </p>
+                    <p class="white-text  mt-3"  style="text-align: justify; width: 100%;">
+                        Entiendo que no está permitido el ingreso a las instalaciones de la empresa bajo la influencia de sustancias psicoactivas legales o ilegales, ya que pondría en riesgo mi seguridad y la de los demás en la operación.
+                    </p>    
+                    <div class="signature-slide-22" >
+                        <canvas id="firmaCanvas" width="300" height="100" style="background:white"></canvas>
+                        <button id="borrarFirmaBtn"></button>
+                        <!-- <img src="assets/img/logo-full.svg" style="max-width: 10%; padding: 10px;"> -->
                     </div>
-                    <br>
-					<p class="resultado"></p>
-                    <i class="inst mb-2">Selecciona el sistema de votación</i>
+                   
+
                 </div>
+                
             </div>
-            <!-- Columna derecha - Blanco -->
-            <div class="col-lg-6 bg-votacion" >    
-            </div>
+       
         </div>
     </div>
     <!--Fin Actividad de calificacion-->
@@ -1247,6 +1242,8 @@
     <div class="row ">
         <!-- Columna izquierda - Azul petróleo -->
         <div class="col-lg-12 col-md-12 magin-movil top-slide-14" style="text-align:center;">
+            <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
             <h1 style="color: var(--white);">Que estés ATENTO a tus deberes y a tu entorno</h1>
             <p class="inst5 mb-2" style="margin-bottom: 5%;"><em>Revisa detenidamente las tres opciones y elige entre verdadero o falso según su aplicabilidad en cada situación</em></p>
         </div>
@@ -1303,6 +1300,8 @@
                 <div class="padding-left-2">
             
                    <h1 style="color: var(--white);"><span style="color: var(--grey);">CASO 3:</span> CONFLICTO DE INTERÉS</h1>
+                   <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
                    <p class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">Que declares situaciones de<span style="color: var(--blue25);"> CONFLICTO DE INTERÉS</span><p>
                    <p class="dx2-v4" style="color: var(--white); line-height: 1.2em;"> Veamos este caso relacionado con
                             CONFLICTO DE INTERÉS<br>
@@ -1392,6 +1391,8 @@
                 <div class="padding-left-2">
                 
                     <h1 style="color: var(--white);"><span style="color: var(--grey);">CASO 4:</span> COMITÉ DE CONVIVENCIA </h1>
+                    <h4 style="font-size:large; color: var(--blue25);">¿Qué esperamos de ti como nuevo colaborador?</h4>
+                    <hr style="color: #e9e9e9;">
                     <p  class="dx2-v4-casos" style="color: var(--white); margin-bottom: 2%;">Que sepas cuándo acudir al <span style="color: var(--blue25);">comité de convivencia</span><p>
                         <p class="dx2-v4" style="color: var(--white); line-height: 1.2em;"> Veamos este caso relacionado que puede ocurrir en
                             <span style="color: var(--blue25);">nuestra operación</span><br>

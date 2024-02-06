@@ -1220,7 +1220,7 @@
             position: relative;
         }
         .pc-movil-slide-22-1{
-            width: 60% !important;
+            width: 100% !important;
         }
         .pc-movil-slide-22-2{
             width: 40% !important;
@@ -1234,14 +1234,14 @@
             position: relative;
         }
         .signature-slide-22{
-            max-width: 30%; 
-            margin: 0 auto; 
-            margin-top:30px;
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            justify-content: center;
         }
         .contenido-slide-22{
             margin-left: 80px; 
             margin-right: 80px; 
-            margin-top: 70px;
         }
 
         .divided-background-slide-14 {
@@ -3028,11 +3028,11 @@ iframe:after {
 .accordion-button {
     font-size: 18px;
     color: #ffffff;
-    background-color: var(--primary);
+    background-color: var(--blue75);
 }
 .accordion-button:not(.collapsed) {
     color: #fff;
-    background: var(--secondary);
+    background: var(--blue25);
 }
 .accordion-collapse.collapse.show {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;

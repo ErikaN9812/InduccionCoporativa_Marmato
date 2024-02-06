@@ -1,5 +1,54 @@
 $(document).ready(function () {
 
+  //Para generar el TOOLTIP
+  $(function() {
+    // Agrega un atributo "title" a cada imagen con el concepto correspondiente
+    $('.actOrderElement li img').each(function() {
+      var concepto;
+  
+      switch ($(this).closest('li').attr('value')) {
+        case '1':
+          concepto = 'Coexistencia';
+          break;
+        case '2':
+          concepto = 'Eficiencia';
+          break;
+        case '3':
+          concepto = 'Gestión';
+          break;
+        case '4':
+          concepto = 'Inversión';
+          break;
+        case '5':
+          concepto = 'Seguridad';
+          break;
+        case '6':
+          concepto = 'Transparencia';
+          break;
+        default:
+          concepto = 'Concepto por defecto';
+      }
+  
+      // Agrega el atributo "title" con el concepto y inicializa el tooltip solo para esta imagen
+      $(this).attr('title', concepto).tooltip();
+    });
+  });
+  
+
+  var canvas = document.getElementById("firmaCanvas");
+  var signaturePad = new SignaturePad(canvas);
+
+  // Para borrar la firma
+  $("#borrarFirmaBtn").on("click", function () {
+    signaturePad.clear();
+  });
+
+  // Para obtener la imagen de la firma como base64
+  $("#guardarFirmaBtn").on("click", function () {
+    var firmaImagen = signaturePad.toDataURL();
+    // Puedes enviar la firmaImagen a tu servidor o realizar otras acciones con ella.
+    console.log(firmaImagen);
+  });
 
 // Mover el tooltip junto con el cursor
 $('#main-image').mousemove(function (e) {
