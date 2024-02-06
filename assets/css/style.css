@@ -2064,7 +2064,7 @@
 /*icono mas vestuario*/
 .icono {
     position: absolute;
-    max-height: 2rem;
+    max-height: 1.4rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
