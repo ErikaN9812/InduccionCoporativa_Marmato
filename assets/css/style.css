@@ -3271,7 +3271,9 @@ iframe:after {
     background-size: cover;  
 }
 
-
+.top-slide-21{
+    margin-top:60px;
+}
 
 @media (max-width:734px) {
     
@@ -3327,12 +3329,15 @@ iframe:after {
     .top{
        margin-top:340px;
     }
+    .top-slide-21{
+        margin-top:100px;
+    }
+    
 
     .top-slide-14{
         margin-top:100px;
     }
     
-
     }
     .top-slide-1-2{
         margin-top:5%; 
@@ -3459,60 +3464,3 @@ iframe:after {
 .actVorF .btn {
   margin: 10px;
 }
-  
-/*ctActivityDragDrop*/
-.ctActivityDragDrop {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.ctActivityDragDrop img {
-    max-width: 317px;
-    border-radius: 5px;
-}
-.ctActivityDragDrop img:hover {
-    filter: brightness(0.8);
-    transform: scale(1.01);
-    transition: .2s;
-    cursor: pointer;
-}
-.ctActivityDragDrop .listOpcDrag > div {
-    position: relative;
-    display: inline-block;
-    width: 150px;
-    height: 190px;
-    margin: 10px;
-    border: 1px solid #cdcdcd;
-    border-radius: 5px;
-}
-.ctActivityDragDrop .listOpcDrag .correct img:nth-child(1) {
-    position: absolute;
-    width: 75px;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-}
-.ctActivityDragDrop .listOpcDrag .correct img:nth-child(2) {
-    width: 75px;
-    left: 0 !important;
-    top: 0 !important;
-}
-.ctActivityDragDrop .listOpcDrop {
-    border-right: 1px solid #cacaca;
-}
-.ctActivityDragDrop .listOpcDrop img {
-    display: inline-block;
-    margin: 10px;
-    z-index: 3;
-}
-.tooltip, .arrow:after {
-    background: black;
-    border: 2px solid white;
-  }
-  .tooltip {
-    padding: 5px 10px;
-    color: white;
-    border-radius: 20px;
-    font: bold 12px;
-
-    box-shadow: 0 0 2px black;
-  }
