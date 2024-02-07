@@ -173,7 +173,7 @@ $(document).ready(function () {
       var descripcion;
       switch ($(this).attr('value')) {
         case '1':
-          descripcion = 'No usar blusas cortas, ni escotadas';
+          descripcion = 'Uso de camisa empresarial';
           break;
         case '2':
           descripcion = 'Uso de blue jeans sin rotos, desgastes o decorados fuertes';
@@ -197,13 +197,13 @@ $(document).ready(function () {
       var descripcion_vestuario;
       switch ($(this).attr('value')) {
         case '1':
-          descripcion_vestuario = 'No usar faldas, ni vestidos cortos';
+          descripcion_vestuario = 'Evitar faldas y vestidos demasiado cortos';
           break;
         case '2':
-          descripcion_vestuario = 'Uso de blusas sin escotes';
+          descripcion_vestuario = 'Las blusas no deben tener escotes exagerados ni ser demasiado cortas';
           break;
         case '3':
-          descripcion_vestuario = 'Uso de botas de seguridad';
+          descripcion_vestuario = 'Los jeans no deben tener roturas, desgaste excesivo ni decoraciones llamativas';
           break;
       }
   

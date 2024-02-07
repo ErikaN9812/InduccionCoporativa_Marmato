@@ -186,7 +186,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             display: flex;
-            height: 140vh;
+            height: 120vh;
             align-items: center;
             position: relative;
         }
@@ -339,6 +339,15 @@
             position: relative;
         }
 
+        .fixedv1
+        {
+            display: flex;
+        }
+
+        .imgsagri img{
+            width: 65%;
+        }
+
 
 
         .bg-petroleo-slide-7{
@@ -409,6 +418,15 @@
         .padding-left-1{
             margin-right: 60px;
             margin-left: 90px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+        /*Espacio de vestuario*/
+        .padding-left-v2{
+            margin-right: 90px;
+            margin-left: 80px;
             margin-top: 50px;
             max-width: 100%;
             padding: 0%;
@@ -894,6 +912,8 @@
         .center-actividad{
             display: grid;
             place-items: center;
+            margin-left: 2%;
+
         }
        
 
