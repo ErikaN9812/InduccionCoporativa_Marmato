@@ -3484,3 +3484,15 @@ iframe:after {
     margin: 10px;
     z-index: 3;
 }
+.tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  .tooltip {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 20px;
+    font: bold 12px;
+
+    box-shadow: 0 0 2px black;
+  }
