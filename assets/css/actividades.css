@@ -139,7 +139,7 @@
     z-index: 2;
 }
 .actOrderElement img {
-    max-width: 210px;
+    max-width: 200px;
 }
 .actOrderElement li img.incorrect {
     border: 3px solid #FF5F5F;
