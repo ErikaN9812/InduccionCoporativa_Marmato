@@ -74,7 +74,7 @@
 	<div class="contentHeader">
 		<div>
 			<img class="logoTop" src="assets/img/logoG.png">
-			<div></div>
+			<div><p style="text-align: left; color: white;" id="breadcrumb" ></p></div>
 			<!-- button home -->
 			<div>
 				<button id="home" onclick="progCircle(1);">
@@ -231,7 +231,7 @@
     <!--Fin Seccion1-->
 
     <!--Inicio Nuestro proposito superior-->
-    <div class="container">
+    <div class="container miga_nuestro_proposito">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
@@ -271,7 +271,7 @@
 
 
     <!--Inicio Nuestra Operacion Minera-->
-    <div class="container">
+    <div class="container miga_nuestra_operacion">
         <div class="row">
         <div class="col-lg-8 col-md-12 bg-blancominera">
             <div class="contenido-central">
@@ -321,7 +321,7 @@
 
 
     <!--Inicio nuestra mision y vision-->
-    <div class="container">
+    <div class="container miga_mision_vision">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-3 bg-petroleo-mision pc-movil-slide-7-1">
@@ -364,7 +364,7 @@
 
     
     <!--Inicio como entendemos la minera-->
-    <div class="container">
+    <div class="container miga_como_entendemos">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 bg-blanco-beneficio  col-inline" style="padding-left: 10%; padding-right: 5%;">
@@ -419,7 +419,7 @@
     <!--Fin como entedemos la minera-->
 
     <!--Inicio Diversidad equidad e inclusion-->
-     <div class="container dividerImgDiversidad">
+     <div class="container dividerImgDiversidad miga_nuestra_cultura_valores">
         <div class="row">
             <div class="col-lg-12 col-md-12"  style="display: grid; place-items: center;" >
                 <img src="assets/img/seccion-diversidad-v2.png" data-bs-toggle="modal" data-bs-target="#slide_09" style="cursor:pointe; text-align: center !important; width: 30%;" align="center">
@@ -448,7 +448,7 @@
 
     
      <!--Pantalla '5 funciones del comite de Diversidad'-->
-     <div class="container bg-blanco">
+     <div class="container bg-blanco miga_comite_diversidad">
         <div class="row ">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-12 col-md-12">
@@ -496,7 +496,7 @@
     <!--Fin 5 funciones del comite de Diversidad -->
 
     <!--Inicio Nuestros principios ARIS-->
-    <div class="container divided-backgroundv3">
+    <div class="container divided-backgroundv3 miga_nuestros_propositos_aris">
         <div class="row">
             <!-- Columna top -->
             <div class="col-lg-12 col-md-12">
@@ -543,7 +543,7 @@
 
    
     <!--Inicio Nuestras directivas-->  
-    <div class="container">
+    <div class="container miga_conoce_directivas">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-12 bg-petroleo-triangulo-right pc_movil_slide_10_1" >
@@ -704,7 +704,7 @@
     
      <!--Inicio Beneficios Marmato-->
     <!--Beneficio 1-->
-    <div class="container">
+    <div class="container miga_beneficios">
         <div class="row">
              <!-- Columna derecha - Blanco -->
             <div class="col-lg-6 bg-slide-13">
@@ -733,7 +733,7 @@
     <!--Fin Beneficios-->
 
     <!--Inicio Asi compartimos juntos en la operacion-->
-    <div class="container divided-backgroundv3">
+    <div class="container divided-backgroundv3 miga_asi_compartimos">
         <div class="row">
          
           <!--Carrusel-->
@@ -800,7 +800,7 @@
 
 
       <!--Inicio Asi te cuidamos en la operación-->
-      <div class="container divided-backgroundv3">
+      <div class="container divided-backgroundv3 miga_asi_cuidamos">
         <div class="row">
         <div class="col-lg-6 col-md-12 top-slide-1-2" >
             <img src="assets/img/asi-te-cuidamos-operacion.png" alt="Asi te ciudamos en la operacion">
@@ -1872,7 +1872,7 @@
 
           aniSl19(1);
             function aniSl19(e){
-                
+
                 // number of slider
                 var sliders = $(".contentModule > div").length;
                 $('#nSlider').html(sliders - 1);
@@ -1890,13 +1890,23 @@
                         $("#next").click(); 
                     });
                 }
-                // if(e === 21){
-                //     if (localStorage.getItem('slider21') === "ok") {
-				// 	    $("#next").removeAttr("disabled").removeAttr("style");
-                //     } else {
-                //         $("#next").attr('disabled','disabled').css("cursor", "no-drop");
-                //     }
-                // }
+                const breadcrumbMap = {
+                    'miga_nuestro_proposito': '1. Nuestro propósito superior',
+                    'miga_nuestra_operacion': '1. Nuestra operación en Colombia',
+                    'miga_mision_vision': '1. Nuestra misión y visión',
+                    'miga_como_entendemos': '1. ¿Cómo entendemos la minería?',
+                    'miga_nuestra_cultura_valores': '1. Nuestra cultura y valores',
+                    'miga_comite_diversidad': '1. Comité de Diversidad, Equidad e Inclusión',
+                    'miga_nuestros_propositos_aris': '1. Nuestros principios Aris',
+                    'miga_conoce_directivas': '1. Conoce a nuestras directivas',
+                    'miga_beneficios': '2. Beneficios',
+                    'miga_asi_compartimos': '2. Así compartimos juntos en la operación',
+                    'miga_asi_cuidamos': '2. Así te cuidamos en la operación'
+                };
+
+                $('#breadcrumb').html(breadcrumbMap[$('.current').attr('class').split(' ').find(className => className.startsWith('miga'))] || '');
+
+
                 if(e === sliders){
                     $("#next").css('display','none');
                     // window.location.href = "quiz.php?course_code=<?= $course_code; ?>";
