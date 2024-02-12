@@ -141,9 +141,9 @@
     <div class="container current">
         <div class="row">
             <!-- Columna izquierda - Blanco -->
-            <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco-bienvenida" >
+            <div class="top-slide-14 bg-blanco-bienvenida" >
                 <div class="padding-left-1">
-                    <h1 class="dx2-v2" style="color: var(--primary);  padding-top: 18%;">Te damos la <span style="color: var(--blue75);">bienvenida</span> a nuestro equipo</h1>   
+                    <h1 class="dx2-v2">Te damos la <span style="color: var(--blue75);">bienvenida</span> a nuestro equipo</h1>   
                     <p style="text-align: justify; padding-top: 5%; padding-bottom: 5%">Estamos encantados de darte la bienvenida
                         a través de este módulo virtual, diseñado especialmente para guiarte como nuevo colaborador de nuestra empresa. Queremos
                         facilitarte una hoja de ruta que te permita
@@ -161,7 +161,7 @@
 
              <!-- Carrusel -->
 
-            <div class="col-lg-6 col-inline slider-box" id="carrusel">
+            <div class="slider-box" id="carrusel">
                 
             </div>
          
@@ -176,7 +176,7 @@
         <div class="row ">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-12 col-md-12">
-                <h1 class="text-center" style="color: var(--white)">Estructura <span style="color: var(--grey);"> temática</span></h1>
+                <h1 class="text-center top-movil" style="color: var(--white)">Estructura <span style="color: var(--grey);"> temática</span></h1>
                 <h4 style="color: var(--white);" class="mb-5 text-center">En este curso encontrarás estos <span style="color: var(--grey);">3 secciones</span> claves de acercamiento
                     a nuestra organización, <br />continúa adelante para irlos revisando en el mismo orden</h4>
             </div>
@@ -236,7 +236,7 @@
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
                 <div class="padding-left-1 ">
-                    <h1 style="padding-top: 15%; color: var(--primary80)">Nuestro <span style="color: var(--blue75);">propósito</span> superior</h1>
+                    <h1 class="dx2-v2 h1-titulo">Nuestro <span style="color: var(--blue75);">propósito</span> superior</h1>
                     <br>   
                     <p style="text-align: justify !important; padding-bottom: 5%">Concebimos a Aris Mining como una
                         compañía ambiental y social con base en la minería, lo cual es relevante en el
@@ -322,37 +322,42 @@
 
     <!--Inicio nuestra mision y vision-->
     <div class="container miga_mision_vision">
-        <div class="row">
+        <div style="display: flex; flex-wrap: wrap;">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-3 bg-petroleo-mision pc-movil-slide-7-1">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <img src="assets/img/img-nuestra-vision.png" alt="" style="margin:0 auto; width:25%; ">
+            <div class="bg-petroleo-mision">
+                <div>
+                    <div class="row">
+                        <img src="assets/img/img-nuestra-vision.png" class="mt-5 img-mision-vision" >
                         <h1 class="mt-3" style="color: var(--white); text-align: center;">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
-                        <div><p style="margin:0 auto; max-width: 75%; text-align: justify; color: #ffff;">Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras y responsables bajo estándares de nivel.</p></div>
-                        <audio controls id="actividad_3" class="track-element mt-4  mx-auto d-block" style="max-width: 75%;">
+                        <p class="p-style">Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras y responsables bajo estándares de nivel.</p>
+                        <audio controls id="actividad_3" class="track-element mt-4  mx-auto d-block size-audio">
                             <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
                         </audio>
                         <div class="icoflecha instruccionflecha cont-flecha-mision" style="text-align: center;">
-                            <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                            <img src="assets/img/flecha-instru.png" alt="flecha"> 
+                            <i class="inst mb-2">Haz clic para escuchar el audio</i>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Columna derecha - Blanco -->
-            <div class="col-lg-3 bg-petroleo-vision pc-movil-slide-7-2" >
-                <div class="col-lg-12 col-md-12">
+            <div class="bg-petroleo-vision" >
+                <div>
                 <div class="row">
-                    <img src="assets/img/img-nuestra-mision.png" alt="" style="margin:0 auto; width:26%;">
+                    <img src="assets/img/img-nuestra-mision.png" alt="" class="img-mision-vision">
                     <h1  class="mt-3" style="color: var(--blue75); text-align: center;">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
                     <br>   
-                    <div><p style="margin:0 auto; text-align: justify !important; width: 70%;">Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.</p></div>
+                    <div>
+                        <p class="p-style-2">Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.
+                        </p>
+                    </div>
                     <br>
-                    <audio controls id='actividad_3' class="track-element  mt-4  mx-auto d-block" style="max-width: 75%;">
+                    <audio controls id='actividad_3' class="track-element  mt-4  mx-auto d-block size-audio">
                         <source src="assets/audio/Vision-f.mp3" type="audio/mp3">
                     </audio>
                     <div class="icoflecha instruccionflecha cont-flecha-vision" style="text-align: center;">
-                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> 
+                        <i class="inst mb-2">Haz clic para escuchar el audio</i>
                     </div>
                 </div>
                 </div>
@@ -367,9 +372,9 @@
     <div class="container miga_como_entendemos">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 bg-blanco-beneficio  col-inline" style="padding-left: 10%; padding-right: 5%;">
+            <div class="col-lg-6 bg-blanco-beneficio col-inline">
                 <div class="col-lg-12 col-md-12 padding-left">
-                    <h1 class="dx2-v2" style="color: var(--primary); margin-top: 12%;">¿Cómo entendemos
+                    <h1 class="dx2-v5" style="color: var(--primary); margin-top: 12%;">¿Cómo entendemos
                      la<span style="color: var(--blue75)"> minería</span>?</h1>
                     <br>   
                     <p style="color: #8f8f8f; text-align: justify !important;"> Creemos en una operación minera con
@@ -382,7 +387,8 @@
                         <source src="assets/audio/como-entedemos-la-mineria.mp3" type="audio/mp3">
                     </audio>
                     <div class="icoflecha instruccionflecha cont-central-flecha">
-                        <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> 
+                        <i>Haz clic para escuchar el audio</i>
                     </div>
                     <!--<i class="inst mb-2" style="margin-top: 2%; margin-bottom: 5% !important;">Haga clic para escuchar el audio</i>-->
                 </div>
