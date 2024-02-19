@@ -74,7 +74,7 @@
 	<div class="contentHeader">
 		<div>
 			<img class="logoTop" src="assets/img/logoG.png">
-			<div><p style="text-align: left; color: white;" id="breadcrumb" ></p></div>
+			<div class="miga_pan"><p style="text-align: left;" id="breadcrumb" > </p></div>
 			<!-- button home -->
 			<div>
 				<button id="home" onclick="progCircle(1);">
@@ -142,30 +142,22 @@
         <div class="row">
             <!-- Columna izquierda - Blanco -->
             <div class="top-slide-14 bg-blanco-bienvenida" >
-                <div class="padding-left-1">
-                    <h1 class="dx2-v2">Te damos la <span style="color: var(--blue75);">bienvenida</span> a nuestro equipo</h1>   
-                    <p style="text-align: justify; padding-top: 5%; padding-bottom: 5%">Estamos encantados de darte la bienvenida
-                        a través de este módulo virtual, diseñado especialmente para guiarte como nuevo colaborador de nuestra empresa. Queremos
-                        facilitarte una hoja de ruta que te permita
-                        identificarte y moverte con confianza dentro de nuestra organización.</p>
+                <div class="padding-left-1 parrafogris-justify ">
+                    <h1 class="dx2-v2 h1-titulo" style="color: var(--primary);"> <span style="color: var(--blue25)">Bienvenidos</span> a nuestro apasionante equipo</h1>   
+                    <p style="padding-bottom: 5%; margin-top: 5%;">Nos emociona que seas parte de nuestra Compañía, a través de esta inducción virtual queremos
+                        presentarte aspectos importantes para tu trabajo con nosotros</p>
                         <audio controls class="audio-bienvenida">
                             <source src="assets/audio/Bienvenida-Induccion-corporativa.mp3" type="audio/mp3" style="padding-top: 5%;">
                         </audio>
                         <div class="icoflecha instruccionflecha cont-central-flecha">
                             <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
-                        </div>
-                       
+                        </div> 
                 </div>
-                
             </div>
-
              <!-- Carrusel -->
-
             <div class="slider-box" id="carrusel">
                 
-            </div>
-         
-         
+            </div>   
         </div>
     </div>
     <!--Fin seccion bienvenido-->
@@ -175,34 +167,52 @@
     <div class="container divided-backgroundv3">
         <div class="row ">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-12 col-md-12">
-                <h1 class="text-center top-movil" style="color: var(--white)">Estructura <span style="color: var(--grey);"> temática</span></h1>
-                <h4 style="color: var(--white);" class="mb-5 text-center">En este curso encontrarás estos <span style="color: var(--grey);">3 secciones</span> claves de acercamiento
-                    a nuestra organización, <br />continúa adelante para irlos revisando en el mismo orden</h4>
+            <div class="col-lg-12 col-md-12 parrafoblanco-center">
+                <h1 class="text-center top-movil" style="color: var(--white)">Recorrido por la<span style="color: var(--grey);"> Compañía</span></h1>
+                <p style="color: var(--white);" class="text-center">Queremos que estés familiarizado con nuestra Compañía, <br>te invitamos a navegar por
+                    <span style="color: var(--grey);"> (4) cuatro secciones</span> clave para tu proceso de inducción.</p>
+                    <div class="icoflechaabajo instruccionflecha cont-central-flecha ">
+                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha"> <i>Desplaza el mouse sobre cada título para ver su contenido</i>
+                    </div>
             </div>
-            
-            <!-- Columna derecha - azul oscuro -->
-            <div class="col-lg-12 col-md-12 ">
-                <div class="contenido-central-2">
-                    <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                        <div class="col-lg-3 col-md-12">
-                            <img  class="img-estructura"  src="assets/img/Seccion1.png">
-                        </div>
-                        <div class="col-lg-1 col-md-12">
-                            <img  class="img-estructura2"  src="assets/img/flechas-5.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img  class="img-estructura"  src="assets/img/seccion2.png">
-                        </div>
-                        <div class="col-lg-1 col-md-12">
-                            <img  class="img-estructura2"  src="assets/img/flechas-5.png">
-                        </div>
-                        <div class="col-lg-3  col-md-12">
-                            <img class="img-estructura" src="assets/img/seccion3.png">
-                        </div>
+
+            <div class="col-lg-12 col-md-12 slide-elementos2 ">
+                <div class="contenido-central">
+                    <div class="accordion text-parrafo">
+                    <ul>
+                        <li tabindex="1" >
+                            <div id="fondo-momento1">
+                                <a href="#">
+                                <h2 style="text-align: center;">Conoce más acerca<br>de la Compañía</h2>
+                                </a>
+                            </div>
+                        </li>
+                        <li tabindex="2">
+                            <div>
+                                <a href="#">
+                                <h2 style="text-align: center;">Trabajar con nosotros <br>trae grandes beneficios</h2>
+                                </a>
+                            </div>
+                         </li>
+                        <li tabindex="3">
+                            <div>
+                                <a href="#">
+                                <h2 style="text-align: center;">Qué esperamos de ti<br>como colaborador</h2>
+                                </a>
+                            </div>
+                        </li>
+                        <li tabindex="4">
+                            <div>
+                                <a href="#">
+                                <h2 style="text-align: center;">Así Cuidamos de Ti<br>y del Medio Ambiente</h2>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
     <!--Fin estrucuta tematica-->
@@ -221,8 +231,7 @@
             </div>
             
             <div class="col-lg-6 col-md-12 left">
-                <h1 class="dx3-v2">Conoce la organización de
-                    la que haces parte</h1>
+                <h1 class="dx3-v2">Conoce más acerca de la Compañía</h1>
                 <hr class="hr-custom"> 
                 <h4 class="dx2-v3">Sección 1</h4>
             </div>
@@ -235,16 +244,13 @@
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-6 col-md-12 top-slide-14 bg-blanco2" >
-                <div class="padding-left-1 ">
+                <div class="padding-left-1 parrafogris-justify">
                     <h1 class="dx2-v2 h1-titulo">Nuestro <span style="color: var(--blue75);">propósito</span> superior</h1>
                     <br>   
-                    <p style="text-align: justify !important; padding-bottom: 5%">Concebimos a Aris Mining como una
-                        compañía ambiental y social con base en la minería, lo cual es relevante en el
-                        contexto minero colombiano; queremos combinar las habilidades tradicionales
-                        y el conocimiento local de los mineros a pequeña escala con la tecnología,
-                        infraestructura y acceso al capital  de la minería a gran escala.</p>
+                    <p style="padding-bottom: 5%">Aris Mining se sustenta en ser una Compañía minera con un enfoque ambiental y social, lo cual adquiere una especial relevancia en el contexto colombiano. Queremos integrar las habilidades
+                        tradicionales y el conocimiento local de los mineros a pequeña escala con la aplicación de tecnología avanzada, infraestructura moderna y acceso a recursos financieros propios de la minería a gran escala.</p>
                     <audio controls>
-                        <source src="assets/audio/Nuestro-proposito-superior.mp3" type="audio/mp3" style="padding-bottom: 5%;">
+                        <source src="assets/audio/Nuestro-proposito-superior-new.mp3" type="audio/mp3" style="padding-bottom: 5%;">
                     </audio>
                     <div class="icoflecha instruccionflecha cont-central-flecha">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
@@ -274,15 +280,26 @@
     <div class="container miga_nuestra_operacion">
         <div class="row">
         <div class="col-lg-8 col-md-12 bg-blancominera">
-            <div class="contenido-central">
-                <div class="col-lg-12 col-md-12">
+            <div class="contenido-left-mapa">
+                <div class="col-lg-12 col-md-12 ">
                     <h1 style="color: var(--primary); margin-top: 5%;">Nuestra operación en <span style="color: var(--blue25)">Colombia</span></h1>
-                    <i class="inst mb-2">Desplace el mouse sobre la imagen para ver el contenido detallado</i>
-                    <br> 
-                    <div class="containerimg">
-                        <div class="centerimg">    
-                    <img src="assets/img/Mapa actualizado-v2.png" alt="">
+                    <div class="icoflechaabajo instruccionflecha">
+                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="margin-left: 25%;"> <i>Haz clic sobre el + para aumentar y el (-) para disminuir</i>
                     </div>
+                    <br> 
+                    <div class="centermapaimg">
+
+                        <div class="containerdepimg">   
+                            <img src="assets/img/mapa-operacion/departamentos.png" alt="">
+                        </div>
+                        <div class="containerimg">
+                            <img class="iconomapa" id="" style="margin-top: 28%; margin-left: 55%; cursor: pointer;" src="assets/img/mapa-operacion/mapa-mas.png" value="1">
+                            <img class="iconomapa" id="" style="margin-top: 28%; margin-left: 60%; cursor: pointer;" src="assets/img/mapa-operacion/mapa-menos.png" value="1">
+                            <img src="assets/img/mapa-operacion/mapa-general.png" alt=""> 
+                            <!--<img src="assets/img/mapa-operacion/zoom1.png" alt="">-->
+                                 <!--<img src="assets/img/mapa-operacion/zoom2" alt="">-->
+                                  <!--<img src="assets/img/mapa-operacion/zoom3" alt="">-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -290,7 +307,7 @@
 
         <div class="col-lg-4 col-md-12 bg-petroleo-triangulor">
            <div class="col-lg-12 col-md-12">
-            <img src="assets/img/definicion-mapa.png" alt="" style="margin:0 auto; width:45%; margin-top: 5%;">
+            <img src="assets/img/mapa-operacion/definicion-mapa.png" alt="" style="margin:0 auto; width:90%; margin-top: 8%; margin-bottom: 3%;">
             <h5 style="color: #e9e9e9; text-align: center; margin-top: 10%;margin-bottom: 4%;">Te invitamos a que observes este video</h5>
             <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_07" style="background-color: #BFEE30 !important; color: #0B3D5C !important;">
             <i class="fa fa-play"></i>
@@ -329,13 +346,14 @@
                     <div class="row">
                         <img src="assets/img/img-nuestra-vision.png" class="mt-5 img-mision-vision" >
                         <h1 class="mt-3" style="color: var(--white); text-align: center;">Nuestra<span style="color: var(--grey)"> Misión</span></h1>
-                        <p class="p-style">Aris Mining es una empresa minera productora de metales preciosos que crea valor para sus accionistas y grupos de interés mediante la adopción de prácticas eficientes, seguras y responsables bajo estándares de nivel.</p>
+                        <p class="p-style" style="margin-bottom: 8%;">Aris Mining es una empresa minera que <strong>genera valor para sus grupos de interés:</strong> accionistas, comunidades, pequeños mineros, gobierno, proveedores y colaboradores, 
+                            a través de la <strong> adopción de prácticas seguras, eficientes y sostenibles.</strong></p>
                         <audio controls id="actividad_3" class="track-element mt-4  mx-auto d-block size-audio">
                             <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
                         </audio>
-                        <div class="icoflecha instruccionflecha cont-flecha-mision" style="text-align: center;">
-                            <img src="assets/img/flecha-instru.png" alt="flecha"> 
-                            <i class="inst mb-2">Haz clic para escuchar el audio</i>
+                        <div class="icoflecha instruccionflecha" style="text-align: center;">
+                            <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 30%; width: 3%; margin-top: 2%;"> 
+                            <i>Haz clic para escuchar el audio</i>
                         </div>
                     </div>
                 </div>
@@ -344,20 +362,21 @@
             <div class="bg-petroleo-vision" >
                 <div>
                 <div class="row">
-                    <img src="assets/img/img-nuestra-mision.png" alt="" class="img-mision-vision">
+                    <img src="assets/img/img-nuestra-mision.png" alt="" class="img-mision-vision" style="margin-top: 5%;">
                     <h1  class="mt-3" style="color: var(--blue75); text-align: center;">Nuestra<span style="color: var(--primary)"> Visión</span></h1>
                     <br>   
                     <div>
-                        <p class="p-style-2">Aris Mining será una empresa consolidada en explotación subterránea de oro y plata en Colombia, reconocida por los altos estándares en sus prácticas mineras, desarrollo sostenible e integridad  empresarial.
+                        <p class="p-style-2">Aris Mining será reconocida como la <strong>principal productora de oro de las Américas</strong>, con relevancia mundial. 
+                            Nuestra marca se asociará con las <strong>mejores prácticas sociales, ambientales, y de gobierno corporativo ESG;</strong> creando valor a través de la diversificación y optimización de mina, invirtiendo en expansión, exploración y gestión activa del portafolio
                         </p>
                     </div>
                     <br>
                     <audio controls id='actividad_3' class="track-element  mt-4  mx-auto d-block size-audio">
                         <source src="assets/audio/Vision-f.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-flecha-vision" style="text-align: center;">
-                        <img src="assets/img/flecha-instru.png" alt="flecha"> 
-                        <i class="inst mb-2">Haz clic para escuchar el audio</i>
+                    <div class="icoflecha instruccionflecha " style="text-align: center;">
+                        <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 30%; width: 3%; margin-top: 2%;"> 
+                        <i>Haz clic para escuchar el audio</i>
                     </div>
                 </div>
                 </div>
@@ -372,16 +391,14 @@
     <div class="container miga_como_entendemos">
         <div class="row">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-6 bg-blanco-beneficio col-inline">
-                <div class="col-lg-12 col-md-12 padding-left">
-                    <h1 class="dx2-v5" style="color: var(--primary); margin-top: 12%;">¿Cómo entendemos
+            <div class="col-lg-6 bg-blanco-minera  col-inline">
+                <div class="col-lg-12 col-md-12 padding-left parrafogris-justify">
+                    <h1 class="dx2-v5" style="color: var(--primary);">¿Cómo entendemos
                      la<span style="color: var(--blue75)"> minería</span>?</h1>
                     <br>   
-                    <p style="color: #8f8f8f; text-align: justify !important;"> Creemos en una operación minera con
-                        altos estándares de seguridad, ética empresarial y buen gobierno, donde el
-                        centro de toda operación es el bienestar
-                        del ser humano y la protección del medio
-                        ambiente.</p>
+                    <p> Nuestro modelo de minería es clave para el futuro de la industria minera y su integración en la estructura social del país.  
+                        <br>Generamos valor mutuo y promovemos la <strong>formalización de unidades mineras,</strong> la reducción de los impactos ambientales y el beneficio para las <strong>comunidades locales.</strong> 
+                    </p>
                     <br>
                     <audio controls id='actividad_3' class="track-element audio-v2 mt-4">
                         <source src="assets/audio/como-entedemos-la-mineria.mp3" type="audio/mp3">
@@ -1891,29 +1908,29 @@
                     });
                 }
                 const breadcrumbMap = {
-                    'miga_nuestro_proposito'            : '1. Nuestro propósito superior',
-                    'miga_nuestra_operacion'            : '1. Nuestra operación en Colombia',
-                    'miga_mision_vision'                : '1. Nuestra misión y visión',
-                    'miga_como_entendemos'              : '1. ¿Cómo entendemos la minería?',
-                    'miga_nuestra_cultura_valores'      : '1. Nuestra cultura y valores',
-                    'miga_comite_diversidad'            : '1. Comité de Diversidad, Equidad e Inclusión',
-                    'miga_nuestros_propositos_aris'     : '1. Nuestros principios Aris',
-                    'miga_conoce_directivas'            : '1. Conoce a nuestras directivas',
-                    'miga_beneficios'                   : '2. Beneficios',
-                    'miga_asi_compartimos'              : '2. Así compartimos juntos en la operación',
-                    'miga_asi_cuidamos'                 : '2. Así te cuidamos en la operación',
-                    'miga_gestiones_adecuadamente'      : '3. Que gestiones adecuadamente tu turno de trabajo',
-                    'miga_codigo_vestuario_mina'        : '3. Que sigas el código de Vestuario Operativo de mina',
-                    'miga_codigo_vestuario_operacional' : '3. Que sigas el código de Vestuario Administrativo Operacional',
-                    'miga_codigo_vestuario_oficina'     : '3. Que sigas el código de Vestuario Administrativo de oficina',
-                    'miga_sagrilaft'                    : '3. ¿Qué es SAGRILAFT?',
-                    'miga_lavado_activos'               : '3. Que nos ayudes a prevenir el riesgo de LAVADO DE ACTIVOS',
-                    'miga_prevenir_lavado'              : '3. Que nos ayudes a prevenir el riesgo de Lavado de activos',
-                    'miga_etica_transparencia'          : '3. Que actúes con Ética y Transparencia',
-                    'miga_situaciones_conflictos'       : '3. Que declares situaciones de conflicto De Interés',
-                    'miga_deberes_entorno'              : '3.  Comité de Convivencia Laboral',
-                    'miga_deberes_entorno_2'            : '3.  Qué estés atento a tus deberes y a tu entorno',
-                    'miga_buena_gente'                  : '3. Que seas buena gente',
+                    'miga_nuestro_proposito'            : '| 1. Nuestro propósito superior',
+                    'miga_nuestra_operacion'            : '| 1. Nuestra operación en Colombia',
+                    'miga_mision_vision'                : '| 1. Nuestra misión y visión',
+                    'miga_como_entendemos'              : '| 1. ¿Cómo entendemos la minería?',
+                    'miga_nuestra_cultura_valores'      : '| 1. Nuestra cultura y valores',
+                    'miga_comite_diversidad'            : '| 1. Comité de Diversidad, Equidad e Inclusión',
+                    'miga_nuestros_propositos_aris'     : '| 1. Nuestros principios Aris',
+                    'miga_conoce_directivas'            : '| 1. Conoce a nuestras directivas',
+                    'miga_beneficios'                   : '| 2. Beneficios',
+                    'miga_asi_compartimos'              : '| 2 . Así compartimos juntos en la operación',
+                    'miga_asi_cuidamos'                 : '| 2. Así te cuidamos en la operación',
+                    'miga_gestiones_adecuadamente'      : '| 3. Que gestiones adecuadamente tu turno de trabajo',
+                    'miga_codigo_vestuario_mina'        : '| 3. Que sigas el código de Vestuario Operativo de mina',
+                    'miga_codigo_vestuario_operacional' : '| 3. Que sigas el código de Vestuario Administrativo Operacional',
+                    'miga_codigo_vestuario_oficina'     : '| 3. Que sigas el código de Vestuario Administrativo de oficina',
+                    'miga_sagrilaft'                    : '| 3. ¿Qué es SAGRILAFT?',
+                    'miga_lavado_activos'               : '| 3. Que nos ayudes a prevenir el riesgo de LAVADO DE ACTIVOS',
+                    'miga_prevenir_lavado'              : '| 3. Que nos ayudes a prevenir el riesgo de Lavado de activos',
+                    'miga_etica_transparencia'          : '| 3. Que actúes con Ética y Transparencia',
+                    'miga_situaciones_conflictos'       : '| 3. Que declares situaciones de conflicto De Interés',
+                    'miga_deberes_entorno'              : '| 3.  Comité de Convivencia Laboral',
+                    'miga_deberes_entorno_2'            : '| 3.  Qué estés atento a tus deberes y a tu entorno',
+                    'miga_buena_gente'                  : '| 3. Que seas buena gente',
                     'miga_compromiso'                  : 'Mi compromiso'
                 };
 
