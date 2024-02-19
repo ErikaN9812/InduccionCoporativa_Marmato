@@ -222,12 +222,6 @@ $(document).ready(function () {
     signaturePad.clear();
   });
 
-  // Para obtener la imagen de la firma como base64
-  $("#guardarFirmaBtn").on("click", function () {
-    var firmaImagen = signaturePad.toDataURL();
-    // Puedes enviar la firmaImagen a tu servidor o realizar otras acciones con ella.
-    console.log(firmaImagen);
-  });
 
 // Mover el tooltip junto con el cursor
 // $('#main-image').mousemove(function (e) {
