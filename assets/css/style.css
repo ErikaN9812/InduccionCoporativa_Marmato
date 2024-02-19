@@ -1456,6 +1456,8 @@
             align-items: center;
             position: relative;
         }
+
+        
         .pc-movil-slide-20-1{
             width: 30% !important;
         }
@@ -1673,6 +1675,8 @@
                 color:white; 
                 font-size:12px;
             }
+
+
             select {
                 width: 90%;
                 padding: 8px;
@@ -3590,6 +3594,16 @@ iframe:after {
     background-size: cover;  
 }
 
+.cultura_valores{
+    display: flex; 
+    justify-content: center; 
+}
+
+.responsive-img {
+    width: 100%; 
+    height: auto;
+}
+
 
 .hide-nine-back{
     display: none;
@@ -3629,12 +3643,24 @@ iframe:after {
 }
 
 @media (max-width:734px) {
-    
+    .cultura_valores{
+        display: flex; 
+        justify-content: center; 
+        margin-top: 200px !important;
+    }
     .darkStyleimg21 {
         background: url(../../assets/img/fondo_02_slide_04.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
+        height: 40vh;
+    }
+
+    .darkStyleimgdiversidad1 {
+        background: url(../../assets/img/fondo-diversidad-v2.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;  
         height: 40vh;
     }
 
@@ -3723,6 +3749,7 @@ iframe:after {
 .glass p {
   color: #000; /* Color del texto, por ejemplo, negro */
 }
+
 @media (max-width: 768px) {
     .glass {
         padding: 5%; /* Espacio interno deseado */

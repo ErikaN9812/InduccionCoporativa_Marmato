@@ -222,71 +222,7 @@ $(document).ready(function () {
     signaturePad.clear();
   });
 
-  // Para obtener la imagen de la firma como base64
-  $("#guardarFirmaBtn").on("click", function () {
-    var firmaImagen = signaturePad.toDataURL();
-    // Puedes enviar la firmaImagen a tu servidor o realizar otras acciones con ella.
-    console.log(firmaImagen);
-  });
 
-// Mover el tooltip junto con el cursor
-// $('#main-image').mousemove(function (e) {
-//   if(e.pageX >= 1075 && e.pageX <= 1109 && e.pageY >= 90 && e.pageY <= 117){
-//     $('#img-1').show();
-//   }else{
-//     $('#img-1').hide();
-//   }
-
-//   if(e.pageX >= 1074 && e.pageX <= 1125 && e.pageY > 115 && e.pageY <= 128){
-//     $('#img-2').show();
-//     $('#img-2').css('margin-top', '15px');
-
-//   }else{
-//     $('#img-2').hide();
-//   }
-
-//   if(e.pageX >= 1076 && e.pageX <= 1112 && e.pageY > 137 && e.pageY <= 147){
-//     $('#img-3').show();
-//     $('#img-3').css('margin-top', '35px');
-
-//   }else{
-//     $('#img-3').hide();
-//   }
-//   // console.log(e.pageX);
-
-//   if(e.pageX >= 1116 && e.pageX <= 1135 && e.pageY > 147 && e.pageY <= 159){
-//     $('#img-4').show();
-//     $('#img-4').css('margin-top', '45px');
-
-//   }else{
-//     $('#img-4').hide();
-//   }
-
-//   if(e.pageX >= 1065 && e.pageX <= 1100 && e.pageY > 160 && e.pageY <= 188){
-//     $('#img-5').show();
-//     $('#img-5').css('margin-top', '55px');
-
-//   }else{
-//     $('#img-5').hide();
-//   }
-
-//   if(e.pageX >= 1135 && e.pageX <= 1168 && e.pageY >= 290 && e.pageY <= 325 ){
-//     $('#img-6').show();
-//     $('#img-6').css('margin-top', '150px');
-
-//   }else{
-//     $('#img-6').hide();
-//   }
-
-//   if(e.pageX >= 1038 && e.pageX <= 1075 && e.pageY >= 455 && e.pageY <= 485 ){
-//     $('#img-7').show();
-//     $('#img-7').css('margin-top', '200px');
-
-//   }else{
-//     $('#img-7').hide();
-//   }
-// });
-  
   $('.zoom').magnify();
   sistemaVotacion();
   preguntas01();
@@ -463,15 +399,6 @@ reproducirAudioImagen();
   });
 
 
-
-  // var logoImage = document.getElementById("logoImage");
-  // function checkScreenWidth() {
-  //     var newImageSrc = window.innerWidth <= 768 ? "assets/img/logo_slide_05_movil.png" : "assets/img/logoW.png";
-  //     logoImage.src = newImageSrc;
-  // }
-  // window.onload = checkScreenWidth;
-// window.addEventListener("resize", checkScreenWidth);
-
   //Actualizar el progreso del curso cada vez que se avanza en los slides
   $("#next").on('click', function() {
     // updateProgress();
@@ -481,7 +408,37 @@ reproducirAudioImagen();
   carrusel();
   popsAudios();
 
+
+  //Zoom Mapa
+  var currentZoomLevel = 1;
+  var maxZoomLevel = 4;
+  var minZoomLevel = 1;
+
+  $('#zoom_1').click(function() {
+      if (currentZoomLevel < maxZoomLevel) {
+          currentZoomLevel++;
+          updateImageMap();
+      }
+  });
+
+  $('#zoom_2').click(function() {
+      if (currentZoomLevel > minZoomLevel) {
+          currentZoomLevel--;
+          updateImageMap();
+      }
+  });
+
+ function updateImageMap() {
+  var imgSrc = 'assets/img/mapa-operacion/zoom' + currentZoomLevel + '.png';
+  $('#mapa-img').fadeOut(200, function() {
+    $(this).attr('src', imgSrc).fadeIn(300);
+  });
+}
+
 });
+
+ 
+  
 
   function changeImage2(element, newSrc) {
     element.src = newSrc;
