@@ -1463,4 +1463,3 @@ reproducirAudioImagen();
       $(this).addClass("corret");
     });
   }
-

@@ -657,7 +657,7 @@
 
         /*Fondo como entendemos la minera*/
         .bg-blancofondominera {
-            background-image: url(../img/fondo-mineria-v3.jpg) ;
+            background-image: url(../img/como-entendemos-mineria.jpg) ;
             background-color: #fff; /* Color blanco */
             background-repeat: no-repeat;
             background-size: cover;
@@ -965,6 +965,13 @@
             text-align: center;
         }
 
+        .contenido-left-mapa {
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+
         /*instruccion flecha*/
         .cont-central-flecha {
             margin-right: 60px;
@@ -1067,12 +1074,12 @@
         }
         .img-mision-vision{
             margin:0 auto; 
-            width:25%; 
+            width:20%;
         }
         @media (max-width: 734px) {
             .img-mision-vision{
                 margin:0 auto; 
-                width:45%; 
+                width:20%; 
             }
             .cont-flecha-mision {
                 margin-right: 0px;
@@ -1222,6 +1229,18 @@
             padding-left: 10%; 
             padding-right: 5%;
         } 
+
+        /*como entendemos la minera*/
+        .bg-blanco-minera {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+            padding-left: 7%; 
+            padding-right: 7%;
+        } 
+
 
         .bg-azuloscuro3-bene {
             background-color: #022249;
@@ -2220,13 +2239,34 @@
     display: block;
     text-align: left;
     margin-top: 8px;
-}  
+} 
+
+
+/*imagen flecha izquierda abajo*/
+.icoflechaabajo img {
+    width: 2%;
+    float: left;
+    margin-top: 1.8%;
+    margin-right: 0.5%;
+    margin-left: 35%;
+  }
 
 
 /*icono mas vestuario*/
 .icono {
     position: absolute;
     max-height: 1.4rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+/*icono mas vestuario*/
+.iconomapa {
+    position: absolute;
+    max-height: 2.2rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
@@ -2250,7 +2290,6 @@
 }
 
 
-
 .img-legal{
     max-width: 5rem;
     height: auto;
@@ -2262,6 +2301,37 @@
     flex-direction: row;
     align-content: flex-end;
     justify-content: flex-end;
+}
+
+
+/*parrafos*/
+.parrafogris-justify p {
+    text-align: justify;
+    line-height: 1.2em;
+    font-size: 21px;
+    color: #8f8f8f;
+}
+
+/*parrafos texto blanco*/
+.parrafoblanco-justify p {
+    text-align: justify;
+    line-height: 1.4em;
+    margin-top: 3%;
+    font-size: 21px;
+    color: #fff;
+}
+
+/*parrafos texto blanco centrado*/
+.parrafoblanco-center p {
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 21px;
+    color: #fff;
+}
+
+.miga_pan p{
+    color: #d3d3d3;
+    font-size: 19px;
 }
 
 #mapa {
@@ -2628,19 +2698,29 @@ img {
 
 /*centrar imagen*/
 .containerimg {
-    height: 395px;
-    position: relative;
+    max-width: 80%;
+    float: left;
     border: 3px solid #dbe4ed; /* Border color is optional */ 
+  }
 
+  /*imagen mapa departame*/
+.containerdepimg {
+    float: left;
+    max-width: 15%;
   }
 
 .centerimg {
     margin: 0;
     position: absolute;
     max-width: 100%;
-    margin-left: 20%;
+    margin-left: 10%;
   }
 
+  
+.centermapaimg {
+    margin: 0;
+    margin-left: 10%;
+  }
   
 
 video {
