@@ -1418,6 +1418,8 @@
             align-items: center;
             position: relative;
         }
+
+        
         .pc-movil-slide-20-1{
             width: 30% !important;
         }
@@ -1635,6 +1637,8 @@
                 color:white; 
                 font-size:12px;
             }
+
+
             select {
                 width: 90%;
                 padding: 8px;
