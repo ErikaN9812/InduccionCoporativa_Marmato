@@ -609,6 +609,20 @@
             position: relative;
         }
 
+         /*fondo diversidad 2*/
+         .bg-blanco-equiparesv2 {
+            background-image: url(../img/fondo-blanco3.jpg) ;
+            background-color: #fff; /* Color blanco */
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.8;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
 
         .bg-slide-13 {
             background-image: url(../img/beneficio1-poliza.jpg) ;
@@ -627,6 +641,13 @@
             background-color: #fff; /* Color blanco */
             width: 55%;
             height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .bg-flex {
             z-index: 0;
             display: flex;
             align-items: center;
@@ -769,6 +790,15 @@
             max-width: 100%;
             padding: 3%;
             text-align: center;
+        }
+
+         /*contenido asi te queremos*/
+         .contenido-lateral-5funciones {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            margin-left: 50px;
+            padding-right: 8%;
         }
 
         /*estilo animaciones*/
@@ -1076,6 +1106,14 @@
             margin:0 auto; 
             width:20%;
         }
+
+        .diversidad img{
+            max-width: 50%;
+        }
+
+
+
+
         @media (max-width: 734px) {
             .img-mision-vision{
                 margin:0 auto; 
@@ -2310,6 +2348,16 @@
     line-height: 1.2em;
     font-size: 21px;
     color: #8f8f8f;
+}
+
+/*parrafos*/
+.parrafo-diversidadgris-center p {
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 18px;
+    color: #8f8f8f;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /*parrafos texto blanco*/
