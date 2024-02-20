@@ -103,22 +103,22 @@ $(document).ready(function () {
   
       switch ($(this).closest('li').attr('value')) {
         case '1':
-          concepto = 'Coexistir con comunidades es convivir en armonía y respeto mutuo, promoviendo la paz y la equidad.';
+          concepto = 'Entemos que la interración frecuente con las comunidades localesdel entorno en el que hacemos presencia, son compomentes eseciales de nuestra licencia social para operar.';
           break;
         case '2':
-          concepto = 'Eficiencia operacional es hacer más con menos recursos, optimizando procesos para alcanzar resultados óptimos.';
+          concepto = 'Promovemos la excelencia operacional teniendo como prioridad el bienestar de los colaboradores con progrmas como VISION ZERO de seguridad industrial.';
           break;
         case '3':
-          concepto = 'Proteger el medio ambiente mediante prácticas responsables y sostenibles.';
+          concepto = 'Estamos comprometidos a maneter las mejores prácticas y estándares internacionales en nuestro enfoque de sustentabilidad para operar como una empresa minera responsable.';
           break;
         case '4':
-          concepto = 'Destinando recursos para mejorar la calidad de vida y promover el desarrollo comunitario.';
+          concepto = 'En Aris nos basamos en 5 pirales de inversion social 1.Educación, Cultura y deporte 2.Desarrollo socio-económico 3.Infraestrutura para compectitividad 4.Medio Ambiente 5.Equidad de géneto e inclusión';
           break;
         case '5':
-          concepto = 'Garantizar condiciones seguras y promover el bienestar físico y mental de las personas en entornos laborales y sociales.';
+          concepto = 'Aris Mining creemos que todos los accidentes y enfermedades asociados al tabajo son prevenibles y evitarlos es una tarera  diaria de todos.';
           break;
         case '6':
-          concepto = 'Divulgar información para rendir cuentas y construir confianza.';
+          concepto = 'Estamos comprometidos con el gobierno corporativo y la cutura basada en la transparencia, la responsabildad y la integridad.';
           break;
         default:
           concepto = 'Concepto por defecto';

@@ -186,7 +186,7 @@
             background-repeat: no-repeat;
             background-size: contain;
             display: flex;
-            height: 120vh;
+            height: 100vh;
             align-items: center;
             position: relative;
         }
@@ -285,6 +285,29 @@
             display: flex;
             align-items: center;
             position: relative;
+        }
+
+         /*fondo triangulo iziquierda degrade*/
+         .bg-petroleo-triangulo-turno {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            display: flex;
+        }
+
+
+         /*fondo triangulo iziquierda degrade*/
+         .bg-petroleo-triangulo-rightsagrilaft {
+            background-color: #133450; /* Color azul petróleo */
+            background-image: url(../img/triangulo-degradado.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            display: flex;
+            padding: 5% 5%;
+            padding-top: 8%;
         }
 
       
@@ -635,6 +658,22 @@
             background-size: contain;
             width: 45%;
             height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .bg-marmato {
+            background-color:#2A80A6; /* Color blanco */
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .bg-segovia {
+            background-color: #003a5d; /* Color blanco */
             z-index: 0;
             display: flex;
             align-items: center;
@@ -2406,7 +2445,7 @@
 .parrafoblanco-left p {
     text-align: left;
     line-height: 1.2em;
-    font-size: 20px;
+    font-size: 21px;
     color: #fff;
 }
 
@@ -2419,6 +2458,10 @@
     height: 100vh; /* Altura del div */
     width: 30%x; /* Ancho del div */
     background-color: #2c3e50; /* Color azul (cambia según tu preferencia) */
+}
+
+.organigrama img{
+    border: 2px solid #dbe4ed;
 }
 
 
@@ -2477,7 +2520,7 @@ p, a, ul, li, label {
 
 /*listado asi te queremos en la operacion*/
 .listadoperacion li {
-	font-size: 1.2rem;
+	font-size: 19px;
 	font-family: 'Futura Bk BT', sans-serif;
 	color: #8f8f8f ;
     font-weight: 500;
@@ -2488,8 +2531,7 @@ p, a, ul, li, label {
 
 /*listado vestuario*/
  .listado ul, li {
-	font-size: 1.2rem;
-	font-family: 'Futura Bk BT', sans-serif;
+	font-size: 21px;
 	color: #fff;
     font-weight: 500;
     margin: 0;
@@ -2689,6 +2731,10 @@ video::-webkit-media-controls-panel {
     overflow-wrap: break-word;
     white-space: normal;
 
+}
+
+.titulo20p{
+    font-size: 2em;
 }
 
 
