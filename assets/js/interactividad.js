@@ -1229,15 +1229,15 @@ reproducirAudioImagen();
 
 
 
-  const titles = document.querySelectorAll(".rulest h2");
-  const image = document.querySelector("#img_slide13");
-  const backgroundImageDiv = document.querySelector(".bg-slide-13");
-  const titles2 = document.querySelectorAll(".bg-slide-13 h2");
-
+  var titles = $(".rulest h2");
+  var image = $("#img_slide_14_marmato");
+  var backgroundImageDiv = $("#bg-slide-marmato");
+  var titles2 = $(".bg-slide-13 h2");
   let currentIndex = 0;
   let allowNextSlide = true;
   let prev = false;
 
+  
   function prevSlide() {
     if(prev){
       if (allowNextSlide) {
@@ -1256,19 +1256,58 @@ reproducirAudioImagen();
   }
 
   function updateSlide() {
-    allowNextSlide = false;
+      allowNextSlide = false;
 
-    // Cambiar la imagen
-    const newImageSrc = `assets/img/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.png`;
-    console.log(newImageSrc);
-    image.src = newImageSrc;
-    image.style.cursor = "pointer";
+      // Cambiar la imagen
+      var newImageSrc = `assets/img/${titles[currentIndex].getAttribute("data-title").toLowerCase()}.png`;
+      image.attr("src", newImageSrc);
+      image.css("cursor", "pointer");
+  
+      var newBackgroundImageSrc = `assets/img/${titles2[currentIndex].getAttribute("data-title").toLowerCase()}.jpg`;
+      backgroundImageDiv.css("background-image", `url(${newBackgroundImageSrc})`);
+  
+      allowNextSlide = true; 
+  }
 
-    const newBackgroundImageSrc = `assets/img/${titles2[currentIndex].getAttribute("data-title").toLowerCase()}.jpg`;
-    backgroundImageDiv.style.backgroundImage = `url(${newBackgroundImageSrc})`;
+  var titles3 = $(".rulest2 h2");
+  var image_segovia = $("#img_slide_14_segovia");
+  var backgroundImageDivSegovia = $("#bg-slide-segovia");
+  var titles4 = $(".bg-slide-14-segovia h2");
 
-    allowNextSlide = true;
+  let currentIndex2 = 0;
+  let allowNextSlide2 = true;
+  let prev2 = false;
 
+   
+  function prevSlide2() {
+    if(prev2){
+      if (allowNextSlide2) {
+        currentIndex2 = (currentIndex2 - 1 + titles3.length) % titles3.length;
+        updateSlide();
+      }
+    }
+  }
+
+  function nextSlide2() {
+    if (allowNextSlide2) {
+      currentIndex2 = (currentIndex2 + 1) % titles3.length;
+      updateSlide2();
+      prev2 = true;
+    }
+  }
+
+  function updateSlide2() {
+      allowNextSlide2 = false;
+
+      // Cambiar la imagen
+      var newImageSrc2 = `assets/img/${titles3[currentIndex2].getAttribute("data-title").toLowerCase()}.png`;
+      image_segovia.attr("src", newImageSrc2);
+      image_segovia.css("cursor", "pointer");
+  
+      var newBackgroundImageSrc2 = `assets/img/${titles4[currentIndex2].getAttribute("data-title").toLowerCase()}.jpg`;
+      backgroundImageDivSegovia.css("background-image", `url(${newBackgroundImageSrc2})`);
+  
+      allowNextSlide2 = true; 
   }
 
   let completion = 0.0;
@@ -1420,3 +1459,14 @@ reproducirAudioImagen();
       $(this).addClass("corret");
     });
   }
+
+  function info_marmato(){
+    $(".info-segovia").attr("hidden", true);
+    $(".info-marmato").removeAttr("hidden");
+  }
+
+  function info_segovia(){
+    $(".info-marmato").attr("hidden", true);
+    $(".info-segovia").removeAttr("hidden");
+  }
+  

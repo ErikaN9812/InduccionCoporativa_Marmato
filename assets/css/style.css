@@ -638,6 +638,16 @@
             position: relative;
         }
 
+        .bg-blanco-2 {
+            background-color: #fff; /* Color blanco */
+            height: 90vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 50% !important;
+        }
+
         /*fondo diversidad*/
         .bg-blanco-equipares {
             background-image: url(../img/fondo-equipares.png) ;
@@ -667,17 +677,33 @@
 
 
         .bg-slide-13 {
-            background-image: url(../img/beneficio1-poliza.jpg) ;
-            background-color: #fff; /* Color blanco */
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 45%;
-            height: 100vh;
-            z-index: 0;
+            width: 50% !important;
+            height: 90vh;
             display: flex;
-            align-items: center;
-            position: relative;
         }
+
+        .bg-slide-14-segovia {
+            width: 50% !important;
+            height: 90vh;
+            display: flex;
+        }
+
+        #bg-slide-marmato{
+            background-image: url(../img/Beneficio-operativo-marmato1.jpg) ;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #bg-slide-segovia{
+            background-image: url(../img/beneficio-segovia-operativo-2.jpg) ;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
 
         .bg-marmato {
             background-color:#2A80A6; /* Color blanco */
@@ -685,6 +711,7 @@
             display: flex;
             align-items: center;
             position: relative;
+            width: 50% !important;
         }
 
         .bg-segovia {
@@ -693,6 +720,8 @@
             display: flex;
             align-items: center;
             position: relative;
+            width: 50% !important;
+
         }
         
         .bg-blanco-v2 {

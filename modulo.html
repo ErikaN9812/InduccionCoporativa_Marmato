@@ -873,31 +873,34 @@
     <div class="container miga_beneficios">
         <div class="row">
              <!-- Columna derecha - Blanco -->
-             <div class="col-lg-12" style="display: flex;">
-                <div class="col-lg-5 bg-marmato">
-                    <button id='actividad_1' class="btn btn-warning track-element" 
-                    style="background-color: #2A80A6; color: #fff !important; float: justify; margin-top: 15%;"> 
+             <div style="display: flex;">
+                <div class="bg-marmato">
+                    <button class="btn btn-warning"  onclick="info_marmato();"
+                    style="background-color: #2A80A6; color: #fff !important; float: justify; margin-top: 10%;"> 
                     Marmato</button>
                 </div>
-                <div class="col-lg-7 bg-segovia">
-                    <button id='actividad_1' class="btn btn-warning track-element" 
+                <div class="bg-segovia">
+                    <button class="btn btn-warning" onclick="info_segovia();"
                     style="background-color: #003a5d; color: #fff !important; float: justify; margin-top: 10%;"> 
                     Segovia</button>
                 </div>
              </div>
 
-                <div class="col-lg-5 bg-slide-13">
-                    <h2 data-title="Beneficio-operativo-marmato1" hidden ></h2>
-                    <h2 data-title="Beneficio-operativo-marmato2" hidden></h2>
-                    <h2 data-title="beneficio-admin-marmato2" hidden></h2>
+             <div class="col-lg-12 info-marmato" style="display: flex;" >
+                <div class="bg-slide-13">
+                    <div id="bg-slide-marmato">
+                        <h2 data-title="Beneficio-operativo-marmato1" hidden ></h2>
+                        <h2 data-title="Beneficio-operativo-marmato2" hidden></h2>
+                        <h2 data-title="beneficio-admin-marmato2" hidden></h2>
+                    </div>
                 </div>
     
                   <!-- Columna Marmato -->
-               <div class="col-lg-5 bg-blanco col-inline top-slide-14">
+               <div class="bg-blanco-2 col-inline top-slide-14">
                     <div class="bntNextPrev12r movil-pc-flechas-l" onclick="prevSlide()"> <i class="fas fa-angle-left"></i></div>
                     <div class="col-lg-6 beneficios img rulest" >
                         <p style="color: #2e2e2e; margin-top: 5%;" class="text-center">Todos nuestros colaboradores tienen estos beneficios</p>
-                        <img id="img_slide13" src="assets/img/Beneficios-Marmato1.png" alt="Beneficio 1" >
+                        <img id="img_slide_14_marmato" src="assets/img/Beneficios-Marmato1.png" alt="Beneficio 1" >
                         <h2 data-title="Beneficios-Marmato1" hidden ></h2>
                         <h2 data-title="Beneficios-Marmato2" hidden></h2>
                         <h2 data-title="Beneficios-Admin-Marmato3" hidden></h2>
@@ -906,6 +909,30 @@
                     </div>
                     <div class="bntNextPrev12r movil-pc-flechas-r" onclick="nextSlide()">  <i class="fas fa-angle-right"></i></div>
                 </div>
+            </div>
+
+            <div class="col-lg-12 info-segovia" style="display: flex;" hidden>
+                <div class="bg-slide-14-segovia">
+                    <div id="bg-slide-segovia">
+                        <h2 data-title="beneficio-segovia-operativo-2" hidden ></h2>
+                        <h2 data-title="beneficio-segovia-admin-1" hidden></h2>
+                    </div>
+                </div>
+    
+                  <!-- Columna segovia -->
+               <div class="bg-blanco-2 col-inline top-slide-14">
+                    <div class="bntNextPrev12r movil-pc-flechas-l" onclick="prevSlide2()"> <i class="fas fa-angle-left"></i></div>
+                    <div class="col-lg-6 beneficios img rulest2" >
+                        <p style="color: #2e2e2e; margin-top: 5%;" class="text-center">Todos nuestros colaboradores tienen estos beneficios</p>
+                        <img id="img_slide_14_segovia" src="assets/img/Beneficios-Segovia-Operativo1.png" alt="Beneficio 1" >
+                        <h2 data-title="Beneficios-Segovia-Operativo1" hidden ></h2>
+                        <h2 data-title="Beneficios-Admin-Segovia-2" hidden></h2>
+                        <p class="inst4 mb-2"><em>Haz clic, sobre las flechas, para cambiar de contenido</em></p>
+                    </div>
+                    <div class="bntNextPrev12r movil-pc-flechas-r" onclick="nextSlide2()">  <i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+
         </div>
     </div>
     <!--Fin Beneficios-->
