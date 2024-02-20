@@ -365,6 +365,21 @@
             position: relative;
         }
 
+        /*fondo accidente*/
+        .bg-blancoincident{
+            background-color: #fff; /* Color azul petróleo */
+            background-image: url(../img/reportar-accidente.png);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            background-size: 60%;
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            position: relative;
+            text-align: center;
+        }
+
         .fixedv1
         {
             display: flex;
@@ -758,18 +773,7 @@
             position: relative;
         }
 
-        .bg-blancoincident{
-            background-color: #fff; /* Color azul petróleo */
-            background-image: url(../img/report.png);
-            background-repeat: repeat-x;
-            background-position: bottom;
-            background-size: contain;
-            height: 100vh;
-            z-index: 0;
-            display: flex;
-            position: relative;
-            text-align: center;
-        }
+
 
         .bg-azuloscuro {
             background-color: #071835; /* Color blanco */
@@ -1435,6 +1439,7 @@
         .white-text-slide-15{
             color: whitesmoke !important;
             margin-top: 0px; 
+            font-size: 20px;
         }
         .bg-petroleo2-slide-15 {
             background-color: #003a5d; /* Color azul petróleo */
@@ -1885,7 +1890,7 @@
             }
             .bg-blancoincident{
                 background-color: #fff; /* Color azul petróleo */
-                background-image: url(../img/report.png);
+                background-image: url(../img/reportar-accidente.png);
                 background-repeat: repeat-x;
                 background-position: bottom;
                 background-size: auto;
@@ -2413,6 +2418,13 @@
     font-size: 21px;
     color: #8f8f8f;
 }
+/*parrafos*/
+.parrafogris-center p {
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 21px;
+    color: #8f8f8f;
+}
 
 /*parrafos*/
 .parrafo-diversidadgris-center p {
@@ -2448,6 +2460,15 @@
     font-size: 21px;
     color: #fff;
 }
+
+/*parrafos texto blanco centrado*/
+.parrafoblanco-leftprotocolo p {
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 19px;
+    color: #fff;
+}
+
 
 .miga_pan p{
     color: #d3d3d3;
@@ -2547,6 +2568,16 @@ p, a, ul, li, label {
     font-weight: 500;
     margin: 0;
     line-height: 1.6rem;
+}
+
+/*listado accidente*/
+.listadoaccidente ul, li {
+	font-size: 20px;
+	color: #fff;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6rem;
+    text-align: justify;
 }
 
 a {
@@ -2735,6 +2766,17 @@ video::-webkit-media-controls-panel {
 
 .titulo20p{
     font-size: 2em;
+}
+
+.titulo16p{
+    font-size: 1.4em;
+}
+
+.titulocasos{
+    line-height: 1.2em;
+    font-size: 1.7em;
+    color: #fff;
+    font-weight: 600;
 }
 
 
@@ -3670,7 +3712,13 @@ iframe:after {
     background-size: contain;  
 }
 
-
+/*seccion 4*/
+.darkStyleimgseccion4 {
+    background: url(../../assets/img/Fondo-seccion4.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;  
+}
 
 .darkStyleimgdiversidad1 {
     background: url(../../assets/img/fondo-diversidad-v2.png);
