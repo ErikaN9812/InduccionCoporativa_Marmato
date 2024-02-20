@@ -448,7 +448,6 @@
         .padding-left-4{
             margin-right: 60px;
             margin-left: 60px;
-            margin-top: 80px;
             max-width: 100%;
             padding: 0%;
         }
@@ -469,12 +468,17 @@
             padding: 0%;
         }
 
-
-
         .padding-left-2{
             margin-right: 0px;
             margin-left: 60px;
             margin-top: 90px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
+        .padding-left-4{
+            margin-right: 60px;
+            margin-left: 60px;
             max-width: 100%;
             padding: 0%;
         }
@@ -1111,6 +1115,11 @@
             max-width: 50%;
         }
 
+        .protocolo-img img{
+            max-width: 10%;
+        }
+
+
 
 
 
@@ -1254,6 +1263,18 @@
             display: flex;
             align-items: center;
             position: relative;
+        }
+
+          /*fondo color video*/
+        .bg-azuloscuro6 {
+            background-color: #133450; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            display: block; 
+            align-items: center;
+            position: relative;
+            padding-top: 7%;
+            padding-left: 5%;
         }
 
         /*fondo  beneficios*/
@@ -2381,6 +2402,14 @@
     color: #fff;
 }
 
+/*parrafos texto blanco centrado*/
+.parrafoblanco-left p {
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 20px;
+    color: #fff;
+}
+
 .miga_pan p{
     color: #d3d3d3;
     font-size: 19px;
@@ -2466,6 +2495,16 @@ p, a, ul, li, label {
     margin: 0;
     line-height: 1.6rem;
     text-align: justify;
+}
+
+/*listado protocolo*/
+.listadomodal li {
+	font-size: 1.2rem;
+	font-family: 'Futura Bk BT', sans-serif;
+	color: #525252;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.6rem;
 }
 
 a {
