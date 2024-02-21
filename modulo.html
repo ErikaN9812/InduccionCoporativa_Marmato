@@ -1460,37 +1460,43 @@
                         <i class="inst mb-2">Organiza los <b>riesgos más comunes</b> que puede ocurrir en nuestra operación</i>
                         <div class="center-actividad">
                             <div class="col-lg-12 col-md-12">
-                                <div class="ctActivityDragDrop">
-                                    <div class="listOpcDrop">
-                                        <div class="col-lg-12 col-md-12 fixedv1">
-                                            <div class="col-lg-6 col-md-12">
-                                                <img id="sl21_drag3" src="assets\img\actividad-riesgos\sagrilaft-riesgo3.png"> 
-                                                <img id="sl21_drag1" src="assets\img\actividad-riesgos\sagrilaft-riesgo1.png"> 
-                                                <img id="sl21_drag2" src="assets\img\actividad-riesgos\sagrilaft-riesgo2.png"> 
-                                                </div>   
-                                                <div class="col-lg-6 col-md-12">
-                                                <img id="sl21_drag4" src="assets\img\actividad-riesgos\sagrilaft-riesgo4.png"> 
-                                                <img id="sl21_drag5" src="assets\img\actividad-riesgos\sagrilaft-riesgo5.png"> 
-                                                </div>
-                                        </div> 
+                                <div class="actSelectImg text-center">
+                                    <div>
+                                      <div class="itemAct xmark" onclick="actSelectImg(this, 'xmarkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo1.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct check track-element" id="actividad_8" onclick="actSelectImg(this, 'checkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo2.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct xmark" onclick="actSelectImg(this, 'xmarkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo3.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct check" onclick="actSelectImg(this, 'checkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo4.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct xmark" onclick="actSelectImg(this, 'xmarkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo5.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct check" onclick="actSelectImg(this, 'checkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo1.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct xmark" onclick="actSelectImg(this, 'xmarkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo5.png">
+                                        <img class="resAct" src="">
+                                      </div>
+                                      <div class="itemAct check" onclick="actSelectImg(this, 'checkAct')">
+                                        <img src="assets\img\actividad-riesgos\sagrilaft-riesgo4.png">
+                                        <img class="resAct" src="">
+                                      </div>
                                     </div>
-
-                                    <div class="listOpcDrag imgsagri">
-                                            <div id="sl21_drop1">
-                                                <img src="assets\img\actividad-riesgos\cuadro-riesgo1.png">
-                                            </div>
-                                            <div id="sl21_drop2">
-                                                <img src="assets\img\actividad-riesgos\cuadro-riesgo2.png">
-                                            </div>
-                                            <div id="sl21_drop3">
-                                                <img src="assets\img\actividad-riesgos\cuadro-riesgo3.png">
-                                            </div>
-                                            <div id="sl21_drop4">
-                                                <img src="assets\img\actividad-riesgos\cuadro-riesgo4.png">
-                                            </div>
-                                            <div id="sl21_drop5">
-                                                <img src="assets\img\actividad-riesgos\cuadro-riesgo5.png">
-                                            </div>
+                                    <div class="correctIncorrect" style="display:none;" >
+                                        <p id="correctIncorrect"></p>
                                     </div>
                                 </div>
                             </div>
@@ -2435,9 +2441,9 @@
                     </p>    
                   <!-- <div class="signature-slide-22" >
                         <canvas id="firmaCanvas" width="300" height="100" style="background:white"></canvas>
-                        <button id="borrarFirmaBtn"></button>-->
-                        <!-- <img src="assets/img/logo-full.svg" style="max-width: 10%; padding: 10px;"> -->
-                   <!--</div>-->
+                        <button id="borrarFirmaBtn"></button>
+                        <img src="assets/img/logo-full.svg" style="max-width: 10%; padding: 10px;">
+                   </div> -->
                 </div>      
             </div>
         </div>

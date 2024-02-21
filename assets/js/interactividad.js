@@ -214,13 +214,13 @@ $(document).ready(function () {
     });
   });
 
-  var canvas = document.getElementById("firmaCanvas");
-  var signaturePad = new SignaturePad(canvas);
+  // var canvas = document.getElementById("firmaCanvas");
+  // var signaturePad = new SignaturePad(canvas);
 
-  // Para borrar la firma
-  $("#borrarFirmaBtn").on("click", function () {
-    signaturePad.clear();
-  });
+  // // Para borrar la firma
+  // $("#borrarFirmaBtn").on("click", function () {
+  //   signaturePad.clear();
+  // });
 
 
   $('.zoom').magnify();
@@ -437,7 +437,25 @@ reproducirAudioImagen();
 
 });
 
- 
+function actSelectImg(el, data) {
+  $(el).addClass(data).find('.resAct').attr('src','assets/img/' + data + '.png');
+
+  if(data == 'checkAct'){
+    $("#correctIncorrect").text("¡ES CORRECTO! Este es un riesgo identificado a lo que la compañía podría estar expuesta");
+    $(".correctIncorrect").removeClass("incorrecto").addClass("correcto").show();
+  }else{
+    $("#correctIncorrect").text("¡PIENSALO BIEN! Este NO es un riesgo identificado a lo que la compañía podría estar expuesta");
+    $(".correctIncorrect").removeClass("correcto").addClass("incorrecto").show();
+  }
+  // setTimeout(() => {
+  //   if ($('.actSelectImg .check').length == $('.actSelectImg .checkAct').length) {
+  //     // $('.actSelectImg .result').show();
+  //     // $('.actSelectImg .good').html(($('.actSelectImg .checkAct').length - $('.actSelectImg .xmarkAct').length));
+  //     // $('.actSelectImg .total').html($('.actSelectImg .check').length);
+  //     $('.actSelectImg .itemAct').removeAttr('onclick');
+  //   }
+  // }, "200");
+}
   
 
   function changeImage2(element, newSrc) {
