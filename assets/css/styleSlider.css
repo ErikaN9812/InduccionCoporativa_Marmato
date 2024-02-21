@@ -32,12 +32,12 @@
 .current i.inst2 {
 	padding: 5px;
     border-radius: 5px;
-    background: #fdbf6030;
+   
     color: #f4a630;
     display: block;
     text-align: left;
     margin-top: 8px;
-    font-size: 13px; 
+    font-size: 16px; 
 }
 
 /*ref de mision y vision*/

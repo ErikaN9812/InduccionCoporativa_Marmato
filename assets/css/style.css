@@ -926,6 +926,16 @@
             max-width: 100%;
             padding: 3%;
         }
+
+         /*ajuste pantalla sld1*/
+         .contenido-lateral-6poli {
+            margin-right: 10px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+        
         
         
         .contenido-azuloscuro {
@@ -1190,14 +1200,13 @@
             z-index: 0;
             position: relative;
         }
-        .bg-blanco2 {
+        .bg-blanco2-6poli {
             background-color: #fff; /* Color blanco */
-            height: 55vh;
+            height: 100vh;
             z-index: 0;
             display: flex;
             align-items: center;
             position: relative;
-
         } 
 
         .bg-blanco-bienvenida{
@@ -1214,15 +1223,18 @@
             max-width: 75%; 
             text-align: justify; 
             color: #ffff;
+            font-size: 18px;
         }
         .p-style-2{
             margin:0 auto; 
             max-width: 75%; 
-            text-align: justify; 
+            text-align: justify;
+            font-size: 18px; 
+            color: #8f8f8f;
         }
         .img-mision-vision{
             margin:0 auto; 
-            width:20%;
+            width:28%;
         }
 
         .diversidad img{
@@ -1387,7 +1399,7 @@
             display: block; 
             align-items: center;
             position: relative;
-            padding-top: 7%;
+            padding-top: 10%;
             padding-left: 5%;
         }
 
@@ -1676,7 +1688,7 @@
         }
 
         .dx2-v3{
-            font-size: 2em;
+            font-size: 30px;
             text-align: left;
             word-wrap: break-word; 
             overflow-wrap: break-word;
@@ -2494,14 +2506,14 @@
 .parrafogris-justify p {
     text-align: justify;
     line-height: 1.2em;
-    font-size: 21px;
+    font-size: 18px;
     color: #8f8f8f;
 }
 /*parrafos*/
 .parrafogris-center p {
     text-align: center;
     line-height: 1.2em;
-    font-size: 21px;
+    font-size: 18px;
     color: #8f8f8f;
 }
 
@@ -2520,7 +2532,7 @@
     text-align: justify;
     line-height: 1.4em;
     margin-top: 3%;
-    font-size: 21px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -2528,7 +2540,7 @@
 .parrafoblanco-center p {
     text-align: center;
     line-height: 1.2em;
-    font-size: 21px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -2536,7 +2548,7 @@
 .parrafoblanco-left p {
     text-align: left;
     line-height: 1.2em;
-    font-size: 21px;
+    font-size: 18px;
     color: #fff;
 }
 
@@ -2544,14 +2556,14 @@
 .parrafoblanco-leftprotocolo p {
     text-align: left;
     line-height: 1.2em;
-    font-size: 19px;
+    font-size: 18px;
     color: #fff;
 }
 
 
 .miga_pan p{
     color: #d3d3d3;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 #mapa {
@@ -2814,7 +2826,7 @@ video::-webkit-media-controls-panel {
 }
 
 .dx3{
-    font-size: 3em;
+    font-size: 38px;
     text-align: center;
     word-wrap: break-word; 
     overflow-wrap: break-word;
@@ -2823,13 +2835,14 @@ video::-webkit-media-controls-panel {
 }
 
 .dx3-v2{
-    font-size: 3em;
+    font-size: 45px;
+    font-weight: 800;
     text-align: left;
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
     color: #0B3D5C;
-    line-height: 45px;
+    line-height: 1.2em;
     padding-left: 0%; 
     margin-top:10%;
 }
@@ -2844,11 +2857,11 @@ video::-webkit-media-controls-panel {
 }
 
 .titulo20p{
-    font-size: 2em;
+    font-size: 28px;
 }
 
 .titulo16p{
-    font-size: 1.4em;
+    font-size: 20px;
 }
 
 .titulocasos{
@@ -2978,6 +2991,11 @@ img {
 .centermapaimg {
     margin: 0;
     margin-left: 10%;
+  }
+
+.politica-img img{
+    max-width: 280px;
+    margin: 0 auto;
   }
   
 
