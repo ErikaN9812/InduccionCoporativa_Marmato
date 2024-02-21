@@ -59,8 +59,16 @@
             display: flex;
             align-items: center;
             position: relative;
-            
         }
+
+        .bg-petroleopolitica {
+            background-color: #fff; /* Color blanco */
+            z-index: 0;
+            position: relative;
+            text-align: center;
+            margin-left: 60px;
+        }
+ 
  
         /*background casos*/
         .bg-petroleocasos {
@@ -2376,6 +2384,14 @@
     text-align: left;
     margin-top: 8px;
 } 
+
+/*imagen flecha izquierda general*/
+.icoflechaabajov2 img {
+    width: 3%;
+    float: left;
+    margin-top: 1.2%;
+    margin-right: 0.5%;
+  }
 
 
 /*imagen flecha izquierda abajo*/
