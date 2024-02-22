@@ -1328,6 +1328,72 @@ function actSelectImg(el, data) {
       allowNextSlide2 = true; 
   }
 
+
+  //SLIDER 12 REGLAS DE ORO
+  let rulesH4 = document.querySelectorAll(".rulest h4");
+  let img_12_reglas = document.querySelector("#img_12_reglas");
+  let audio_12_reglas = new Audio();
+  let current_index_12_reglas = -1;
+  let allow_next_slide_12_reglas = true;
+  let prev_12_reglas = false;
+
+  function prevSlide3() {
+    if(prev_12_reglas){
+      if (allow_next_slide_12_reglas) {
+        current_index_12_reglas = (current_index_12_reglas - 1 + rulesH4.length) % rulesH4.length;
+        updateSlide3();
+      }
+    }
+  }
+
+  function nextSlide3() {
+    if (allow_next_slide_12_reglas) {
+      current_index_12_reglas = (current_index_12_reglas + 1) % rulesH4.length;
+      updateSlide3();
+      prev_12_reglas = true;
+    }
+  }
+
+  function updateSlide3() {
+    allow_next_slide_12_reglas = false;
+    // Remover el fondo resaltado de todos los títulos
+    rulesH4.forEach((title) => {
+      title.style.backgroundColor = "transparent";
+      title.style.border = "transparent";
+      title.style.borderRadius = "10px";
+    });
+
+    // Resaltar el título actual
+    rulesH4[current_index_12_reglas].style.backgroundColor = "rgba(0, 122, 243, 0.20)";
+    // Cambiar la imagen
+    var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.jpg`;
+    img_12_reglas.src = newImageSrc;
+    img_12_reglas.style.cursor = "pointer";
+    // Detener la reproducción actual y reproducir el nuevo audio
+    audio_12_reglas.pause();
+    audio_12_reglas.src = `assets/audio/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.mp3`;
+    audio_12_reglas.play();
+
+    // audio_12_reglas.addEventListener("timeupdate", function () {
+    //   if (audio_12_reglas.currentTime >= audio_12_reglas.duration - 5) {
+    //     allow_next_slide_12_reglas = true;
+    //   }
+    // });
+    allow_next_slide_12_reglas = true;
+    img_12_reglas.addEventListener("click", function () {
+      if (audio_12_reglas.paused) {
+        audio_12_reglas.play();
+      } else {
+        audio_12_reglas.pause();
+      }
+    });
+
+    $("#prev, #next").on("click", function () {
+      audio_12_reglas.pause();
+    });
+  }
+
+
   let completion = 0.0;
   const totalElements = 6; // Número total de elementos a arrastrar
   const borderWidth = 10; // Ancho del borde
