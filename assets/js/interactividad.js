@@ -1338,20 +1338,13 @@ function actSelectImg(el, data) {
   let prev_12_reglas = false;
 
   function prevSlide3() {
-    if(prev_12_reglas){
-      if (allow_next_slide_12_reglas) {
-        current_index_12_reglas = (current_index_12_reglas - 1 + rulesH4.length) % rulesH4.length;
-        updateSlide3();
-      }
-    }
+    current_index_12_reglas = (current_index_12_reglas - 1 + rulesH4.length) % rulesH4.length;
+    updateSlide3();
   }
 
   function nextSlide3() {
-    if (allow_next_slide_12_reglas) {
-      current_index_12_reglas = (current_index_12_reglas + 1) % rulesH4.length;
-      updateSlide3();
-      prev_12_reglas = true;
-    }
+    current_index_12_reglas = (current_index_12_reglas + 1) % rulesH4.length;
+    updateSlide3();
   }
 
   function updateSlide3() {
@@ -1370,22 +1363,23 @@ function actSelectImg(el, data) {
     img_12_reglas.src = newImageSrc;
     img_12_reglas.style.cursor = "pointer";
     // Detener la reproducción actual y reproducir el nuevo audio
+    
     audio_12_reglas.pause();
     audio_12_reglas.src = `assets/audio/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.mp3`;
     audio_12_reglas.play();
 
-    // audio_12_reglas.addEventListener("timeupdate", function () {
-    //   if (audio_12_reglas.currentTime >= audio_12_reglas.duration - 5) {
-    //     allow_next_slide_12_reglas = true;
-    //   }
-    // });
-    allow_next_slide_12_reglas = true;
-    img_12_reglas.addEventListener("click", function () {
-      if (audio_12_reglas.paused) {
-        audio_12_reglas.play();
-      } else {
-        audio_12_reglas.pause();
-      }
+    audio_12_reglas.addEventListener("ended", function () {
+      allow_next_slide_12_reglas = true;
+      nextSlide3();
+    }); 
+
+
+     img_12_reglas.addEventListener("click", function () {
+        if (audio_12_reglas.paused) {
+            audio_12_reglas.play();
+        } else {
+            audio_12_reglas.pause();
+        }
     });
 
     $("#prev, #next").on("click", function () {
