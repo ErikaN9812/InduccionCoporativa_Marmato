@@ -765,6 +765,26 @@
             width: 60% !important;
 
         }
+
+        
+        .bg-colaboradores {
+            background-color:#2A80A6; /* Color blanco */
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 43% !important;
+        }
+
+        .bg-proveedores {
+            background-color: #003a5d; /* Color blanco */
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 60% !important;
+
+        }
         
         .bg-blanco-v2 {
             background-color: #fff; /* Color blanco */
@@ -1393,13 +1413,13 @@
 
           /*fondo color video*/
         .bg-azuloscuro6 {
-            background-color: #133450; /* Color blanco */
-            height: 100vh;
+            background-color: #0e4860; /* Color blanco */
+            height: 80vh;
             z-index: 0;
             display: block; 
             align-items: center;
             position: relative;
-            padding-top: 10%;
+            padding-top: 2%;
             padding-left: 5%;
         }
 
