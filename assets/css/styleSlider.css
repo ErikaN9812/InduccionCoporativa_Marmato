@@ -775,11 +775,11 @@
 }
 .actSelectImg .itemAct .resAct {
     position: absolute;
-    max-width: 100px;
+    max-width: 80px;
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: calc(50% - 50px);
+    top: calc(60% - 50px);
 }
 .actSelectImg .result {
     display: none;

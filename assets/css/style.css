@@ -380,7 +380,7 @@
             background-repeat: no-repeat;
             background-position: bottom;
             background-size: contain;
-            background-size: 60%;
+            background-size: 63%;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -721,7 +721,7 @@
 
         #bg-slide-marmato{
             background-image: url(../img/Beneficio-operativo-marmato1.jpg) ;
-            width: 100%;
+            width: 80%;
             height: 100%;
             background-repeat: no-repeat;
             background-size: cover;
@@ -729,7 +729,7 @@
 
         #bg-slide-segovia{
             background-image: url(../img/beneficio-segovia-operativo-2.jpg) ;
-            width: 100%;
+            width: 80%;
             height: 100%;
             background-repeat: no-repeat;
             background-size: cover;
@@ -753,7 +753,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            width: 50% !important;
+            width: 40% !important;
         }
 
         .bg-segovia {
@@ -762,7 +762,7 @@
             display: flex;
             align-items: center;
             position: relative;
-            width: 50% !important;
+            width: 60% !important;
 
         }
         
@@ -2431,6 +2431,15 @@
     margin-top: 8px;
 } 
 
+.instruccionflechasagri i{
+    padding: 5px  5px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: left;
+} 
+
+
 /*imagen flecha izquierda general*/
 .icoflechaabajov2 img {
     width: 3%;
@@ -2663,7 +2672,7 @@ p, a, ul, li, label {
 
 /*listado accidente*/
 .listadoaccidente ul, li {
-	font-size: 20px;
+	font-size: 18px;
 	color: #fff;
     font-weight: 500;
     margin: 0;
@@ -3145,6 +3154,35 @@ button.btn {
     color: #fff !important;
     box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
 }
+
+/*beneficios*/
+button.btnbeneficio  {
+    display: block;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+    margin: 5px auto;
+}
+
+button.btnbeneficio {
+    position: relative;
+    background: var(--primary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff !important;
+}
+
+button.btnbeneficio:hover {
+    filter: grayscale(50%);
+    transform: scale(1.01);
+}
+button.btnbeneficio:focus {
+    outline: inherit;
+    box-shadow: inherit;
+}
+
 .h1-titulo{
     padding-top: 15%; 
     color: var(--primary80)
