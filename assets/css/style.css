@@ -2903,7 +2903,7 @@ video::-webkit-media-controls-panel {
 
 .dx2-v2{
     font-size: 2em;
-    text-align: left;
+    text-align: center;
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
@@ -3205,8 +3205,10 @@ button.btnbeneficio:focus {
 
 .h1-titulo{
     padding-top: 15%; 
-    color: var(--primary80)
+    color: var(--primary80);
+    text-align: left;
 }
+
 @media (max-width: 734px) {
     .h1-titulo{
         padding-top: 25%; 
