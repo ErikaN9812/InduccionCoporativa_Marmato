@@ -447,15 +447,65 @@ function actSelectImg(el, data) {
     $("#correctIncorrect").text("¡PIENSALO BIEN! Este NO es un riesgo identificado a lo que la compañía podría estar expuesta");
     $(".correctIncorrect").removeClass("correcto").addClass("incorrecto").show();
   }
-  // setTimeout(() => {
-  //   if ($('.actSelectImg .check').length == $('.actSelectImg .checkAct').length) {
-  //     // $('.actSelectImg .result').show();
-  //     // $('.actSelectImg .good').html(($('.actSelectImg .checkAct').length - $('.actSelectImg .xmarkAct').length));
-  //     // $('.actSelectImg .total').html($('.actSelectImg .check').length);
-  //     $('.actSelectImg .itemAct').removeAttr('onclick');
-  //   }
-  // }, "200");
 }
+
+  function reiniciarActividad(actividad='', posicionesIniciales='',tipo=0,idActividad=0) {
+
+    if(tipo==1){
+      actividad.find("li img").removeClass("correct incorrect");
+      actividad.find("li .ico").removeAttr("src");
+  
+      var elementosOrdenados = posicionesIniciales.map(function(pos) {
+          return actividad.find("li[value='" + pos + "']")[0];
+      });
+  
+      actividad.empty().append(elementosOrdenados);
+    }
+
+    //Multiple Respuestas
+    if(tipo==2){
+      actividad = $('#actividad_h_0' + idActividad);
+      if(idActividad==1){
+        elements = []; 
+        results = []; 
+        correctCount = 0;
+        actividad.find('.act').removeClass('act');
+        actividad.find('.true').removeClass('true');
+        actividad.find('.false').removeClass('false'); 
+        $('#btn-valid').show();
+        $('#respuesta').hide();
+        $('#respuesta_mal').hide(); 
+        $('#reiniciar').hide();
+        $('#btn-valid').show();
+
+      }else{
+        elements = 'elements' + idActividad;
+        this[elements] = [];
+
+        results = 'results' + idActividad;
+        this[results] = [];
+
+        correctCount = 'correctCount' + idActividad;
+        this[correctCount] = 0;
+      
+        actividad.find('.act').removeClass('act');
+        actividad.find('.true').removeClass('true'); 
+        actividad.find('.false').removeClass('false'); 
+        $('#btn-valid' + idActividad).show(); 
+        $('#respuesta' + idActividad).hide();
+        $('#respuesta_mal' + idActividad).hide(); 
+        $('#reiniciar'+ idActividad).hide();
+        $('#btn-valid'+ idActividad).show();
+      }
+    }
+
+    if(tipo==3){
+      $(".itemAct").removeClass("checkAct xmarkAct");
+      $(".itemAct .resAct").attr("src", "");
+      $(".correctIncorrect").hide();
+    }
+    
+  }
   
 
   function changeImage2(element, newSrc) {
@@ -513,20 +563,6 @@ function actSelectImg(el, data) {
     setInterval(changeImage, 2100);
   }
 
-  var results = [];
-  var elements = [];
-
-  function Questions01(el, e) {
-      var index = elements.indexOf(el);
-      if (index === -1) {
-          elements.push(el);
-          results.push(e);
-      } else {
-          results[index] = e;
-      }
-      
-      $(el).addClass('act');
-  }
 
   function sistemaVotacion(){
     const estrellas = document.querySelectorAll('input[name="estrellas"]');
@@ -714,17 +750,25 @@ function actSelectImg(el, data) {
         if (results[i] ) {
             $(elements[i]).addClass('true');
             correctCount++;
+            console.log(correctCount);
+            console.log(numCorrect);
             if(correctCount == numCorrect){
                 $('#respuesta_mal').hide();
                 $('#respuesta').html('Respuesta correcta');
                 $('#respuesta').show();
-                // localStorage.setItem('slider21', 'ok');
-                createProgCircle();
+            }else if(correctCount >=1 && correctCount < numCorrect){
+              $('#respuesta_mal').html('Faltan respuestas por seleccionar');
+              $('#respuesta_mal').show();
             }else{
-                $('#respuesta_mal').html('Respuesta incorrecta');
+                $('#respuesta_mal').html('Respuesta incorrectasafsaf');
                 $('#respuesta_mal').show();
             }
-        } else {
+        } else if(correctCount >=1 && correctCount < numCorrect){
+          $('#respuesta_mal').html('Faltan respuestas por seleccionar');
+          $('#respuesta_mal').show();
+          $(elements[i]).addClass('false');
+          
+        }else  {
             $('#respuesta_mal').html('Respuesta incorrecta');
             $('#respuesta_mal').show();
             $(elements[i]).addClass('false');
@@ -737,6 +781,7 @@ function actSelectImg(el, data) {
             $(elements[i]).removeClass('act');
         }
         $('#btn-valid').hide();
+        $('#reiniciar').show();
     }
 
   }
@@ -766,7 +811,6 @@ function actSelectImg(el, data) {
   }
 
   // PREGUNTAS 02
-
   var results2 = [];
   var elements2 = [];
 
@@ -784,21 +828,29 @@ function actSelectImg(el, data) {
 
 
 
-  function valid2(numCorrect) {
-    var correctCount = 0;
+  function valid2(numCorrect2) {
+    var correctCount2 = 0;
     // var malCount = 0;
     for (var i = 0; i < elements2.length; i++) {
         if (results2[i] ) {
             $(elements2[i]).addClass('true');
-            correctCount++;
-            if(correctCount == numCorrect){
+            correctCount2++;
+            if(correctCount2 == numCorrect2){
                 $('#respuesta_mal2').hide();
                 $('#respuesta2').html('Respuesta correcta');
                 $('#respuesta2').show();
+            }else if(correctCount2 >=1 && correctCount2 < numCorrect2){
+              $('#respuesta_mal2').html('Faltan respuestas por seleccionar');
+              $('#respuesta_mal2').show();
             }else{
                 $('#respuesta_mal2').html('Respuesta incorrecta');
                 $('#respuesta_mal2').show();
             }
+        }else if(correctCount2 >=1 && correctCount2 < numCorrect2){
+          $('#respuesta_mal2').html('Faltan respuestas por seleccionar');
+          $('#respuesta_mal2').show();
+          $(elements2[i]).addClass('false');
+          
         } else {
             $('#respuesta_mal2').html('Respuesta incorrecta');
             $('#respuesta_mal2').show();
@@ -806,12 +858,13 @@ function actSelectImg(el, data) {
         }
     }
 
-    if (correctCount == numCorrect) {
+    if (correctCount2 == numCorrect2) {
         for (var i = 0; i < elements2.length; i++) {
             $(elements2[i]).removeClass('false');
             $(elements2[i]).removeClass('act');
         }
         $('#btn-valid2').hide();
+        $('#reiniciar2').show();
     }
 
   }
@@ -879,21 +932,29 @@ function actSelectImg(el, data) {
   }
 
 
-  function valid3(numCorrect) {
-    var correctCount = 0;
+  function valid3(numCorrect3) {
+    var correctCount3 = 0;
     // var malCount = 0;
     for (var i = 0; i < elements3.length; i++) {
         if (results3[i] ) {
             $(elements3[i]).addClass('true');
-            correctCount++;
-            if(correctCount == numCorrect){
+            correctCount3++;
+            if(correctCount3 == numCorrect3){
                 $('#respuesta_mal3').hide();
                 $('#respuesta3').html('Respuesta correcta');
                 $('#respuesta3').show();
+            }else if(correctCount3 >=1 && correctCount3 < numCorrect3){
+              $('#respuesta_mal3').html('Faltan respuestas por seleccionar');
+              $('#respuesta_mal3').show();
             }else{
                 $('#respuesta_mal2').html('Respuesta incorrecta');
                 $('#respuesta_mal3').show();
             }
+        }else if(correctCount3 >=1 && correctCount3 < numCorrect3){
+          $('#respuesta_mal3').html('Faltan respuestas por seleccionar');
+          $('#respuesta_mal3').show();
+          $(elements3[i]).addClass('false');
+          
         } else {
             $('#respuesta_mal3').html('Respuesta incorrecta');
             $('#respuesta_mal3').show();
@@ -901,12 +962,13 @@ function actSelectImg(el, data) {
         }
     }
 
-    if (correctCount == numCorrect) {
+    if (correctCount3 == numCorrect3) {
         for (var i = 0; i < elements3.length; i++) {
             $(elements3[i]).removeClass('false');
             $(elements3[i]).removeClass('act');
         }
         $('#btn-valid3').hide();
+        $('#reiniciar3').show();
     }
 
   }
@@ -951,21 +1013,29 @@ function actSelectImg(el, data) {
   }
 
 
-  function valid4(numCorrect) {
-    var correctCount = 0;
+  function valid4(numCorrect4) {
+    var correctCount4 = 0;
     // var malCount = 0;
     for (var i = 0; i < elements4.length; i++) {
         if (results4[i] ) {
             $(elements4[i]).addClass('true');
-            correctCount++;
-            if(correctCount == numCorrect){
+            correctCount4++;
+            if(correctCount4 == numCorrect4){
                 $('#respuesta_mal4').hide();
                 $('#respuesta4').html('Respuesta correcta');
                 $('#respuesta4').show();
+            }else if(correctCount4 >=1 && correctCount4 < numCorrect4){
+              $('#respuesta_mal4').html('Faltan respuestas por seleccionar');
+              $('#respuesta_mal4').show();
             }else{
                 $('#respuesta_mal2').html('Respuesta incorrecta');
                 $('#respuesta_mal4').show();
             }
+        }else if(correctCount4 >=1 && correctCount4 < numCorrect4){
+          $('#respuesta_mal4').html('Faltan respuestas por seleccionar');
+          $('#respuesta_mal4').show();
+          $(elements4[i]).addClass('false');
+          
         } else {
             $('#respuesta_mal4').html('Respuesta incorrecta');
             $('#respuesta_mal4').show();
@@ -973,12 +1043,13 @@ function actSelectImg(el, data) {
         }
     }
 
-    if (correctCount == numCorrect) {
+    if (correctCount4 == numCorrect4) {
         for (var i = 0; i < elements4.length; i++) {
             $(elements4[i]).removeClass('false');
             $(elements4[i]).removeClass('act');
         }
         $('#btn-valid4').hide();
+        $('#reiniciar4').show();
     }
 
   }
@@ -1132,7 +1203,7 @@ function actSelectImg(el, data) {
     videoElement.play();
   }
 
-  function reiniciarActividad(el) {
+  function reiniciarActividadGrafica(el) {
     corret = 0;
     completion2 = 0.0;
     actualizarGrafico2();
@@ -1327,6 +1398,66 @@ function actSelectImg(el, data) {
   
       allowNextSlide2 = true; 
   }
+
+
+  //SLIDER 12 REGLAS DE ORO
+  let rulesH4 = document.querySelectorAll(".rulest h4");
+  let img_12_reglas = document.querySelector("#img_12_reglas");
+  let audio_12_reglas = new Audio();
+  let current_index_12_reglas = -1;
+  let allow_next_slide_12_reglas = true;
+  let prev_12_reglas = false;
+
+  function prevSlide3() {
+    current_index_12_reglas = (current_index_12_reglas - 1 + rulesH4.length) % rulesH4.length;
+    updateSlide3();
+  }
+
+  function nextSlide3() {
+    current_index_12_reglas = (current_index_12_reglas + 1) % rulesH4.length;
+    updateSlide3();
+  }
+
+  function updateSlide3() {
+    allow_next_slide_12_reglas = false;
+    // Remover el fondo resaltado de todos los títulos
+    rulesH4.forEach((title) => {
+      title.style.backgroundColor = "transparent";
+      title.style.border = "transparent";
+      title.style.borderRadius = "10px";
+    });
+
+    // Resaltar el título actual
+    rulesH4[current_index_12_reglas].style.backgroundColor = "rgba(0, 122, 243, 0.20)";
+    // Cambiar la imagen
+    var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.jpg`;
+    img_12_reglas.src = newImageSrc;
+    img_12_reglas.style.cursor = "pointer";
+    // Detener la reproducción actual y reproducir el nuevo audio
+    
+    audio_12_reglas.pause();
+    audio_12_reglas.src = `assets/audio/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.mp3`;
+    audio_12_reglas.play();
+
+    audio_12_reglas.addEventListener("ended", function () {
+      allow_next_slide_12_reglas = true;
+      nextSlide3();
+    }); 
+
+
+     img_12_reglas.addEventListener("click", function () {
+        if (audio_12_reglas.paused) {
+            audio_12_reglas.play();
+        } else {
+            audio_12_reglas.pause();
+        }
+    });
+
+    $("#prev, #next").on("click", function () {
+      audio_12_reglas.pause();
+    });
+  }
+
 
   let completion = 0.0;
   const totalElements = 6; // Número total de elementos a arrastrar
