@@ -3602,6 +3602,17 @@ button.btn-sm {
     background: var(--primary);
     transition: 1s;
 }
+/*listado 12 reglas de oro*/
+.listadoreglas li {
+    margin-top: 2% !important;
+	font-size: 18px;
+	font-family: 'Futura Bk BT', sans-serif;
+	color: #525252;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.3rem;
+    text-align: justify;
+}
 .contentFooter img {
     position: absolute;
     z-index: -1;

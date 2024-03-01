@@ -672,28 +672,28 @@ function actSelectImg(el, data) {
 
 
   function updateProgress(){
-  let code_course = $('#course_code').val();
-  let module_id = $('#module_id').val(); 
-  $.ajax({
-      type: "POST",
-      url: "../../../functions_helpers.php?progress_courses",
-      dataType: "json",
-      data:
-      {
-          code_course: code_course,
-          module_id: module_id
-      },
-      success: function(result)
-      {
-          let courseProgress = result.course_progress;
+    let code_course = $('#course_code').val();
+    let module_id = $('#module_id').val(); 
+    $.ajax({
+        type: "POST",
+        url: "../../../functions_helpers.php?progress_courses",
+        dataType: "json",
+        data:
+        {
+            code_course: code_course,
+            module_id: module_id
+        },
+        success: function(result)
+        {
+            let courseProgress = result.course_progress;
 
-          if (courseProgress === null || courseProgress === undefined) {
-              $('#course-progress').html('<strong>0.0%</strong>');
-          }else{
-              $('#course-progress').html('<strong>' + courseProgress + '%</strong>');
-          }
-      }
-  });
+            if (courseProgress === null || courseProgress === undefined) {
+                $('#course-progress').html('<strong>0.0%</strong>');
+            }else{
+                $('#course-progress').html('<strong>' + courseProgress + '%</strong>');
+            }
+        }
+    });
   }
 
   function reproducirAudioImagen(){
@@ -750,8 +750,6 @@ function actSelectImg(el, data) {
         if (results[i] ) {
             $(elements[i]).addClass('true');
             correctCount++;
-            console.log(correctCount);
-            console.log(numCorrect);
             if(correctCount == numCorrect){
                 $('#respuesta_mal').hide();
                 $('#respuesta').html('Respuesta correcta');
@@ -768,7 +766,7 @@ function actSelectImg(el, data) {
           $('#respuesta_mal').show();
           $(elements[i]).addClass('false');
           
-        }else  {
+        }else {
             $('#respuesta_mal').html('Respuesta incorrecta');
             $('#respuesta_mal').show();
             $(elements[i]).addClass('false');
@@ -782,6 +780,7 @@ function actSelectImg(el, data) {
         }
         $('#btn-valid').hide();
         $('#reiniciar').show();
+        $('#respuesta_mal').hide();
     }
 
   }
@@ -865,6 +864,8 @@ function actSelectImg(el, data) {
         }
         $('#btn-valid2').hide();
         $('#reiniciar2').show();
+        $('#respuesta_mal2').hide();
+
     }
 
   }
@@ -969,6 +970,8 @@ function actSelectImg(el, data) {
         }
         $('#btn-valid3').hide();
         $('#reiniciar3').show();
+        $('#respuesta_mal3').hide();
+
     }
 
   }
@@ -1050,6 +1053,7 @@ function actSelectImg(el, data) {
         }
         $('#btn-valid4').hide();
         $('#reiniciar4').show();
+        $('#respuesta_mal4').hide();
     }
 
   }
@@ -1356,6 +1360,7 @@ function actSelectImg(el, data) {
       backgroundImageDiv.css("background-image", `url(${newBackgroundImageSrc})`);
   
       allowNextSlide = true; 
+
   }
 
   var titles3 = $(".rulest2 h2");
@@ -1456,6 +1461,43 @@ function actSelectImg(el, data) {
     $("#prev, #next").on("click", function () {
       audio_12_reglas.pause();
     });
+
+     //Subtitulo dinamico 
+     data_title_actual = rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase();
+     console.log(data_title_actual);
+     $('#p-12-reglas').hide();
+
+     var sub12Reglas = {
+       'slide12_01': [
+         'Regla específica para el título 1',
+         'Otra regla específica para el título 1',
+         'Y otra más para el título 1'
+       ],
+       'slide12_02': [
+         'Regla específica para el título 2',
+         'Otra regla específica para el título 2',
+         'Y otra más para el título 2'
+       ],
+       'slide12_03': [
+         'Regla específica para el título 3',
+         'Otra regla específica para el título 3',
+         'Y otra más para el título 3'
+       ],
+       'slide12_04': [
+         'Regla específica para el título 4',
+         'Otra regla específica para el título 4',
+         'Y otra más para el título 4'
+       ],
+     };
+
+     $('.listadoreglas').empty();
+
+     if (data_title_actual in sub12Reglas) {
+       sub12Reglas[data_title_actual].forEach(regla => {
+         $('.listadoreglas').append(`<li>${regla}</li>`);
+       });
+     }
+     $('.listadoreglas').show();
   }
 
 
