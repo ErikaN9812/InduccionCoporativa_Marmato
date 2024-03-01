@@ -1603,7 +1603,7 @@
                                     <div class="correctIncorrect" style="display:none;" >
                                         <p id="correctIncorrect"></p>
                                     </div>
-                                    <button class="btn" id="reiniciar"onclick="reiniciarActividad('', [], 3, '')">Reiniciar</button>
+                                    <button class="btn" onclick="reiniciarActividad('', [], 3, '')">Reiniciar</button>
                                 </div>
                             </div>
                         </div>
@@ -2040,7 +2040,15 @@
             <div class="bntNextPrev12r movil-pc-flechas-l" onclick="prevSlide3()">  <i class="fas fa-angle-left"></i></div>
             <div class="col-lg-6" >
                 <img id="img_12_reglas" src="assets/img/slide_12_rules.jpg" alt="Imagen" style="width: 100%;">
-                <p style="margin-top: 50px; font-weight: bold; font-size: 17px" class="text-center">Por favor haga click, sobre las flechas, para escuchar una breve descripción de cada una de las reglas.</p>
+                <p style="margin-top: 50px; font-weight: bold; font-size: 17px" class="text-center" id="p-12-reglas">Por favor haga click, sobre las flechas, para escuchar una breve descripción de cada una de las reglas.</p>
+                   
+                <p class="instrucciones" id="p-12-reglas" style="display: none;">  
+                    <span><strong>Instrucciones:</strong></span><br >
+                    Por favor haga click, sobre las flechas, para escuchar una breve descripción de cada una de las reglas               
+                    <ul class="listadoreglas" style="display: none;">
+                        
+                    </ul>
+                </p>
             </div>
             <div class="bntNextPrev12r movil-pc-flechas-r" onclick="nextSlide3()">  <i class="fas fa-angle-right"></i></div>
         </div>
