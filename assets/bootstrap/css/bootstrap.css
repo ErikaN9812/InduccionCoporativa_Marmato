@@ -5745,6 +5745,8 @@ textarea.form-control-lg {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
+  border: 2px solid #cecece;
+  border-radius: 5px;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -5803,7 +5805,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 8%;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -5838,8 +5840,8 @@ textarea.form-control-lg {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;

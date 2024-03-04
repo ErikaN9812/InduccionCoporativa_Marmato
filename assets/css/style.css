@@ -859,7 +859,7 @@
         }
 
         .container-image {
-            background-image: url(../img/beneficios-generales.jpg) ;
+            background-image: url(../img/beneficios/portada-sld1.jpg) ;
             background-repeat: no-repeat;
             background-size: cover;
             height: 100vh;
@@ -874,12 +874,12 @@
             width: 100%;
             /* El height controla el alto del degradado */
             height: 450px;
-            position: absolute;
+            position: relative;
             left: 0;
             /*  posición del degrado desde aquí */
             bottom: 0;
-            /* posición, reemplaza también la dirección en el gradiente */
-            background-image: linear-gradient(to top, #0b3d5c, transparent);
+            /* posición, reemplaza también la dirección en el gradiente
+            background-image: linear-gradient(to top, #0b3d5c, transparent);*/
           }
           
            /*Fondo asi te queremos en la operacion*/
@@ -2705,7 +2705,7 @@ p, a, ul, li, label {
 
 /*listado asi te queremos en la operacion*/
 .listadoperacion li {
-	font-size: 19px;
+	font-size: 18px;
 	font-family: 'Futura Bk BT', sans-serif;
 	color: #8f8f8f ;
     font-weight: 500;
@@ -2716,17 +2716,17 @@ p, a, ul, li, label {
 
 /*listado vestuario*/
  .listado ul, li {
-	font-size: 21px;
+	font-size: 18px;
 	color: #fff;
     font-weight: 500;
     margin: 0;
-    line-height: 1.6rem;
+    line-height: 1.3rem;
     text-align: justify;
 }
 
 /*listado protocolo*/
 .listadomodal li {
-	font-size: 1.2rem;
+	font-size: 18px;
 	font-family: 'Futura Bk BT', sans-serif;
 	color: #525252;
     font-weight: 500;
@@ -2927,6 +2927,14 @@ video::-webkit-media-controls-panel {
     overflow-wrap: break-word;
     white-space: normal;
 
+}
+
+.parrafo18p{
+    font-size: 18px;
+    color: var(--white);
+    text-align: center;
+    line-height: 1.2em;
+    margin-top: 5%;
 }
 
 .titulo20p{
