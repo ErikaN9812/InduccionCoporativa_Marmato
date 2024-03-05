@@ -69,6 +69,14 @@
             position: relative;
         }
 
+        .bg-petroleopoliticaTI{
+            background-color: #0b3d5c; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+        }
+
         .bg-petroleopolitica {
             background-color: #fff; /* Color blanco */
             z-index: 0;
@@ -1010,6 +1018,13 @@
             padding: 3%;
             height: 100vh;
             padding-left: 5%;
+        }
+
+         /*contenido manual de convivencia*/
+         .contenido-lateral-politica {
+            max-width: 100%;
+            padding: 3%;
+            padding-left: 6%;
         }
 
          /*contenido asi te queremos*/
@@ -2647,7 +2662,7 @@
 /*parrafos texto blanco*/
 .parrafoblanco-justify p {
     text-align: justify;
-    line-height: 1.4em;
+    line-height: 1.3em;
     margin-top: 3%;
     font-size: 18px;
     color: #fff;
@@ -2680,6 +2695,11 @@
 .tituloh5 h5{
     font-size: 18px;
     text-align: left;
+}
+
+.tituloh5 {
+    font-size: 20px;
+    color: var(--white);
 }
 
 .miga_pan p{
