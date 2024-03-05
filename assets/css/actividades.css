@@ -318,13 +318,19 @@
     border: 2px solid white;
   }
   .tooltip {
-    padding: 5px 10px;
+    padding: 85px 10px;
     color: white;
     border-radius: 20px;
     font: bold 12px;
-
     box-shadow: 0 0 2px black;
   }
+
+  .tooltip img{
+
+    width: 190px !important;
+    height: 80px !important;
+  }
+  
 
                  
 #actOrderElement {
