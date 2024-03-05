@@ -61,6 +61,14 @@
             position: relative;
         }
 
+        .bg-petroleoconvivencia {
+            background-color: #0b3d5c; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+            position: relative;
+        }
+
         .bg-petroleopolitica {
             background-color: #fff; /* Color blanco */
             z-index: 0;
@@ -234,7 +242,6 @@
             background-size: contain;
             background-position: right;
             width: 50%;
-
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -398,6 +405,15 @@
             padding: 6% 6%;
         }
 
+        /*manual de convivencia*/
+        .bg-blancomanualconvi {
+            background-color: #fff; /* Color azul petróleo */
+            z-index: 0;
+            display: flex;
+            position: relative;
+            text-align: center;
+        }
+
         .fixedv1
         {
             display: flex;
@@ -490,6 +506,16 @@
             max-width: 100%;
             padding: 0%;
         }
+
+         /*Espacio de vestuario*/
+         .padding-left-vestuario-administrativo{
+            margin-right: 90px;
+            margin-left: 80px;
+            margin-top: 50px;
+            max-width: 100%;
+            padding-left: 5%;
+        }
+
 
         /*que gestiones tu turno*/
         .padding-left-turno{
@@ -966,12 +992,24 @@
             text-align: center;
         }
 
+        .padding-manual{
+            padding-left: 2%;
+        }
+
         /*contenido asi te queremos*/
         .contenido-lateral-asi-queremos {
             margin-left: 60px;
             max-width: 100%;
             padding: 3%;
             text-align: center;
+        }
+
+        /*contenido manual de convivencia*/
+        .contenido-lateral-manual {
+            max-width: 100%;
+            padding: 3%;
+            height: 100vh;
+            padding-left: 5%;
         }
 
          /*contenido asi te queremos*/
@@ -999,21 +1037,21 @@
             padding: 0%;
             text-align: center;
         }
-        
-        
-        
+          
         .contenido-azuloscuro {
             margin-left: 80px;
             padding: 3%;;
             max-width: 70%;
             text-align: center;
         }
+
         .contenido-azuloscuro2 {
             margin-left: 15px;
             max-width: 100%;
             padding: 3%;
             text-align: center;
         }
+        
         .col-inline {
             display: inline-flex;
             vertical-align: top;
@@ -1570,6 +1608,12 @@
             max-width:500px; 
             height: 500px;
         }
+
+        .video-slide-casos{
+            max-width:600px; 
+            height: 500px;
+        }
+
         .pc-movil-slide-14-1{
             width: 60% !important;
         }
@@ -2474,7 +2518,7 @@
 
 /*imagen flecha izquierda*/
 .icoflecha img {
-    width: 5%;
+    width: 3.9%;
     float: left;
     margin-right: 2%;
   }
@@ -2633,6 +2677,10 @@
     color: #fff;
 }
 
+.tituloh5 h5{
+    font-size: 18px;
+    text-align: left;
+}
 
 .miga_pan p{
     color: #d3d3d3;
@@ -2947,7 +2995,7 @@ video::-webkit-media-controls-panel {
 
 .titulocasos{
     line-height: 1.2em;
-    font-size: 1.7em;
+    font-size: 25px;
     color: #fff;
     font-weight: 600;
 }

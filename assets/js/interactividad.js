@@ -157,6 +157,16 @@ $(document).ready(function () {
         case '7':
           imgSrc = 'assets/img/vestuario-mina/uniforme-mina-botas.png';
           break;
+        case '8':
+            imgSrc = 'assets/img/vestuario-mina/autorescatador.png';
+            break;
+        case '9':
+            imgSrc = 'assets/img/vestuario-mina/reata.png';
+            break;
+        case '10':
+            imgSrc = 'assets/img/vestuario-mina/overol-seguridad.png';
+            break;
+            
       }
   
       $(this).attr('title', '<img src="' + imgSrc + '">').tooltip({
@@ -1661,3 +1671,10 @@ function actSelectImg(el, data) {
     $(".info-segovia").removeAttr("hidden");
   }
   
+
+  /*Script accordeon*/
+//get param of the URL
+const valores = window.location.search;
+const urlParams = new URLSearchParams(valores);
+var producto = urlParams.get('color');
+$('body').removeClass().addClass(producto);

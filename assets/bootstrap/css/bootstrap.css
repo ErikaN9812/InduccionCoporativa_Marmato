@@ -3870,13 +3870,19 @@ textarea.form-control-lg {
 
 .nav-pills .nav-link {
   background: none;
-  border: 0;
+  border: 0.5px solid #cecece;
   border-radius: 0.25rem;
+  font-size: 18px;
+  color: #0b3d5c;
+  text-align: left;
+  padding: 10px 10px;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #0b3d5c;
+  font-size: 18px;
+  text-align: left;
 }
 
 .nav-fill > .nav-link,

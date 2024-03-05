@@ -763,10 +763,10 @@
     position: relative;
 }
 .actSelectImg .itemAct {
-    max-width: 340px;
+    max-width: 360px;
     position: relative;
     display: inline-block;
-    margin: 10px;
+    margin: 4px;
 }
 .actSelectImg .itemAct:hover {
     cursor: pointer;
