@@ -1678,3 +1678,35 @@ const valores = window.location.search;
 const urlParams = new URLSearchParams(valores);
 var producto = urlParams.get('color');
 $('body').removeClass().addClass(producto);
+
+
+    // historieta01();
+    historieta02();
+    mostrarActividadVideo();
+    mostrarActividadVideo2();
+    mostrarActividadVideo3();
+
+    $("#icon_1").on('click', function() {
+        pauseMedia();
+        $('#planning-1').hide();
+        $('#planning-2').hide();
+        $('#planning-3').show();
+    });
+    $("#icon_2").on('click', function() {
+        pauseMedia();
+        $('#planning-3').hide();
+        $('#planning-1').hide();
+        $('#planning-2').show();
+    });
+    $("#icon_3").on('click', function() {
+        pauseMedia();
+        $('#planning-3').hide();
+        $('#planning-2').hide();
+        $('#planning-1').show();
+    });
+
+    $("#next,#prev").on('click', function() {
+        pauseMedia();
+        updateProgress.call(this);
+    });
+    sistemaVotacion();
