@@ -1026,8 +1026,6 @@
           }
         }
       }
-
-  
   
       li:nth-child(1) {
         background-image: url("../img/secciones/seccion1.png");
@@ -1107,26 +1105,23 @@
   }
   
   
-  @media screen and (max-width: 600px) {
-   
-    body {
-      margin: 0;
-    }
-  
-    .accordion {
+  @media screen and (max-width: 734px) {
+
+    .accordionseccion {
       height: auto;
   
       ul, ul:hover {
         li,
         li:hover {
-          position: relative;
+          position: relative !important;
           display: table;
-         /*table-layout: fixed;*/
-          width: 100%;
+         table-layout: fixed !important;
+          width: 100% !important;
           -webkit-transition: none;
           transition: none;
         }
       }
+
      /*responsive momentos h2*/
       div {
         display: block;
@@ -1134,6 +1129,11 @@
         width: 100%;
         margin-top: 40%;
     }
+    h2 {
+      font-size: 20px !important;
+    }
+
+
   }
   
   .about {

@@ -290,6 +290,7 @@
             background-image: url(../img/triangulo-degradado-derecha.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            width: 30%;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -542,6 +543,13 @@
             padding: 0%;
         }
 
+        .padding-left-5{
+            margin-right: 60px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
         .padding-left-casos{
             margin-right: 60px;
             margin-left: 10px;
@@ -566,14 +574,70 @@
             padding: 0%;
         }
 
-        .padding-left-4{
-            margin-right: 60px;
-            margin-left: 60px;
-            max-width: 100%;
-            padding: 0%;
+        .departamentos{
+            margin-top: 20%; 
+            padding-right: 5%;
+        }
+        .departamentos_2{
+            display: none;
+        }
+        .flecha-v3{
+            margin-left: 30%; 
+            width: 3%; 
+            margin-top: 2%;
+        }
+        .elemento-img{
+            width: 40%; 
+            margin-left: 30%;
         }
 
-        @media(max-width: 768px){
+        @media(max-width: 734px){
+            .elemento-img{
+                width: 40%; 
+                margin-left: 30%;
+            }
+            .padding-left-5{
+                margin-right: 0px;
+                margin-left: 0px;
+                max-width: 75%;
+                padding: 0%;
+                text-align: center;
+            }
+            .padding-left-4{
+                margin-right: 0px;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+            }
+            .flecha-v3{
+                margin-left: 0%; 
+                width: 3%; 
+                margin-top: 2%;
+            }
+            .bg-petroleo-triangulor {
+                background-color: #133450; /* Color azul petróleo */
+                background-image: url(../img/triangulo-degradado-derecha.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 65vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .departamentos_pc{
+                display: none;
+            }
+            .departamentos{
+                margin-top: 20%; 
+                padding-right: 5%;
+                display: none;
+            }
+            .departamentos_2{
+                display: block;
+            }
              /*fondo azul mision*/
             .bg-petroleo-mision {
                 background-color: #133450; /* Color azul petróleo */
@@ -878,6 +942,7 @@
             display:block;
             align-items: center;
             position: relative;
+            width: 70%;
         }
 
         /*Fondo como entendemos la minera*/
@@ -1213,6 +1278,20 @@
             text-align: center;
         }
 
+        .divided-background-v-accordion {
+            /*background: linear-gradient(to bottom, #063247 50%, #fff 50%);*/
+            background-image: url(../img/fondo-estructura-secciones.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            height: 110vh !important;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+
         
         .white-text{
             color: whitesmoke !important;
@@ -1362,14 +1441,37 @@
             max-width: 10%;
         }
 
-
-
-
-
         @media (max-width: 734px) {
+            .bg-blanco-equiparesv2 {
+                background-image: url(../img/fondo-blanco3.jpg) ;
+                background-color: #fff; /* Color blanco */
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.8;
+                height: 100vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .contenido-lateral-6poli {
+                margin-right: 00px;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+            }
+            
+            .contenido-left-mapa {
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+                margin-top: 0%;
+            }
+
             .img-mision-vision{
                 margin:0 auto; 
-                width:20%; 
+                width:40%; 
             }
             .cont-flecha-mision {
                 margin-right: 0px;
@@ -1408,7 +1510,29 @@
                 background-repeat: no-repeat;
                 background-position: bottom;
                 background-size: cover;
-                height: 200vh !important;
+                height: 90vh !important;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                text-align: center;
+            }
+            .bg-blanco2-6poli {
+                background-color: #fff; /* Color blanco */
+                height: 70vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: 25% !important;
+            } 
+    
+            .divided-background-v-accordion{
+                background-image: url(../img/fondo-estructura-secciones.jpg);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: cover;
+                height: auto !important;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -1432,7 +1556,7 @@
             .bg-blanco-bienvenida{
                 background-color: #fff; /* Color blanco */
                 width: 100%;
-                height: 65vh;
+                height: 25vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -1519,6 +1643,19 @@
             padding-top: 10%;
             padding-left: 5%;
         }
+
+        .bg-azuloscuro-7 {
+            background-color: #0e4860; /* Color blanco */
+            height: 100vh;
+            width: 60%;
+            z-index: 0;
+            display: block; 
+            align-items: center;
+            position: relative;
+            padding-top: 10%;
+            padding-left: 5%;
+        }
+
 
         /*fondo  beneficios*/
         .bg-blanco-beneficio {
@@ -1868,7 +2005,124 @@
         .rating input:checked + label {
             background-image: url('../../assets/img/estrella-llena.png'); /* Cambia 'estrella-llena.png' por tu imagen de estrella llena */
         }
-        @media (max-width: 734px) {
+
+        .content-flecha-v2{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        #zoom_1{
+            margin-top: 27%; 
+            margin-left: 53%; 
+            cursor: pointer;
+        }
+        
+        #zoom_2{
+            margin-top: 27%; 
+            margin-left: 58%; 
+            cursor: pointer;
+        }
+        .elemento-top{
+           margin-top: 13%;
+        }
+        .elemento-left{
+            margin-left: 2%;
+        }
+        .elementos-movil{
+            display: none;
+        }
+
+        .info-prevencion{
+            display: flex;
+            width: 40%;
+        }
+        .titulo-h1-v4{
+            font-size: 27px; 
+            text-align: center; 
+            color: #0b3d5c; 
+            margin-top: 10%;
+        }
+        .bg-blanco-3 {
+            background-color: #fff; /* Color blanco */
+            height: 85vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: auto !important;
+        }
+        @media (max-width: 734px) { 
+            .info-prevencion{
+                display: flex;
+                width: 100%;
+            }
+            .bg-azuloscuro-7 {
+                background-color: #0e4860; /* Color blanco */
+                height: 100vh;
+                width: 100%;
+                z-index: 0;
+                display: block; 
+                align-items: center;
+                position: relative;
+                padding-top: 10%;
+                padding-left: 5%;
+            }
+            .elementos-movil{
+                display: block;
+            }
+            .elementos-pc{
+                display: none !important;
+            }
+            .elemento-left{
+                margin-left: 0%;
+            }
+            .elemento-top{
+                margin-top: 0% !important;
+             }
+            #zoom_1{
+                margin-top: 34%; 
+                margin-left: 70%; 
+                cursor: pointer;
+            }
+            
+            #zoom_2{
+                margin-top: 34%; 
+                margin-left: 80%; 
+                cursor: pointer;
+            }
+
+            .bg-blancominera {
+                background-color: #fff; /* Color blanco */
+                z-index: 0;
+                display:block;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 65vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            .bg-blanco-minera {
+                background-color: #fff; /* Color blanco */
+                z-index: 0;
+                display:block;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 65vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: 20%;
+                padding-left: 4%;
+                padding-right: 4%;
+            } 
              /*fondo  beneficios*/
             .bg-blanco-beneficio {
                 background-color: #fff; /* Color blanco */
@@ -1882,7 +2136,7 @@
                 padding: 1%;
             } 
             .bg-blancofondominera {
-                background-image: url(../img/fondo-minero24.jpg) ;
+                background-image: url(../img/como-entendemos-mineria.jpg) ;
                 background-color: #fff; /* Color blanco */
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -2204,12 +2458,21 @@
             }
             .bg-blanco2 {
                 background-color: #fff; /* Color blanco */
-                height: 100vh;
+                height: 85vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
                 position: relative;
-                margin-top: 50px !important;
+                margin-top: auto !important;
+            } 
+            .bg-blanco-3 {
+                background-color: #fff; /* Color blanco */
+                height: 70vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: auto !important;
             } 
 
             .col-inline-politicas {
@@ -2284,10 +2547,10 @@
             }
             .slide-2-elementos{
                 display: grid; 
-                margin-top: 150px; 
+                margin-top: 200px; 
                 justify-content: center; 
                 z-index: 1;
-                height: 1000px;
+                height: 145vh;
             }
             .contenido-central {
                 margin-right: 15px; /* Ajusta el margen derecho para dispositivos móviles */
@@ -2581,6 +2844,14 @@
     margin-left: 35%;
   }
 
+  .icoflechaabajo2 img {
+    width: 2%;
+    float: left;
+    margin-top: 1.8%;
+    margin-right: 0.5%;
+    margin-left: 0%;
+  }
+
 
 /*icono mas vestuario*/
 .icono {
@@ -2832,6 +3103,14 @@ i{
 
 
 @media (max-width: 734px) {
+    .icoflechaabajo img {
+        width: 2%;
+        float: left;
+        margin-top: 1.8%;
+        margin-right: 0.5%;
+        margin-left: 0%;
+      }
+
     .icoflechaderecha img {
         width: 5%;
         float: center;
@@ -2846,6 +3125,10 @@ i{
         text-align: center;
         margin-top: 8px;
     }  
+
+    .oculta{
+        display: none;
+    }
     
     i{
         font-family: 'Alata', sans-serif;
@@ -3006,6 +3289,10 @@ video::-webkit-media-controls-panel {
 }
 
 .titulo20p{
+    font-size: 28px;
+}
+
+.titulo_h1_v3{
     font-size: 28px;
 }
 
@@ -3329,7 +3616,31 @@ button.btnbeneficio:focus {
     text-align: left;
 }
 
+.titulo-h1{
+    margin-top: 5%; 
+    margin-left: 18%;
+}
+
 @media (max-width: 734px) {
+    .containerimg {
+        max-width: 100%;
+        float: center;
+        border: 3px solid #dbe4ed; /* Border color is optional */ 
+      }
+    .centermapaimg {
+        margin: 0;
+        margin-left: 0%;
+      }
+    .titulo-h1{
+        margin-top: 20%; 
+        margin-left: 0%;
+    }
+    .titulo20p{
+        font-size: 20px;
+    }
+    .titulo_h1_v3{
+        font-size: 16px !important;
+    }
     .h1-titulo{
         padding-top: 25%; 
         color: var(--primary80)
@@ -3349,7 +3660,7 @@ button.btnbeneficio:focus {
         overflow-wrap: break-word;
         white-space: normal;
         color: var(--primary);  
-        padding-top: 40%;
+        padding-top: 2%;
     }
     .dx2-v5{
         font-size: 2em;
@@ -4148,7 +4459,7 @@ iframe:after {
  /*reponsive un minuto*/  
  @media (max-width: 768px){
     .top-slide-14{
-        margin-top:0px;
+        margin-top:40%;
      }
     .top-slide-1{
         margin-top:150px;

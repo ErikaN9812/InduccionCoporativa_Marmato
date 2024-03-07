@@ -149,7 +149,7 @@
                         <audio controls class="audio-bienvenida">
                             <source src="assets/audio/Bienvenida-Induccion-corporativa.mp3" type="audio/mp3" style="padding-top: 5%;">
                         </audio>
-                        <div class="icoflecha instruccionflecha cont-central-flecha">
+                        <div class="icoflecha instruccionflecha content-flecha-v2">
                             <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                         </div> 
                 </div>
@@ -164,15 +164,16 @@
 
 
     <!--Pantalla estructura tematica-->
-    <div class="container divided-backgroundv3">
+    <div class="container divided-background-v-accordion">
         <div class="row ">
             <!-- Columna izquierda - Azul petróleo -->
             <div class="col-lg-12 col-md-12 parrafoblanco-center">
                 <h1 class="titulo20p text-center top-movil" style="color: var(--white)">Recorrido por la<span style="color: var(--grey);"> Compañía</span></h1>
                 <p style="color: var(--white);" class="text-center">Queremos que estés familiarizado con nuestra Compañía, <br>te invitamos a navegar por
                     <span style="color: var(--grey);"> (4) cuatro secciones</span> clave para tu proceso de inducción.</p>
-                    <div class="icoflechaabajo instruccionflecha cont-central-flecha ">
-                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha"> <i>Desplaza el mouse sobre cada título para ver su contenido</i>
+                    <div class="icoflechaabajo instruccionflecha">
+                        <img src="assets/img/flecha-instru-abajo.png" class="oculta" alt="flecha"> 
+                        <i>Desplaza el mouse sobre cada título para ver su contenido</i>
                     </div>
             </div>
 
@@ -183,7 +184,7 @@
                         <li tabindex="1" >
                             <div id="fondo-momento1">
                                 <a href="#">
-                                <h2 style="text-align: center;">Conoce más acerca<br>de la Compañía</h2>
+                                <h2 style="text-align: center;">Conoce más acerca<br>de la compañía</h2>
                                 </a>
                             </div>
                         </li>
@@ -204,7 +205,7 @@
                         <li tabindex="4">
                             <div>
                                 <a href="#">
-                                <h2 style="text-align: center;">Así Cuidamos de Ti<br>y del Medio Ambiente</h2>
+                                <h2 style="text-align: center;">Así Cuidamos de ti<br>y del medio ambiente</h2>
                                 </a>
                             </div>
                         </li>
@@ -246,7 +247,7 @@
                     <audio controls>
                         <source src="assets/audio/Nuestro-proposito-superior-new.mp3" type="audio/mp3" style="padding-bottom: 5%;">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha content-flecha-v2">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                     </div>
                 </div>
@@ -259,8 +260,9 @@
                         <video controls poster="assets/img/portada-proposito-superior.png"  style="max-width:540px; height: 450px;" id='actividad_4' class="track-element">
                             <source src="assets/video/nuestra-operac" type="video/mp4">
                         </video>
-                        <div class="icoflecha instruccionflecha" style="margin-top: 2%;">
-                            <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 35%; width: 3.5%;"> <i>Haz clic para ver el video</i>
+                        <div class="icoflecha instruccionflecha content-flecha-v2">
+                            <img src="assets/img/flecha-instru.png" alt="flecha"> 
+                            <i>Haz clic para ver el video</i>
                         </div>
                     </div>   
                 </div>       
@@ -273,21 +275,23 @@
     <!--Inicio Nuestra Operacion Minera-->
     <div class="container miga_nuestra_operacion">
         <div class="row">
-        <div class="col-lg-8 col-md-12 bg-blancominera">
+        <div class="bg-blancominera">
             <div class="contenido-left-mapa">
                 <div class="col-lg-12 col-md-12">
-                    <h1 class="titulo20p" style="color: var(--primary); margin-top: 5%; margin-left: 18%;">Nuestra operación en <span style="color: var(--blue25)">Colombia</span></h1>
+                    <h1 class="titulo20p titulo-h1" style="color: var(--primary);">Nuestra operación en <span style="color: var(--blue25)">Colombia</span></h1>
                     <div class="icoflechaabajo instruccionflecha">
-                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="margin-left: 33%;"> <i>Haz clic sobre el (+) para aumentar y el (-) para disminuir</i>
+                        <img src="assets/img/flecha-instru-abajo.png" class="oculta" alt="flecha" style="margin-left: 33%;"> <i>Haz clic sobre el (+) para aumentar y el (-) para disminuir</i>
                     </div>
                     <br> 
                     <div class="centermapaimg">
-                        <div class="containerdepimg">   
-                            <img src="assets/img/mapa-operacion/departamentos.png" alt="" style="margin-top: 20%; padding-right: 5%;">
+                        <img src="assets/img/mapa-operacion/departamentos_2.png" class="departamentos_2">
+
+                        <div class="containerdepimg departamentos_pc">   
+                            <img src="assets/img/mapa-operacion/departamentos.png" class="departamentos">
                         </div>
                         <div class="containerimg">
-                            <img class="iconomapa" id="zoom_1" style="margin-top: 28%; margin-left: 55%; cursor: pointer;" src="assets/img/mapa-operacion/mapa-mas.png">
-                            <img class="iconomapa" id="zoom_2" style="margin-top: 28%; margin-left: 60%; cursor: pointer;" src="assets/img/mapa-operacion/mapa-menos.png">
+                            <img class="iconomapa" id="zoom_1" src="assets/img/mapa-operacion/mapa-mas.png">
+                            <img class="iconomapa" id="zoom_2" src="assets/img/mapa-operacion/mapa-menos.png">
                             <img id="mapa-img" src="assets/img/mapa-operacion/zoom1.png" alt=""> 
                            
                         </div>
@@ -296,7 +300,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-12 bg-petroleo-triangulor">
+        <div class="bg-petroleo-triangulor">
            <div class="col-lg-12 col-md-12">
             <img src="assets/img/mapa-operacion/definicion-mapa.png" alt="" style="margin:0 auto; width:85%; margin-top: 10%; margin-bottom: 3%;">
             <p style="color: #e9e9e9; text-align: center; margin-top: 10%;margin-bottom: 4%; font-size: 18px;">Te invitamos a que observes este video</p>
@@ -342,8 +346,8 @@
                         <audio controls id="actividad_3" class="track-element mt-4  mx-auto d-block size-audio">
                             <source src="assets/audio/Mision-Audio.mp3" type="audio/mp3">
                         </audio>
-                        <div class="icoflecha instruccionflecha" style="text-align: center;">
-                            <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 30%; width: 3%; margin-top: 2%;"> 
+                        <div class="icoflecha instruccionflecha content-flecha-v2 ">
+                            <img src="assets/img/flecha-instru.png" alt="flecha"> 
                             <i>Haz clic para escuchar el audio</i>
                         </div>
                     </div>
@@ -365,8 +369,8 @@
                     <audio controls id='actividad_3' class="track-element  mt-4  mx-auto d-block size-audio">
                         <source src="assets/audio/Vision-f.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha " style="text-align: center;">
-                        <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 30%; width: 3%; margin-top: 2%;"> 
+                    <div class="icoflecha instruccionflecha content-flecha-v2">
+                        <img src="assets/img/flecha-instru.png" alt="flecha"> 
                         <i>Haz clic para escuchar el audio</i>
                     </div>
                 </div>
@@ -446,7 +450,7 @@
                     <audio controls id='actividad_3' class="track-element audio-v2 mt-4">
                         <source src="assets/audio/como-entedemos-la-mineria.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha content-flecha-v2">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> 
                         <i>Haz clic para escuchar el audio</i>
                     </div>
@@ -503,8 +507,8 @@
                                 <source src="assets/audio/6 politicas.mp3" type="audio/mp3">
                             </audio> 
                         </div> 
-                        <div class="icoflecha instruccionflecha">
-                            <img src="assets/img/flecha-instru.png" alt="flecha" style="margin-left: 10%;"> <i>Haz clic para escuchar el audio</i>
+                        <div class="icoflecha instruccionflecha content-flecha-v2">
+                            <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                         </div>               
                 </div> 
             </div>
@@ -512,8 +516,8 @@
             <div class="col-9 bg-petroleo3 col-inline-politicas pc-celular-azul">
                 <div class="col-12 col-inline-politicas">
                     <div class="row col-12">
-                        <div class="icoflechaabajo instruccionflecha cont-central-flecha" style="margin-bottom: 3%;">
-                            <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="margin-left: 15%; margin-top: 3%;"> <i>Haz clic para descargar el PDF de cada política</i>
+                        <div class="icoflechaabajo2 instruccionflecha content-flecha-v2">
+                            <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para descargar el PDF de cada política</i>
                         </div>  
                         <div class="col-lg-6 col-md-4 track-element" id="actividad_2"  style="min-height: 15rem; cursor:pointer;" data-bs-toggle="modal" data-bs-target="#slide_08_01">
                                 <img class="img-legal" src="assets/img/politica-sst-1.png">
@@ -679,11 +683,11 @@
      <div class="container bg-blanco-equiparesv2 miga_5_funciones_comite">
         <div class="row ">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-12 col-md-12">
-                <h1 class="text-center titulo20p" style="color: var(--primary);">Conoce las<span style="color: #803689;"> 5 funciones</span> que tiene el Comité de
+            <div class="col-lg-12 col-md-12 top-movil">
+                <h1 class="text-center titulo_h1_v3" style="color: var(--primary);">Conoce las<span style="color: #803689;"> 5 funciones</span> que tiene el Comité de
                     <span style="color: var(--grey); color: #803689; display: block; margin-bottom: 3%;" >Diversidad, Equidad e Inclusión</span></h1>
             </div>
-            
+
             <!-- Columna derecha - azul oscuro -->
             <div class="col-lg-12 col-md-12 ">
                 <div class="contenido-central-2 parrafo-diversidadgris-center diversidad">
@@ -703,14 +707,25 @@
                             <p style="color: var(--blue25);">Definir las acciones a implementar</p>
                             <p>para promover una cultura de equidad, inclusión y respeio a la diversidad</p>
                         </div>
+                        <div class="col-lg-3  col-md-12 equipares elementos-movil" >
+                            <img class="img-equipares" src="assets/img/diversidad/diversidad4.png">
+                            <p style="color: var(--blue25);">Liderar y facilitar la implementación</p>
+                            <p>de las acciones aprobadas, con el apoyo de las demás áreas de la empresa</p>
+                        </div>
+                        <div class="col-lg-3  col-md-12 equipares elementos-movil">
+                            <img class="img-equipares" src="assets/img/diversidad/diversidad5.png">
+                            <p style="color: var(--blue25);">Monitorear e informar</p>
+                            <p >sobre situaciones que ocurran en la organización que estén en contra de la política,
+                                y recomendar las acciones preventivas y correctivas aplicables</p>
+                        </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 slide-2-elementos" style="margin-top: 13%;">
+                    <div class="col-lg-12 col-md-12 slide-2-elementos elemento-top elementos-pc">
                         <div class="col-lg-4  col-md-12 equipares">
                             <img class="img-equipares" src="assets/img/diversidad/diversidad4.png">
                             <p style="color: var(--blue25);">Liderar y facilitar la implementación</p>
                             <p>de las acciones aprobadas, con el apoyo de las demás áreas de la empresa</p>
                         </div>
-                        <div class="col-lg-4 col-md-12 equipares" style="margin-left: 2%;">
+                        <div class="col-lg-4 col-md-12 equipares elemento-left">
                             <img class="img-equipares" src="assets/img/diversidad/diversidad5.png">
                             <p style="color: var(--blue25);">Monitorear e informar</p>
                             <p >sobre situaciones que ocurran en la organización que estén en contra de la política,
@@ -727,38 +742,17 @@
     <!--Inicio Protocolo para la prevencion y manejo de casos de acoso laboral-->
     <div class="container">
         <div class="row">
-             <!-- Columna derecha - Blanco 
-             <div style="display: flex;">
-                <div class="bg-colaboradores">
-                    <button class="btnbeneficio btn-warning"  onclick="info_marmato();"
-                    style="background-color: #2A80A6; color: #fff !important; float: justify; margin-top: 13%;"> 
-                    Ver protocolo para Colaboradores</button>
-                </div>
-                <div class="bg-proveedores">
-                    <button class="btnbeneficio btn-warning" onclick="info_segovia();"
-                    style="background-color: #003a5d; color: #fff !important; float: justify; margin-top: 9%;"> 
-                    Ver protocolo para Proveedores </button>
-                </div>
-             </div>-->
-
-            <!-- Columna Colaboradoes-->
-             <div class="col-lg-12 info-marmato" style="display: flex;" >
-                <div class="col-lg-5 col-md-12 top-slide-14 bg-blanco2" >
-                    <div class="padding-left-4 parrafogris-justify">
-                        <h1 class="titulo20p" style="font-size: 27px; text-align: center; color: #0b3d5c; margin-top: 30%;">Protocolo para <strong style="color: var(--blue25);"> prevención <br> y manejo de casos</strong> de acoso laboral, <br>sexual y/o discriminación
+             <!-- Columna derecha - Blanco -->
+                <div class="info-prevencion top-slide-14 bg-blanco-3" >
+                    <div class="padding-left-5 parrafogris-justify">
+                        <h1 class="titulo20p titulo-h1-v4">Protocolo para <strong style="color: var(--blue25);"> prevención <br> y manejo de casos</strong> de acoso laboral, <br>sexual y/o discriminación
                         <br> <strong style="color: var(--blue25);"></strong></h1>
-                        <img src="assets/img/diversidad/protocolo-2.png" style="width: 40%; margin-left: 30%;">  
+                        <img src="assets/img/diversidad/protocolo-2.png" class="elemento-img">  
                         <p style="padding-bottom: 3%">Es una línea para prevenir y abordar el acoso de género en el trabajo, protegiendo a las personas afectadas y promoviendo un ambiente laboral seguro y justo, tanto para colaboradores y proveedores.</p>
-                        <!--<audio controls>
-                            <source src="assets/audio/Nuestro-proposito-superior-new.mp3" type="audio/mp3" style="padding-bottom: 5%;">
-                        </audio>
-                        <div class="icoflecha instruccionflecha cont-central-flecha">
-                            <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
-                        </div>-->
                     </div>
                 </div>
     
-                <div class="col-lg-7 bg-azuloscuro6 parrafoblanco-leftprotocolo" >
+                <div class="bg-azuloscuro-7 parrafoblanco-leftprotocolo" >
                     <p style="text-align: left; font-size: 25px; margin-bottom: 2%;" >Rutas de <strong style="color: var(--blue25);">denuncias y quejas</strong></p>
                     <p style="color: #eeeeee">Comunicarse con el <strong>Comité de Convivencia Laboral</strong> de manera escrita o verbal, a través de los correos electrónicos:</p>
                     <br>
@@ -812,7 +806,7 @@
                        <!--<audio controls>
                             <source src="assets/audio/Nuestro-proposito-superior-new.mp3" type="audio/mp3" style="padding-bottom: 5%;">
                         </audio>
-                        <div class="icoflecha instruccionflecha cont-central-flecha">
+                        <div class="icoflecha instruccionflecha">
                             <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                         </div>-->
                     </div>
@@ -844,7 +838,6 @@
                 style="background-color: #BFEE30 !important; color: #0B3D5C !important; float: justify;"> 
                 Quien reciba la queja deberá</button>
             </div>
-        </div>
         </div>
         </div>
           <!-- Modal -->
@@ -1226,7 +1219,7 @@
                 <audio controls class="audio-bienvenida" style="max-width: 93% !important;">
                     <source src="assets/audio/SLIP-19-Que-gestiones-turno-de-trabajo.mp3" type="audio/mp3" style="max-width: 90% !important;">
                 </audio>
-                <div class="icoflecha instruccionflecha cont-central-flecha">
+                <div class="icoflecha instruccionflecha">
                     <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                 </div>
             </div>
@@ -1237,7 +1230,7 @@
                 <button id='actividad_1' class="btn btn-warning track-element" data-bs-toggle="modal" data-bs-target="#slide_turnos_12"
                     style="background-color: #BFEE30 !important; color: #0B3D5C !important; margin-left: 5%; margin-top: 3%; padding: 10px 100px !important" > 
                     Ver video</button>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para ver el video</i>
                     </div>
             </div>
@@ -1287,7 +1280,7 @@
                     <audio controls class="mt-4" style="max-width: 80%;">
                         <source src="assets/audio/SLIP-20-Codigo-Vestuario-Operativo-de-mina.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                     </div>
         
@@ -1339,7 +1332,7 @@
                     <audio controls class="mt-4" style="max-width: 75%;">
                         <source src="assets/audio/SLIP-21-Que-sigas-código-vestuario-administrativo.mp3" type="audio/mp3">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                     </div>
                 </div>
@@ -1379,7 +1372,7 @@
                     <audio controls class="mt-4" style="max-width: 70%;">
                         <source src="assets/audio/SLIP-22-Que-sigas-el-código-de-Vestuario-Oficina.mp3" type="audio/mp3" style="padding-bottom: 2%;">
                     </audio>
-                    <div class="icoflecha instruccionflecha cont-central-flecha">
+                    <div class="icoflecha instruccionflecha">
                         <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                     </div>
         
@@ -1757,7 +1750,7 @@
         <!-- Columna izquierda - Azul petróleo -->
         <div class="col-lg-12 col-md-12 magin-movil top-slide-14" style="text-align:center;">
             <h1 class="titulo20p" style="color: var(--white);"> Qué estés atento a <span style="color: var(--grey);">tus deberes</span style="color: var(--grey);"> y a <span>tu entorno</span></h1>
-            <div class=" instruccionflecha cont-central-flecha">
+            <div class=" instruccionflecha">
                 <i style="text-align: center; margin-bottom: 3%;">Revisa detenidamente las tres opciones y elige entre verdadero o falso según su aplicabilidad en cada situación</i>
             </div>
         </div>
@@ -2022,7 +2015,7 @@
             </div>
           </div>
           <div class="col-md-12 col-lg-7 bg-blanco slide-2-riesgos">
-            <div class="icoflechaabajo instruccionflecha cont-central-flecha" style="margin-bottom: 3%; margin-top: 5%;">
+            <div class="icoflechaabajo instruccionflecha" style="margin-bottom: 3%; margin-top: 5%;">
                 <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="margin-left: 15%; margin-top: 3%;"> <i>Haz clic sobre cada imagen para ver su clasificación</i>
             </div>
                 <div class="row col-lg-12 " style="margin-bottom: 3%; margin-left: 10%;">
@@ -2257,7 +2250,7 @@
                 <audio controls class="audio-bienvenida">
                     <source src="assets/audio/Bienvenida-Inducci" type="audio/mp3" style="padding-top: 5%;">
                 </audio>
-                <div class="icoflecha instruccionflecha cont-central-flecha">
+                <div class="icoflecha instruccionflecha">
                     <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
                 </div> 
             </div>
