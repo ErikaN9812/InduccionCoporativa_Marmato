@@ -171,7 +171,10 @@
         margin-top: 70px;
     }
     .slider-box img{
-        height: 60vh;
+        height: 70vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
     }
     .actOrderElement img {
         max-width: 80px;
