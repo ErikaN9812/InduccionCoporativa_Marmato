@@ -1477,7 +1477,7 @@ function actSelectImg(el, data) {
      console.log(data_title_actual);
      $('#p-12-reglas').hide();
 
-     var sub12Reglas = {
+    /* var sub12Reglas = {
        'slide12_01': [
          'Regla específica para el título 1',
          'Otra regla específica para el título 1',
@@ -1498,7 +1498,7 @@ function actSelectImg(el, data) {
          'Otra regla específica para el título 4',
          'Y otra más para el título 4'
        ],
-     };
+     };*/
 
      $('.listadoreglas').empty();
 

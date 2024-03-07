@@ -547,7 +547,7 @@
             margin-right: 60px;
             margin-left: 60px;
             max-width: 100%;
-            padding: 0%;
+            padding-right: 18%
         }
 
         .padding-left-casos{
@@ -2040,14 +2040,14 @@
             width: 40%;
         }
         .titulo-h1-v4{
-            font-size: 27px; 
+            font-size: 28px; 
             text-align: center; 
             color: #0b3d5c; 
             margin-top: 10%;
         }
         .bg-blanco-3 {
             background-color: #fff; /* Color blanco */
-            height: 85vh;
+            height: 100vh;
             z-index: 0;
             display: flex;
             align-items: center;
@@ -2798,7 +2798,7 @@
 .icoflecha img {
     width: 3.9%;
     float: left;
-    margin-right: 2%;
+    margin-right: 0.5%;
   }
 
   /*imagen flecha derecha*/
@@ -2808,13 +2808,37 @@
     margin-right: 2%;
   }
 
+  /*imagen flecha derecha*/
+.icoflechavision img {
+    width: 3.0%;
+    float: left;
+    margin-right: 0.5%;
+  }
+
+  /*imagen flecha izquierda*/
+.icoflechavestuario img {
+    width: 3%;
+    float: left;
+    margin-right: 0.5%;
+  }
+
 .instruccionflecha i{
-    padding: 5px  10px;
+    padding: 5px  5px;
     border-radius: 5px;
     color: #f4a630;
     display: block;
     text-align: left;
     margin-top: 8px;
+} 
+
+.instruccionflechavestuario i{
+    padding: 5px  5px;
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: left;
+    margin-top: 8px;
+    margin-right: 25%;
 } 
 
 .instruccionflechasagri i{
@@ -2837,9 +2861,9 @@
 
 /*imagen flecha izquierda abajo*/
 .icoflechaabajo img {
-    width: 2%;
+    width: 1.5%;
     float: left;
-    margin-top: 1.8%;
+    margin-top: 1.2%;
     margin-right: 0.5%;
     margin-left: 35%;
   }
@@ -3049,7 +3073,7 @@ p, a, ul, li, label {
 	color: #8f8f8f ;
     font-weight: 500;
     margin: 0;
-    line-height: 1.6rem;
+    line-height: 1.3rem;
     text-align: justify;
 }
 
@@ -3103,10 +3127,19 @@ i{
 
 
 @media (max-width: 734px) {
+
+    /*imagen flecha izquierda*/
+    .icoflecha img {
+    width: 3.9%;
+    float: left;
+    margin-right: 0.5%;
+    margin-bottom: 1.2%;
+     }
+
     .icoflechaabajo img {
         width: 2%;
         float: left;
-        margin-top: 1.8%;
+        margin-top: 1.2%;
         margin-right: 0.5%;
         margin-left: 0%;
       }
@@ -3118,12 +3151,13 @@ i{
       }
     
     .instruccionflecha i{
-        padding: 5px  10px;
+        padding: 5px  5px;
         border-radius: 5px;
         color: #f4a630;
         display: block;
-        text-align: center;
+        text-align: left;
         margin-top: 8px;
+        text-align: center;
     }  
 
     .oculta{
