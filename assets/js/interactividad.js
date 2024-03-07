@@ -1,100 +1,100 @@
 $(document).ready(function () {
-					// item 1
-					$("#sl21_drag1").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop1',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop1").droppable({
-						accept: '#sl21_drag1',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
+    // item 1
+      $("#sl21_drag1").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop1',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop1").droppable({
+        accept: '#sl21_drag1',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
 
-				  // item 2
-					$("#sl21_drag2").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop1',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop2").droppable({
-						accept: '#sl21_drag2',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
+      // item 2
+      $("#sl21_drag2").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop1',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop2").droppable({
+        accept: '#sl21_drag2',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
 
-				  // item 3
-					$("#sl21_drag3").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop3',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop3").droppable({
-						accept: '#sl21_drag3',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
+      // item 3
+      $("#sl21_drag3").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop3',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop3").droppable({
+        accept: '#sl21_drag3',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
 
-          // item 4
-					$("#sl21_drag4").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop4',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop4").droppable({
-						accept: '#sl21_drag4',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
+      // item 4
+      $("#sl21_drag4").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop4',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop4").droppable({
+        accept: '#sl21_drag4',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
 
-          // item 5
-					$("#sl21_drag5").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop5',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop5").droppable({
-						accept: '#sl21_drag5',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
+      // item 5
+      $("#sl21_drag5").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop5',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop5").droppable({
+        accept: '#sl21_drag5',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
 
-          // item 6
-					$("#sl21_drag6").draggable({
-						revert: 'invalid',
-				    snap: '#sl21_drop6',
-				    snapMode: 'corner',
-    				snapTolerance: '22'
-					});
-					$("#sl21_drop6").droppable({
-						accept: '#sl21_drag6',
-						drop: function( ev, ui ) {
-							ui.draggable.detach();
-    					$(this).append( ui.draggable );
-    					$(this).addClass("correct");
-						}
-				  });
-        
+      // item 6
+      $("#sl21_drag6").draggable({
+        revert: 'invalid',
+        snap: '#sl21_drop6',
+        snapMode: 'corner',
+        snapTolerance: '22'
+      });
+      $("#sl21_drop6").droppable({
+        accept: '#sl21_drag6',
+        drop: function( ev, ui ) {
+          ui.draggable.detach();
+          $(this).append( ui.draggable );
+          $(this).addClass("correct");
+        }
+      });
+    
 
   //Para generar el TOOLTIP para el slide 10
   $(function() {
@@ -239,6 +239,7 @@ $(document).ready(function () {
   preguntas02();
   preguntas03();
   preguntas04();
+  updateImageDiagramaIT();
   //img 01 grag & drop
 $("#actPuzzleDra01").draggable({
     snap: '#actPuzzleDro01'
@@ -379,17 +380,17 @@ $("#drop1, #drop2, #drop3, #drop4, #drop5, #drop6").on("droppable:drop",
   }
 );
 
-$("#grupo_whatsapp").click(function () {
-  window.open('https://chat.whatsapp.com/G91Vr9cBLlwAWaXGmS1cB9','_blank');
-});
+  $("#grupo_whatsapp").click(function () {
+    window.open('https://chat.whatsapp.com/G91Vr9cBLlwAWaXGmS1cB9','_blank');
+  });
 
-arrastrarElemento();
-// actualizarGrafico();
-actualizarGrafico2();
-// listaLlamadaCorrecta();
-// listaLlamadaIncorrecta();
-pausarMultimedia();
-reproducirAudioImagen();
+  arrastrarElemento();
+  // actualizarGrafico();
+  actualizarGrafico2();
+  // listaLlamadaCorrecta();
+  // listaLlamadaIncorrecta();
+  pausarMultimedia();
+  reproducirAudioImagen();
 
   var selects = document.querySelectorAll('.select-opcion');
 
@@ -1568,96 +1569,96 @@ function actSelectImg(el, data) {
   }
 
   function arrastrarElemento() {
-  // Logica para la actividad (SLIDE 6)
-  // item 1
-  $("#drag1").draggable({
-    revert: "invalid",
-    snap: "#drop1",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop1")
-    .droppable({
-      accept: "#drag1",
-    })
-    .on("droppable:drop", function (e) {
-      console.log("ENTRAA AQUII");
-      $(this).addClass("corret");
+    // Logica para la actividad (SLIDE 6)
+    // item 1
+    $("#drag1").draggable({
+      revert: "invalid",
+      snap: "#drop1",
+      snapMode: "corner",
+      snapTolerance: "1",
     });
+    $("#drop1")
+      .droppable({
+        accept: "#drag1",
+      })
+      .on("droppable:drop", function (e) {
+        console.log("ENTRAA AQUII");
+        $(this).addClass("corret");
+      });
 
-  // item 2
-  $("#drag2").draggable({
-    revert: "invalid",
-    snap: "#drop2",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop2")
-    .droppable({
-      accept: "#drag2",
-    })
-    .on("droppable:drop", function (e) {
-      $(this).addClass("corret");
+    // item 2
+    $("#drag2").draggable({
+      revert: "invalid",
+      snap: "#drop2",
+      snapMode: "corner",
+      snapTolerance: "1",
     });
+    $("#drop2")
+      .droppable({
+        accept: "#drag2",
+      })
+      .on("droppable:drop", function (e) {
+        $(this).addClass("corret");
+      });
 
-  // item 3
-  $("#drag3").draggable({
-    revert: "invalid",
-    snap: "#drop3",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop3")
-    .droppable({
-      accept: "#drag3",
-    })
-    .on("droppable:drop", function (e) {
-      $(this).addClass("corret");
+    // item 3
+    $("#drag3").draggable({
+      revert: "invalid",
+      snap: "#drop3",
+      snapMode: "corner",
+      snapTolerance: "1",
     });
+    $("#drop3")
+      .droppable({
+        accept: "#drag3",
+      })
+      .on("droppable:drop", function (e) {
+        $(this).addClass("corret");
+      });
 
-  // item 4
-  $("#drag4").draggable({
-    revert: "invalid",
-    snap: "#drop4",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop4")
-    .droppable({
-      accept: "#drag4",
-    })
-    .on("droppable:drop", function (e) {
-      $(this).addClass("corret");
+    // item 4
+    $("#drag4").draggable({
+      revert: "invalid",
+      snap: "#drop4",
+      snapMode: "corner",
+      snapTolerance: "1",
     });
+    $("#drop4")
+      .droppable({
+        accept: "#drag4",
+      })
+      .on("droppable:drop", function (e) {
+        $(this).addClass("corret");
+      });
 
-  // item 4
-  $("#drag5").draggable({
-    revert: "invalid",
-    snap: "#drop5",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop5")
-    .droppable({
-      accept: "#drag5",
-    })
-    .on("droppable:drop", function (e) {
-      $(this).addClass("corret");
+    // item 4
+    $("#drag5").draggable({
+      revert: "invalid",
+      snap: "#drop5",
+      snapMode: "corner",
+      snapTolerance: "1",
     });
+    $("#drop5")
+      .droppable({
+        accept: "#drag5",
+      })
+      .on("droppable:drop", function (e) {
+        $(this).addClass("corret");
+      });
 
-  // item 4
-  $("#drag6").draggable({
-    revert: "invalid",
-    snap: "#drop4",
-    snapMode: "corner",
-    snapTolerance: "1",
-  });
-  $("#drop6")
-    .droppable({
-      accept: "#drag6",
-    })
-    .on("droppable:drop", function (e) {
-      $(this).addClass("corret");
+    // item 4
+    $("#drag6").draggable({
+      revert: "invalid",
+      snap: "#drop4",
+      snapMode: "corner",
+      snapTolerance: "1",
+    });
+    $("#drop6")
+      .droppable({
+        accept: "#drag6",
+      })
+      .on("droppable:drop", function (e) {
+        $(this).addClass("corret");
     });
   }
 
@@ -1686,27 +1687,23 @@ $('body').removeClass().addClass(producto);
     mostrarActividadVideo2();
     mostrarActividadVideo3();
 
-    $("#icon_1").on('click', function() {
-        pauseMedia();
-        $('#planning-1').hide();
-        $('#planning-2').hide();
-        $('#planning-3').show();
-    });
-    $("#icon_2").on('click', function() {
-        pauseMedia();
-        $('#planning-3').hide();
-        $('#planning-1').hide();
-        $('#planning-2').show();
-    });
-    $("#icon_3").on('click', function() {
-        pauseMedia();
-        $('#planning-3').hide();
-        $('#planning-2').hide();
-        $('#planning-1').show();
-    });
+
 
     $("#next,#prev").on('click', function() {
         pauseMedia();
         updateProgress.call(this);
     });
-    sistemaVotacion();
+
+  function updateImageDiagramaIT(){
+    $("#icon_1").on('click', function() {
+      $("#planning").attr('src', 'assets/img/planning-1.jpg');
+    });
+
+    $("#icon_2").on('click', function() {
+      $("#planning").attr('src', 'assets/img/solution_2.jpg');
+    });
+
+    $("#icon_3").on('click', function() {
+      $("#planning").attr('src', 'assets/img/operation_3.jpg');
+    });
+  }
