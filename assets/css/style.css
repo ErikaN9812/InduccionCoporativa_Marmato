@@ -599,7 +599,7 @@
             .padding-left-5{
                 margin-right: 0px;
                 margin-left: 0px;
-                max-width: 75%;
+                max-width: 100%;
                 padding: 0%;
                 text-align: center;
             }
@@ -1875,7 +1875,8 @@
         }
         .bg-blanco-slide-20 {
             background-color: #fff; /* Color blanco */
-            height: 100vh;
+            height: 75vh;
+            width: 70% !important;
             z-index: 0;
             display: flex;
             align-items: center;
@@ -2054,14 +2055,50 @@
             position: relative;
             margin-top: auto !important;
         }
+        .ruta-denuncia{
+            display: flex;
+        }
+        .p-element{
+            text-align: center !important; 
+            font-size: 25px !important; 
+            margin-bottom: 2% !important;
+        }
+        .p-element-2{
+            color: #eeeeee !important;
+        }
+        .bg-petroleo-3 {
+            background-color: #003a5d; /* Color azul petróleo */
+            width: 30% !important;
+            height: 100vh !important;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         @media (max-width: 734px) { 
+            .p-element{
+                text-align: center !important; 
+                font-size: 25px !important; 
+                margin-bottom: 2% !important;
+            }
+            .p-element-2{
+                color: #eeeeee !important;
+                text-align: justify !important;
+            }
+            .ruta-denuncia{
+                display: flex;
+                flex-direction: column;
+            }
             .info-prevencion{
                 display: flex;
                 width: 100%;
             }
             .bg-azuloscuro-7 {
                 background-color: #0e4860; /* Color blanco */
-                height: 100vh;
+                height: 115vh;
                 width: 100%;
                 z-index: 0;
                 display: block; 
@@ -2244,6 +2281,7 @@
             }
             .bg-blanco-slide-20 {
                 background-color: #fff; /* Color blanco */
+                width: 100% !important;
                 height: auto;
                 z-index: 0;
                 display: flex;
@@ -2500,6 +2538,19 @@
                 align-items: center;
                 position: relative;
             }
+            .bg-petroleo-3 {
+                background-color: #003a5d; /* Color azul petróleo */
+                width: 100% !important;
+                height: 70vh !important;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
             .bg-petroleo-slide-7{
                 background-color: #003a5d; /* Color azul petróleo */
                 height: auto;
@@ -3325,6 +3376,10 @@ video::-webkit-media-controls-panel {
 .titulo20p{
     font-size: 28px;
 }
+.titulo-h1-v5{
+    font-size: 28px;
+    text-align: center;
+}
 
 .titulo_h1_v3{
     font-size: 28px;
@@ -3656,6 +3711,14 @@ button.btnbeneficio:focus {
 }
 
 @media (max-width: 734px) {
+    p{
+        font-size: 1.0rem;
+        font-family: 'Futura Bk BT', sans-serif;
+        color: #8f8f8f;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.5rem;
+    }
     .containerimg {
         max-width: 100%;
         float: center;
