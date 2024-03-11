@@ -2670,7 +2670,7 @@
                 text-align: center;
             } */
             .footer {
-                height: 0px;
+                height: auto;
                 position: relative;
                 bottom: 0;
                 width: 100%;
@@ -4066,19 +4066,20 @@ button.btn-sm {
 }
 /*content progress*/
 .contCircleBar {
-    padding: 13px;
-    text-align: end;
-    margin-right: 20%;
+    padding: 3px;
+    text-align: center;
+    margin-right: 0%;
+    background-color: #003A5D;
 }
 .txPg:hover .contCircleBar {
     display: block;
 }
 .contCircleBar span {
     display: inline-block;
-    opacity: .3 !important;
-    width: 10px;
+    opacity: .4 !important;
+    width: 20px;
     height: 10px;
-    border-radius: 50%;
+    border-radius: 0%;
     background: var(--blue50);
     margin: 4px;
 }
@@ -4089,6 +4090,25 @@ button.btn-sm {
     -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
 }
+
+.contCircleBar span.current2 {
+    opacity: 1 !important;
+    background: var(--grey);
+    position: relative;
+}
+.contCircleBar span.current2::after {
+    content: " ";
+    position: absolute;
+    opacity: .6;
+    top: -4px;
+    left: -4px;
+    display: block;
+    width: 28px;
+    height: 18px;
+    border-radius: 0px;
+    border: 2px solid var(--grey);
+}
+
 .contCircleBar span.current {
     opacity: 1 !important;
     background: var(--grey);
@@ -4101,9 +4121,9 @@ button.btn-sm {
     top: -4px;
     left: -4px;
     display: block;
-    width: 18px;
+    width: 28px;
     height: 18px;
-    border-radius: 50px;
+    border-radius: 0px;
     border: 2px solid var(--grey);
 }
 .progBar {
@@ -4137,7 +4157,17 @@ button.btn-sm {
     bottom: 0;
     margin-left: -20px;
 }
+.contCircleBar-footer{
+    display: none;
+}
 @media (max-width: 991px) {
+    .contCircleBar-nav-bar{
+        display: none !important;
+    }
+    .contCircleBar-footer{
+        display: block;
+        background-color:white !important;  
+    }
     .contCircleBar {
         padding: 0px;
         text-align: end;
