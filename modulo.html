@@ -73,6 +73,9 @@
        <!-- header -->
        <div class="contCircleBar contCircleBar-nav-bar">
         </div>
+        <div class="progBar">
+            <div style="width: 5%;"></div>
+        </div>
 	<div class="contentHeader">
 		<div>
 			<img class="logoTop" src="assets/img/logoG.png">
@@ -2388,10 +2391,10 @@
 <!--end contentmodule -->
 </div>
 <!-- end  content slider -->
-    <div class="footer">
+    <!-- <div class="footer">
         <div class="contCircleBar contCircleBar-footer">
         </div>
-    </div>
+    </div> -->
     <div>
         <!-- button next & prev -->
         <button id="pagIndex" class="bntNextPrev" onclick="btnPrev()" style="left: 10px;">
@@ -2430,8 +2433,8 @@
                 // number of slider
                 var sliders = $(".contentModule > div").length;
                 $('#nSlider').html(sliders - 1);
-                // var progressBar = Math.round((e/sliders)*100);
-                // $(".progBar > div").css("width",progressBar+"%");
+                var progressBar = Math.round((e/sliders)*100);
+                $(".progBar > div").css("width",progressBar+"%");
                 if(e === 1){
                     $("#prev").css('display','none');
                     $("#pagIndex").css('display','inline-block');
