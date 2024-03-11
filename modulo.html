@@ -71,67 +71,70 @@
     <!-- Header con el logo -->
     <div class="header">
        <!-- header -->
-       <div class="contCircleBar contCircleBar-nav-bar">
-        </div>
         <div class="progBar">
             <div style="width: 5%;"></div>
         </div>
-	<div class="contentHeader">
-		<div>
-			<img class="logoTop" src="assets/img/logoG.png">
-			<div class="miga_pan"><p style="text-align: left;" id="breadcrumb" > </p></div>
-			<!-- button home -->
-			<div>
-				<button id="home" onclick="progCircle(1);">
-					<i class="fas fa-home"></i>
-				</button>
-			</div>
-			<!-- progress counter -->
-			<div class="txPg">
-				<span id="textProg">1</span> / <span id="nSlider"></span>
-			</div>
-			<i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
-		</div>
-		<!--menu-->
-		<div class="headerOpc">
-			<i class="fas fa-times"></i>
-			<br>
-			<!-- <h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1> -->
-			<h1>Hola! <b>Nombre user</b></h1>
-			<h5>Bienvenido a su Ruta de Aprendizaje!</h5>
-			<div class="headerProg">
-			    <p><b>Progreso: </b><span id="course-progress"><strong>
-				<?= $progress[0]['course_progress'];?>%</span></strong></p>
-			</div>
-			<hr>
-			<ul>
-				<a href="index.html">
-				<!-- <a href="index.php?course_code=<?= $course_code; ?>"> -->
-					<li><i class="fas fa-caret-right"></i> Presentación</li>
-				</a>
-				<a href="modulo.html" class="act">
-				<!-- <a href="modulo.php?course_code=<?= $course_code; ?>" class="act"> -->
-					<li><i class="fas fa-caret-right"></i> Contenido</li>
-				</a>
-				<a href="quiz.html">
-				<!-- <a href="quiz.php?course_code=<?= $course_code; ?>"> -->
-					<li><i class="fas fa-caret-right"></i> Evaluación</li>
-				</a>
-			</ul>
-			<hr>
-			<ul>
-				<a href="index.html">
-				<!-- <a href="../../../../courses/login.php"> -->
-					<li><i class="fas fa-caret-right"></i> Mis cursos</li>
-				</a>
-				<a href="modulo.html">
-				<!-- <a href="../../../../courses/logout.php"> -->
-					<li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
-				</a>
-			</ul>
-			<span class="infSof">© Sofactia. powered by Unydos</span>
-		</div>
-	</div>
+ 
+        <div class="contentHeader">
+            <div>
+                <img class="logoTop" src="assets/img/logoG.png">
+                <div class="miga_pan"><p style="text-align: left;" id="breadcrumb" > </p></div>
+                <!-- button home -->
+                <div>
+                    <button id="home" onclick="progCircle(1);">
+                        <i class="fas fa-home"></i>
+                    </button>
+                </div>
+                <!-- progress counter -->
+                <div class="txPg">
+                    <span id="textProg">1</span> / <span id="nSlider"></span>
+                </div>
+                <i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
+            </div>
+            <!--menu-->
+            <div class="headerOpc">
+                <i class="fas fa-times"></i>
+                <br>
+                <!-- <h1>Hola! <b><?= ucwords($CI->session->userdata('employee_data')['fullname']); ?></b></h1> -->
+                <h1>Hola! <b>Nombre user</b></h1>
+                <h5>Bienvenido a su Ruta de Aprendizaje!</h5>
+                <div class="headerProg">
+                    <p><b>Progreso: </b><span id="course-progress"><strong>
+                    <?= $progress[0]['course_progress'];?>%</span></strong></p>
+                </div>
+                <hr>
+                <ul>
+                    <a href="index.html">
+                    <!-- <a href="index.php?course_code=<?= $course_code; ?>"> -->
+                        <li><i class="fas fa-caret-right"></i> Presentación</li>
+                    </a>
+                    <a href="modulo.html" class="act">
+                    <!-- <a href="modulo.php?course_code=<?= $course_code; ?>" class="act"> -->
+                        <li><i class="fas fa-caret-right"></i> Contenido</li>
+                    </a>
+                    <a href="quiz.html">
+                    <!-- <a href="quiz.php?course_code=<?= $course_code; ?>"> -->
+                        <li><i class="fas fa-caret-right"></i> Evaluación</li>
+                    </a>
+                </ul>
+                <hr>
+                <ul>
+                    <a href="index.html">
+                    <!-- <a href="../../../../courses/login.php"> -->
+                        <li><i class="fas fa-caret-right"></i> Mis cursos</li>
+                    </a>
+                    <a href="modulo.html">
+                    <!-- <a href="../../../../courses/logout.php"> -->
+                        <li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
+                    </a>
+                </ul>
+                <span class="infSof">© Sofactia. powered by Unydos</span>
+            </div>
+        </div>
+        <!--BARRA DE PROGRESO  -->
+        <div class="contCircleBar contCircleBar-nav-bar">
+        </div>
+
     </div>
 <!-- content fluid -->
 <div class="container-fluid" style="position: relative; height: 100vh;">

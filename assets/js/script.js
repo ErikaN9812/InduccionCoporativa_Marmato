@@ -36,11 +36,19 @@ function updateItems(delta){
 	var $current2 = $items2.filter('.current');
 	var index2 = $current2.index();
 	var newIndex2 = index2+delta;
+
 	newIndex2 = (newIndex2 < 0) ? 0 : ((newIndex2 > $items2.length) ? $items2.length : newIndex2);
 	if (newIndex2 != index2){
 		$current2.removeClass('current');
 		$current2 = $items2.eq(newIndex2).addClass('current');    
 	}
+	$items2.slice(index2 + 1).removeClass('current2');
+
+	$items2.slice(0, index2).removeClass('current2');
+	for (var i = 0; i < newIndex2; i++) {
+		$items2.eq(i).addClass('current2');
+	}
+
 	// reset activity h5p ------->
 	$('iframe').attr('src', function (i, val) { return val; });
 	// scroll position top ------->
