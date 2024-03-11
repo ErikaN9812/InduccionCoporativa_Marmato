@@ -3875,7 +3875,7 @@ button.btn-sm {
 .contentHeader button#home {
     border: none;
     background: none;
-    padding: 10px 0;
+    padding: 0px 0;
 }
 .contentHeader button#home i {
     background: none;
@@ -4044,7 +4044,7 @@ button.btn-sm {
     position: relative;
     background: none;
     color: var(--white);
-    padding: 17px 0;
+    padding: 0px 0;
     text-align: center;
     font-size: 1.3rem;
 }
