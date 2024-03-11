@@ -1430,7 +1430,7 @@
         }
         .img-mision-vision{
             margin:0 auto; 
-            width:28%;
+            width:23%;
         }
 
         .diversidad img{
@@ -3161,9 +3161,15 @@ p, a, ul, li, label {
 a {
     text-decoration: none;
 }
-h1, h2, h3, b, button, span {
+h1, h2, h3, b, button{
 	font-family: 'Alata', sans-serif;
     white-space: nowrap;
+}
+
+span{
+    font-family: 'Futura Bk BT', sans-serif;
+    white-space: nowrap;
+
 }
 
 i{
