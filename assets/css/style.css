@@ -3815,16 +3815,16 @@ button.btn-sm {
     width: 100%;
     position: relative;
     z-index: 3;
-    height: 70px;
+    height: 50px;
     background: #003A5D;
     border-bottom-color: white;
     border-bottom-width: medium;
-    border-bottom-style: outset;
+   
   
 }
 .contentHeader > div:nth-child(1) {
     max-width: 1200px;
-    height: 70px;
+    height: 50px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -3876,7 +3876,6 @@ button.btn-sm {
     border: none;
     background: none;
     padding: 10px 0;
-    border-left: 1px solid #e5e5e5;
 }
 .contentHeader button#home i {
     background: none;
@@ -4048,8 +4047,6 @@ button.btn-sm {
     padding: 17px 0;
     text-align: center;
     font-size: 1.3rem;
-    border-right: 1px solid #e5e5e5;
-    border-left: 1px solid #e5e5e5;
 }
 @media (max-width: 991px) {
     .bntNextPrev {
@@ -4066,10 +4063,11 @@ button.btn-sm {
 }
 /*content progress*/
 .contCircleBar {
-    padding: 3px;
+    padding: 0px;
     text-align: center;
     margin-right: 0%;
     background-color: #003A5D;
+    border-bottom-style: outset;
 }
 .txPg:hover .contCircleBar {
     display: block;
@@ -4106,7 +4104,7 @@ button.btn-sm {
     width: 28px;
     height: 12px;
     border-radius: 0px;
-    border: 2px solid #beee30b7;
+    /* border: 2px solid #beee30b7; */
 }
 
 .contCircleBar span.current {
