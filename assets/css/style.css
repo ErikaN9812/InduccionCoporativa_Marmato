@@ -4078,7 +4078,7 @@ button.btn-sm {
     display: inline-block;
     opacity: .4 !important;
     width: 20px;
-    height: 10px;
+    height: 4px;
     border-radius: 0%;
     background: var(--blue50);
     margin: 4px;
@@ -4093,7 +4093,7 @@ button.btn-sm {
 
 .contCircleBar span.current2 {
     opacity: 1 !important;
-    background: var(--grey);
+    background: #beee30b7;
     position: relative;
 }
 .contCircleBar span.current2::after {
@@ -4104,9 +4104,9 @@ button.btn-sm {
     left: -4px;
     display: block;
     width: 28px;
-    height: 18px;
+    height: 12px;
     border-radius: 0px;
-    border: 2px solid var(--grey);
+    border: 2px solid #beee30b7;
 }
 
 .contCircleBar span.current {
@@ -4122,7 +4122,7 @@ button.btn-sm {
     left: -4px;
     display: block;
     width: 28px;
-    height: 18px;
+    height: 12px;
     border-radius: 0px;
     border: 2px solid var(--grey);
 }
