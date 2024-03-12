@@ -4174,6 +4174,9 @@ button.btn-sm {
 .progBar{
     display: none;
 }
+.back-color{
+    background-color: #003A5D;
+}
 @media (max-width: 991px) {
     .contCircleBar-nav-bar{
         display: none !important;

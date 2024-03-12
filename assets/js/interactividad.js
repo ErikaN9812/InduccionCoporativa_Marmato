@@ -1444,7 +1444,7 @@ function actSelectImg(el, data) {
     });
 
     // Resaltar el título actual
-    rulesH4[current_index_12_reglas].style.backgroundColor = "rgba(0, 122, 243, 0.20)";
+    rulesH4[current_index_12_reglas].style.backgroundColor = "#0b3d5c";
     // Cambiar la imagen
     var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.jpg`;
     img_12_reglas.src = newImageSrc;
@@ -1696,14 +1696,26 @@ $('body').removeClass().addClass(producto);
 
   function updateImageDiagramaIT(){
     $("#icon_1").on('click', function() {
+      $(".bg-diagramait").removeClass("back-color"); 
+      $(this).closest('.bg-diagramait').addClass("back-color");
+      $("h5").css("color", "");
+      $(this).closest('.bg-diagramait').find("h5").css("color", "white");
       $("#planning").attr('src', 'assets/img/planning-1.jpg');
     });
 
     $("#icon_2").on('click', function() {
+      $(".bg-diagramait").removeClass("back-color"); 
+      $(this).closest('.bg-diagramait').addClass("back-color");
+      $("h5").css("color", "");
+      $(this).closest('.bg-diagramait').find("h5").css("color", "white");
       $("#planning").attr('src', 'assets/img/solution_2.jpg');
     });
 
     $("#icon_3").on('click', function() {
+      $(".bg-diagramait").removeClass("back-color"); 
+      $(this).closest('.bg-diagramait').addClass("back-color");
+      $("h5").css("color", "");
+      $(this).closest('.bg-diagramait').find("h5").css("color", "white");
       $("#planning").attr('src', 'assets/img/operation_3.jpg');
     });
   }
