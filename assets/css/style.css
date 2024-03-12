@@ -4177,6 +4177,15 @@ button.btn-sm {
 .back-color{
     background-color: #003A5D;
 }
+.back-color2{
+    background-color: red;
+}
+.back-color-12-reglas{
+    color: var(--blue25);
+}
+.back-color-12-reglas-2{
+    color: var(--primary);
+}
 @media (max-width: 991px) {
     .contCircleBar-nav-bar{
         display: none !important;
