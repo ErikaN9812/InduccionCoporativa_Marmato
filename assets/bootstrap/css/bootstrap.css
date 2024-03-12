@@ -5517,7 +5517,7 @@ textarea.form-control-lg {
   opacity: 0;
 }
 .tooltip.show {
-  opacity: 0.9;
+  opacity: 1;
 }
 .tooltip .tooltip-arrow {
   position: absolute;
