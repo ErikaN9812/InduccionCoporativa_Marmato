@@ -1441,10 +1441,18 @@ function actSelectImg(el, data) {
       title.style.backgroundColor = "transparent";
       title.style.border = "transparent";
       title.style.borderRadius = "10px";
+      title.classList.remove("back-color-12-reglas-2");
+      title.classList.add("back-color-12-reglas");
+      title.querySelector("span").style.color = "var(--grey)";
     });
 
     // Resaltar el título actual
-    rulesH4[current_index_12_reglas].style.backgroundColor = "#0b3d5c";
+    rulesH4[current_index_12_reglas].style.backgroundColor = "var(--grey)";
+    rulesH4[current_index_12_reglas].querySelector("span").style.color = "var(--primary)";
+    // console.log(rulesH4[current_index_12_reglas]);
+    rulesH4[current_index_12_reglas].classList.remove("back-color-12-reglas"); 
+    rulesH4[current_index_12_reglas].classList.add("back-color-12-reglas-2"); 
+
     // Cambiar la imagen
     var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.jpg`;
     img_12_reglas.src = newImageSrc;
@@ -1478,36 +1486,13 @@ function actSelectImg(el, data) {
      console.log(data_title_actual);
      $('#p-12-reglas').hide();
 
-    /* var sub12Reglas = {
-       'slide12_01': [
-         'Regla específica para el título 1',
-         'Otra regla específica para el título 1',
-         'Y otra más para el título 1'
-       ],
-       'slide12_02': [
-         'Regla específica para el título 2',
-         'Otra regla específica para el título 2',
-         'Y otra más para el título 2'
-       ],
-       'slide12_03': [
-         'Regla específica para el título 3',
-         'Otra regla específica para el título 3',
-         'Y otra más para el título 3'
-       ],
-       'slide12_04': [
-         'Regla específica para el título 4',
-         'Otra regla específica para el título 4',
-         'Y otra más para el título 4'
-       ],
-     };*/
-
      $('.listadoreglas').empty();
 
-     if (data_title_actual in sub12Reglas) {
-       sub12Reglas[data_title_actual].forEach(regla => {
-         $('.listadoreglas').append(`<li>${regla}</li>`);
-       });
-     }
+    //  if (data_title_actual in sub12Reglas) {
+    //    sub12Reglas[data_title_actual].forEach(regla => {
+    //      $('.listadoreglas').append(`<li>${regla}</li>`);
+    //    });
+    //  }
      $('.listadoreglas').show();
   }
 
