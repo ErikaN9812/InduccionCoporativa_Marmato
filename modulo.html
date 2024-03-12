@@ -2396,7 +2396,7 @@
                         $("#next").click(); 
                     });
                 }
-                const breadcrumbMap = {
+                var breadcrumbMap = {
                     'miga_nuestro_proposito'            : '| 1. Conoce más acerca de la Compañía',
                     'miga_nuestra_operacion'            : '| 1. Conoce más acerca de la Compañía',
                     'miga_mision_vision'                : '| 1. Conoce más acerca de la Compañía',
@@ -2422,11 +2422,16 @@
                     'miga_deberes_entorno'              : '| 3. ¿Qué esperamos de ti como colaborador?',
                     'miga_deberes_entorno_2'            : '| 3. ¿Qué esperamos de ti como colaborador?',
                     'miga_buena_gente'                  : '| 3. ¿Qué esperamos de ti como colaborador?',
-                    'miga_compromiso'                  : 'Mi compromiso'
+                    'miga_compromiso'                   : 'Mi compromiso'
                 };
 
-                $('#breadcrumb').html(breadcrumbMap[$('.current').attr('class').split(' ').find(className => className.startsWith('miga'))] || '');
-
+                $('#breadcrumb').html(
+                    $('.current').filter(function() {
+                        return Array.from(this.classList).find(className => className.startsWith('miga'));
+                    }).map(function() {
+                        return breadcrumbMap[Array.from(this.classList).find(className => className.startsWith('miga'))] || '';
+                    }).get().join('')
+                );
 
                 if(e === sliders){
                     $("#next").css('display','none');
