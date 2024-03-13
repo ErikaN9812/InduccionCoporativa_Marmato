@@ -692,9 +692,9 @@
     
      <!--Pantalla '5 funciones del comite de Diversidad'-->
      <div class="container bg-blanco-equiparesv2 miga_5_funciones_comite">
-        <div class="row ">
+        <div class="top-funciones">
             <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-12 col-md-12 top-movil">
+            <div class="col-lg-12 col-md-12">
                 <h1 class="text-center titulo_h1_v3" style="color: var(--primary);">Conoce las<span style="color: #803689;"> 5 funciones</span> que tiene el Comité de
                     <span style="color: var(--grey); color: #803689; display: block; margin-bottom: 3%;" >Diversidad, Equidad e Inclusión</span></h1>
             </div>
@@ -900,136 +900,137 @@
 
   <!--Inicio Repasemos algunas de nuestras politicas-->
   <div class="container miga_repasemos_politicas">
-    <div class="row">
-        <!-- Columna derecha - Blanco -->
-        <div class="bg-petroleo-3">
-            <h1 class="titulo-h1-v5" style="color: #ffff;"> Repasemos algunas de <br> 
-                <span style="color: var(--grey);">nuestras políticas</span><br> corporativas
-            </h1>
-            <canvas style="max-width: 200px; max-height: 200px; margin: 0 auto;" id="donutChart02" width="200" height="200"></canvas>
-            <div id="completionPercentage2"></div>
-        </div>
-        <!-- Columna izquierda - Azul petróleo -->
-        <div class="bg-blanco-slide-20" >
-            <div class="col-md-12 col-lg-12">
-                <div class="instruccionflecha">
-                    <i style="text-align: center; margin-bottom: 3%;"><strong>Instrucciones:</strong>
-                    De acuerdo con tu conocimiento en las politicas selecciona <br> si es Falso o Verdadero, según corresponda.
-                    </i>
-                </div>
+        <div class="nuestras-politicas">
+            <!-- Columna derecha - Blanco -->
+            <div class="bg-petroleo-3">
+                <h1 class="titulo-h1-v5" style="color: #ffff;"> Repasemos algunas de <br> 
+                    <span style="color: var(--grey);">nuestras políticas</span><br> corporativas
+                </h1>
+                <canvas style="max-width: 200px; max-height: 200px; margin: 0 auto;" id="donutChart02" width="200" height="200"></canvas>
+                <div id="completionPercentage2"></div>
+            </div>
 
-                <div class="actVorF" style="margin-right: 10%;">
-                    <div class="counta">
-                        <span class="inc">1</span>/<span class="tol"></span>
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="bg-blanco-slide-20" >
+                <div class="col-md-12 col-lg-12">
+                    <div class="instruccionflecha">
+                        <i style="text-align: center; margin-bottom: 3%;"><strong>Instrucciones:</strong>
+                        De acuerdo con tu conocimiento en las politicas selecciona <br> si es Falso o Verdadero, según corresponda.
+                        </i>
                     </div>
-                    <div class="itemQ view">
-                        <div class="row">
-                        <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
-                        <p style="text-align: justify; font-size:12px important;"><b>Política de conducta y ética corporativa</b>
-                            <br>
-                            Promover un conducta honesta y ética para la Gestión de conflictos.
-                        </p>
+
+                    <div class="actVorF" style="margin-right: 7%; margin-left:2%;">
+                        <div class="counta">
+                            <span class="inc">1</span>/<span class="tol"></span>
                         </div>
-                        <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                        <img src="assets/img/slide19_01.jpg" id="img_slide19_01">
-                        </div>
-                        </div>
-                        <hr>
-                        <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
-                            <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
-                            <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
-                        </div>
-                    </div>
-                    <div class="itemQ">
-                        <div class="row">
+                        <div class="itemQ view">
+                            <div class="row">
                             <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
-                            <p style="text-align: justify; font-size:12px important;"><b>Política contra el soborno y la corrupción</b>
+                            <p style="text-align: justify; font-size:12px important;"><b>Política de conducta y ética corporativa</b>
                                 <br>
-                                Los representantes o empleados de la compañía no están obligados a seguir
-                                las políticas de conducta y ética corporativa, como pagos a funcionarios públicos para obtener beneficios en contratos.
+                                Promover un conducta honesta y ética para la Gestión de conflictos.
                             </p>
                             </div>
                             <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                    <img src="assets/img/politica-antisoborno.jpg" id="img_slide19_02">
+                            <img src="assets/img/slide19_01.jpg" id="img_slide19_01">
+                            </div>
+                            </div>
+                            <hr>
+                            <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
+                                <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
                             </div>
                         </div>
-                        <hr>
-                        <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
-                            <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
-                            <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                        <div class="itemQ">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                <p style="text-align: justify; font-size:12px important;"><b>Política contra el soborno y la corrupción</b>
+                                    <br>
+                                    Los representantes o empleados de la compañía no están obligados a seguir
+                                    las políticas de conducta y ética corporativa, como pagos a funcionarios públicos para obtener beneficios en contratos.
+                                </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                        <img src="assets/img/politica-antisoborno.jpg" id="img_slide19_02">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="itemQ">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
-                            <p style="text-align: justify; font-size:12px important;"><b>Política contra la discriminación</b>
-                                <br>
-                                Todas las personas tienen derecho a un ambiente libre de discriminación y acoso laboral y sexual.
-                            </p>
+                        <div class="itemQ">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                <p style="text-align: justify; font-size:12px important;"><b>Política contra la discriminación</b>
+                                    <br>
+                                    Todas las personas tienen derecho a un ambiente libre de discriminación y acoso laboral y sexual.
+                                </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                    <img src="assets/img/politica-diversidad.jpg" id="img_slide19_03">
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                <img src="assets/img/politica-diversidad.jpg" id="img_slide19_03">
+                            <hr>
+                            <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
+                                <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
                             </div>
                         </div>
-                        <hr>
-                        <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
-                            <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
-                            <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
-                        </div>
-                    </div>
 
-                    <div class="itemQ">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
-                            <p style="text-align: justify; font-size:12px important;"><b>Política de Diversidad</b>
-                                <br>
-                                Promovemos practicas equitativas e incluyentes, recociendo las diferencias de las personas.
-                            </p>
+                        <div class="itemQ">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                <p style="text-align: justify; font-size:12px important;"><b>Política de Diversidad</b>
+                                    <br>
+                                    Promovemos practicas equitativas e incluyentes, recociendo las diferencias de las personas.
+                                </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                                    <img src="assets/img/politica-diversidad.jpg" id="img_slide19_03">
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                <img src="assets/img/politica-diversidad.jpg" id="img_slide19_03">
+                            <hr>
+                            <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
+                                <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
                             </div>
                         </div>
-                        <hr>
-                        <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
-                            <button class="btn" onclick="actVorF(this, 'correct')">Verdadero</button>
-                            <button class="btn" onclick="actVorF(this, 'incorrect')">Falso</button>
-                        </div>
-                    </div>
 
-                    <div class="itemQ">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
-                            <p style="text-align: justify; font-size:12px important;"><b>Política de Presentación de Denuncias <br> e Inquietudes</b>
-                                <br>
-                                Los colaboradores no están obligados a comunicar las deficiencias e incumplimientos de políticas y controles internos.
-                            </p>
+                        <div class="itemQ">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6"  style="display: flex; justify-content: center;">
+                                <p style="text-align: justify; font-size:12px important;"><b>Política de Presentación de Denuncias <br> e Inquietudes</b>
+                                    <br>
+                                    Los colaboradores no están obligados a comunicar las deficiencias e incumplimientos de políticas y controles internos.
+                                </p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                            
+                                    <img src="assets/img/politica-seguridad.jpg" id="img_slide19_04">
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
+                            <hr>
+                            <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
+                                <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
+                                <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                            </div>
+                        </div>
                         
-                                <img src="assets/img/politica-seguridad.jpg" id="img_slide19_04">
-                            </div>
+                        <div class="actFin" style="display:none;">
+                            <p class="my-2 p-res">Respuesta correctas</p>
+                            <h1></h1>
                         </div>
-                        <hr>
-                        <div class="check mt-2 text-center"  style="display: flex; justify-content: center;">
-                            <button class="btn" onclick="actVorF(this, 'incorrect')">Verdadero</button>
-                            <button class="btn" onclick="actVorF(this, 'correct')">Falso</button>
+                        <br>
+                        <div class="btn-reintentar text-center" style="display: flex; justify-content: center; display:none; padding:15px; cursor:pointer;">
+                            <a class="btn-success btn-reiniciar" onclick="reiniciarActividadGrafica(this);" >Reintentar</a>
                         </div>
-                    </div>
-                    
-                    <div class="actFin" style="display:none;">
-                        <p class="my-2 p-res">Respuesta correctas</p>
-                        <h1></h1>
-                    </div>
-                    <br>
-                    <div class="btn-reintentar text-center" style="display: flex; justify-content: center; display:none; padding:15px; cursor:pointer;">
-                        <a class="btn-success btn-reiniciar" onclick="reiniciarActividadGrafica(this);" >Reintentar</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
    <!--Fin politica de anticonsumo-->
    
@@ -1042,7 +1043,6 @@
                     <h1 class="titulo20p" style="color: var(--white); margin-top: 3%; text-align: center;">Conoce a<span style="color: var(--grey)"> nuestras directivas</span></h1>
                     <i class="inst mb-2">Conoce a nuestras directivas, desplazando el mouse sobre la imagen que quieras ampliar</i>  
                     <img src="assets/img/Organigrama-actualizado.png" alt="" class="zoom img-zomm"
-                    style="text-align: center !important; width: 68%; margin: 0 auto; margin-left: 30%; "
                     data-magnify-src="assets/img/organigrama-actualizado-zoom.png">
                 </div>
             </div>
@@ -1068,22 +1068,15 @@
 
     <!--Inicio Beneficio nueva version-->
     <div class="container miga_beneficios">
-        <div class="row">
-            <!-- Columna izquierda - Azul petróleo -->
-           <!--- <div class="col-lg-12">
-                <div class="container-image">
-                    <p style="margin-top: 35%; font-size: 50px; color: var(--white); text-align: center;"> <b>BENEFICIOS</b> </p>
-                    <img src="https://bit.ly/3SYCdiF" alt="image" />
-                </div>
-            </div>-->
-            <div class="col-lg-5 col-inline container-image">     
+        <div class="beneficios-2">
+            <div class="container-image">     
                 <div class="col-lg-12 col-md-12">
                     <p style="font-size: 60px; color: var(--white); text-align: center; margin-top: 65%;" > <b>BENEFICIOS</b> </p>
                     <p class="parrafo18p" ><em>"Para más información acércate  <br>al personal de Recursos Humanos"</em></p>                   
                 </div>
             </div>
             <!-- Columna derecha - Blanco -->
-            <div class="col-md-12 col-lg-7 bg-blancobeneficio parrafogris-center">
+            <div class="bg-blancobeneficio parrafogris-center">
                 <p style="margin-bottom: 3%; margin-top: 4%;">Todos nuestros colaboradores tienen estos beneficios</p>
                 <div id="carouselAltoRiesgo" class="carousel slide" data-bs-ride="carousel">
                   <div class="carousel-inner">
@@ -1113,9 +1106,9 @@
                   </button>
                 </div>
                 <div class="icoflechaabajov2 instruccionflecha" style="margin-left: 15%;">
-                    <img src="assets/img/flecha-instru.png" alt="flecha"> <i style=" margin-bottom: 2%; width: 4%">Haz clic sobre las flechas para cambiar de contenido</i>
+                    <img src="assets/img/flecha-instru.png" alt="flecha"> <i style=" margin-bottom: 2%; width: 100%">Haz clic sobre las flechas para cambiar de contenido</i>
                 </div>
-              </div>
+            </div>
         </div>
     </div>
     <!--Fin Beneficio nueva version-->
@@ -1171,23 +1164,23 @@
                     </div>
             </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="slide_turnos_12" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" style="color: #BFEE30;">Ver video</h5>
-            <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Modal -->
+            <div class="modal fade" id="slide_turnos_12" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" style="color: #BFEE30;">Ver video</h5>
+                    <button type="button" class="btn-closeoperacion" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <i class="inst mb-2">Haz clic para ver el video</i>
+                    <video controls poster  class="mx-auto">
+                        <source src="assets/video/video-Xtime-como-funciona.mp4" type="video/mp4">
+                    </video>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <i class="inst mb-2">Haz clic para ver el video</i>
-            <video controls poster  class="mx-auto">
-                <source src="assets/video/video-Xtime-como-funciona.mp4" type="video/mp4">
-            </video>
-            </div>
-        </div>
-        </div>
-    </div>
         </div>
     </div>
 <!--Fin Turno de trabajo-->

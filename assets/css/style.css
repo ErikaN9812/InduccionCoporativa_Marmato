@@ -412,6 +412,7 @@
             align-items: center;
             position: relative;
             padding: 6% 6%;
+            width: 60% !important;
         }
 
         /*manual de convivencia*/
@@ -602,6 +603,27 @@
         }
 
         @media(max-width: 734px){
+            .bg-blancobeneficio {
+                background-color: #fff; /* Color azul petróleo */
+                z-index: 0;
+                display:block;
+                align-items: center;
+                position: relative;
+                padding: 6% 6%;
+                width: 100% !important;
+            }
+               /*fondo triangulo iziquierda degrade*/
+            .bg-petroleo-triangulo-right {
+                background-color: #133450; /* Color azul petróleo */
+                background-image: url(../img/triangulo-degradado.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 60vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
             .elemento-img{
                 width: 40%; 
                 margin-left: 30%;
@@ -971,6 +993,7 @@
             background-image: url(../img/beneficios/portada-sld1.jpg) ;
             background-repeat: no-repeat;
             background-size: cover;
+            width: 40% !important;
             height: 100vh;
             z-index: 0;
             display: flex;
@@ -1162,7 +1185,7 @@
         }
         .slide-2-elementos{
             display: flex; 
-            margin-top: 150px; 
+            margin-top: 180px; 
             align-self: flex-end; 
             justify-content: center; 
             z-index: 3;
@@ -1451,7 +1474,52 @@
             max-width: 10%;
         }
 
+        .top-funciones{
+           margin-top: 10%;
+        }
+        .nuestras-politicas{
+            display: flex;
+        }
+        .img-zomm{
+            text-align: center !important; 
+            width: 68%; 
+            margin: 0 auto; 
+            margin-left: 30%; 
+        }
+        .beneficios-2{
+            display: flex;
+        }
         @media (max-width: 734px) {
+            .beneficios-2{
+                display:flex;
+            flex-direction: column;
+
+            }
+            .container-image {
+                background-image: url(../img/beneficios/portada-sld1.jpg) ;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100% !important;
+                height: 100vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                flex-direction: column;
+              }
+            .img-zomm{
+                text-align: center !important; 
+                width: 100%; 
+                margin: 0 auto; 
+                margin-left: 0%; 
+            }
+            .nuestras-politicas{
+                display: flex;
+                flex-direction: column;
+            }
+            .top-funciones{
+                margin-top: 20%;
+             }
             .bg-blanco-equiparesv2 {
                 background-image: url(../img/fondo-blanco3.jpg) ;
                 background-color: #fff; /* Color blanco */
@@ -3216,8 +3284,12 @@ i{
         float: center;
         margin-right: 2%;
       }
+      .instruccionflecha{
+        max-width: 95% !important;
+    }  
     
     .instruccionflecha i{
+        max-width: 95%;
         padding: 5px  5px;
         border-radius: 5px;
         color: #f4a630;
