@@ -1659,24 +1659,15 @@ function actSelectImg(el, data) {
   
 
   /*Script accordeon*/
-//get param of the URL
-const valores = window.location.search;
-const urlParams = new URLSearchParams(valores);
-var producto = urlParams.get('color');
-$('body').removeClass().addClass(producto);
-
-
-    // historieta01();
-    historieta02();
-    mostrarActividadVideo();
-    mostrarActividadVideo2();
-    mostrarActividadVideo3();
-
-
+  //get param of the URL
+  const valores = window.location.search;
+  const urlParams = new URLSearchParams(valores);
+  var producto = urlParams.get('color');
+  $('body').removeClass().addClass(producto);
 
     $("#next,#prev").on('click', function() {
-        pauseMedia();
-        updateProgress.call(this);
+        // pauseMedia();
+        // updateProgress.call(this);
     });
 
   function updateImageDiagramaIT(){
