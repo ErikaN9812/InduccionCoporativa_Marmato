@@ -483,12 +483,82 @@
             margin-top: 2%;
           }
 
+          .ambiental-card {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+            margin-top: 2%;
+            width: 700px;
+          }
+
           .clasificacion img{
             width: 20%;
             margin: 0 auto;
             margin-top: 3%;
             margin-bottom: 3%;
            }
+
+           .ambientalimg img{
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 3%;
+            margin-bottom: 3%;
+           }
+
+           #carouselAmbiental{
+            width: 70%;
+            justify-content: center;
+            margin-left: 10%;
+           }
+
+           #carouselAmbiental-control{
+            width: 70%;
+            justify-content: center;
+            margin-left: 10%;
+           }
+
+           .pilarimg img{
+            width: 60%;
+            margin-top: 10%;
+          }
+
+          
+          .ambientalcontrol img{
+            width: 60%;
+            margin: 0 auto;
+            border-radius: 5%;
+          }
+
+          .bg-blanco-v3 {
+            background-color: #fff; /* Color blanco */
+            z-index: 0;
+            position: relative;
+            text-align: center;
+        }
+
+        .ambientalimg img{
+            width: 60%;
+        }
+
+        
+.parrafopilar p {
+    text-align: justify;
+    line-height: 1.2em;
+    margin-top: 3%;
+    font-size: 18px;
+}
+
+        /*instruccion flecha*/
+.instruccionflechapilar i{
+    border-radius: 5px;
+    color: #f4a630;
+    display: block;
+    text-align: left;
+    margin-top: 8px;
+}  
+
+
+    
 
 
         .bg-slide1 {
@@ -1129,6 +1199,13 @@
             position: relative;
         }
 
+        .s {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            align-items: center;
+        }
+
         .bg-azuloscuroh {
             background-color: #071835; /* Color blanco */
             height: 50vh;
@@ -1164,6 +1241,21 @@
             padding: 3%;
             text-align: center;
         }
+
+        .contenido-lateralambiental {
+            margin-right: 0px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 3%;
+            text-align: center;
+        }
+
+        .contenido-lateralambiental4 {
+            padding-right: 4%;
+            padding-left: 6%;
+            max-width: 100%;
+        }
+
 
         .padding-manual{
             padding-left: 2%;
@@ -1505,6 +1597,16 @@
             position: relative;
         } 
 
+        .bg-blanco2 {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+        
+            position: relative;
+            margin-top: auto !important;
+        } 
+
         .bg-blanco-bienvenida{
             background-color: #fff; /* Color blanco */
             width: 45%;
@@ -1785,8 +1887,7 @@
             display: block; 
             align-items: center;
             position: relative;
-            padding-top: 10%;
-            padding-left: 5%;
+            padding-left: 2%;
         }
 
         .bg-azuloscuro-7 {
@@ -3295,10 +3396,11 @@ p, a, ul, li, label {
 .listadomodal li {
 	font-size: 18px;
 	font-family: 'Futura Bk BT', sans-serif;
-	color: #525252;
+	color: #8f8f8f;
     font-weight: 500;
     margin: 0;
     line-height: 1.6rem;
+    text-align: justify;
 }
 
 /*listado accidente*/

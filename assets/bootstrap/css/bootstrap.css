@@ -3858,8 +3858,8 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
+  color: #fff;
+  background-color: #2A80A6;
   border-color: #dee2e6 #dee2e6 #fff;
 }
 .nav-tabs .dropdown-menu {
@@ -3908,6 +3908,10 @@ textarea.form-control-lg {
 }
 .tab-content > .active {
   display: block;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: solid 1px #d1d1d1;
+  margin-right: 5%;
 }
 
 .navbar {
