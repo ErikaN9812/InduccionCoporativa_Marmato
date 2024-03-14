@@ -951,7 +951,7 @@
 }
 
 .cardriesgo2 {
-  flex: 0 0 calc(33.33% - 1rem); 
+  flex: 0 0 calc(25% - 1rem); 
   margin-bottom: 1rem;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
