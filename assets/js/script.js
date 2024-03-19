@@ -33,10 +33,10 @@ function updateItems(delta){
 	}
 	// cicle progress ------->
 	var $items2 = $('.contCircleBar').children();
+	var contCircleBarMovil = $('.contCircleBarMovil').children();
 	var $current2 = $items2.filter('.current');
 	var index2 = $current2.index();
 	var newIndex2 = index2+delta;
-
 	newIndex2 = (newIndex2 < 0) ? 0 : ((newIndex2 > $items2.length) ? $items2.length : newIndex2);
 	if (newIndex2 != index2){
 		$current2.removeClass('current');
@@ -48,6 +48,27 @@ function updateItems(delta){
 	for (var i = 0; i < newIndex2; i++) {
 		$items2.eq(i).addClass('current2');
 	}
+	var totalSlides = $('.contCircleBarMovil span').length;
+	if(newIndex==1){
+		contMovil = 2;
+	}else{
+		contMovil=1;
+		contMovil=newIndex+contMovil;
+	}
+	console.log(contMovil);
+	for (var i = 1; i <= contMovil; i++) {
+		var sliderAct2 = '.contentModule > div:nth-child('+ contMovil +')';
+		var progressCircle2 = '.contCircleBarMovil span:nth-child('+ contMovil +')';
+		$(sliderAct2).addClass('current2');
+		$(progressCircle2).addClass('current2');
+	}
+
+	// for (var j = parseInt(delta) + 1; j <= totalSlides; j++) {
+	// 	var sliderAct3 = '.contentModule > div:nth-child(' + j + ')';
+	// 	var progressCircle3 = '.contCircleBarMovil span:nth-child(' + j + ')';
+	// 	$(sliderAct3).removeClass('current2');
+	// 	$(progressCircle3).removeClass('current2');
+	// }
 
 	// reset activity h5p ------->
 	$('iframe').attr('src', function (i, val) { return val; });

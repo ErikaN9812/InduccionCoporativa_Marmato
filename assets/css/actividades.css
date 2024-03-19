@@ -157,6 +157,9 @@
     #breadcrumb{
         display: none;
     }
+    #breadcrumb_movil{
+        display: block !important;
+    }
     .slider-box {
         background-color: #fff; /* Color blanco */
         background-repeat: no-repeat;

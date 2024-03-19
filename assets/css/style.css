@@ -1901,11 +1901,15 @@
             .cont-central-flecha img{
                 display: none;
             }
+
+            .miga_pan_movil{
+                display: block;
+            }
             
             .bg-blanco-bienvenida{
                 background-color: #fff; /* Color blanco */
                 width: 100%;
-                height: 25vh;
+                height: 35vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -4239,6 +4243,9 @@ button.btnpoli:hover {
 
 
 @media (max-width: 734px) {
+    .miga_pan_movil{
+        width: 340px;
+    }
     p{
         font-size: 1.0rem;
         font-family: 'Futura Bk BT', sans-serif;
@@ -4406,8 +4413,6 @@ button.btn-sm {
     background: #003A5D;
     border-bottom-color: white;
     border-bottom-width: medium;
-   
-  
 }
 .contentHeader > div:nth-child(1) {
     max-width: 1200px;
@@ -4475,7 +4480,16 @@ button.btn-sm {
     .contentHeader .opcMovil .txPg {
         display: none;
     }
-@media (max-width:400px) {
+@media (max-width:734px) {
+    .contentHeader {
+        width: 100%;
+        position: relative;
+        z-index: 3;
+        height: 70px;
+        background: #003A5D;
+        border-bottom-color: white;
+        border-bottom-width: medium;
+    }
     #home {
         display: none;
     }

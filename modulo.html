@@ -75,21 +75,23 @@
         <div class="contentHeader">
             <div>
                 <img class="logoTop" src="assets/img/logoG.png">
-                <div class="miga_pan"><p style="text-align: left;" id="breadcrumb" > </p></div>
+                <div class="miga_pan"><p style="text-align: left;" id="breadcrumb"></p></div>
                 <!-- button home -->
                 <div>
                     <button id="home" onclick="progCircle(1);">
                         <i class="fas fa-home"></i>
                     </button>
                 </div>
+
                 <!-- progress counter -->
                 <div class="txPg">
                     <span id="textProg">1</span> / <span id="nSlider"></span>
                     <div class="contCircleBarMovil">
-                        
                     </div>
                 </div>
                 <i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
+                <div class="miga_pan_movil"><p style="text-align: center; display: none;" id="breadcrumb_movil"></p></div>
+
             </div>
             <!--menu-->
             <div class="headerOpc">
@@ -133,14 +135,13 @@
         </div>
         <!--BARRA DE PROGRESO PC-->
         <div class="contCircleBar contCircleBar-nav-bar">
+           
         </div>
 
         <!--BARRA DE PROGRESO MOVIL-->
         <div class="progBar">
             <div style="width: 5%;"></div>
         </div>
- 
-
     </div>
 <!-- content fluid -->
 <div class="container-fluid" style="position: relative; height: 100vh;">
@@ -2790,11 +2791,48 @@
                     'miga_compromiso'                   : 'Mi compromiso'
                 };
 
+                var breadcrumbMapMovil = {
+                    'miga_nuestro_proposito'            : '1. Conoce más acerca de la Compañía',
+                    'miga_nuestra_operacion'            : '1. Conoce más acerca de la Compañía',
+                    'miga_mision_vision'                : '1. Conoce más acerca de la Compañía',
+                    'miga_como_entendemos'              : '1. Conoce más acerca de la Compañía',
+                    'miga_nuestra_cultura_valores'      : '1. Conoce más acerca de la Compañía',
+                    'miga_5_funciones_comite'           : '1. Conoce más acerca de la Compañía',
+                    'miga_comite_protocolo_diversidad'  : '1. Conoce más acerca de la Compañía',
+                    'miga_repasemos_politicas'          : '1. Conoce más acerca de la Compañía',
+                    'miga_nuestros_propositos_aris'     : '1. Conoce más acerca de la Compañía',
+                    'miga_conoce_directivas'            : '1. Conoce más acerca de la Compañía',
+                    'miga_beneficios'                   : '2. Trabajar con nosotros trae grandes beneficios',
+                    'miga_asi_compartimos'              : '2. Trabajar con nosotros trae grandes beneficios',
+                    'miga_asi_cuidamos'                 : '2. Trabajar con nosotros trae grandes beneficios',
+                    'miga_gestiones_adecuadamente'      : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_codigo_vestuario_mina'        : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_codigo_vestuario_operacional' : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_codigo_vestuario_oficina'     : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_sagrilaft'                    : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_lavado_activos'               : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_prevenir_lavado'              : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_etica_transparencia'          : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_situaciones_conflictos'       : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_deberes_entorno'              : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_deberes_entorno_2'            : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_buena_gente'                  : '3. ¿Qué esperamos de ti como colaborador?',
+                    'miga_compromiso'                   : 'Mi compromiso'
+                };
+
                 $('#breadcrumb').html(
                     $('.current').filter(function() {
                         return Array.from(this.classList).find(className => className.startsWith('miga'));
                     }).map(function() {
                         return breadcrumbMap[Array.from(this.classList).find(className => className.startsWith('miga'))] || '';
+                    }).get().join('')
+                );
+
+                $('#breadcrumb_movil').html(
+                    $('.current').filter(function() {
+                        return Array.from(this.classList).find(className => className.startsWith('miga'));
+                    }).map(function() {
+                        return breadcrumbMapMovil[Array.from(this.classList).find(className => className.startsWith('miga'))] || '';
                     }).get().join('')
                 );
 
