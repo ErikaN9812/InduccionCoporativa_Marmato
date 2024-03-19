@@ -66,43 +66,94 @@ function updateItems(delta){
 	}
 }
 
-// function progress circle ------->
-function progCircle(e){
-	var totalSlides = $('.contCircleBar span').length;
-	$(".current").addClass("hide");
-  setTimeout(function(){
-    resetMenu();
-		var sliderAct = '.contentModule > div:nth-child('+ e +')';
-		var progressCircle = '.contCircleBar span:nth-child('+ e +')';
-		$(sliderAct).addClass('current');
-		$(progressCircle).addClass('current');
-
-		for (var i = 1; i <= e; i++) {
-			var sliderAct2 = '.contentModule > div:nth-child('+ i +')';
-			var progressCircle2 = '.contCircleBar span:nth-child('+ i +')';
-			$(sliderAct2).addClass('current2');
-			$(progressCircle2).addClass('current2');
-		}
-
-		for (var j = parseInt(e) + 1; j <= totalSlides; j++) {
-            var sliderAct3 = '.contentModule > div:nth-child(' + j + ')';
-            var progressCircle3 = '.contCircleBar span:nth-child(' + j + ')';
-            $(sliderAct3).removeClass('current2');
-            $(progressCircle3).removeClass('current2');
+function createCirclesMovil(){
+	var containerCount = $('.container').length;
+    var contCircleBarMovil = $('.contCircleBarMovil');
+    
+    contCircleBarMovil.empty();
+    
+    // Crear los span dinámicamente
+    for (var i = 0; i < containerCount-1; i++) {
+        var span = $('<span></span>');
+        span.attr('onclick', 'progCircle(' + (i+1) + ', 1);');
+		if (i === 0) {
+            span.addClass('current2');
         }
-		$("#textProg").html(e);
-		//reset activity h5p ------->
-	    $('iframe').attr('src', function (i, val) { return val; });
-		//function animation latest slide------->
+        contCircleBarMovil.append(span);
+    }
+}
 
-		aniSl19(e);
-		$(".current").removeClass("hide");
-	}, 300);
+// function progress circle ------->
+function progCircle(e,plataforma=0){
+	if(plataforma==1){
+		var totalSlides = $('.contCircleBarMovil span').length;
+		$(".current").addClass("hide");
+		  setTimeout(function(){
+			resetMenu();
+			var sliderAct = '.contentModule > div:nth-child('+ e +')';
+			var progressCircle = '.contCircleBarMovil span:nth-child('+ e +')';
+			$(sliderAct).addClass('current');
+			$(progressCircle).addClass('current');
+	
+			for (var i = 1; i <= e; i++) {
+				var sliderAct2 = '.contentModule > div:nth-child('+ i +')';
+				var progressCircle2 = '.contCircleBarMovil span:nth-child('+ i +')';
+				$(sliderAct2).addClass('current2');
+				$(progressCircle2).addClass('current2');
+			}
+	
+			for (var j = parseInt(e) + 1; j <= totalSlides; j++) {
+				var sliderAct3 = '.contentModule > div:nth-child(' + j + ')';
+				var progressCircle3 = '.contCircleBarMovil span:nth-child(' + j + ')';
+				$(sliderAct3).removeClass('current2');
+				$(progressCircle3).removeClass('current2');
+			}
+			$("#textProg").html(e);
+			//reset activity h5p ------->
+			$('iframe').attr('src', function (i, val) { return val; });
+			//function animation latest slide------->
+	
+			aniSl19(e);
+			$(".current").removeClass("hide");
+		}, 300);
+	}else{
+		var totalSlides = $('.contCircleBar span').length;
+		$(".current").addClass("hide");
+		  setTimeout(function(){
+		resetMenu();
+			var sliderAct = '.contentModule > div:nth-child('+ e +')';
+			var progressCircle = '.contCircleBar span:nth-child('+ e +')';
+			$(sliderAct).addClass('current');
+			$(progressCircle).addClass('current');
+	
+			for (var i = 1; i <= e; i++) {
+				var sliderAct2 = '.contentModule > div:nth-child('+ i +')';
+				var progressCircle2 = '.contCircleBar span:nth-child('+ i +')';
+				$(sliderAct2).addClass('current2');
+				$(progressCircle2).addClass('current2');
+			}
+	
+			for (var j = parseInt(e) + 1; j <= totalSlides; j++) {
+				var sliderAct3 = '.contentModule > div:nth-child(' + j + ')';
+				var progressCircle3 = '.contCircleBar span:nth-child(' + j + ')';
+				$(sliderAct3).removeClass('current2');
+				$(progressCircle3).removeClass('current2');
+			}
+			$("#textProg").html(e);
+			//reset activity h5p ------->
+			$('iframe').attr('src', function (i, val) { return val; });
+			//function animation latest slide------->
+	
+			aniSl19(e);
+			$(".current").removeClass("hide");
+		}, 300);
+	}
+	
 }
 
 // function button home ------->
 function resetMenu(){
-	var $items = $('.contentModule').children();
+  var $items = $('.contentModule').children();
   var $current = $items.filter('.current');
   $current.removeClass('current');
   var $items2 = $('.contCircleBar').children();

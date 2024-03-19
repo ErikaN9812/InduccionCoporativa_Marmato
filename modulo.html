@@ -85,6 +85,9 @@
                 <!-- progress counter -->
                 <div class="txPg">
                     <span id="textProg">1</span> / <span id="nSlider"></span>
+                    <div class="contCircleBarMovil">
+                        
+                    </div>
                 </div>
                 <i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
             </div>
@@ -946,7 +949,7 @@
                             </p>
                             </div>
                             <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                            <img src="assets/img/img_slide19_01.jpg" id="img_slide19_01">
+                            <img src="assets/img/slide19_01.jpg" id="img_slide19_01">
                             </div>
                             </div>
                             <hr>
@@ -965,7 +968,7 @@
                                 </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                        <img src="assets/img/img_slide19_02.jpg" id="img_slide19_02">
+                                        <img src="assets/img/slide19_02.jpg" id="img_slide19_02">
                                 </div>
                             </div>
                             <hr>
@@ -984,7 +987,7 @@
                                 </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                    <img src="assets/img/img_slide19_03.jpg" id="img_slide19_03">
+                                    <img src="assets/img/slide19_03.jpg" id="img_slide19_03">
                                 </div>
                             </div>
                             <hr>
@@ -1003,7 +1006,7 @@
                                 </p>
                                 </div>
                                 <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
-                                    <img src="assets/img/img_slide19_04.jpg" id="img_slide19_04">
+                                    <img src="assets/img/slide19_04.jpg" id="img_slide19_04">
                                 </div>
                             </div>
                             <hr>
@@ -1023,7 +1026,7 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 text-center" style="display: flex; justify-content: center;">
                             
-                                    <img src="assets/img/img_slide19_05.jpg" id="img_slide19_05">
+                                    <img src="assets/img/slide19_05.jpg" id="img_slide19_05">
                                 </div>
                             </div>
                             <hr>
@@ -2563,7 +2566,7 @@
     <div class="container">
         <div class="row">  
           <div class="col-md-12 col-lg-4 pilarimg bg-blanco-v3 parrafogris-left contenido-lateralambiental">
-            <img src="assets/img/ambiental-2.png" alt="" style="width: 60%; margin: 0 auto;" >
+            <img id="img-ambiental" src="assets/img/ambiental/optimizacion/1-sld-opt.jpg" alt="" style="width: 100%; margin: 0 auto;" >
             <h1 class="titulo20p" style="color: var(--primary);">Ambiental</span></h1>
             <hr class="hr-style">
             <p ></p>
@@ -2737,7 +2740,7 @@
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
        
        <script>
-
+        createCirclesMovil();
           aniSl19(1);
             function aniSl19(e){
 

@@ -1335,7 +1335,7 @@
             margin-right: 0px;
             margin-left: 60px;
             max-width: 100%;
-            padding: 3%;
+            padding: 0%;
             text-align: center;
         }
 
@@ -4776,6 +4776,57 @@ button.btn-sm {
         max-width: 600px;
         bottom: 0;
         margin-left: 0px;
+    }
+    .txPg:hover .contCircleBarMovil {
+        display: block;
+    }
+
+    /*content progress*/
+    .contCircleBarMovil{
+        display: none;
+        position: absolute;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+        top: 47px;
+        width: auto;
+        right: 0;
+        width: 200px;
+    }
+
+    .contCircleBarMovil span {
+        display: inline-block;
+        opacity: .3 !important;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--primary);
+        margin: 2px;
+    }
+    .contCircleBarMovil span:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+    }
+    .contCircleBarMovil span.current2 {
+        opacity: 1 !important;
+        background: var(--primary);
+        position: relative;
+    }
+    .contCircleBarMovil span.current2::after {
+        content: " ";
+        position: absolute;
+        opacity: .6;
+        top: -4px;
+        left: -4px;
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50px;
+        border: 2px solid var(--primary);
     }
 }
 

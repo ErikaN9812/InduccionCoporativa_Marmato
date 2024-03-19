@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $("#nav-home-tab-1").on("click", function() {
+      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/1-sld-opt.jpg');
+    });
+    $("#nav-profile-tab-2").on("click", function() {
+      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/2-sld-opt.jpg');
+    });
     // item 1
       $("#sl21_drag1").draggable({
         revert: 'invalid',
@@ -1235,11 +1241,9 @@ function actSelectImg(el, data) {
 
     for (let i = 1; i <= 6; i++) {
       let imgID = "#img_slide19_" + (i < 10 ? "0" : "") + i;
-      if(imgID==='#img_slide19_02' || imgID==='#img_slide19_04'){
-        $(imgID).attr("src", "assets/img/slide19_" + (i < 10 ? "0" : "") + i + ".jpg");
-      }else{
-        $(imgID).attr("src", "assets/img/slide19_" + (i < 10 ? "0" : "") + i + ".png");
-      }
+    
+      $(imgID).attr("src", "assets/img/slide19_" + (i < 10 ? "0" : "") + i + ".jpg");
+      
     }
   }
 
