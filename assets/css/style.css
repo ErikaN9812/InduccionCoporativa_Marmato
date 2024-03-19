@@ -448,6 +448,11 @@
             width: 65%;
         }
 
+        .diversidadimg img {
+            text-align: center !important;
+            width: 32%;
+        }
+
 
 
         .bg-petroleo-slide-7{
@@ -602,6 +607,22 @@
             text-align: center;
         }
 
+        .col-60{
+            width: 60%;
+        }
+        
+        .col-80{
+            width: 80%;
+        }
+
+        .col-10{
+            width: 100%;
+        }
+
+        .col-12{
+            width: 120%;
+        }
+
         .pc-sld{
             display: block;
         }
@@ -731,7 +752,6 @@
             margin-right: 20%;
         } 
 
-
         .departamentos{
             margin-top: 20%; 
             padding-right: 5%;
@@ -747,6 +767,11 @@
         .elemento-img{
             width: 35%; 
             margin-left: 30%;
+        }
+
+        .cardpoli{
+            min-height: 12rem;
+            cursor:pointer;
         }
 
         @media(max-width: 734px){
@@ -769,6 +794,10 @@
             }
 
             .col-80{
+                width: 100% !important;
+            }
+
+            .col-10{
                 width: 100% !important;
             }
 
@@ -812,6 +841,12 @@
                 width: 40%; 
                 margin-left: 30%;
             }
+
+            .diversidadimg img {
+                margin: 0 auto;
+                width: 100%;
+            }
+
             .padding-left-5{
                 margin-right: 0px;
                 margin-left: 0px;
@@ -836,7 +871,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 55vh;
+                height: 60vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -936,6 +971,11 @@
                 z-index: 0;
                 display: flex;
                 text-align: center;
+            }
+
+            .cardpoli{
+                min-height: 10rem;
+                cursor:pointer;
             }
 
         }
@@ -1266,19 +1306,6 @@
             align-items: center;
             position: relative;
         }
-
-        .col-60{
-            width: 60%;
-        }
-        
-        .col-80{
-            width: 80%;
-        }
-
-        .col-12{
-            width: 120%;
-        }
-
 
 
         .header {
@@ -1840,7 +1867,7 @@
             }
             .bg-blanco2-6poli {
                 background-color: #fff; /* Color blanco */
-                height: 70vh;
+                height: 53vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -2344,6 +2371,17 @@
             justify-content: center;
         }
 
+        .content-flecha-4poli{
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 5%;
+            margin-bottom: 3%;
+        }
+
+
         #zoom_1{
             margin-top: 27%; 
             margin-left: 53%; 
@@ -2467,7 +2505,7 @@
                 align-items: center;
                 position: relative;
                 width: 100%;
-                height: 65vh;
+                height: 55vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -2984,6 +3022,17 @@
                 background-repeat: no-repeat;
                 }
 
+
+            .fondo-mobile-diversidad {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    background-image: url(../img/mobile/fondo-mobile-diversidad.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    }
+
             .bg-petroleoh {
                 background-color: #003A5D; /* Color azul petróleo */
                 height: 50%;
@@ -3025,6 +3074,11 @@
             .pc-celular-azul{
                 width: 100% !important;
                 margin-top:20px;
+            }
+
+            .sld-11-diversidad{
+                width: 100% !important;
+                margin-top:350px;
             }
             .contenido-lateral {
                 margin-right: 0px;
@@ -3723,7 +3777,7 @@ video::-webkit-media-controls-panel {
 }
 .dx13g{
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 20px;
     text-align: center;
     word-wrap: break-word; 
     overflow-wrap: break-word;
@@ -3734,7 +3788,7 @@ video::-webkit-media-controls-panel {
 
 .dx13g:hover{
     color: var(--grey);
-    font-size: 1.5em;
+    font-size: 22px;
     text-align: center;
     word-wrap: break-word; 
     overflow-wrap: break-word;
@@ -3832,6 +3886,15 @@ video::-webkit-media-controls-panel {
     white-space: normal;
     color: var(--primary);  
     padding-top: 18%;
+}
+
+.dx2-v6{
+    font-size: 28px;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: var(--primary);  
 }
 
 
@@ -3936,10 +3999,15 @@ img {
   }
 
 .politica-img img{
-    max-width: 280px;
+    width: 50%;
     margin: 0 auto;
   }
   
+
+.tituloh4 h4{
+    font-size: 18px;
+    text-align: center;
+}
 
 video {
     position: relative;
@@ -4090,6 +4158,22 @@ button.btn {
     font-weight: 800;
 }
 
+
+button.btnpoli {
+    background-color: #c00000;
+    color: #fff;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
+    font-family: 'Futura Bk BT', sans-serif;
+    font-weight: 500;
+    margin-top: 25%;
+}
+
+
 /*beneficios*/
 button.btnbeneficio  {
     display: block;
@@ -4116,6 +4200,16 @@ button.btnbeneficio:hover {
 button.btnbeneficio:focus {
     outline: inherit;
     box-shadow: inherit;
+}
+
+button.btnpoli:focus {
+    outline: inherit;
+    box-shadow: inherit;
+}
+
+button.btnpoli:hover {
+    filter: grayscale(50%);
+    transform: scale(1.01);
 }
 
 .h1-titulo-left{
@@ -4204,6 +4298,12 @@ button.btnbeneficio:focus {
         height: auto;
         margin-top: -7rem;
     }
+
+    .politica-img img{
+        width: 70%;
+        margin: 0 auto;
+      }
+
     .dx2-v2{
         font-size: 25px;
         text-align: center;
@@ -4251,6 +4351,18 @@ button.btnbeneficio:focus {
     button.btn {
         margin: 15px auto 0px;
     }
+
+    button.btnpoli{
+        font-size: 22px;
+        margin-top: 6%;
+        font-family: 'Futura Bk BT', sans-serif;
+        font-weight: 500;
+        margin-left: 25%;
+        position: relative;
+        padding: 15px 20px;
+        border-radius: 30px;
+    }
+
     .img-logow {
         width: 90%;
         display: block;
@@ -5000,7 +5112,7 @@ iframe:after {
     }
 
     .darkStyleimgdiversidad1 {
-        background: url(../../assets/img/fondo-diversidad-v2.png);
+        background: url(../../assets/img/fondo-equidad-mobile.png);
         background-repeat: no-repeat;
         background-position: right;
         background-size: cover;  
@@ -5079,6 +5191,11 @@ iframe:after {
 
      .top-slide-sld4{
         margin-top:20% !important;
+        margin-bottom: 5%;
+     }
+
+     .top-slide-sld11{
+        margin-top:100% !important;
         margin-bottom: 5%;
      }
 
