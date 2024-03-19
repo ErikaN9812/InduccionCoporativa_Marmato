@@ -607,9 +607,22 @@
             text-align: center;
         }
 
+        .col-40{
+            width: 40%;
+        }
+
+        .col-50{
+            width: 50%;
+        }
+
         .col-60{
             width: 60%;
         }
+
+        .col-70{
+            width: 70%;
+        }
+        
         
         .col-80{
             width: 80%;
@@ -637,6 +650,10 @@
         }
 
         .pc-slide-8{
+            display: block;
+        }
+
+        .pc-slide-42{
             display: block;
         }
         
@@ -752,6 +769,13 @@
             margin-right: 20%;
         } 
 
+        .parrafoblanco-center p {
+            text-align: center;
+            line-height: 1.2em;
+            font-size: 18px;
+            color: #fff;
+        } 
+
         .departamentos{
             margin-top: 20%; 
             padding-right: 5%;
@@ -790,6 +814,14 @@
             }
 
             .col-40{
+                width: 100% !important;
+            }
+
+            .col-50{
+                width: 100% !important;
+            }
+
+            .col-70{
                 width: 100% !important;
             }
 
@@ -1697,6 +1729,16 @@
             margin-top: auto !important;
         } 
 
+        .bg-blanco-buena-gente {
+            background-color: #fff; /* Color blanco */
+            height: 90vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-top: auto !important;
+        } 
+
         .bg-blanco-proposito {
             background-color: #fff; /* Color blanco */
             height: 100vh;
@@ -1935,6 +1977,18 @@
             align-items: center;
             position: relative;
             text-align: center;
+        }
+
+         /*fondo lineamiento ambiental*/
+         .bg-azul-ambiental{
+            background-color: #003a5d;
+            height: 100vh;
+            z-index: 0;
+            display: block;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding-top: 8%;
         }
 
 
