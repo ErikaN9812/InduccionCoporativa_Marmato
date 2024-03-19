@@ -1904,6 +1904,7 @@
 
             .miga_pan_movil{
                 display: block;
+                width: 340px;
             }
             
             .bg-blanco-bienvenida{
@@ -4243,9 +4244,6 @@ button.btnpoli:hover {
 
 
 @media (max-width: 734px) {
-    .miga_pan_movil{
-        width: 340px;
-    }
     p{
         font-size: 1.0rem;
         font-family: 'Futura Bk BT', sans-serif;
