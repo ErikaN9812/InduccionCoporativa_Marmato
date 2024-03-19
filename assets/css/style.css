@@ -4541,6 +4541,7 @@ button.btn-sm {
     .contentHeader .opcMovil .txPg {
         display: none;
     }
+    
 @media (max-width:734px) {
     .contentHeader {
         width: 100%;
@@ -4551,11 +4552,11 @@ button.btn-sm {
         border-bottom-color: white;
         border-bottom-width: medium;
     }
-    #home {
+    /* #home {
         display: none;
-    }
+    } */
     .contentHeader > div:nth-child(1) {
-        grid-template-columns: 170px 1fr 1px 80px 55px;
+        grid-template-columns: 170px 1fr 45px 60px 51px;
     }
 }
 .fdMn {
