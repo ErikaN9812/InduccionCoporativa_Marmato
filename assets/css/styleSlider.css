@@ -90,6 +90,18 @@
     display: none;
 }
 
+
+.tab-content-ambiental > .tab-pane {
+  display: none;
+}
+.tab-content-ambiental > .active {
+  display: block;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: solid 1px #d1d1d1;
+  margin-right: 12%;
+}
+
 @media (max-width: 768px) {
     
     .current i.inst2 {
