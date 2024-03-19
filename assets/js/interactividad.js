@@ -103,22 +103,22 @@ $(document).ready(function () {
   
       switch ($(this).closest('li').attr('value')) {
         case '1':
-          concepto = 'Entemos que la interración frecuente con las comunidades localesdel entorno en el que hacemos presencia, son compomentes eseciales de nuestra licencia social para operar.';
+          concepto = 'Entendemos que la interacción frecuente con las comunidades locales del entorno en el que hacemos presencia, son componentes esenciales de nuestra licencia social para operar.';
           break;
         case '2':
-          concepto = 'Promovemos la excelencia operacional teniendo como prioridad el bienestar de los colaboradores con progrmas como VISION ZERO de seguridad industrial.';
+          concepto = 'Promovemos la excelencia operacional teniendo como prioridad el bienestar de los colaboradores con programas como VISIÓN ZERO de seguridad industrial.';
           break;
         case '3':
-          concepto = 'Estamos comprometidos a maneter las mejores prácticas y estándares internacionales en nuestro enfoque de sustentabilidad para operar como una empresa minera responsable.';
+          concepto = 'Estamos comprometidos a mantener las mejores prácticas y estándares internacionales en nuestro enfoque de sustentabilidad para operar como una empresa minera responsable.';
           break;
         case '4':
-          concepto = 'En Aris nos basamos en 5 pirales de inversion social 1.Educación, Cultura y deporte 2.Desarrollo socio-económico 3.Infraestrutura para compectitividad 4.Medio Ambiente 5.Equidad de géneto e inclusión';
+          concepto = 'En Aris nos basamos en 5 pirales de inversión social 1.Educación, Cultura y deporte 2.Desarrollo socio-económico 3.Infraestrutura para competitividad 4.Medio Ambiente 5.Equidad de género e inclusión.';
           break;
         case '5':
-          concepto = 'Aris Mining creemos que todos los accidentes y enfermedades asociados al tabajo son prevenibles y evitarlos es una tarera  diaria de todos.';
+          concepto = 'Aris Mining creemos que todos los accidentes y enfermedades asociados al trabajo son prevenibles y evitarlos es una tarea diaria de todos.';
           break;
         case '6':
-          concepto = 'Estamos comprometidos con el gobierno corporativo y la cutura basada en la transparencia, la responsabildad y la integridad.';
+          concepto = 'Estamos comprometidos con el gobierno corporativo y la cultura basada en la transparencia, la responsabilidad y la integridad.';
           break;
         default:
           concepto = 'Concepto por defecto';

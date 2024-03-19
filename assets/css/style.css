@@ -228,6 +228,11 @@
             position: relative;
         }
 
+        .pcmision-vision{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
          /*fondo azul mision*/
          .bg-petroleo-mision {
             background-color: #133450; /* Color azul petróleo */
@@ -558,9 +563,6 @@
 }  
 
 
-    
-
-
         .bg-slide1 {
             background-color: #133450; /* Color azul petróleo */
             background-image: url(../img/img-minuto-reflexionv2.png);
@@ -600,7 +602,16 @@
             text-align: center;
         }
 
+        .pc-sld{
+            display: block;
+        }
+
+
         .turno-trabajo{
+            display: flex;
+        }
+
+        .pc-modal{
             display: flex;
         }
 
@@ -621,10 +632,18 @@
             padding-right: 10%;
         }
 
+        .padding-left-mineria{
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 0px;
+            max-width: 100%;
+            padding: 0%;
+        }
+
         .padding-left-1{
             margin-right: 60px;
             margin-left: 90px;
-            margin-top: 50px;
+            margin-top: 0px;
             max-width: 100%;
             padding: 0%;
         }
@@ -702,6 +721,17 @@
             padding: 0%;
         }
 
+        /*parrafos texto blanco centrado*/
+        .parrafoblanco-center-secciones p {
+            text-align: center;
+            line-height: 1.2em;
+            font-size: 18px;
+            color: #fff;
+            margin-left: 20%;
+            margin-right: 20%;
+        } 
+
+
         .departamentos{
             margin-top: 20%; 
             padding-right: 5%;
@@ -726,8 +756,29 @@
             flex-direction: column;
             }
 
-            .conten60{
-                width: 100%;
+            .pc-modal{
+            flex-direction: column;
+            }
+
+            .col-60{
+                width: 100% !important;
+            }
+
+            .col-40{
+                width: 100% !important;
+            }
+
+            .col-80{
+                width: 100% !important;
+            }
+
+            .col-12{
+                width: 100% !important;
+            }
+
+            .pcmision-vision{
+                display: flex;
+                flex-wrap: wrap;
             }
 
             .turno-trabajoespacio{
@@ -785,7 +836,7 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 100%;
-                height: 65vh;
+                height: 55vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -810,7 +861,7 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 width: 100%;
-                height: 80vh;
+                height: 75vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -825,7 +876,7 @@
                 background-size: contain;
                 background-position: right;
                 width: 100%;
-                height: 80vh;
+                height: 70vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -886,6 +937,7 @@
                 display: flex;
                 text-align: center;
             }
+
         }
         .phones{
             display: inline-grid;
@@ -1215,9 +1267,18 @@
             position: relative;
         }
 
-        .conten60{
+        .col-60{
             width: 60%;
         }
+        
+        .col-80{
+            width: 80%;
+        }
+
+        .col-12{
+            width: 120%;
+        }
+
 
 
         .header {
@@ -1483,6 +1544,7 @@
             align-items: center;
             position: relative;
             text-align: center;
+
         }
 
         
@@ -1603,7 +1665,17 @@
             height: 100vh;
             z-index: 0;
             display: flex;
-        
+            align-items: center;
+            position: relative;
+            margin-top: auto !important;
+        } 
+
+        .bg-blanco-proposito {
+            background-color: #fff; /* Color blanco */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
             position: relative;
             margin-top: auto !important;
         } 
@@ -1633,7 +1705,8 @@
         }
         .img-mision-vision{
             margin:0 auto; 
-            width:23%;
+            width:28%;
+            margin-bottom: 1.5%;
         }
 
         .diversidad img{
@@ -1719,7 +1792,7 @@
 
             .img-mision-vision{
                 margin:0 auto; 
-                width:40%; 
+                width:50%; 
             }
             .cont-flecha-mision {
                 margin-right: 0px;
@@ -1786,9 +1859,10 @@
                 align-items: center;
                 position: relative;
                 text-align: center;
+                margin-top: 35%;
             }
             .top-movil{
-                margin-top: 110px;
+                margin-top: 80px;
             }
             .cont-central-flecha {
                 margin-right: auto;
@@ -1809,6 +1883,16 @@
                 display: flex;
                 align-items: center;
                 position: relative;
+            }
+
+               /*parrafos texto blanco centrado*/
+            .parrafoblanco-center-secciones p {
+                text-align: center;
+                line-height: 1.2em;
+                font-size: 18px;
+                color: #fff;
+                margin-left: 0%;
+                margin-right: 0%;
             }
         }
         /*fondo lineamiento ambiental*/
@@ -1923,8 +2007,6 @@
             z-index: 0;
             align-items: center;
             position: relative;
-            padding-left: 7%; 
-            padding-right: 7%;
         } 
 
 
@@ -2398,14 +2480,14 @@
                 align-items: center;
                 position: relative;
                 width: 100%;
-                height: 65vh;
+                height: 40vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
                 position: relative;
-                margin-top: 20%;
-                padding-left: 4%;
-                padding-right: 4%;
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                white-space: normal;
             } 
              /*fondo  beneficios*/
             .bg-blanco-beneficio {
@@ -2424,7 +2506,7 @@
                 background-color: #fff; /* Color blanco */
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 60vh;
+                height: 50vh;
                 z-index: 0;
                 display: flex;
                 align-items: center;
@@ -2438,6 +2520,17 @@
                 align-items: center;
                 position: relative;
             }
+
+             /*fondo color video*/
+             .bg-azuloscuro3 {
+                background-color: #022249; /* Color blanco */
+                height: 50vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+        
             .pc-movil-mapa1-left{
                 margin-left: 0px;
             }
@@ -2750,6 +2843,17 @@
                 position: relative;
                 margin-top: auto !important;
             } 
+
+            .bg-blanco-proposito {
+                background-color: #fff; /* Color blanco */
+                height:  25%;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-top: auto !important;
+            } 
+
             .bg-blanco-3 {
                 background-color: #fff; /* Color blanco */
                 height: 70vh;
@@ -2851,14 +2955,34 @@
                 height: 145vh;
             }
             .contenido-central {
-                margin-right: 15px; /* Ajusta el margen derecho para dispositivos móviles */
-                margin-left: 15px;  /* Ajusta el margen izquierdo para dispositivos móviles */
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                white-space: normal;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+
+            .contenido-central-seccion {
+                word-wrap: break-word; 
+                overflow-wrap: break-word;
+                white-space: normal;
                 max-width: 100%;
                 padding: 0%;
                 text-align: center;
             }
 
-          
+            .fondo-mobilesec1 {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                background-image: url(../img/mobile/fondo-momento1.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                }
 
             .bg-petroleoh {
                 background-color: #003A5D; /* Color azul petróleo */
@@ -3261,6 +3385,18 @@
 }
 
 /*parrafos texto blanco*/
+.parrafoblanco-mision-justify p {
+    text-align: justify;
+    line-height: 1.3em;
+    margin-top: 3%;
+    font-size: 18px;
+    color: #fff;
+    margin:0 auto; 
+    max-width: 75%; 
+}
+
+
+/*parrafos texto blanco*/
 .parrafoblanco-justify p {
     text-align: justify;
     line-height: 1.3em;
@@ -3269,13 +3405,7 @@
     color: #fff;
 }
 
-/*parrafos texto blanco centrado*/
-.parrafoblanco-center p {
-    text-align: center;
-    line-height: 1.2em;
-    font-size: 18px;
-    color: #fff;
-}
+
 
 /*parrafos texto blanco centrado*/
 .parrafoblanco-left p {
@@ -3354,6 +3484,11 @@
 
 .fcenter{
     margin: 0 auto !important;
+}
+
+.postervideo video{
+    max-width:540px;
+    height: 350px;
 }
 
 /*----------*/
@@ -3448,6 +3583,7 @@ i{
     margin-right: 0.5%;
     margin-bottom: 1.2%;
      }
+     
 
     .icoflechaabajo img {
         width: 2%;
@@ -3456,6 +3592,13 @@ i{
         margin-right: 0.5%;
         margin-left: 0%;
       }
+
+      .icoflechavision img {
+        width: 5.0%;
+        float: left;
+        margin-right: 0.5%;
+      }
+    
 
     .icoflechaderecha img {
         width: 5%;
@@ -3467,7 +3610,7 @@ i{
     }  
     
     .instruccionflecha i{
-        max-width: 95%;
+        max-width: 100%;
         padding: 5px  5px;
         border-radius: 5px;
         color: #f4a630;
@@ -3501,8 +3644,8 @@ h2 span {
 }
 
 .videocontainer{
-    width: 100%;
-    display: grid;
+    width: 80%;
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -3662,6 +3805,14 @@ video::-webkit-media-controls-panel {
     font-weight: 600;
 }
 
+.dx2-recorrido{
+    font-size: 28px;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    color: var(--primary);  
+}
 
 .dx2-v2{
     font-size: 28px;
@@ -3932,9 +4083,11 @@ button.btn {
     padding: 10px 20px;
     border-radius: 30px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 18px;
     color: #fff !important;
     box-shadow: rgb(0 160 175 / 30%) 0px 8px 24px;
+    font-family: 'Futura Bk BT', sans-serif;
+    font-weight: 800;
 }
 
 /*beneficios*/
@@ -3965,16 +4118,31 @@ button.btnbeneficio:focus {
     box-shadow: inherit;
 }
 
-.h1-titulo{
+.h1-titulo-left{
+    font-size: 28px;
     padding-top: 15%; 
     color: var(--primary80);
     text-align: left;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
-.titulo-h1{
-    margin-top: 5%; 
-    margin-left: 18%;
+.h1-titulo-center{
+    font-size: 28px;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
 }
+
+
+.titulo-h1{
+    font-size: 28px;
+    padding-top: 15%; 
+    text-align: center;
+}
+
 
 @media (max-width: 734px) {
     p{
@@ -3994,20 +4162,40 @@ button.btnbeneficio:focus {
         margin: 0;
         margin-left: 0%;
       }
+
     .titulo-h1{
-        margin-top: 20%; 
-        margin-left: 0%;
+       font-size: 18px;
+       text-align: center;
+       word-wrap: break-word; 
+       overflow-wrap: break-word;
+       white-space: normal;
     }
+
     .titulo20p{
         font-size: 20px;
     }
     .titulo_h1_v3{
         font-size: 16px !important;
     }
-    .h1-titulo{
-        padding-top: 25%; 
-        color: var(--primary80)
+    .h1-titulo-left{
+        font-size: 25px;
+        color: var(--primary80);
+        padding-top: 2%;
+        text-align: center;
+        text-align: center;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
     }
+
+    .h1-titulo-center{
+        font-size: 25px;
+        padding-top: 2%;
+        text-align: center;
+        text-align: center;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
+    }
+    
     .img-estructura2{
         max-height: 15rem;
         max-width: 100%; 
@@ -4017,7 +4205,7 @@ button.btnbeneficio:focus {
         margin-top: -7rem;
     }
     .dx2-v2{
-        font-size: 2em;
+        font-size: 25px;
         text-align: center;
         word-wrap: break-word; 
         overflow-wrap: break-word;
@@ -4025,25 +4213,41 @@ button.btnbeneficio:focus {
         color: var(--primary);  
         padding-top: 2%;
     }
-    .dx2-v5{
-        font-size: 2em;
+
+    .dx2-recorrido{
+        font-size: 25px;
         text-align: center;
         word-wrap: break-word; 
         overflow-wrap: break-word;
+        white-space: normal;
+        color: var(--primary);  
+    }
 
+    .dx2-v5{
+        font-size: 25px;
+        text-align: center;
+        word-wrap: break-word; 
+        overflow-wrap: break-word;
         color: var(--primary);  
         padding-top: 0%;
     }
     .dx3-v2{
-        font-size: 3em;
-        text-align: left;
+        font-size: 35px;
+        text-align: center;
         word-wrap: break-word; 
         overflow-wrap: break-word;
         white-space: normal;
         color: #0B3D5C; 
-        padding-left: 15%; 
-        margin-top:2%;
+        margin-top:20%;
     }
+
+    .videocontainer{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
     button.btn {
         margin: 15px auto 0px;
     }
@@ -4051,6 +4255,11 @@ button.btnbeneficio:focus {
         width: 90%;
         display: block;
         margin: 0 auto;
+    }
+
+    .postervideo video{
+        max-width:450px;
+        height: 300px;
     }
 }
 button.btn-sm {
@@ -4803,7 +5012,7 @@ iframe:after {
     }
 
     .darkStyleimgseccion1 {
-        background: url(../../assets/img/Fondo-seccion1-v2.jpg);
+        background: url(../../assets/img/Fondo-seccion1-mobile.webp);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
@@ -4846,10 +5055,14 @@ iframe:after {
         margin-top:100px;
     }
     
-
     .top-slide-14{
         margin-top:100px;
     }
+
+    .top-slide-sld4{
+        margin-top:100px;
+    }
+    
     
     }
     .top-slide-1-2{
@@ -4861,8 +5074,20 @@ iframe:after {
  /*reponsive un minuto*/  
  @media (max-width: 768px){
     .top-slide-14{
-        margin-top:40%;
+        margin-top:30%;
      }
+
+     .top-slide-sld4{
+        margin-top:20% !important;
+        margin-bottom: 5%;
+     }
+
+     .top-slide-sld8{
+        margin-top:20% !important;
+        margin-bottom: 5%;
+     }
+
+
     .top-slide-1{
         margin-top:150px;
     }
