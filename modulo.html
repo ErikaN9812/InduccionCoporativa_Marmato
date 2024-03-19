@@ -85,6 +85,9 @@
                 <!-- progress counter -->
                 <div class="txPg">
                     <span id="textProg">1</span> / <span id="nSlider"></span>
+                    <div class="contCircleBarMovil">
+                        
+                    </div>
                 </div>
                 <i class="fas fa-bars" style="padding: 10px 10px 10px 20px;"></i>
             </div>
@@ -2564,7 +2567,7 @@
     <div class="container">
         <div class="row">  
           <div class="col-md-12 col-lg-4 pilarimg bg-blanco-v3 parrafogris-left contenido-lateralambiental">
-            <img src="assets/img/ambiental-2.png" alt="" style="width: 60%; margin: 0 auto;" >
+            <img id="img-ambiental" src="assets/img/ambiental/optimizacion/1-sld-opt.jpg" alt="" style="width: 100%; margin: 0 auto;" >
             <h1 class="titulo20p" style="color: var(--primary);">Ambiental</span></h1>
             <hr class="hr-style">
             <p ></p>
@@ -2857,7 +2860,7 @@
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
        
        <script>
-
+        createCirclesMovil();
           aniSl19(1);
             function aniSl19(e){
 
