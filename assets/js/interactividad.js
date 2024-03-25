@@ -421,8 +421,14 @@ $("#drop1, #drop2, #drop3, #drop4, #drop5, #drop6").on("droppable:drop",
     // updateProgress();
   });
   var carrusel_img = document.getElementById("carrusel");
-  carrusel_img.style.backgroundImage = 'url(assets/img/slide/Slide-1.jpg)';
+  carrusel_img.style.backgroundImage = 'url(assets/img/slide/Slide-1.webp';
   carrusel();
+  popsAudios();
+
+  /*beneficio carrusel*/
+  var carrusel_img = document.getElementById("carruselbeneficios");
+  carrusel_img.style.backgroundImage = 'url(assets/img/beneficios/Slide-1.webp';
+  carruselbeneficios();
   popsAudios();
 
 
@@ -562,8 +568,35 @@ function actSelectImg(el, data) {
     // Generar URLs de imágenes con un bucle
     for (var i = 1; i <= 19; i++) {
       var img = document.createElement("img");
-      img.src = `assets/img/slide/Slide-${i}.jpg`;
+      img.src = `assets/img/slide/Slide-${i}.webp`;
       carrusel.appendChild(img);
+      images.push(img);
+        // images.push(`url(assets/img/slide/Slide-${i}.jpg)`);
+    }
+
+    var currentImageIndex = 0;
+
+    function changeImage() {
+      images[currentImageIndex].classList.remove("active-img");
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add("active-img");
+    }
+    images[currentImageIndex].classList.add("active-img");
+    // Cambiar la imagen cada dos segundos
+    setInterval(changeImage, 2100);
+  }
+
+
+  /*Beneficios carrusel*/
+  function carruselbeneficios() {
+    var carruselbeneficios = document.getElementById("carruselbeneficios");
+    var images = [];
+
+    // Generar URLs de imágenes con un bucle
+    for (var i = 1; i <= 6; i++) {
+      var img = document.createElement("img");
+      img.src = `assets/img/beneficios/Slide-${i}.webp`;
+      carruselbeneficios.appendChild(img);
       images.push(img);
         // images.push(`url(assets/img/slide/Slide-${i}.jpg)`);
     }

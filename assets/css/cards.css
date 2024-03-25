@@ -125,7 +125,7 @@ body {
 .text-center {
   text-align: center; }
 
-<---- simple card
+/*simple card*/
 
 
 .snip1401 {
@@ -858,7 +858,7 @@ body {
 }
 
 .small-text{
-  font-size: 0.75rem;x
+  font-size: 0.75rem;
 }
 
 /* Filas y columnas */
