@@ -2020,6 +2020,7 @@
 
             .miga_pan_movil{
                 display: block;
+                width: 340px;
             }
             
             .bg-blanco-bienvenida{
@@ -4387,9 +4388,6 @@ button.btnpoli:hover {
 
 
 @media (max-width: 734px) {
-    .miga_pan_movil{
-        width: 340px;
-    }
     p{
         font-size: 1.0rem;
         font-family: 'Futura Bk BT', sans-serif;
@@ -4634,6 +4632,7 @@ button.btn-sm {
     .contentHeader .opcMovil .txPg {
         display: none;
     }
+    
 @media (max-width:734px) {
     .contentHeader {
         width: 100%;
@@ -4644,11 +4643,11 @@ button.btn-sm {
         border-bottom-color: white;
         border-bottom-width: medium;
     }
-    #home {
+    /* #home {
         display: none;
-    }
+    } */
     .contentHeader > div:nth-child(1) {
-        grid-template-columns: 170px 1fr 1px 80px 55px;
+        grid-template-columns: 170px 1fr 45px 60px 51px;
     }
 }
 .fdMn {
