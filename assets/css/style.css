@@ -4558,6 +4558,7 @@ video::-webkit-media-controls-panel {
 }
 
 .parrafo18p{
+
     font-size: 18px;
     color: var(--white);
     text-align: center;
@@ -5490,6 +5491,7 @@ button.btn-sm {
         margin-right: 40px;
     }
     .txPg {
+        font-size: 1.0rem;
         color: var(--grey);
     }
 }
@@ -6076,12 +6078,16 @@ iframe:after {
         background-position: right;
         height: 45vh; 
     }
+
+    #planning{
+        width: 100% !important;
+    }
     
     .top{
        margin-top:340px;
     }
     .top-slide-21{
-        margin-top:100px;
+        margin-top:100px !important;
     }
     
     .top-slide-14{
