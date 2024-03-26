@@ -92,6 +92,21 @@
 }
 
 
+.cardriesgo2 {
+  flex: 0 0 calc(33.33% - 1rem); 
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cardriesgo2 img{
+  align-items: center;
+}
+
+.card-body2 {
+  flex: 1 1 1;
+  padding: 0.5rem 0.5rem;
+}
+
 .tab-content-ambiental > .tab-pane {
   display: none;
 }
@@ -963,7 +978,7 @@
 }
 
 .cardriesgo2 {
-  flex: 0 0 calc(25% - 1rem); 
+
   margin-bottom: 1rem;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
@@ -979,10 +994,7 @@
   align-items: center;
 }
 
-.card-body2 {
-  flex: 1 1 1;
-  padding: 0.5rem 0.5rem;
-}
+
 
 .card-bodyambiental {
   flex: 1 1 1;
