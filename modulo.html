@@ -354,7 +354,6 @@
             </div>
             </div>
         </div>
-
     </div>
     <!--Fin Operacion minera-->
 
@@ -1564,7 +1563,7 @@
             <!--columna izquierda-->
             <div class="col-40">
                 <div class="videocontainer-casos fcenter">
-                    <div class="icoflechaabajocasos instruccionflecha content-flecha-centrado">
+                    <div class="icoflechaabajocasos instruccionflecha content-flecha-v2">
                         <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para ver el video</i>
                     </div>	
                     <video id="preguntas_01" class="video-slide-casos" controls poster="assets/img/Portada-caso1-sagrilaft.jpg" id="Video Caso Lavado de activos">
@@ -1605,34 +1604,32 @@
    <!--Fin CASO 1: SAGRILAFT -->
 
     <!--Inicio caso2 ptee-->
-    <div class="container preguntas_01 bg-petroleocasos miga_etica_transparencia">
-        <div class="row">
+    <div class="container preguntas_02 bg-petroleocasos-sld24 miga_prevenir_lavado">
+        <div class="pc-slideflex">
             <!--columna izquierda-->
-            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos" >
-                <div class="videocontainer fcenter">
-                    <div class="instruccionflechasagri" style="margin-top: 12%; margin-bottom: 3%;">
-                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 6%; float: left; margin-top:5%; margin-left: 10%;"> <i>Haz clic para ver el video-caso</i>
+            <div class="col-40">
+                <div class="videocontainer-casos fcenter">
+                    <div class="icoflechaabajocasos instruccionflecha content-flecha-v2">
+                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para ver el video</i>
                     </div>	
-                    <video id="preguntas_02" class="video-slide-13" controls poster="assets/img/portada-caso-2-lavado.jpg" id="Video Caso Lavado de activos">
+                    <video id="preguntas_02" class="video-slide-casos" controls poster="assets/img/portada-caso-2-lavado.jpg" id="Video Caso Etica y Transparencia">
                         <source src="assets/video/Caso2-lavado-activo.mp4" type="video/mp4">
                     </video>
-                </div>  
+                </div> 
             </div>
 
-            <!-- Columna derecha - Azul petróleo -->
-            <div class="col-lg-8 col-md-12 top-slide-14" >
-                <div class="padding-left-casos">
-                   
+            <div class="col-80 bg-petroleocasos-corpo" >
+                <div class="padding-casos-sld11">
                     <p class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que actúes con 
                         <strong style="color: var(--blue25);">Ética y Transparencia</strong></p>
-                    <h4 style="font-size:large; color: var(--blue25);">CASO 2: PTEE </h4>
-                    <hr style="border: 1px solid var(--white); width: 50%;">
-					<p style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado con PTEE y elige las 2 respuestas correctas</p>
+                    <h4 class="titulo-h4"  style="font-size:large; color: var(--blue25);">CASO 2: PTEE </h4>
+                    <hr style="border: 1px solid var(--white); width: 100%; margin: 0 auto;">
+					<p class="parrafo-casos-sld24" style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado con PTEE y elige las 2 respuestas correctas</p>
 
-                    <div class="ctItem" id='actividad_h_02' style="display: none;">
-                        <h4 style="color:var(--primary); font-size: 18px;">¿Qué crees que debe hacer Hugo,
+                    <div class="ctItem text-parrafocasos" id='actividad_h_02' style="display: none;">
+                        <p style="color:var(--primary);">¿Qué crees que debe hacer Hugo,
                             frente a esta propuesta de Paco?
-                        </h4>
+                        </p>
                         <div>
                             <p onclick="Questions2(this, false)">a. La propuesta de Paco no tiene nada de malo y Hugo la debe aceptar.</p>
                             <p onclick="Questions2(this, false)">b. La propuesta de Paco es una propuesta tentadora de la que Hugo no se debe negar.</p>
@@ -1642,8 +1639,8 @@
                         <i class="inst" id='respuesta2' style="display:none;">Mensaje</i>
                         <i class="inst_mal" id='respuesta_mal2' style="display:none;">Mensaje</i>
                         <div style="display: flex;">
-                            <button class="btn" id='btn-valid2' onclick="valid2(2)">Validar</button>
-                            <button class="btn" id="reiniciar2" style="display: none;" onclick="reiniciarActividad($('#actividad_h_02'), [], 2,2)">Reiniciar</button>
+                            <button class="btn" id='btn-valid2' onclick="valid2(2)"><i class="fa fa-check"></i> Validar</button>
+                            <button class="btn" id="reiniciar2" style="display: none;" onclick="reiniciarActividad($('#actividad_h_02'), [], 2,2)"> <i class="fa fa-repeat"></i> Reiniciar</button>
                         </div>
                     </div>
                 </div>
@@ -1653,31 +1650,31 @@
    <!--Fin caso2 ptee-->
 
    <!--Inicio CASO 3: CONFLICTO DE INTERÉS-->
-   <div class="container preguntas_02 bg-petroleocasos miga_situaciones_conflictos">
-    <div class="row">
-
-        <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos" >
-            <div class="videocontainer fcenter">
-                <div class="instruccionflechasagri" style="margin-top: 12%; margin-bottom: 3%;">
-                    <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 6%; float: left; margin-top:5%; margin-left: 10%;"> <i>Haz clic para ver el video-caso</i>
+   <div class="container preguntas_02 bg-petroleocasos-sld24 miga_prevenir_lavado">
+    <div class="pc-slideflex">
+        <!--columna izquierda-->
+        <div class="col-40">
+            <div class="videocontainer-casos fcenter">
+                <div class="icoflechaabajocasos instruccionflecha content-flecha-v2">
+                    <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para ver el video</i>
                 </div>	
-                <video id="preguntas_03" class="video-slide-13" controls poster="assets/img/portada-caso3-conflicto.jpg" id="ceo">
+                <video id="preguntas_03" class="video-slide-casos" controls poster="assets/img/portada-caso3-conflicto.jpg" id="Video Caso Etica y Transparencia">
                     <source src="assets/video/Caso3- Conflicto-de Interes-Voz-Mujer.mp4" type="video/mp4">
                 </video>
-            </div>  
+            </div> 
         </div>
 
-        <!-- Columna izquierda - Azul petróleo -->
-        <div class="col-lg-8 col-md-12 top-slide-14" >
-            <div class="padding-left-2">
-                <p class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que declares situaciones de <strong style="color: var(--blue25);">Conflicto De Interés</strong></p>   
-                <h4 style="font-size:large; color: var(--blue25);">CASO 3: CONFLICTO DE INTERÉS</h4>
-                <hr style="border: 1px solid var(--white); width: 50%;">
-                <p style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado de Conflicto de Interés y elige las 3 respuestas correctas</p>
-                <div class="ctItem" id='actividad_h_03' style="display: none; margin-right: 10%;">
-                    <h4 style="color:var(--primary); font-size: 18px;">Selecciona las acciones y consecuencias que consideras que ocurrirán, luego de que Eloisa
+        <div class="col-80 bg-petroleocasos-corpo" >
+            <div class="padding-casos-sld26">
+                <p class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; ">Que declares situaciones de <strong style="color: var(--blue25);">Conflicto De Interés</strong></p>
+                <h4 class="titulo-h4"  style="font-size:large; color: var(--blue25);">CASO 3: CONFLICTO DE INTERÉS </h4>
+                <hr style="border: 1px solid var(--white); width: 100%; margin: 0 auto;">
+                <p class="parrafo-casos-sld24" style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado de Conflicto de Interés y elige las 3 respuestas correctas</p>
+
+                <div class="ctItem text-parrafocasos" id='actividad_h_03' style="display: none;">
+                    <p style="color:var(--primary);">Selecciona las acciones y consecuencias que consideras que ocurrirán, luego de que Eloisa
                         ha conversado con su jefe, acerca de su situación de CONFLICTO DE INTERES
-                    </h4>
+                    </p>
                     <div>
                         <p onclick="Questions3(this, false)">a. No pasará nada, ya que el sólo hecho de contárselo a su jefe ya es suficiente.</p>
                         <p onclick="Questions3(this, true)">b. No tendrá consecuencias negatIvas para Eloisa, quien además es bien vista por su jefe
@@ -1689,23 +1686,23 @@
                     <i class="inst" id='respuesta3' style="display:none;">Mensaje</i>
                     <i class="inst_mal" id='respuesta_mal3' style="display:none;">Mensaje</i>
                     <div style="display: flex;">
-                        <button class="btn" id='btn-valid3' onclick="valid3(3)">Validar</button>
-                        <button class="btn" id="reiniciar3" style="display: none;" onclick="reiniciarActividad($('#actividad_h_03'), [], 2,3)">Reiniciar</button>
+                        <button class="btn" id='btn-valid3' onclick="valid3(3)"><i class="fa fa-check"></i> Validar</button>
+                        <button class="btn" id="reiniciar3" style="display: none;" onclick="reiniciarActividad($('#actividad_h_03'), [], 2,3)"><i class="fa fa-repeat"></i> Reiniciar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   </div>
+</div>
    <!--Fin CASO 3: CONFLICTO DE INTERÉS-->
 
   <!--Inicio nuevo Manual de Convivencia-->
   <div class="container ">
-    <div class="row">
-      <div class="col-md-12 col-lg-4  parrafoblanco-justify contenido-lateral-manual bg-petroleoconvivencia">
-        <h1 class="titulo20p" style="color: var(--white); margin-top: 15%; text-align: center;">Qué estés atento a tus <strong style="color: var(--grey);"><br>Derechos</strong> y <strong style="color: var(--grey);">Deberes</strong></h1>
-        <hr style=" border: 1px solid var(--white); width: 100%;">
-        <img src="assets/img/comite-convivencia.png" alt="" style="width: 60%; margin-bottom: 3%; margin: 0 auto;">
+    <div class="pc-slideflex">
+      <div class="col-40 parrafoblanco-justify contenido-lateral-manual bg-petroleoconvivencia top-slide-60">
+        <h1 class="titulo-h1-center" style="color: var(--white); margin-top: 12%; text-align: center;">Qué estés atento a tus <strong style="color: var(--grey);"><br>Derechos</strong> y <strong style="color: var(--grey);">Deberes</strong></h1>
+        <hr style="border: 1px solid var(--white); width: 100%;">
+        <img class="convivenciaimg" src="assets/img/comite-convivencia.png" alt="">
         <p style="margin-bottom: 3%;">El <strong>Manual de convivencia</strong> se crea para mantener un ambiente laboral sano y seguro en sus instalaciones.</p>
         <!--Instruccion-->
         <div class="audiocomp">
@@ -1717,11 +1714,12 @@
             <img src="assets/img/flecha-instru.png" alt="flecha"> <i>Haz clic para escuchar el audio</i>
         </div> 
     </div>
-      <div class="col-md-12 col-lg-7 bg-blancomanualconvi" style="display: block;">
-        <div class="instruccionflechasagri" style="margin-top: 5%; margin-bottom: 2%; margin-left: 25%;">
-            <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 3%; float: left; margin-top:3%; "> <i>Haz clic sobre los botones para mirar el contenido</i>
+      <div class="col-70 bg-blancomanualconvi" style="display: block;">
+        <div class="icoflechaabajo instruccionflechasagri" >
+            <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 2%;" class="oculta"> <i class="pc-display">Haz clic sobre los botones para mirar el contenido</i>
+            <i class="movil-display" style="text-align: center;">Haz clic sobre los botones para mirar el contenido</i>
         </div>
-        <div class="d-flex align-items-start padding-manual">	
+        <div class="d-flex align-items-start padding-manual pc-display">	
           <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Derechos</button>
             <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Deberes</button>
@@ -1779,94 +1777,179 @@
             </div>
           </div>
         </div>
+
+        <div class="accordion movil-display" id="accordionconvivencia" style="margin-top: 4%;">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-buttonconvi" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  1. Derechos
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionconvivencia">
+                <div class="accordion-body">
+                  <ul class="listadoperacion">
+                    <li>Ser <strong>tratados con dignidad y respeto.</strong> Nadie podrá ser agredido en su integridad física y moral.</li>
+                    <li>Ser <strong> escuchados y atendidos en un tiempo razonable en las solicitudes</strong> y reclamos que formulen de manera respetuosa ante las
+                        instancias respectivas.</li>
+                    <li>Ser <strong>usuarios de los espacios y dentro de estos participar libremente</strong> de las actividades que se organicen.</li>
+                    <li><strong>Recibir un trato igualitario y no ser discriminado</strong> por razón de su clase social, credo, raza, orientación sexual o cualquier otra condición.</li>
+                    <li>Ser informados sobre la <strong>existencia del Manual de Convivencia</strong> y de las regulaciones que se desarrollen en virtud de este.</li>
+                    <li>Disfrutar de su tiempo libre.</li>
+                    <li><strong>Contar con las herramientas, equipos y suministros necesarios</strong> para el cumplimento de las funciones y el buen descanso.</li>
+                    <li>A disfrutar de un <strong>ambiente sano.</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-buttonconvi collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                 2. Deberes
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionconvivencia">
+                <div class="accordion-body">
+                  <ul class="listadoperacion">
+                    <li>Utilizar los <strong>espacios según el uso asignado</strong> y definido por la Empresa</li>
+                    <li><strong>Conocer y asimilar el contenido del Manual de Convivencia</strong> y asegurar su conocimiento y observancia.</li>
+                    <li><strong>Hacer buen uso de los equipos y espacios asignados por la empresa esto incluye:</strong> puestos de trabajo casilleros, baños, parqueaderos de vehículos, 
+                        equipos de marcación biométrica y todos aquellos que la Empresa considere necesarios asignar al colaborador.</li>
+                    <li>Procurar contar con un <strong>ambiente amable, limpio, saludable y estético.</strong></li>
+                  </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-buttonconvi collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                 3. Restricciones
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionconvivencia">
+                <div class="accordion-body">
+                  <ul class="listadoperacion"> 
+                    <li><strong>Aquellos actos que atenten</strong> contra la moral, la ética y privacidad de las personas.</li>
+                    <li><strong>Ingresar a las instalaciones</strong> en estado de embriaguez y/o bajo los efectos de sustancias psicoactivas.</li>
+                    <li><strong>Ingresar a las instalaciones,</strong> recibir, distribuir y/o consumir <strong>dentro de estas bebidas embriagantes y/o sustancias psicoactivas.</strong></li>
+                    <li><strong>No está permitido</strong> el porte, transporte o almacenamiento de material explosivo, sustancias inflamables, velas, armas de cualquier tipo, 
+                        <strong>excepto por parte del personal del área de seguridad de la organización</strong> que por sus funciones las requiere y para lo cual están autorizados.
+                    </li>
+                    <li><strong>Provocar sonidos notoriamente elevados</strong> que molesten a terceros o perturben la tranquilidad.</li>
+                    <li><strong>Ingresar a las instalaciones en compañía</strong> de personas no reportadas en los sitios de ingreso.</li>
+                    <li><strong>Prohibición explícita de fumar</strong> en habitaciones, áreas de trabajo y espacios comunes, conforme a la Ley 1335 de 2009</li>
+                    <li>Hacer uso de los vehículos <strong>para desplazamientos con fines personales.</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-buttonconvi collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                   4.Uso de instalaciones
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionconvivencia">
+                  <div class="accordion-body">
+                    <ul class="listadoperacion"> 
+                        <li>Seguir adecuadamente los <strong>horarios establecidos</strong> para el uso del comedor para desayuno, almuerzo y cena en operación. </li>
+                        <li>El uso de comedor este asignado <strong>exclusivamente para toma de alimentos.</strong></li>
+                        <li>Seguir el horario establecido para <strong>ingreso y salida de Clubes</strong> en la operación.</li>
+                        <li>La asignación del alojamiento estará a cargo por el <strong>área de administración.</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
       </div>
     </div>
   </div>
    <!--Fin actividad de convivencia-->
 
    <!--Actividad estar atento a tus debers y entorno-->
-   <div class="container bg-petroleo2 miga_deberes_entorno_2">
-    <div class="row ">
-        <!-- Columna izquierda - Azul petróleo -->
-        <div class="col-lg-12 col-md-12 magin-movil top-slide-14" style="text-align:center;">
-            <h1 class="titulo20p" style="color: var(--white); margin-top: 5%;"> Qué estés atento a <span style="color: var(--grey);">tus deberes</span style="color: var(--grey);"> y a <span>tu entorno</span></h1>
-            <div class=" instruccionflecha">
-                <i style="text-align: center; margin-bottom: 1%;">Revisa detenidamente las tres opciones y elige entre verdadero o falso según su aplicabilidad en cada situación</i>
-            </div>
-        </div>
-        
-        <!-- Columna derecha - Blanco -->
-        <div class="col-lg-12 col-md-12 ">
-            <div class="contenido-central parrafoblanco-center">
-                <div class="col-lg-12 col-md-12 slide-2-elementos" >
-                    <div class="col-lg-3 col-md-12 actividad_slide_14">
-                        <img class="img-estructura"  src="assets/img/act_slide_14_01_pre.png">
-                        <h4>
-                            Debo tratar con dignidad y respeto a mis <br>compañeros y superiores
-                        </h4>
-                        <select class="select-opcion">
-                            <option data-image="act_slide_14_01_pre.png">Seleccione</option>
-                            <option data-image="act_slide_14_01_mal.png">Falso</option>
-                            <option data-image="act_slide_14_01_ok.png">Verdadero</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-3 col-md-12 actividad_slide_14">
-                        <img class="img-estructura"  src="assets/img/act_slide_14_02_pre.png">
-                        <h4>
-                            Puedo ir con mi familia de paseo <br>en un vehículo de la empresa
-                        </h4>
-                        <select class="select-opcion">
-                            <option data-image="act_slide_14_02_pre.png">Seleccione</option>
-                            <option data-image="act_slide_14_02_ok.png">Falso</option>
-                            <option data-image="act_slide_14_02_mal.png">Verdadero</option>
-                        </select>                        
-                    </div>
-                    <div class="col-lg-3 col-md-12 actividad_slide_14">
-                        <img class="img-estructura" src="assets/img/act_slide_14_03_pre.png">
-                        <h4>
-                            Puedo ingresar a los Clubes <br>en cualquier horario
-                        </h4>
-                        <select class="select-opcion">
-                            <option data-image="act_slide_14_03_pre.png">Seleccione</option>
-                            <option data-image="act_slide_14_03_ok.png">Falso</option>
-                            <option data-image="act_slide_14_03_mal.png">Verdadero</option>
-                        </select>                        
-                    </div>
+
+    <div class="container bg-petroleo-sld28 miga_deberes_entorno_2">
+        <div class="pc-slidegrid">
+            <!-- Columna izquierda - Azul petróleo -->
+            <div class="col-10 magin-movil top-slide-14" style="text-align:center;">
+                <h1 class="titulo-h1-center" style="color: var(--white); margin-top: 5%;"> Qué estés atento a <strong style="color: var(--grey);">tus deberes</strong> y a <strong style="color: var(--grey);">tu entorno</strong></h1>
+                <div class=" instruccionflecha">
+                    <i style="text-align: center; margin-bottom: 1%;">Revisa detenidamente las tres opciones y elige entre verdadero o falso según su aplicabilidad en cada situación</i>
                 </div>
-                <p  style="margin-top: 2%;" ><em>"Cualquier duda comunicarse con el área de Recursos Humanos"</em></p>    
+            </div>
+            
+            <!-- Columna derecha - Blanco -->
+            <div class="col-10">
+                <div class="contenido-central-sld28 parrafoblanco-center">
+                    <div class="col-10 slide-2-elementos-sld28" >
+                        <div class="col-30 actividad_slide_14">
+                            <img class="img-estructura"  src="assets/img/act_slide_14_01_pre.png">
+                            <h4>
+                                Debo tratar con dignidad y respeto a mis <br>compañeros y superiores
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_01_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_01_mal.png">Falso</option>
+                                <option data-image="act_slide_14_01_ok.png">Verdadero</option>
+                            </select>
+                        </div>
+                        <div class="col-30 actividad_slide_14">
+                            <img class="img-estructura"  src="assets/img/act_slide_14_02_pre.png">
+                            <h4>
+                                Puedo ir con mi familia de paseo <br>en un vehículo de la empresa
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_02_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_02_ok.png">Falso</option>
+                                <option data-image="act_slide_14_02_mal.png">Verdadero</option>
+                            </select>                        
+                        </div>
+                        <div class="col-30 actividad_slide_14">
+                            <img class="img-estructura" src="assets/img/act_slide_14_03_pre.png">
+                            <h4>
+                                Puedo ingresar a los Clubes <br>en cualquier horario
+                            </h4>
+                            <select class="select-opcion">
+                                <option data-image="act_slide_14_03_pre.png">Seleccione</option>
+                                <option data-image="act_slide_14_03_ok.png">Falso</option>
+                                <option data-image="act_slide_14_03_mal.png">Verdadero</option>
+                            </select>                        
+                        </div>
+                    </div>
+                    <p style="margin-top: 2%;" ><em>"Cualquier duda comunicarse con el área de Recursos Humanos"</em></p>    
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
     <!--Fin actividad de estar atento a tus deberes y tu entorno-->
 
     <!--inicio caso 4 comite de convivencia-->
-    <div class="container preguntas_02 bg-petroleocasos miga_deberes_entorno_2">
-        <div class="row">
+    
 
-            <!--columna izquierda -->
-            <div class="col-lg-4 col-md-12 top-slide-14 " >
-                <div class="videocontainer fcenter">
-                    <div class="instruccionflechasagri" style="margin-top: 12%; margin-bottom: 3%;">
-                    <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 6%; float: left; margin-top:5%; margin-left: 10%;"> <i>Haz clic para ver el video-caso</i>
-                </div>		
-                    <video id="preguntas_04" class="video-slide-13" controls poster="assets/img/portada-caso4-comite.jpg" id="caso 4">
+    <div class="container preguntas_04 bg-petroleocasos-sld24 miga_deberes_entorno_2">
+        <div class="pc-slideflex">
+            <!--columna izquierda-->
+            <div class="col-40">
+                <div class="videocontainer-casos fcenter">
+                    <div class="icoflechaabajocasos instruccionflecha content-flecha-v2">
+                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para ver el video</i>
+                    </div>	
+                    <video id="preguntas_04" class="video-slide-casos" controls poster="assets/img/portada-caso4-comite.jpg" id="Video Caso Conflicto de Interes">
                         <source src="assets/video/Caso 4-Comite -de-Convivencia.mp4" type="video/mp4">
                     </video>
-                </div>  
+                </div> 
             </div>
-
-            <!-- Columna derecha-->
-            <div class="col-lg-8 col-md-12 top-slide-14" >
-                <div class="padding-left-casos">
-                    <h1 class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que sepas cuándo acudir al <span style="color: var(--blue25);">Comité de Convivencia</span></h1>
-                    <h4 style="font-size:large; color: var(--blue25);">CASO 4: COMITÉ DE CONVIVENCIA</h4>
-                    <hr style=" border: 1px solid var(--white); width: 50%;">
-                                        <p style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado de Conflicto de Interés y elige las 3 respuestas correctas</p>
-                    <div class="ctItem" id='actividad_h_04' style="display: none;">
-                        <h4 style="color:var(--primary); font-size: 18px;">Seleccione las acciones y consecuencias que consideras que ocurrirán,
+    
+            <div class="col-80 bg-petroleocasos-corpo" >
+                <div class="padding-casos-sld26">
+                    <p class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; ">Que sepas cuándo acudir al <strong style="color: var(--blue25);">Comité de Convivencia</strong></p>
+                    <h4 class="titulo-h4"  style="font-size:large; color: var(--blue25);">CASO 4: COMITÉ DE CONVIVENCIA </h4>
+                    <hr style="border: 1px solid var(--white); width: 100%; margin: 0 auto;">
+                    <p class="parrafo-casos-sld24" style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado de Conflicto de Interés y elige las 3 respuestas correctas</p>
+    
+                    <div class="ctItem text-parrafocasos" id='actividad_h_04' style="display: none;">
+                        <p style="color:var(--primary);">Seleccione las acciones y consecuencias que consideras que ocurrirán,
                             luego de que Matías ha presentado su queja en Recursos Humanos de la mineras
-                        </h4>
+                        </p>
                         <div>
                             <p onclick="Questions4(this, false)">a. El área de recursos humanos no prestará atención a Matías y le dirán que regrese al trabajo</p>
                             <p onclick="Questions4(this, true)">b. El área de recursos humanos indicará que debe presentar esta solicitud al
@@ -1881,7 +1964,7 @@
                         <i class="inst_mal" id='respuesta_mal4' style="display:none;">Mensaje</i>
                         <!-- <button class="btn" id='btn-valid4' onclick="valid4(3)">Validar</button> -->
                         <div style="display: flex;">
-                            <button class="btn" id='btn-valid4' onclick="valid4(3)">Validar</button>
+                            <button class="btn" id='btn-valid4' onclick="valid4(3)"><i class="fa fa-check"></i> Validar</button>
                             <button class="btn" id="reiniciar4" style="display: none;" onclick="reiniciarActividad($('#actividad_h_04'), [], 2,4)"> <i class="fa fa-repeat"></i> Reiniciar</button>
                         </div>
                     </div>

@@ -158,6 +158,16 @@
             align-items: center;
             position: relative;
         }
+
+        .bg-petroleo-sld28 {
+            background-color: #003a5d; /* Color azul petróleo */
+            height: 100vh;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
         .bg-petroleo4{
             background-color: #003a5d; /* Color azul petróleo */
             height: 100vh;
@@ -498,8 +508,7 @@
         }
 
         .videocontainer-casos{
-            width: 100%;
-            display: grid;
+            width: 80%;  
             justify-content: center;
             align-items: center;
             padding-top: 8%;
@@ -873,7 +882,13 @@
             margin-top: 50px;
             max-width: 100%;
         }
-
+        
+        .padding-casos-sld26{
+            padding-right: 8%;
+            margin-left: 0px;
+            margin-top: 50px;
+            max-width: 100%;
+        }
         .content-40{
             width: 40%;
         }
@@ -957,6 +972,11 @@
         margin: 0 auto;
         margin-top: 5%;
         margin-bottom: 3%;
+        }
+
+        .convivenciaimg{
+            width: 50%;
+            margin: 0 auto;
         }
 
         .cardpoli{
@@ -1150,8 +1170,18 @@
                 justify-content: center;
             }
 
+            .bg-petroleoconvivencia {
+                background-color: #0b3d5c; /* Color azul petróleo */
+                height: 80vh;
+                z-index: 0;
+                align-items: center;
+                position: relative;
+            }
+
+            
+
             .videocontainer-casos{
-                width: 80% !important;
+                width: 100% !important;
                 display: grid;
                 justify-content: center;
                 align-items: center;
@@ -1237,6 +1267,19 @@
                 justify-content: center;
             }
 
+            .padding-casos-sld26{
+                margin-right: 15px ;
+                margin-left: 15px ;
+                margin-top: 30px;
+                margin-bottom: 5%;
+                max-width: 100%;
+                padding: 0%;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: center;
+            }
+
             .flecha-v3{
                 margin-left: 0%; 
                 width: 3%; 
@@ -1295,6 +1338,15 @@
                 position: relative;
             }
 
+            .bg-blancomanualconvi {
+                background-color: #fff; /* Color azul petróleo */
+                z-index: 0;
+                display: flex;
+                position: relative;
+                text-align: center;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
 
             .padding-left-1{
                 margin-right: 0px;
@@ -1789,7 +1841,6 @@
         .contenido-lateral-manual {
             max-width: 100%;
             padding: 3%;
-            height: 100vh;
             padding-left: 5%;
         }
 
@@ -1875,6 +1926,13 @@
             z-index: 3;
         }
 
+        .slide-2-elementos-sld28{
+            display: flex; 
+            margin-top: 50px; 
+            align-self: flex-end; 
+            justify-content: center; 
+            z-index: 3;
+        }
 
         .slide-acordeon-elementos{
             text-align: center;
@@ -2030,6 +2088,14 @@
        
 
         .contenido-central {
+            margin-right: 60px;
+            margin-left: 60px;
+            max-width: 100%;
+            padding: 0%;
+            text-align: center;
+        }
+
+        .contenido-central-sld28{
             margin-right: 60px;
             margin-left: 60px;
             max-width: 100%;
@@ -2279,6 +2345,14 @@
                 padding: 0%;
                 text-align: center;
                 margin-top: 0%;
+            }
+
+            .contenido-lateral-manual {
+                max-width: 100%;
+                padding: 0%;
+                padding-left: 0%;
+                margin-left: 5%;
+                margin-right: 5%;
             }
 
             .img-mision-mision{
@@ -2635,7 +2709,7 @@
         }
 
         .video-slide-casos{
-            max-width:600px; 
+            max-width:300px; 
             height: 500px;
         }
 
@@ -3115,7 +3189,15 @@
                 padding: 0%;
                 text-align: center;
             }
-    
+            
+            .contenido-central-sld28{
+                margin-right: 0px;
+                margin-left: 0px;
+                max-width: 100%;
+                padding: 0%;
+                text-align: center;
+            }
+
             .dx3-v3{
                 font-size: 2.5em;
                 text-align: left;
@@ -3286,6 +3368,17 @@
                 align-items: center;
                 position: relative;
             }
+
+            .bg-petroleo-sld28 {
+                background-color: #003a5d; /* Color azul petróleo */
+                width: 100%;
+                padding-bottom: 5%;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
             .bg-blancoincident{
                 background-color: #fff; /* Color azul petróleo */
                 background-image: url(../img/reportar-accidente.png);
@@ -3298,6 +3391,12 @@
                 position: relative;
                 text-align: center;
             }
+
+            .video-slide-casos{
+                max-width:300px; 
+                height: 500px;
+            }
+
             .pc-movil-slide-15-1{
                 width: 100% !important;
             }
@@ -3521,6 +3620,14 @@
                 justify-content: center; 
                 z-index: 1;
                 height: 70vh;
+            }
+
+            .slide-2-elementos-sld28{
+                display: grid; 
+                justify-content: center; 
+                z-index: 1;
+                width: 100%;
+                margin-top: 0%;
             }
 
             .slide-2-elementos-adminoperacional{
@@ -3765,12 +3872,12 @@
 
 
 .img-estructura{
-    max-height: 16rem;
+    max-height: 15rem;
     max-width: 100%; 
     margin: 0 auto;
     width: auto;
     height: auto;
-    margin-top: -10rem;
+    margin-top: -3rem;
 }
 
 
@@ -3812,6 +3919,14 @@
     margin-top: -3rem;
 }
 
+.img-estructurasld29{
+    max-height: 15rem;
+    max-width: 100%; 
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    margin-top: -3rem;
+}
 
 /*Arrastrar imagen de vestuario*/
 .img-vestuario{
@@ -4119,6 +4234,7 @@
 
 .fcenter{
     margin: 0 auto !important;
+    padding-left: 10%
 }
 
 .postervideo video{
@@ -4292,6 +4408,12 @@ i{
         color: #8f8f8f;
         line-height: 1.3em;
     }
+
+    
+    .fcenter{
+        margin: 0 auto !important;
+        padding-left: 0%
+    }
     
 }
 
@@ -4463,7 +4585,7 @@ video::-webkit-media-controls-panel {
     line-height: 1.2em;
     font-size: 25px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .titulo-h4{
@@ -4951,7 +5073,7 @@ button.btnpoli:hover {
         text-align: center !important;
         line-height: 1.2em; 
         color: #fff;
-        font-weight: 600;
+        font-weight: 800;
     }
 
     .titulo-h4{
@@ -4961,13 +5083,22 @@ button.btnpoli:hover {
         margin-top: 5%;
     }
 
-    .img-estructura2{
+    .img-estructura{
         max-height: 15rem;
         max-width: 100%; 
         margin: 0 auto;
         width: auto;
         height: auto;
-        margin-top: -7rem;
+        margin-top: 5%;
+    }
+
+    .img-estructurasld29{
+        max-height: 15rem;
+        max-width: 100%; 
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+        margin-top: 15%
     }
 
     .politica-img img{
@@ -5683,6 +5814,8 @@ iframe:after {
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }
 
+
+  
 /* ------------- */
 /* img avatar */
 .avatarImg {

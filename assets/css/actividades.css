@@ -53,7 +53,7 @@
     padding: 7px 15px;
     border-radius: 5px;
     margin: 5px;
-    font-size: 15px !important;
+    font-size: 18px !important;
 }
 .preguntas_02 .ctItem > div p.act {
     background: #353846;
@@ -72,6 +72,43 @@
     background: #65f38a;
     color: #fff;
 }
+
+/*slide 29 caso 4*/
+.preguntas_04 .ctItem {
+    background: #ebebeb;
+    padding: 15px;  
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.preguntas_04 .ctItem > div p,
+.preguntas_04 .record {
+    background: #f7f7f7;
+    padding: 7px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px !important;
+}
+
+.preguntas_04 .ctItem > div p.act {
+    background: #353846;
+    color: #fff;
+}
+.preguntas_04 .ctItem > div p:hover {
+    cursor: pointer;
+    background: #fff;
+    color: #8f8f8f;
+}
+.preguntas_04 .ctItem > div p.false {
+    background: #f36572;
+    color: #fff;
+}
+.preguntas_04 .ctItem > div p.true {
+    background: #65f38a;
+    color: #fff;
+}
+
 
 /*Estilo carrusel*/
 .slider-box {
