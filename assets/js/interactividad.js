@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $("#nav-home-tab-1").on("click", function() {
-      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/1-sld-opt.jpg');
+      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/1-sld-opt.png');
     });
     $("#nav-profile-tab-2").on("click", function() {
-      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/2-sld-opt.jpg');
+      $("#img-ambiental").attr('src','assets/img/ambiental/optimizacion/2-sld-opt.png');
     });
     // item 1
       $("#sl21_drag1").draggable({
