@@ -488,7 +488,22 @@
             box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
         }
 
+        .bg-petroleocasos-sld24 {
+            background-color: #0B3E5D;
+            height: 100vh !important;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
 
+        .videocontainer-casos{
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding-top: 8%;
+        }        
 
         .fixedv1
         {
@@ -525,7 +540,7 @@
 
         .ambiental-uso-recursosimg img{
             width: 60%; 
-            margin-top: 20% !important;
+            margin-top: 3% !important;
             margin: 0 auto;
         }
 
@@ -539,8 +554,6 @@
             border: 1px solid var(--white);
             width: 100%;
         }
-
-
 
         .bg-petroleo-slide-7{
             background-color: #003a5d; /* Color azul petróleo */
@@ -572,6 +585,8 @@
             flex-direction: row;
             justify-content: center;
         }
+
+
 
         .clasificacion-riesgo1 {
             display: flex;
@@ -852,6 +867,13 @@
             padding: 0%;
         }
 
+        .padding-casos-sld11{
+            padding-right: 20%;
+            margin-left: 0px;
+            margin-top: 50px;
+            max-width: 100%;
+        }
+
         .content-40{
             width: 40%;
         }
@@ -1110,6 +1132,32 @@
                 position: relative;
             }
 
+            .bg-petroleocasos-v2-sld12 {
+                background-color: #0B3E5D;
+                height: 120vh;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .bg-petroleocasos-corpo {
+                background-color: #0B3E5D;
+                z-index: 0;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+            }
+
+            .videocontainer-casos{
+                width: 80% !important;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                padding-top: 25% !important;
+            }
+
             .elemento-img{
                 width: 40%; 
                 margin-left: 30%;
@@ -1175,7 +1223,19 @@
                 max-width: 100%;
                 padding: 0%;
             }
-    
+
+            .padding-casos-sld11{
+                margin-right: 15px ;
+                margin-left: 15px ;
+                margin-top: 30px;
+                margin-bottom: 5%;
+                max-width: 100%;
+                padding: 0%;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: center;
+            }
 
             .flecha-v3{
                 margin-left: 0%; 
@@ -1765,6 +1825,15 @@
             padding: 0%;
             text-align: center;
         }
+
+        /*ajuste pantalla sld1*/
+        .contenido-lateral-sld41 {
+            margin-left: 40px;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+        }
           
         .contenido-azuloscuro {
             margin-left: 80px;
@@ -2352,6 +2421,10 @@
                 color: #fff;
                 margin-left: 0%;
                 margin-right: 0%;
+            }
+
+            .parrafo-casos-sld24{
+                text-align: center;
             }
         }
         /*fondo lineamiento ambiental*/
@@ -3846,6 +3919,13 @@
     margin-left: 0%;
   }
 
+  .icoflechaabajocasos img {
+    width: 6%;
+    float: left;
+    margin-top: 10%;
+    margin-right: 0.5%;
+  }
+
 
 /*icono mas vestuario*/
 .icono {
@@ -3969,6 +4049,13 @@
     line-height: 1.2em;
     font-size: 18px;
     color: #fff;
+}
+
+.text-parrafocasos p {
+    font-size: 18px;
+    text-align: left;
+    color: #8f8f8f;
+    line-height: 1.3em;
 }
 
 .tituloh5 h5{
@@ -4198,6 +4285,13 @@ i{
     .size-audio{
         max-width: 100%;
     }
+
+    .text-parrafocasos p {
+        font-size: 18px;
+        text-align: left;
+        color: #8f8f8f;
+        line-height: 1.3em;
+    }
     
 }
 
@@ -4370,6 +4464,11 @@ video::-webkit-media-controls-panel {
     font-size: 25px;
     color: #fff;
     font-weight: 600;
+}
+
+.titulo-h4{
+    color: var(--blue25);
+    font-size: 18px;
 }
 
 .dx2-recorrido{
@@ -4847,6 +4946,21 @@ button.btnpoli:hover {
         overflow-wrap: break-word;
     }
     
+    .titulocasos{
+        font-size: 25px;
+        text-align: center !important;
+        line-height: 1.2em; 
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .titulo-h4{
+        color: var(--blue25);
+        text-align: center;
+        font-size: 18px;
+        margin-top: 5%;
+    }
+
     .img-estructura2{
         max-height: 15rem;
         max-width: 100%; 
@@ -4958,6 +5072,13 @@ button.btnpoli:hover {
         margin-bottom: 0%;
         text-align: center;
     }
+
+    .icoflechaabajocasos img {
+        width: 6%;
+        float: left;
+        margin-top: 10%;
+        margin-right: 0.5%;
+      }
 }
 button.btn-sm {
     padding: 5px 20px;

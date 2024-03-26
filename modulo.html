@@ -1493,7 +1493,7 @@
             <!-- Columna top -->
             <div class="col-10 bg-petroleo-v5-sagri top-slide-70">
                 <div class="col-10 parrafoblanco-center">
-                    <h1 class="titulo-h1-center" style="color: var(--white); ">Que nos ayudes a
+                    <h1 class="titulo-h1-center" style="color: var(--white); margin-top: 5%;">Que nos ayudes a
                         <strong style="color: var(--grey)"> prevenir</strong> el riesgo de 
                         <strong style="color: var(--grey)"> Lavado de activos</strong></h1>
                     <p>Protege a nuestra Compañía frente al Lavado de Activos y la Financiación del Terrorismo y la Proliferación de Armas de Destrucción Masiva </p>
@@ -1558,49 +1558,45 @@
     </div>
     <!--Fin Actividad Sagrilaft-->
 
-     <!--Inicio CASO 1: SAGRILAFT -->
-     <div class="container preguntas_01 bg-petroleocasos miga_prevenir_lavado">
-        <div class="row">
-
+     <!--Inicio CASO 1: SAGRILAFT-->
+    <div class="container preguntas_01 bg-petroleocasos-sld24 miga_prevenir_lavado">
+        <div class="pc-slideflex">
             <!--columna izquierda-->
-            <div class="col-lg-4 col-md-12 top-slide-14 bg-petroleocasos">
-                <div class="videocontainer fcenter">
-                    <div class="instruccionflechasagri" style="margin-top: 12%; margin-bottom: 3%;">
-                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 6%; float: left; margin-top:5%; margin-left: 10%;"> <i>Haz clic para ver el video-caso</i>
-                    </div>
-                    <!--<i class="inst mb-2" style="margin-top: 15%;">Clic sobre el video para comenzar</i>-->		
+            <div class="col-40">
+                <div class="videocontainer-casos fcenter">
+                    <div class="icoflechaabajocasos instruccionflecha content-flecha-centrado">
+                        <img src="assets/img/flecha-instru-abajo.png" alt="flecha" class="oculta"> <i>Haz clic para ver el video</i>
+                    </div>	
                     <video id="preguntas_01" class="video-slide-casos" controls poster="assets/img/Portada-caso1-sagrilaft.jpg" id="Video Caso Lavado de activos">
                         <source src="assets/video/Caso-1-SAGRILAFT-voz-mujer.mp4" type="video/mp4">
                     </video>
                 </div> 
             </div>
- 
-            <!-- Columna izquierda - Azul petróleo -->
-            <div class="col-lg-8 col-md-12 top-slide-14" >
-                <div class="padding-left-casos">    
-                    <p class="titulocasos" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que nos ayudes a <strong style="color: var(--blue25);">prevenir el riesgo </strong> de
+
+            <div class="col-80 bg-petroleocasos-corpo" >
+                <div class="padding-casos-sld11">
+                    <p class="titulocasos pc-display" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que nos ayudes a <strong style="color: var(--blue25);">prevenir el riesgo </strong> de
                         Lavado de Activos y Financiación del Terrorismo 
                     </p>
-                    <h4 style="font-size:large; color: var(--blue25);">CASO 1: SAGRILAFT </h4>
+                    <p class="titulocasos movil-display" style="color: var(--white); font-weight: 800; text-align: justify; margin-bottom: 2%;">Que nos ayudes a <strong style="color: var(--blue25);">prevenir el riesgo </strong> de
+                        Lavado de Activos y Financiación del Terrorismo 
+                    </p>
+                    <h4 class="titulo-h4" style="font-size:large; color: var(--blue25);">CASO 1: SAGRILAFT </h4>
                     <hr style="border: 1px solid var(--white); width: 100%;">
-					<p style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado con SAGRILAFT y elige las 2 respuestas correctas</p>
-                    <div class="ctItem" id='actividad_h_01' style="display: none;">
-                        <p style="color:var(--primary); font-size: 18px;">¿Qué crees que debió haber hecho el profesional de contratos de Cuyano Mining?​</p>
+					<p class="parrafo-casos-sld24" style="color: #d8d8d8; font-size: 18px;"> Veamos este caso relacionado con SAGRILAFT y elige las 2 respuestas correctas</p>
+                 
+                    <div class="ctItem espacioright10 text-parrafocasos" id='actividad_h_01' style="display: none;" >
+                        <p style="color:var(--primary); margin-bottom: 3%;">Señale las <strong>2 respuestas correctas</strong> que usted considere puedan causar accidentes graves relacionados con energías peligrosas</p>
                         <div>
-                            <p onclick="Questions(this, false)">a. Haber continuado con el proceso y no reportar al Oficial de Cumplimiento, porque había
-                                mucha urgencia en construir el campamento y era la mejor empresa?</p>
-                            <p onclick="Questions(this, false)">b. Decirle a Juan que solo se le podía hacer el pago a una sola cuenta bancaria y que eligiera cual​</p>
-                            <p onclick="Questions(this, true)">c. Informarle al equipo técnico de Cuyano Mining sobre la situación, para que le informaran
-                                a Juan y así arreglar el problema y poder continuar con el proceso.​</p>
-                            <p onclick="Questions(this, true)">d. Reportar al Oficial de Cumplimiento la señal de alerta identificada, para que fuera analizada,
-                                evaluada y se tomaran las medidas de control al respecto</p> <!--Respuesta correcta-->
+                            <p onclick="Questions(this, true)">a. No aplicar sistemas de bloqueo de energías peligrosas </p>
+                            <p onclick="Questions(this, false)">b. No intervenir equipos cuando están energizados</p>
+                            <p onclick="Questions(this, false)">c. Llegar a tiempo al trabajo </p>
+                            <p onclick="Questions(this, true)">d. Alterar y/o violar los sistemas de bloqueos </p> 
                         </div>
                         <i class="inst" id='respuesta' style="display:none;">Mensaje</i>
                         <i class="inst_mal" id='respuesta_mal' style="display:none;">Mensaje</i>
-                        <div style="display: flex;">
-                            <button class="btn"  id='btn-valid' onclick="valid(2)">Validar</button>
-                            <button class="btn" id="reiniciar" style="display: none;" onclick="reiniciarActividad($('#actividad_h_01'), [], 2, 1)">Reiniciar</button>
-                        </div>
+                        <button class="btn" id='btn-valid' onclick="valid(2)"><i class="fa fa-check"></i> Validar</button>
+                        <button class="btn" id="reiniciar" style="display: none;" onclick="reiniciarActividad($('#actividad_h_01'), [], 2, 1)"> <i class="fa fa-repeat"></i> Reiniciar</button>
                     </div>
                 </div>
             </div>
@@ -2660,12 +2656,12 @@
     <div class="container">
         <div class="row">  
           <div class="col-md-12 col-lg-4 bg-petroleoambiental ambiental-uso-recursosimg parrafogris-left contenido-lateralambiental">
-            <img  id="img-ambiental" src="assets/img/ambiental/optimizacion/1-sld-opt.png" alt=""  >
-            <h1 class="titulo-h1-center" style="color: var(--white);">Ambiental</span></h1>
+            <h1 class="titulo-h1-center" style="color: var(--white); margin-top: 20%;">Departamento Ambiental <strong style="color: var(--grey);">Aris Mining</strong></h1>
             <hr style=" border: 1px solid var(--white); width: 80%; margin: 0 auto;">
+            <img id="img-ambiental" src="assets/img/ambiental/optimizacion/1-sld-opt.png" alt=""  >
             <p ></p>
           </div>
-          <div class="col-md-12 col-lg-7">
+          <div class="col-md-12 col-lg-7 contenido-lateral-sld41">
             <div class="icoflechaabajov2 instruccionflechapilar">
                 <img src="assets/img/flecha-instru-abajo.png" alt="flecha" style="width: 2.5%;"> <i style="margin-top: 8%; margin-bottom: 2%;">Desplaza el mouse sobre cada título para ver su contenido</i>
             </div>
@@ -2685,6 +2681,14 @@
                     <li>Energías renovables (paneles solares en campamentos)</li>
                     <li>Gestión de residuos (manejo adecuado de RESPEL)</li>
                 </ul>
+                <div class="audiocentral">
+                    <audio controls class="track-element">
+                        <source src="assets/audio/SLIP-41-Optimizacion-uso-recursos.mp3" type="audio/mp3">
+                    </audio> 
+                </div> 
+                <div class="icoflecha instruccionflecha content-flecha-v2">
+                    <img src="assets/img/flecha-instru.png" alt="flecha" style="width: 2%;"> <i>Haz clic para escuchar el audio</i>
+                </div> 
               </div>
               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <!--<h5 class="mt-2" style="color: var(--primary30);"><b>Previsión y prevención de impactos ambientales</b></h5>-->
@@ -2695,6 +2699,14 @@
                     <li>Planificación de los recursos económicos para desarrollar los programas de manejo ambiental.</li>
                     <li>Desarrollar la conciencia ambiental en todos los niveles de la organización a través del programa de educación ambiental.</li>
                 </ul>
+                <div class="audiocentral">
+                    <audio controls class="track-element">
+                        <source src="assets/audio/SLIP-41-Prevision-prevencion-impactos-ambientales.mp3" type="audio/mp3">
+                    </audio> 
+                </div> 
+                <div class="icoflecha instruccionflecha content-flecha-v2">
+                    <img src="assets/img/flecha-instru.png" alt="flecha" style="width: 2%;"> <i>Haz clic para escuchar el audio</i>
+                </div> 
               </div>
             
             </div>
@@ -2709,11 +2721,11 @@
       <!--nueva-->
       <div class="container miga_buena_gente ">
         <div class="row">
-          <div class="col-40  parrafoblanco-center bg-azul-ambiental contenido-lateralambiental4">
-            <h1 class="titulo20p" style="color: var(--white); margin-top: 5%; text-align: center;">Control de la capacidad <br>
+          <div class="col-40 parrafoblanco-center bg-azul-ambiental contenido-lateralambiental4">
+            <h1 class="titulo-h1-center" style="color: var(--white); margin-top: 5%;">Control de la capacidad <br>
                 de absorción de
                 los <strong style="color: var(--grey);">impactos <br></strong>en el medio natural </h1>
-           <h1 class="titulo20p" style="color: var(--grey); margin-top: 5%; text-align: center;">(Componente biótico)</h1>
+           <h1 class="titulo-h1-center" style="color: var(--grey); margin-top: 5%; ">(Componente biótico)</h1>
            <hr style=" border: 1px solid var(--white); width: 100%;">
            <p style="margin-bottom: 5%;">Aris Mining realiza la implementación de estrategias y prácticas destinadas a salvaguardar la capacidad de los ecosistemas para gestionar y mitigar las alteraciones provocadas por la actividad minera. </p>
                <!--Instruccion-->
