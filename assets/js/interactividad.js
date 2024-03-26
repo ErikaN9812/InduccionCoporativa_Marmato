@@ -1491,7 +1491,7 @@ function actSelectImg(el, data) {
     rulesH4[current_index_12_reglas].classList.add("back-color-12-reglas-2"); 
 
     // Cambiar la imagen
-    var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.jpg`;
+    var newImageSrc = `assets/img/${rulesH4[current_index_12_reglas].getAttribute("data-title").toLowerCase()}.webp`;
     img_12_reglas.src = newImageSrc;
     img_12_reglas.style.cursor = "pointer";
     // Detener la reproducción actual y reproducir el nuevo audio

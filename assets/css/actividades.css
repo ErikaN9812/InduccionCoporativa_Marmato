@@ -85,6 +85,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+
 }
 
 .slider-box img {
@@ -95,6 +96,7 @@
     left: 0;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    object-fit: cover;
 }
 
 .slider-box img.active-img {
@@ -159,6 +161,8 @@
     }
     #breadcrumb_movil{
         display: block !important;
+        color:#d3d3d3;
+        font-size: 15px;
     }
     .slider-box {
         background-color: #fff; /* Color blanco */
@@ -172,12 +176,13 @@
         position: relative;
         overflow: hidden;
         margin-top: 70px;
+        object-fit: cover;
     }
     .slider-box img{
         height: 70vh;
         background-size: cover;
         background-repeat: no-repeat;
-        
+        object-fit: cover;
     }
     .actOrderElement img {
         max-width: 80px;
