@@ -2152,6 +2152,7 @@
 
         .padding-manual{
             padding-left: 2%;
+         
         }
 
         /*contenido asi te queremos*/
@@ -2624,7 +2625,7 @@
         }
 
         .top-funciones{
-           margin-top: 10%;
+           margin-top: 5%;
         }
         .nuestras-politicas{
             display: flex;
@@ -3443,7 +3444,7 @@
            margin-top: 13%;
         }
         .elemento-left{
-            margin-left: 2%;
+            margin-left: 0%;
         }
         .elementos-movil{
             display: none;
@@ -6492,7 +6493,7 @@ iframe:after {
 
 /*Fondo seccion1*/
 .darkStyleimgseccion1 {
-    background: url(../../assets/img/Fondo-seccion1.webp);
+    background: url(../../assets/img/Fondo-seccion1.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;  
@@ -6587,6 +6588,12 @@ iframe:after {
 .top-slide-1-2{
     margin-top:5%; 
     width:40%;
+}
+@media (max-width: 734px) {
+    h1, h2, h3, b, i, button, span {
+        font-family: 'Alata', sans-serif;
+        white-space: normal;
+    }  
 }
 
 @media (max-width:734px) {
