@@ -4848,6 +4848,11 @@ i{
 
 
 @media (max-width: 734px) {
+    h1, h2, h3, b, button{
+        font-family: 'Alata', sans-serif;
+        white-space: normal;
+    }
+    
 
     /*imagen flecha izquierda*/
     .icoflecha img {
